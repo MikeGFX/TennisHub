@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Esplora la stagione dei giocatori ATP: tornei, piazzamenti, punti ottenuti e singoli incontri.">
+  <title>TennisHub — La stagione, punto per punto</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/app.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#season-content">Vai alla stagione</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="TennisHub, pagina iniziale">
+      <img src="/favicon.svg" width="31" height="31" alt="">
+      <span>TENNIS<span class="brand-light">HUB</span></span>
+    </a>
+    <span class="brand-caption">La stagione, punto per punto.</span>
+    <div class="archive-badge"><span class="status-dot"></span>Archivio locale</div>
+  </header>
+
+  <main class="workspace">
+    <aside class="roster-panel" aria-labelledby="roster-heading">
+      <div class="roster-heading"><span class="eyebrow">SINGOLARE MASCHILE</span><h2 id="roster-heading">Il circuito ATP<span class="small-pill">50</span></h2></div>
+      <div class="search-wrap"><label class="sr-only" for="player-search">Cerca un giocatore</label><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="player-search" type="search" placeholder="Cerca un giocatore…" autocomplete="off" spellcheck="false"></div>
+      <div class="roster-meta"><span id="roster-count">Caricamento…</span><span>POS. ATP</span></div>
+      <div id="player-list" class="player-list" aria-label="Giocatori ATP"></div>
+      <p class="ranking-date" id="ranking-date"></p>
+    </aside>
+
+    <section class="season-panel" aria-labelledby="player-name">
+      <div class="season-toolbar"><span class="eyebrow">ESPLORA UNA STAGIONE</span><div class="season-tools"><label for="season-select">Stagione</label><select id="season-select" disabled><option>—</option></select><button id="reload" class="icon-button" type="button" aria-label="Ricarica l'archivio locale" title="Ricarica le importazioni disponibili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M6.1 7a7 7 0 0 1 11.6-1L20 9M4 15l2.3 3A7 7 0 0 0 18 17"></path></svg></button></div></div>
+      <div id="app-status" class="sr-only" role="status" aria-live="polite"></div>
+      <div id="season-content" aria-busy="true"><div class="initial-loading"><span class="loading-ball"></span><p>Prepariamo la tua stagione…</p></div></div>
+      <footer class="app-footer"><span>TENNISHUB <span class="footer-separator">/</span> Ogni risultato ha una storia.</span><a href="https://stats.tennismylife.org/tennis-match-database" target="_blank" rel="noopener noreferrer">Dati TennisMyLife <span aria-hidden="true">↗</span></a></footer>
+    </section>
+  </main>
+</body>
+</html>
