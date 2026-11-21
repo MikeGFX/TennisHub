@@ -143,4 +143,6 @@ def load_bundle(client, season, as_of, requested_ranking_date=None):
         resource = client.get(name, entry["url"], entry.get("mtime"))
         resources.append(resource)
         datasets.append(resource)
-    return ranking_date, top_rankings(rankings), datasets, resources
+    from .supplements import load_supplements
+    extra_datasets, extra_resources = load_supplements(season, as_of)
+    return ranking_date, top_rankings(rankings), datasets + extra_datasets, resources + extra_resources

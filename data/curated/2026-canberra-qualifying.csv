@@ -1,0 +1,4 @@
+tourney_id,tourney_name,surface,draw_size,tourney_level,tourney_date,match_num,winner_id,winner_name,winner_ioc,winner_seed,winner_entry,loser_id,loser_name,loser_ioc,loser_seed,loser_entry,score,best_of,round,source_date_precision
+2026-7393,Canberra,Hard,24,C,20260105,curated-Q1-J0DZ-M0TE,J0DZ,Rafael Jodar,ESP,3,,M0TE,Pavle Marinkov,AUS,,WC,6-4 6-3,3,Q1,tournament_week
+2026-7393,Canberra,Hard,24,C,20260105,curated-Q1-F0DM-J0FY,F0DM,Arthur Fery,GBR,9,,J0FY,Daniel Jovanovski,AUS,,WC,3-6 6-4 6-0,3,Q1,tournament_week
+2026-7393,Canberra,Hard,24,C,20260105,curated-Q2-J0DZ-F0DM,J0DZ,Rafael Jodar,ESP,3,,F0DM,Arthur Fery,GBR,9,,6-3 3-2 RET,3,Q2,tournament_week

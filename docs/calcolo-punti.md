@@ -1,4 +1,4 @@
-# Calcolo dei punti ottenuti — motore 2026.4
+# Calcolo dei punti ottenuti — motore 2026.5
 
 Il calcolo e' ora nel modulo `tennishub/points.py`, condiviso dalle query
 dell'app e dallo script di ricerca. Funziona per un identificativo ATP qualsiasi.
@@ -130,3 +130,11 @@ verificare. Questo subtotale non viene presentato come totale completo.
 Gli anni diversi dal 2025 e 2026 restano da validare.
 
 Fonte per i walkover vinti 2026: [Rulebook ATP, Exhibit K](https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-10_exhibits_27apr26.pdf).
+
+## Integrazione Canberra, motore 2026.5
+
+Qualificazioni Challenger a 24 giocatori supportate soltanto con formato
+verificato per l'edizione. Fery Canberra: 3 punti; Jodar: 64 + 5 = 69 punti.
+Il bonus di Jodar era prima assente per indicazione di ingresso mancante.
+Copertura dopo integrazione: 1.187/1.187 partecipazioni registrate, inventario
+ancora incompleto. Dettagli nel [rapporto del censimento](censimento-2026.md).

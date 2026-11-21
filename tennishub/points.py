@@ -14,7 +14,7 @@ from pathlib import Path
 RULES_URL = "https://www.itftennis.com/media/15608/atp-2026-points-table.pdf"
 UNITED_URL = "https://www.atptour.com/-/media/0030c0c028734686b55efd45fe463926.pdf"
 FINALS_URL = "https://www.nittoatpfinals.com/en/event/points-and-prize-money"
-ENGINE_VERSION = "2026.4"
+ENGINE_VERSION = "2026.5"
 RULES_2025_URL = "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf"
 WALKOVER_URL = "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-10_exhibits_27apr26.pdf"
 ROUND_ORDER = {r: i for i, r in enumerate(("Q1", "Q2", "Q3", "RR", "R128", "R64", "R32", "R16", "QF", "SF", "F"))}
@@ -101,7 +101,7 @@ def _last(rows):
     return max(rows, key=lambda row: ROUND_ORDER.get(row["round"], -1))
 
 
-def _rule(sample, edition_metadata):
+def _rule(sample, edition_metadata, qualifying_only=False):
     level, draw = sample["tourney_level"], str(sample["draw_size"])
     if level == "G" and draw == "128":
         return "G"
@@ -109,7 +109,10 @@ def _rule(sample, edition_metadata):
         return "M96" if draw == "96" else "M56"
     if level in {"250", "500"} and draw in {"28", "32", "48"}:
         return level + ("48" if draw == "48" else "32")
-    if level == "C" and draw in {"28", "32"} and edition_metadata:
+    verified_qualifying = (qualifying_only and draw == "24" and edition_metadata
+                           and edition_metadata.get("qualifying_draw_size") == 24
+                           and edition_metadata.get("qualifying_source"))
+    if level == "C" and (draw in {"28", "32"} or verified_qualifying) and edition_metadata:
         key = "C" + str(edition_metadata["level"])
         if key in TABLES:
             return key
@@ -204,10 +207,12 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
         total = sum({"RR": 200, "SF": 400, "F": 500}[row["round"]] for row in main if _winner(row, player_id))
         return PointsResult(total, "Punti delle vittorie: RR 200, SF 400, finale 500.", total, 0, [rules_url, FINALS_URL])
     metadata = (challenger_editions() if editions is None else editions).get(edition_id)
-    rule = _rule(sample, metadata)
+    rule = _rule(sample, metadata, qualifying_only=not main)
     if rule is None:
         return PointsResult(reason="Livello dell'edizione Challenger o formato del tabellone non verificato.", sources=[rules_url])
     sources = [rules_url] + ([metadata["source"]] if category == "C" else [])
+    if qualifying and metadata and metadata.get("qualifying_source"):
+        sources.append(metadata["qualifying_source"])
     if safe_walkovers or default_wins:
         sources.append(WALKOVER_URL)
     if medical_walkovers:

@@ -6,7 +6,7 @@ anche quando si consulta una stagione precedente. Non e' la top 50 di ogni anno.
 
 | Stagione | Partecipazioni registrate | Punti calcolabili | Da verificare |
 |---|---:|---:|---:|
-| 2026 | 1186 | 1186 | 0 |
+| 2026 | 1187 | 1187 | 0 |
 | 2025 | 1227 | 983 | 244 |
 | 2024 | 1243 | 0 | 1243 |
 | 2023 | 1124 | 0 | 1124 |
@@ -54,3 +54,6 @@ python3 -m tennishub completeness --from-season 2016 --to-season 2026 --json
 Confermata una partecipazione assente: Fery, qualificazioni di Canberra, 3 punti.
 Le 1.186 partecipazioni note non rappresentano quindi l'intero inventario del campione.
 Vedi [controlli e lacune riscontrate](censimento-2026.md).
+
+Canberra ora integrata: Fery 3 punti e Jodar 69 (64 + 5); i risultati 2026 noti
+sono 1.187 partecipazioni. La completezza dell'inventario resta da verificare.

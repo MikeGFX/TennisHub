@@ -37,7 +37,7 @@ def prepare(datasets, season, as_of):
         if len(names) > 1 and all(pairs) and len({frozenset(pair.groups()) for pair in pairs}) == len(names):
             separable_ties.add(event_id)
     for resource in datasets:
-        stage = "qualifying" if resource.name.startswith("atp_quali/") else "main"
+        stage = "qualifying" if resource.name.startswith(("atp_quali/", "challenger_quali/")) else "main"
         for line, original in csv_rows(resource):
             row = {key: (value or "").strip() for key, value in original.items() if key is not None}
             if not row["tourney_id"].startswith(str(season) + "-"):

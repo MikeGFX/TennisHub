@@ -1,0 +1,19 @@
+{
+  "season": 2026,
+  "items": [
+    {
+      "file": "2026-canberra-qualifying.csv",
+      "name": "challenger_quali/curated/2026-canberra.csv",
+      "sha256": "81709576e76d63386a4207ca090ecdd160fd0e41a8944aec10f4e375a1b165df",
+      "source_url": "https://www.protennislive.com/posting/2026/7393/qs.pdf",
+      "source_sha256": "49be1bab7e81e8ea436bc5156476c9cbadf1a36c13fc4f6fc58ca0cdbb9ec29c",
+      "verified_on": "2026-11-22",
+      "available_by": "2026-01-10",
+      "source_released_at": "2026-01-10T17:51:04",
+      "method": "Manual transcription from final official PDF, visually checked. CSV hash identifies the transcription; source_sha256 identifies the original PDF.",
+      "scope": "Only the paths of Fery and Jodar, three unique matches. Not the full qualifying draw.",
+      "date_precision": "Tournament week starting 2026-01-05; individual match dates not established.",
+      "identity_check": "ATP IDs and names matched against players already present in the local archive."
+    }
+  ]
+}

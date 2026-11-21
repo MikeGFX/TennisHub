@@ -13,10 +13,21 @@
         "cohort_exact_name_matches": 0,
         "status": "Esaminata una copia parziale. Zero corrispondenze esatte dei 50 non prova assenza di altri tornei ITF nella stagione."
       },
-      "notes": "Censimento aperto: qualificazioni Challenger non importate; confermata la partecipazione mancante di Fery a Canberra (3 punti). ITF/Futures non riconciliati. Dati app al 18 novembre 2026; Finals provvisorie.",
-      "qualifying_status": "challenger_qualifying_not_imported",
+      "notes": "Canberra: integrata la partecipazione di Fery (3 punti) e i due match di qualificazione di Jodar (bonus 5, totale torneo 69). Solo tre incontri del tabellone di qualificazione, non il tabellone completo. Restanti qualificazioni Challenger e ITF/Futures da censire; Finals provvisorie nella fotografia del 18 novembre.",
+      "qualifying_status": "challenger_qualifying_partially_imported",
       "census_import_id": "e1e0d3d2be24788e94b3999dd575a02eb3fea20fd4e2f6e5293c3d791e0c3846",
-      "confirmed_missing_participations": [
+      "confirmed_missing_participations": [],
+      "census_progress": {
+        "checked_on": "2026-11-22",
+        "challenger_main_draws": 238,
+        "challenger_qualifying_draws_imported": 0,
+        "official_qualifying_pdfs_read": 10,
+        "official_qualifying_pdfs_pending": 228,
+        "ta_player_pages_compared": 3,
+        "ta_player_pages_pending": 47,
+        "rate_limits": "HTTP 429 from Tennis Abstract and ProTennisLive; requests stopped, cached results retained."
+      },
+      "resolved_missing_participations": [
         {
           "player_id": "F0DM",
           "player_name": "Arthur Fery",
@@ -41,19 +52,10 @@
           ],
           "source": "https://www.protennislive.com/posting/2026/7393/qs.pdf",
           "sha256": "49be1bab7e81e8ea436bc5156476c9cbadf1a36c13fc4f6fc58ca0cdbb9ec29c",
-          "verification": "Official final draw extracted and visually inspected; absent from selected local snapshot. Not yet imported."
+          "verification": "Integrated in versioned transcription; official final draw visually checked.",
+          "integrated_import_id": "93802591ad9d2109e70fb087e7b254d97ed6a1b75f63de2eb890ea1688404606"
         }
-      ],
-      "census_progress": {
-        "checked_on": "2026-11-22",
-        "challenger_main_draws": 238,
-        "challenger_qualifying_draws_imported": 0,
-        "official_qualifying_pdfs_read": 10,
-        "official_qualifying_pdfs_pending": 228,
-        "ta_player_pages_compared": 3,
-        "ta_player_pages_pending": 47,
-        "rate_limits": "HTTP 429 from Tennis Abstract and ProTennisLive; requests stopped, cached results retained."
-      }
+      ]
     }
   }
 }

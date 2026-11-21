@@ -138,6 +138,22 @@ async function main() {
   assert.equal(all("details.event").length, 22);
   assert.equal(new URL(window.location.href).searchParams.get("player"), "Z355");
 
+  $('[data-player-id="F0DM"]').click();
+  await until(() => ready() && $("#player-name")?.textContent === "Arthur Fery", "Fery con Canberra integrata");
+  const feryCanberra = $("#tournament-2026-7393");
+  assert.ok(feryCanberra);
+  assert.equal(feryCanberra.querySelectorAll(".match").length, 2);
+  assert.match(feryCanberra.querySelector(".event-points").textContent, /^3/);
+  assert.ok(feryCanberra.querySelector('a[href="https://www.protennislive.com/posting/2026/7393/qs.pdf"]'));
+  assert.ok([...feryCanberra.querySelectorAll(".match-footnote")].every((node) => node.textContent.includes("settimana del torneo")));
+  $('[data-player-id="J0DZ"]').click();
+  await until(() => ready() && $("#player-name")?.textContent === "Rafael Jodar", "Jodar con qualificazioni integrate");
+  const jodarCanberra = $("#tournament-2026-7393");
+  assert.equal(jodarCanberra.querySelectorAll(".match").length, 7);
+  assert.match(jodarCanberra.querySelector(".event-points").textContent, /^69/);
+  assert.ok(jodarCanberra.textContent.includes("Tabellone principale: 64"));
+  assert.ok(jodarCanberra.textContent.includes("Qualificazioni: 5"));
+
   let fail = true;
   const retryWindow = await page((url, options, realFetch) => {
     if (fail) { fail = false; return Promise.reject(new Error("Errore di prova")); }

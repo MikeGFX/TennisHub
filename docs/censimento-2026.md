@@ -1,7 +1,8 @@
 # Primo censimento 2026 - 22 novembre 2026
 
 Fotografia locale: 18 novembre; campione dei 50 del 16 novembre.
-Nessun risultato esterno e' stato importato durante questo controllo.
+Nella prima fase non sono stati importati risultati esterni. L'integrazione
+successiva di Canberra e' descritta in fondo al rapporto.
 
 ## Lacuna confermata
 
@@ -70,3 +71,28 @@ Integrare con provenienza verificabile la partecipazione di Fery e il percorso
 di Jodar; proseguire i PDF pendenti quando la fonte consente l'accesso;
 riconciliare l'inventario ITF e i quattro Challenger; controllare le Finals
 con date dei singoli incontri prima di aggiornare la fotografia.
+
+## Integrazione di Canberra completata
+
+Aggiunti tre incontri unici: Fery-Jovanovski (Q1), Jodar-Marinkov (Q1),
+Jodar-Fery (Q2). Il Q2 comune e' memorizzato una sola volta.
+
+- Fery: 21 partecipazioni, 53 incontri registrati e subtotale 1.482 punti;
+  Canberra vale 3 punti.
+- Jodar: sempre 24 partecipazioni, 80 incontri e subtotale 3.269 punti;
+  Canberra passa da 64 a 69 per il bonus qualificazione prima assente.
+- Gli altri 48 giocatori conservano riepiloghi e punti precedenti.
+- Nuova fotografia immutabile: 11.293 incontri, 1.187 partecipazioni del campione
+  con punti calcolabili; la fotografia precedente resta conservata.
+
+La trascrizione e il suo registro sono in `data/curated/`. Il registro distingue
+hash del PDF originale e hash del CSV trascritto. Il PDF e' citato nell'app;
+non e' redistribuito nel repository. Gli incontri riportano la settimana del
+torneo: il giorno effettivo non e' stato accertato. Non sono inventate statistiche.
+L'importazione normale, anche offline, include la trascrizione e resta idempotente.
+Eventuali conflitti con dati successivi interrompono l'importazione per verifica.
+
+Questa e' un'integrazione parziale del tabellone (3 incontri, non tutti i 18).
+Restano 237 main draw Challenger senza qualificazioni registrate e uno con
+qualificazioni soltanto parziali. Il censimento ITF e la riconciliazione degli
+altri casi restano aperti: nessuna certificazione di stagione completa.

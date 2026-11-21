@@ -2,7 +2,9 @@
   "2026-7393": {
     "name": "Canberra",
     "level": 125,
-    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf",
+    "qualifying_draw_size": 24,
+    "qualifying_source": "https://www.protennislive.com/posting/2026/7393/qs.pdf"
   },
   "2026-2205": {
     "name": "Noumea",
