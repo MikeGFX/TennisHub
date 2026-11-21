@@ -73,3 +73,16 @@ L'ordine consigliato per la prossima sessione è scegliere il primo intervento
 sulla qualità dei dati, definire il formato esportabile e delimitare questa prova
 Android. Installazione di Capacitor e nuovo progetto Android sono rinviati a una
 sessione di sviluppo dedicata.
+
+## Aggiornamento del 21 novembre 2026
+
+Implementati in locale: H2H con ricerca di due nomi e filtri per superficie,
+anno e principali/qualificazioni; grafico annuale dei punti e sovrapposizione
+fra stagioni; importazione 2025 e validazione delle tabelle Tour principali;
+17 casi 2026 risolti per walkover vinti, con 34 partecipazioni ancora da verificare.
+
+La consultazione attuale copre il 2025 e il 2026. Restano prioritari i dati
+storici aggiuntivi per H2H pi? completi e le verifiche delle edizioni Challenger
+2025 e dei casi speciali. Il grafico riguarda i punti ottenuti nei tornei;
+uno storico settimanale dei punti del ranking ATP richiede una serie diversa.
+La prima prova Android resta un passo successivo.

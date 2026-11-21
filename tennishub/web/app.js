@@ -84,6 +84,7 @@ async function fetchSeason(controller, mode) {
   renderSeason();
   $("#season-content").setAttribute("aria-busy", "false");
   announce(`${report.player_name}, stagione ${report.season}: ${report.summary.events} partecipazioni disponibili.`);
+  window.dispatchEvent(new CustomEvent("tennishub:season", {detail: report}));
 }
 
 async function openYear(year, preferredPlayer, mode = "push") {
@@ -167,7 +168,7 @@ function renderSeason() {
   const totalText = !known && unknown ? "—" : formatNumber(summary.known_earned_points_subtotal);
   const categories = [...new Set(report.events.map(kind))];
   $("#season-content").innerHTML = `${playerHeading(person)}
-    ${report.season !== 2026 ? `<div class="year-notice">I risultati del ${report.season} sono disponibili. Il calcolo dei punti per questa stagione è ancora da verificare.</div>` : ""}
+    ${![2025, 2026].includes(report.season) ? `<div class="year-notice">I risultati del ${report.season} sono disponibili. Il calcolo dei punti per questa stagione è ancora da verificare.</div>` : ""}
     <div class="metric-grid">
       <div class="metric"><span class="metric-label">Tornei disputati</span><strong class="metric-value">${summary.events}</strong><span class="metric-caption">Partecipazioni nella stagione</span></div>
       <div class="metric"><span class="metric-label">Vittorie / sconfitte</span><strong class="metric-value">${summary.wins} <span class="record-losses">/ ${summary.losses}</span></strong><span class="metric-caption">${winPercentage}% di incontri vinti</span></div>

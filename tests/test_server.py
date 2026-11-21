@@ -42,7 +42,7 @@ class ServerTests(unittest.TestCase):
             return response.status, response.headers, response.read()
 
     def test_browser_entry_and_assets_are_served(self):
-        for path in ("/", "/assets/app.js", "/assets/app.css", "/favicon.svg"):
+        for path in ("/", "/assets/app.js", "/assets/app.css", "/assets/analytics.js", "/assets/analytics.css", "/favicon.svg"):
             with self.subTest(path=path):
                 code, headers, body = self.get(path)
                 self.assertEqual(code, 200)
@@ -72,13 +72,14 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(season["events"][0]["matches"][0]["raw"]["winner_name"], "Alexander Zverev")
         self.assertTrue(season["events"][0]["matches"][0]["sources"])
 
-    def test_changing_year_does_not_apply_wrong_points_table(self):
+    def test_changing_year_uses_validated_2025_table(self):
         code, _, body = self.get("/api/season?year=2025&player=S0AG")
         self.assertEqual(code, 200)
         result = json.loads(body)
         self.assertEqual(result["season"], 2025)
-        self.assertIsNone(result["events"][0]["earned_points"])
-        self.assertEqual(result["events"][0]["points_status"], "needs_review")
+        self.assertEqual(result["events"][0]["earned_points"], 50)
+        self.assertEqual(result["events"][0]["points_status"], "calculated")
+        self.assertIn("2025", result["events"][0]["points_sources"][0])
 
     def test_invalid_input_returns_readable_json_errors(self):
         for path, expected in (("/api/players", 400), ("/api/season?year=oops&player=Z355", 400),
@@ -105,6 +106,28 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(code, 200)
         self.assertTrue(json.loads(body)["needs_import"])
         self.assertEqual(self.get("/api/players?year=2026")[0], 503)
+
+    def test_h2h_search_and_history_endpoints(self):
+        code, _, body = self.get("/api/player-search?q=sinner")
+        self.assertEqual(code, 200)
+        self.assertEqual(json.loads(body)["players"][0]["id"], "S0AG")
+        code, _, body = self.get("/api/h2h?first=Z355&second=S0AG")
+        self.assertEqual(code, 200)
+        self.assertEqual(json.loads(body)["summary"]["first_wins"], 2)
+        code, _, body = self.get("/api/h2h?first=Z355&second=S0AG&surface=Clay")
+        self.assertEqual(json.loads(body)["summary"]["matches"], 0)
+        code, _, body = self.get("/api/points-history?player=S0AG")
+        self.assertEqual(code, 200)
+        self.assertEqual([item["year"] for item in json.loads(body)["seasons"]], [2025, 2026])
+        self.assertEqual([item["total"] for item in json.loads(body)["seasons"]], [50, 50])
+
+    def test_h2h_invalid_filters_and_names(self):
+        for path, expected in (("/api/h2h?first=Z355&second=Z355", 400),
+                               ("/api/h2h?first=Z355&second=S0AG&surface=invalid", 400),
+                               ("/api/h2h?first=Z355&second=S0AG&year=2026oops", 400),
+                               ("/api/h2h?first=Z355&second=missing", 404),
+                               ("/api/points-history", 400)):
+            self.assertEqual(self.get(path)[0], expected)
 
     def test_head_returns_headers_without_body(self):
         code, headers, body = self.get("/", "HEAD")

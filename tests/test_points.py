@@ -112,8 +112,38 @@ class PointsTests(unittest.TestCase):
         self.assertIsNone(self.points([match(winner_id="P003", loser_id="P004")]).value)
         self.assertIsNone(self.points([match(), match(tourney_id="2026-other")]).value)
 
-    def test_unverified_year_and_empty_input_remain_unknown(self):
+    def test_validated_2025_table_has_its_own_source(self):
+        from tennishub.points import RULES_2025_URL
+        cases = [("G", "128", "F", 1300), ("M", "96", "F", 650), ("500", "32", "F", 330), ("250", "32", "F", 165)]
+        for level, draw, round, expected in cases:
+            with self.subTest(level=level):
+                result = self.points([match(round=round, level=level, draw=draw, tourney_id="2025-test")], season=2025)
+                self.assertEqual(result.value, expected)
+                self.assertIn(RULES_2025_URL, result.sources)
+                self.assertNotIn(RULES_URL, result.sources)
+
+    def test_2025_qualifying_values_and_edition_metadata_are_explicit(self):
+        rows = [match(round=r, won=r == "Q1", stage="qualifying", level="250", draw="48", tourney_id="2025-test") for r in ("Q1", "Q2")]
+        self.assertEqual(self.points(rows, season=2025).value, 4)
+        self.assertIsNone(self.points([match(level="C", tourney_id="2025-test")], season=2025).value)
+
+    def test_won_walkover_advances_points_but_lost_walkover_stays_unknown(self):
+        from tennishub.points import WALKOVER_URL
+        result = self.points([match(round="SF", won=True), match(round="F", won=True, score="W/O")])
+        self.assertEqual(result.value, 250)
+        self.assertIn(WALKOVER_URL, result.sources)
+        self.assertIsNone(self.points([match(round="SF", won=True), match(round="F", score="W/O")]).value)
+
+    def test_won_walkover_before_elimination_is_not_a_bye(self):
+        rows = [match(round="R32", won=True, score="W/O"), match(round="R16")]
+        self.assertEqual(self.points(rows).value, 25)
+        self.assertIsNone(self.points([match(round="Q1", won=True, score="W/O", stage="qualifying"), match()]).value)
+
+    def test_year_cannot_be_applied_to_a_different_edition(self):
         self.assertIsNone(self.points([match()], season=2025).value)
+
+    def test_unverified_year_and_empty_input_remain_unknown(self):
+        self.assertIsNone(self.points([match()], season=2024).value)
         self.assertIsNone(self.points([]).value)
 
 

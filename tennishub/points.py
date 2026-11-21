@@ -12,7 +12,9 @@ from pathlib import Path
 RULES_URL = "https://www.itftennis.com/media/15608/atp-2026-points-table.pdf"
 UNITED_URL = "https://www.atptour.com/-/media/0030c0c028734686b55efd45fe463926.pdf"
 FINALS_URL = "https://www.nittoatpfinals.com/en/event/points-and-prize-money"
-ENGINE_VERSION = "2026.2"
+ENGINE_VERSION = "2026.3"
+RULES_2025_URL = "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf"
+WALKOVER_URL = "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-10_exhibits_27apr26.pdf"
 ROUND_ORDER = {r: i for i, r in enumerate(("Q1", "Q2", "Q3", "RR", "R128", "R64", "R32", "R16", "QF", "SF", "F"))}
 LABELS = {"W": "Vincitore", "F": "Finalista", "SF": "Semifinale", "QF": "Quarti",
           "R16": "Ottavi", "R32": "R32", "R64": "R64", "R128": "R128"}
@@ -119,7 +121,7 @@ def _qualifying_bonus(rows, main, rule, player_id):
 
 
 def evaluate_points(matches, player_id, season=2026, editions=None):
-    if season != 2026:
+    if season not in (2025, 2026):
         return PointsResult(reason="Regole punti di questa stagione ancora da validare.")
     if not matches:
         return PointsResult(reason="Nessun incontro disponibile.")
@@ -130,11 +132,20 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
     qualifying = [match["raw"] for match in matches if match["stage"] == "qualifying"]
     sample = (main or qualifying)[0]
     edition_id, category = sample["tourney_id"], sample["tourney_level"]
-    if category == "D" or edition_id == "2026-9210":
-        return PointsResult(0, "Competizione a squadre senza punti ATP individuali.", 0, 0)
-    if any(not row["score"].strip() or any(code in row["score"].upper() for code in ("W/O", "DEF", "ABN", "BYE")) for row in rows):
-        return PointsResult(reason="Walkover, risultato speciale o non concluso: verifica necessaria.")
-    if edition_id == "2026-9900":
+    if not edition_id.startswith(f"{season}-"):
+        return PointsResult(reason="Edizione non appartenente alla stagione richiesta.")
+    rules_url = RULES_2025_URL if season == 2025 else RULES_URL
+    if category == "D" or edition_id == f"{season}-9210":
+        return PointsResult(0, "Competizione a squadre senza punti ATP individuali.", 0, 0, [rules_url])
+    # Il vincitore di un walkover nel main draw avanza per i punti come da Exhibit K.
+    # Ritiri prima del proprio match e risultati amministrativi restano da verificare.
+    safe_walkovers = [row for row in main if "W/O" in row["score"].upper() and _winner(row, player_id)] if season == 2026 else []
+    if any(not row["score"].strip() or any(code in row["score"].upper() for code in ("W/O", "DEF", "ABN", "BYE"))
+           for row in rows if not any(row is safe for safe in safe_walkovers)):
+        return PointsResult(reason="Walkover perso, risultato speciale o non concluso: verifica necessaria.", sources=[rules_url])
+    if edition_id == f"{season}-9900":
+        if season != 2026:
+            return PointsResult(reason="United Cup: ranking congelato e regole dell'edizione da verificare.", sources=[rules_url])
         # GJ37 e' nella fascia 21-30 sia al 22 sia al 29 dicembre 2025.
         # I documenti ufficiali consultati differiscono sulla data di congelamento;
         # non si applica il ranking del match agli avversari non ancora verificati.
@@ -148,14 +159,16 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
         return PointsResult(total, "United Cup: vittorie con fascia avversario verificata.", total, 0, [UNITED_URL])
     if category == "F":
         if any(row["round"] not in {"RR", "SF", "F"} for row in main):
-            return PointsResult(reason="Turno Finals sconosciuto.")
+            return PointsResult(reason="Turno Finals sconosciuto.", sources=[rules_url])
         total = sum({"RR": 200, "SF": 400, "F": 500}[row["round"]] for row in main if _winner(row, player_id))
-        return PointsResult(total, "Punti delle vittorie: RR 200, SF 400, finale 500.", total, 0, [FINALS_URL])
+        return PointsResult(total, "Punti delle vittorie: RR 200, SF 400, finale 500.", total, 0, [rules_url, FINALS_URL])
     metadata = (challenger_editions() if editions is None else editions).get(edition_id)
     rule = _rule(sample, metadata)
     if rule is None:
-        return PointsResult(reason="Livello dell'edizione Challenger o formato del tabellone non verificato.")
-    sources = [RULES_URL] + ([metadata["source"]] if category == "C" else [])
+        return PointsResult(reason="Livello dell'edizione Challenger o formato del tabellone non verificato.", sources=[rules_url])
+    sources = [rules_url] + ([metadata["source"]] if category == "C" else [])
+    if safe_walkovers:
+        sources.append(WALKOVER_URL)
     bonus, bonus_reason = _qualifying_bonus(qualifying, main, rule, player_id)
     if bonus is None:
         return PointsResult(reason=bonus_reason, sources=sources)
@@ -189,6 +202,8 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
         if points_round not in table:
             return PointsResult(reason="Turno non presente nella tabella punti.", qualifying=bonus, sources=sources)
         base = table[points_round]
+    if safe_walkovers:
+        reason += " Avanzamento per walkover vinto incluso secondo Exhibit K."
     return PointsResult(base + bonus, reason + " " + bonus_reason, base, bonus, sources)
 
 

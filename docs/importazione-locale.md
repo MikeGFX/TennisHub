@@ -71,7 +71,8 @@ python3 -m tennishub import --season 2026 --as-of 2026-11-18 --ranking-date 2026
 La classifica e l'anno dei risultati sono scelte indipendenti: si puo' consultare
 la stagione 2025 dei primi 50 selezionati nel novembre 2026. Per importare quella
 stagione, usare `--season 2025`; i file devono essere presenti nell'indice TML.
-Le regole dei punti delle stagioni diverse dal 2026 restano da validare.
+I formati principali 2025 sono ora validati; i livelli Challenger 2025 e altri
+casi speciali restano da verificare. Gli altri anni non hanno regole validate.
 
 Un filtro data applicato ai file attuali non ricrea la versione della fonte che
 era pubblicata in passato. Le fotografie salvate attestano cio' che e' stato
@@ -93,10 +94,10 @@ tra giocatori fuori dai primi 50. Questo conserva anche gli avversari e permette
 di riutilizzare l'archivio quando cambia l'elenco iniziale.
 
 I punti del ranking vengono salvati nella classifica e rimangono distinti dai
-punti ottenuti nei tornei. Il [motore punti 2026.2](calcolo-punti.md) gestisce
+punti ottenuti nei tornei. Il [motore punti 2026.3](calcolo-punti.md) gestisce
 ora ATP 250, diversi formati di tabellone, qualificazioni, wild card e i livelli
-Challenger verificati per 35 edizioni del campione. Sono calcolabili 1.135 delle
-1.186 partecipazioni. Lucky loser, walkover e alcuni casi con dati incompleti
+Challenger verificati per 35 edizioni del campione. Sono calcolabili 1.152 delle
+1.186 partecipazioni. Lucky loser, walkover persi e alcuni casi con dati incompleti
 rimangono `needs_review`, con `earned_points: null`. La United Cup richiede il
 ranking congelato dell'avversario; e' verificata soltanto la fascia di Griekspoor.
 I valori sconosciuti non vengono trasformati in zero: nel riepilogo sono indicati
@@ -121,8 +122,10 @@ Classifica selezionata: **16 novembre 2026**, da Zverev (n. 1) a Griekspoor (n. 
 | Incontri unici importati nell'intero archivio | 11.290 |
 | Partecipazioni nelle schede dei primi 50 | 1.186 |
 | Incontri nelle 50 schede, con doppio conteggio delle sfide tra loro | 2.966 |
-| Partecipazioni dei 50 con punti ancora da verificare (motore 2026.2) | 51 |
+| Partecipazioni dei 50 con punti ancora da verificare (motore 2026.3) | 34 |
 
+Il motore 2026.3 risolve 17 walkover vinti rispetto al conteggio precedente,
+senza cambiare alcun valore gi? calcolato. Il numero di incontri ? invariato.
 Le 50 schede sono state interrogate correttamente. Zverev restituisce 22
 partecipazioni, 85 incontri, 67 vittorie, 18 sconfitte e 9.760 punti ottenuti
 calcolati, compresi i 400 delle Finals ancora in corso.
@@ -146,7 +149,7 @@ sono in una transazione: un errore non lascia un'importazione parziale.
 python3 -m unittest discover -s tests -v
 ```
 
-65 test passati: punti, selezione dei primi 50, idempotenza,
+80 test passati: punti, selezione dei primi 50, idempotenza,
 provenienze, correzioni della fonte, rollback, nomi, cache corrotta, date limite
 e server HTTP locale. La guida all'interfaccia include il controllo DOM facoltativo.
 Controlli SQLite sul database reale: integrita' valida e nessuna violazione

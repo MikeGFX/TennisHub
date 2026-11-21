@@ -17,7 +17,7 @@ async function until(predicate, description) {
 
 async function main() {
   const html = await (await fetch(base)).text();
-  const script = await (await fetch(`${base}/assets/app.js`)).text();
+  const script = await (await fetch(`${base}/assets/app.js`)).text() + "\n" + await (await fetch(`${base}/assets/analytics.js`)).text();
   async function page(fetchOverride) {
     const console = new VirtualConsole();
     console.on("jsdomError", (error) => errors.push(error));
@@ -43,6 +43,46 @@ async function main() {
   assert.equal(all("details.match").length, 85);
   assert.equal($(".metric-featured .metric-value").textContent, "9.760");
   assert.match($(".metric-featured .metric-caption").textContent, /400 provvisori/);
+
+  await until(() => $(".points-chart"), "grafico annuale");
+  assert.equal(all(".season-total-row").length, 2);
+  change("#chart-mode", "compare");
+  assert.equal(all(".chart-line").length, 2);
+  assert.match($(".chart-legend").textContent, /2025/);
+  assert.match($(".chart-legend").textContent, /2026/);
+  assert.doesNotMatch($("#points-charts").textContent, /[?\uFFFD]/, "Caratteri corrotti nei grafici");
+  $(".chart-data summary").click();
+  assert.equal($(".chart-data").open, true);
+  assert.ok(all(".chart-data tbody tr").length > 22);
+
+  $("#h2h-view").click();
+  assert.equal($("#season-content").hidden, true);
+  $("#h2h-form").dispatchEvent(new window.Event("submit", {bubbles:true, cancelable:true}));
+  await until(() => $(".h2h-scoreboard") && $("#h2h-results").getAttribute("aria-busy") === "false", "H2H");
+  const h2h = await (await fetch(`${base}/api/h2h?first=Z355&second=S0AG`)).json();
+  assert.equal(all(".h2h-score strong")[0].textContent, String(h2h.summary.first_wins));
+  assert.equal(all(".h2h-score strong")[1].textContent, String(h2h.summary.second_wins));
+  assert.match($("#h2h-results").textContent, /2025/);
+  assert.doesNotMatch($("#h2h-panel").textContent, /[?\uFFFD]/, "Caratteri corrotti nella vista H2H");
+  $('[data-h2h-surface="Clay"]').click();
+  await until(() => $('[data-h2h-surface="Clay"]')?.getAttribute("aria-pressed") === "true", "filtro superficie H2H");
+  const clay = h2h.by_surface.find((item) => item.surface === "Clay");
+  assert.equal(all(".h2h-score strong")[0].textContent, String(clay.first_wins));
+  assert.equal(all(".h2h-score strong")[1].textContent, String(clay.second_wins));
+  await until(() => [...$("#h2h-year").options].some((item)=>item.value === "2025"), "anni H2H");
+  change("#h2h-year", "2025");
+  await until(() => $(".h2h-scoreboard") && $("#h2h-results").getAttribute("aria-busy") === "false", "filtro anno H2H");
+  assert.ok($("#h2h-results .analytics-note").textContent.includes("2025 (dati"));
+  assert.ok(!$("#h2h-results .analytics-note").textContent.includes("2026 (dati"));
+  $("#h2h-first").value = "Jannik Sinner";
+  $("#h2h-form").dispatchEvent(new window.Event("submit", {bubbles:true, cancelable:true}));
+  await until(() => $("#h2h-results [role=alert]"), "rifiuto giocatori uguali");
+  $("#h2h-first").value = "Alexander Zverev";
+  $("#h2h-form").dispatchEvent(new window.Event("submit", {bubbles:true, cancelable:true}));
+  await until(() => $(".h2h-scoreboard"), "recupero H2H");
+  $("#season-view").click();
+  assert.equal($("#season-content").hidden, false);
+  change("#chart-mode", "year");
 
   const report = await (await fetch(`${base}/api/season?year=2026&player=Z355`)).json();
   const lostEvent = report.events.find((event) => event.matches.some((match) => match.loser_id === report.player_id));
@@ -106,7 +146,7 @@ async function main() {
   await until(() => emptyWindow.document.querySelector(".empty-state"), "archivio vuoto");
   assert.equal(emptyWindow.document.querySelector("#season-select").disabled, true);
   assert.deepEqual(errors, []);
-  process.stdout.write("UI DOM: ricerca, filtri, dettagli, punteggi, cambio rapido, errori e archivio vuoto verificati.\n");
+  process.stdout.write("UI DOM: ricerca, filtri, dettagli, punteggi, cambio rapido, errori, archivio vuoto, H2H e grafici storici verificati.\n");
 }
 
 main().catch((error) => { console.error(error); process.exitCode = 1; }).finally(() => pages.forEach((dom) => dom.window.close()));

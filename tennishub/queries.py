@@ -88,6 +88,7 @@ def season(connection, player, year):
         events.append({
             "id": edition_id, "name": last["name"], "category": last["category"], "surface": last["surface"],
             "first_recorded_date": min(row["match_date"] for row in rows),
+            "last_recorded_date": max(row["match_date"] for row in rows),
             "placement": placement, "provisional": not known_end and not is_team,
             "earned_points": points, "points_status": "calculated" if points is not None else "needs_review",
             "points_reason": reason, "wins": wins, "losses": losses,

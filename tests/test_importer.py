@@ -121,9 +121,9 @@ class ImporterTests(unittest.TestCase):
         self.assertEqual(sinner["summary"]["losses"], 1)
         self.assertIsNone(season(self.connection, "Z355", 2026)["events"][0]["earned_points"])
 
-    def test_other_year_does_not_use_2026_points(self):
-        self.run_import([resource("2025.csv", [row(tourney_id="2025-807", tourney_date="20250225", round="R16")])], year=2025)
-        self.assertIsNone(season(self.connection, "S0AG", 2025)["events"][0]["earned_points"])
+    def test_unverified_year_does_not_use_current_points(self):
+        self.run_import([resource("2024.csv", [row(tourney_id="2024-807", tourney_date="20240225", round="R16")])], year=2024)
+        self.assertIsNone(season(self.connection, "S0AG", 2024)["events"][0]["earned_points"])
 
     def test_first_round_wild_card_at_slam_receives_zero_points(self):
         self.run_import([resource("2026.csv", [row(tourney_level="G", draw_size="128", round="R128", loser_entry="WC")])])

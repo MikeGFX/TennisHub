@@ -8,14 +8,16 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
-from . import queries
+from . import queries, analytics
 from .database import open_existing
 
 ASSETS = Path(__file__).with_name("web")
 STATIC_FILES = {"/": ("index.html", "text/html; charset=utf-8"),
                 "/assets/app.css": ("app.css", "text/css; charset=utf-8"),
                 "/assets/app.js": ("app.js", "text/javascript; charset=utf-8"),
-                "/favicon.svg": ("favicon.svg", "image/svg+xml")}
+                "/favicon.svg": ("favicon.svg", "image/svg+xml"),
+                "/assets/analytics.js": ("analytics.js", "text/javascript; charset=utf-8"),
+                "/assets/analytics.css": ("analytics.css", "text/css; charset=utf-8")}
 
 
 def bootstrap(database):
@@ -68,6 +70,26 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if url.path == "/api/bootstrap":
                 result = bootstrap(self.database)
+            elif url.path in {"/api/player-search", "/api/h2h", "/api/points-history"}:
+                connection = open_existing(self.database)
+                if url.path == "/api/player-search":
+                    result = analytics.player_search(connection, parameters.get("q", [""])[0])
+                elif url.path == "/api/points-history":
+                    player = parameters.get("player", [""])[0].strip()
+                    if not player:
+                        self._respond(HTTPStatus.BAD_REQUEST, {"error": "Seleziona un giocatore."}, head=head)
+                        return
+                    result = analytics.points_history(connection, player)
+                else:
+                    first = parameters.get("first", [""])[0].strip()
+                    second = parameters.get("second", [""])[0].strip()
+                    year = parameters.get("year", ["all"])[0]
+                    surface = parameters.get("surface", ["all"])[0]
+                    stage = parameters.get("stage", ["all"])[0]
+                    if not first or not second or first.casefold() == second.casefold() or (year != "all" and not year.isdigit()) or surface not in (*analytics.SURFACES, "all") or stage not in ("all", "main", "qualifying"):
+                        self._respond(HTTPStatus.BAD_REQUEST, {"error": "Scegli due giocatori diversi e filtri validi."}, head=head)
+                        return
+                    result = analytics.head_to_head(connection, first, second, None if year == "all" else int(year), surface, stage)
             elif url.path in {"/api/players", "/api/season"}:
                 try:
                     year = int(parameters.get("year", [""])[0])

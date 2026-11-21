@@ -37,7 +37,7 @@ non sono scaricabili dal browser.
 - La ricerca seleziona fra i primi 50 della classifica datata indicata nella barra
   laterale; ignora maiuscole e accenti.
 - Il selettore delle stagioni contiene soltanto gli anni già importati. La versione
-  iniziale dell'archivio contiene il 2026.
+  attuale dell'archivio contiene il 2025 e il 2026.
 - Il riepilogo mostra partecipazioni, vittorie/sconfitte, titoli e punti ottenuti
   nella stagione. I punti del ranking ATP compaiono separatamente sotto il nome.
 - Il grafico mostra i punti calcolabili divisi per categoria. Selezionare una voce
@@ -53,8 +53,8 @@ non sono scaricabili dal browser.
 
 I valori sconosciuti appaiono come **Da verificare** e sono esclusi dal subtotale.
 Gli eventi in corso mostrano i punti provvisori. Con l'importazione del
-18 novembre 2026 sono calcolabili 1.135 delle 1.186 partecipazioni dei primi 50;
-51 rimangono da verificare. Zverev ha 22 partecipazioni e 9.760 punti ottenuti,
+18 novembre 2026 sono calcolabili 1.152 delle 1.186 partecipazioni dei primi 50;
+34 rimangono da verificare. Zverev ha 22 partecipazioni e 9.760 punti ottenuti,
 compresi 400 provvisori. Questi totali non ricostruiscono automaticamente la
 classifica ATP, che segue regole proprie di conteggio e finestre temporali.
 
@@ -78,8 +78,9 @@ l'archivio locale; il download e l'aggiornamento delle fonti avvengono con il
 comando di importazione. Aggiornare `--as-of` quando serve una data più recente.
 Su Windows sostituire `python3` con `py -3`.
 
-Per gli anni diversi dal 2026 si possono consultare i risultati disponibili,
-ma le regole dei punti devono ancora essere validate per quella stagione.
+Il calcolo dei punti copre i formati verificati del 2025 e 2026. Le edizioni
+Challenger 2025 e diversi casi speciali restano da validare; gli altri anni
+mostrano i risultati senza applicare automaticamente le tabelle di questi due anni.
 Disponibilità delle fonti, classifica utilizzata e cache sono descritte nella
 [guida all'importazione](importazione-locale.md).
 
@@ -89,7 +90,7 @@ Disponibilità delle fonti, classifica utilizzata e cache sono descritte nella
 python3 -m unittest discover -s tests -v
 ```
 
-65 test verificano importazione, calcolo dei punti e server HTTP, compresi cambio
+80 test verificano importazione, calcolo dei punti e server HTTP, compresi cambio
 anno, ricerca, errori e accesso in sola lettura. Il controllo DOM facoltativo
 esegue il JavaScript dell'interfaccia contro server e dati reali, provando ricerca,
 filtri, dettagli, orientamento del punteggio, cambio rapido del giocatore,
@@ -104,3 +105,23 @@ Quest'ultimo controllo richiede Node e il server avviato con l'archivio di
 verifica 2026 del 18 novembre. È un controllo DOM: non misura impaginazione,
 contrasto o resa visiva nel browser. Gli strumenti di test restano nella cache
 esclusa da Git e non sono necessari per usare l'app.
+
+## Testa a testa e grafici
+
+Il pulsante **Testa a testa / H2H** apre due campi per i nomi o gli ID ATP.
+I suggerimenti cercano tutti i giocatori presenti nell'archivio, compresi gli
+avversari fuori dai primi 50. Premere **Confronta** mostra bilancio e incontri.
+Le schede Cemento, Terra, Erba e Sintetico filtrano la superficie; si pu? anche
+scegliere una stagione o separare principali e qualificazioni. Challenger e
+competizioni a squadre presenti nella fonte sono inclusi, salvo i filtri scelti.
+Walkover e risultati speciali sono elencati ma esclusi dal bilancio; i ritiri a
+incontro iniziato rimangono conteggiati. La copertura e la data delle fonti sono
+sempre visibili: il bilancio del 2025/2026 non ? un H2H completo in carriera.
+
+Nella scheda **Stagione**, il grafico **Andamento dei punti** mostra il cumulato
+ottenuto torneo dopo torneo. Il selettore **Confronta le stagioni** sovrappone gli
+anni importati sul calendario; sotto compare anche il confronto dei subtotali.
+I tornei con punti mancanti sono segnalati con cerchi vuoti e i cumulati parziali
+con linee tratteggiate. La tabella espandibile contiene tutti i valori disponibili.
+Le date sono quelle degli ultimi incontri registrati nelle edizioni: questo non
+? il grafico del ranking storico n? delle date ufficiali di accredito ATP.

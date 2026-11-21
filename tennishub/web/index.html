@@ -9,6 +9,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/app.css">
   <script src="/assets/app.js" defer></script>
+  <script src="/assets/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/analytics.css">
 </head>
 <body>
   <a class="skip-link" href="#season-content">Vai alla stagione</a>
@@ -32,6 +34,19 @@
 
     <section class="season-panel" aria-labelledby="player-name">
       <div class="season-toolbar"><span class="eyebrow">ESPLORA UNA STAGIONE</span><div class="season-tools"><label for="season-select">Stagione</label><select id="season-select" disabled><option>—</option></select><button id="reload" class="icon-button" type="button" aria-label="Ricarica l'archivio locale" title="Ricarica le importazioni disponibili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M6.1 7a7 7 0 0 1 11.6-1L20 9M4 15l2.3 3A7 7 0 0 0 18 17"></path></svg></button></div></div>
+      <nav class="view-nav" aria-label="Viste TennisHub"><button type="button" id="season-view" aria-pressed="true">Stagione</button><button type="button" id="h2h-view" aria-pressed="false">Testa a testa <span>H2H</span></button></nav>
+      <section id="h2h-panel" hidden aria-labelledby="h2h-heading">
+        <span class="eyebrow">DUE GIOCATORI, TUTTI I CONFRONTI DISPONIBILI</span><h1 id="h2h-heading">Testa a testa</h1>
+        <p class="analytics-intro">Scegli due tennisti e scopri come cambia il confronto sulle diverse superfici.</p>
+        <form id="h2h-form" class="h2h-form">
+          <label>Primo giocatore<input id="h2h-first" name="first" list="first-suggestions" value="Alexander Zverev" placeholder="Nome o ID ATP" required autocomplete="off"><datalist id="first-suggestions"></datalist></label>
+          <span class="h2h-vs-label" aria-hidden="true">vs</span>
+          <label>Secondo giocatore<input id="h2h-second" name="second" list="second-suggestions" value="Jannik Sinner" placeholder="Nome o ID ATP" required autocomplete="off"><datalist id="second-suggestions"></datalist></label>
+          <button type="submit" class="action-button">Confronta</button>
+        </form>
+        <div class="h2h-filters"><label>Stagione<select id="h2h-year"><option value="all">Tutti gli anni importati</option></select></label><label>Incontri<select id="h2h-stage"><option value="all">Principali e qualificazioni</option><option value="main">Tabelloni principali</option><option value="qualifying">Qualificazioni</option></select></label></div>
+        <div id="h2h-results" aria-live="polite" aria-busy="false"><p class="analytics-empty">Inserisci i due nomi e premi Confronta. La ricerca comprende tutti i giocatori presenti nell’archivio.</p></div>
+      </section>
       <div id="app-status" class="sr-only" role="status" aria-live="polite"></div>
       <div id="season-content" aria-busy="true"><div class="initial-loading"><span class="loading-ball"></span><p>Prepariamo la tua stagione…</p></div></div>
       <footer class="app-footer"><span>TENNISHUB <span class="footer-separator">/</span> Ogni risultato ha una storia.</span><a href="https://stats.tennismylife.org/tennis-match-database" target="_blank" rel="noopener noreferrer">Dati TennisMyLife <span aria-hidden="true">↗</span></a></footer>

@@ -1,0 +1,77 @@
+/* Analisi: la stessa palette della stagione, con segni da tabellone e dati leggibili. */
+[hidden] { display:none !important; }
+.view-nav { display:flex; gap:8px; border-bottom:1px solid var(--border, #dce1d6); padding-bottom:12px; margin-bottom:28px; }
+.view-nav button { font:inherit; font-size:13px; background:transparent; border:0; color:#64705e; padding:9px 14px; cursor:pointer; border-radius:6px; }
+.view-nav button[aria-pressed="true"] { background:#173e2d; color:#fff; }
+.view-nav button span { font-size:9px; margin-left:5px; opacity:.7; }
+.view-nav button:focus-visible, .surface-choices button:focus-visible { outline:3px solid #7d9d38; outline-offset:3px; }
+#h2h-panel h1 { font-size:36px; letter-spacing:-1px; margin:8px 0 10px; }
+.analytics-intro { font-size:13px; color:#66735f; line-height:1.7; margin-bottom:25px; }
+.h2h-form { display:grid; grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) auto; gap:12px; align-items:end; }
+.h2h-form label, .h2h-filters label { display:grid; gap:8px; font-size:11px; color:#55624f; }
+.h2h-form input, .h2h-filters select, .chart-heading select { width:100%; min-width:0; border:1px solid #d4ddce; border-radius:6px; background:#fafbf6; padding:12px; color:#173e2d; font:inherit; font-size:12px; }
+.h2h-form input:focus, .h2h-filters select:focus, .chart-heading select:focus { outline:2px solid #7d9d38; outline-offset:2px; }
+.h2h-form .action-button { margin:0; min-height:42px; }
+.h2h-vs-label { align-self:end; padding:12px 0; text-align:center; font-size:11px; color:#7a866f; }
+.h2h-filters { display:flex; flex-wrap:wrap; gap:14px; margin:20px 0; }
+.h2h-filters label { min-width:190px; }
+.h2h-toolbar > label, .h2h-toolbar > select { visibility:hidden; }
+.h2h-scoreboard { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:18px; background:#eaf0df; border-top:3px solid #173e2d; padding:28px 22px; margin-top:26px; }
+.h2h-scoreboard > div:last-child { text-align:right; }
+.h2h-scoreboard h2 { font-size:22px; line-height:1.2; letter-spacing:-.6px; margin:8px 0; overflow-wrap:anywhere; }
+.h2h-score { display:grid; grid-template-columns:auto 20px auto; text-align:center; gap:4px; align-items:center; }
+.h2h-score strong { font-size:52px; line-height:1; font-variant-numeric:tabular-nums; }
+.h2h-score > span { color:#8c9b76; font-size:24px; }
+.h2h-score small { grid-column:1/-1; font-size:10px; margin-top:9px; color:#627151; }
+.surface-choices { display:flex; flex-wrap:wrap; gap:7px; margin:18px 0; }
+.surface-choices button { flex:1; min-width:88px; display:grid; gap:6px; text-align:left; padding:12px; background:#fafbf6; color:#173e2d; border:1px solid #d4ddce; border-radius:6px; cursor:pointer; }
+.surface-choices button[aria-pressed="true"] { background:#d3e69a; border-color:#789742; }
+.surface-choices button > span { font-size:11px; }
+.surface-choices button strong { font-size:20px; font-variant-numeric:tabular-nums; }
+.surface-choices button small { font-size:9px; color:#637151; }
+.analytics-note { font-size:11px; line-height:1.75; color:#66735f; margin:12px 0; }
+.analytics-note strong { font-weight:600; }
+.analytics-warning { font-size:11px; line-height:1.6; border-left:3px solid #ad8438; background:#f5efdf; padding:10px 12px; color:#755c2c; }
+.analytics-empty { padding:28px 12px; font-size:12px; line-height:1.7; color:#66735f; }
+.analytics-error { color:#944c3a; background:#f4e9e2; padding:15px; font-size:12px; line-height:1.6; }
+.analytics-table-wrap { width:100%; overflow-x:auto; margin:14px 0; }
+.analytics-table { width:100%; border-collapse:collapse; text-align:left; font-size:11px; line-height:1.5; min-width:560px; }
+.analytics-table th { font-size:9px; font-weight:600; text-transform:uppercase; color:#68755e; padding:12px 10px; background:#edf0e6; }
+.analytics-table td { padding:13px 10px; border-bottom:1px solid #e0e5d9; }
+.analytics-table td small { display:block; font-size:9px; color:#7c876f; margin-top:3px; }
+.analytics-table .score-cell { white-space:nowrap; font-variant-numeric:tabular-nums; }
+.excluded-match { color:#8c795e; }
+.points-charts { border:1px solid #dce3d4; border-radius:9px; padding:22px; margin:24px 0; background:#fafbf7; }
+.chart-heading { display:flex; justify-content:space-between; align-items:center; gap:15px; }
+.chart-heading h2 { font-size:21px; letter-spacing:-.7px; margin:5px 0 10px; }
+.chart-heading select { padding:9px; font-size:10px; }
+.chart-legend { display:flex; flex-wrap:wrap; gap:16px; margin:12px 0 0; font-size:11px; font-variant-numeric:tabular-nums; }
+.chart-legend span { display:flex; gap:6px; align-items:center; }
+.chart-legend i { width:18px; height:3px; background:currentColor; }
+.points-chart { width:100%; height:auto; display:block; margin:10px 0; overflow:visible; }
+.chart-grid { stroke:#e1e6d9; stroke-width:1; }
+.chart-label { fill:#758268; font-size:11px; font-family:inherit; }
+.chart-line { stroke:currentColor; stroke-width:2.5; fill:none; }
+.chart-dot { fill:currentColor; stroke:#fafbf7; stroke-width:1; }
+.chart-dot:hover { r:6px; }
+.series-0 { color:#24583d; }
+.series-1 { color:#b16c3b; }
+.series-2 { color:#54788b; }
+.series-3 { color:#8e6997; }
+.partial-line { stroke-dasharray:6 3; }
+.unknown-dot { fill:#fafbf7; stroke:#b18534; stroke-width:2; }
+.chart-data summary { cursor:pointer; color:#24583d; font-size:11px; padding:9px 0; }
+.season-totals { border-top:1px solid #dce3d4; margin-top:16px; padding-top:16px; }
+.season-totals h3 { font-size:12px; font-weight:600; margin:0; }
+.season-total-row { display:grid; grid-template-columns:40px minmax(0,1fr) auto; gap:10px; align-items:center; margin:15px 0 5px; font-size:12px; }
+.season-total-row progress { width:100%; height:7px; accent-color:#708f45; border:0; border-radius:8px; overflow:hidden; background:#e8eddc; }
+.season-total-row progress::-webkit-progress-bar { background:#e8eddc; }
+.season-total-row progress::-webkit-progress-value { background:#708f45; }
+.season-total-row span { font-variant-numeric:tabular-nums; }
+.season-total-row small { grid-column:2/-1; font-size:9px; color:#718063; }
+@media(max-width:1000px) { .h2h-form { grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr); } .h2h-form > button { grid-column:1/-1; justify-self:start; } }
+@media(max-width:520px) { .view-nav { margin-bottom:20px; } #h2h-panel h1 { font-size:29px; } .h2h-form { grid-template-columns:1fr; } .h2h-vs-label { display:none; } .h2h-filters { display:grid; grid-template-columns:1fr 1fr; gap:8px; } .h2h-filters label { min-width:0; } .h2h-filters select { font-size:10px; padding:10px 6px; } .h2h-scoreboard { padding:20px 12px; gap:8px; } .h2h-scoreboard h2 { font-size:15px; } .h2h-score strong { font-size:33px; } .h2h-score small { font-size:8px; } .h2h-scoreboard .eyebrow { font-size:8px; } .surface-choices button { min-width:75px; } .points-charts { padding:15px 10px; } .chart-heading { align-items:flex-start; gap:8px; } .chart-heading h2 { font-size:18px; } .chart-heading select { max-width:140px; font-size:9px; } .chart-heading .eyebrow { font-size:7px; } }
+
+@media(max-width:520px) { .chart-label { font-size:21px; } }
+
+.workspace.h2h-workspace { grid-template-columns:minmax(0,1fr); max-width:1120px; }

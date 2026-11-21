@@ -14,6 +14,7 @@ Dalla cartella del progetto:
 
 ```bash
 python3 -m tennishub import --season 2026 --as-of 2026-11-18
+python3 -m tennishub import --season 2025 --as-of 2026-11-18
 python3 -m tennishub serve
 ```
 
@@ -37,8 +38,10 @@ sono esclusi da Git: un clone del repository richiede una nuova importazione.
 
 I punti ottenuti nella stagione sono distinti dai punti della classifica ATP.
 I valori sconosciuti restano tali e non diventano zero. Con il campione del
-18 novembre 2026 sono calcolabili 1.135 delle 1.186 partecipazioni dei primi 50.
-Le regole dei punti per le stagioni diverse dal 2026 devono ancora essere validate.
+18 novembre 2026 sono calcolabili 1.152 delle 1.186 partecipazioni dei primi 50.
+Le tabelle principali 2025 sono validate; diverse edizioni Challenger e casi
+speciali restano da verificare. Gli anni diversi dal 2025/2026 non hanno ancora
+regole validate.
 La beta non include risultati in diretta.
 
 ## Documentazione
@@ -55,6 +58,6 @@ La beta non include risultati in diretta.
 python3 -m unittest discover -s tests -v
 ```
 
-65 test coprono importazione, calcolo dei punti e API locali.
+80 test coprono importazione, calcolo dei punti e API locali.
 Il controllo DOM facoltativo delle interazioni è descritto nella guida
 all'interfaccia; Node è necessario solo per quel controllo.
