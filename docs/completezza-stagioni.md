@@ -48,3 +48,9 @@ l'intera stagione. Revisione, URL e limiti sono nel registro
 python3 -m tennishub completeness --from-season 2016 --to-season 2026
 python3 -m tennishub completeness --from-season 2016 --to-season 2026 --json
 ```
+
+## Esito del primo censimento
+
+Confermata una partecipazione assente: Fery, qualificazioni di Canberra, 3 punti.
+Le 1.186 partecipazioni note non rappresentano quindi l'intero inventario del campione.
+Vedi [controlli e lacune riscontrate](censimento-2026.md).

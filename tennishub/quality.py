@@ -20,7 +20,9 @@ def inventory_status(snapshot, reviews=None):
                 and review.get("cohort_size") == json.loads(snapshot["summary_json"])["selected_players"]
                 and review.get("ranking_date") == snapshot["ranking_date"])
     return {"verified": verified, "itf_status": review.get("itf_status", "not_integrated_or_reconciled"),
-            "itf_source": review.get("itf_source"), "notes": review.get("notes", "Inventario completo dei tornei non ancora riconciliato con una fonte indipendente.")}
+            "itf_source": review.get("itf_source"),
+            "qualifying_status": review.get("qualifying_status", "not_reconciled"),
+            "confirmed_missing_participations": review.get("confirmed_missing_participations", []) if review.get("census_import_id") == snapshot["id"] else [], "notes": review.get("notes", "Inventario completo dei tornei non ancora riconciliato con una fonte indipendente.")}
 
 
 def assess_season(connection, year, reviews=None):

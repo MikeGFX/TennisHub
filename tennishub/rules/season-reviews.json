@@ -13,7 +13,47 @@
         "cohort_exact_name_matches": 0,
         "status": "Esaminata una copia parziale. Zero corrispondenze esatte dei 50 non prova assenza di altri tornei ITF nella stagione."
       },
-      "notes": "I punti calcolati coprono le partecipazioni registrate, non certificano un inventario completo di tornei. Dati app al 18 novembre 2026; Finals ancora in corso."
+      "notes": "Censimento aperto: qualificazioni Challenger non importate; confermata la partecipazione mancante di Fery a Canberra (3 punti). ITF/Futures non riconciliati. Dati app al 18 novembre 2026; Finals provvisorie.",
+      "qualifying_status": "challenger_qualifying_not_imported",
+      "census_import_id": "e1e0d3d2be24788e94b3999dd575a02eb3fea20fd4e2f6e5293c3d791e0c3846",
+      "confirmed_missing_participations": [
+        {
+          "player_id": "F0DM",
+          "player_name": "Arthur Fery",
+          "edition_id": "2026-7393",
+          "event": "Canberra",
+          "stage": "qualifying",
+          "placement": "Q2",
+          "earned_points": 3,
+          "matches": [
+            {
+              "round": "Q1",
+              "opponent": "Daniel Jovanovski",
+              "outcome": "W",
+              "score": "3-6 6-4 6-0"
+            },
+            {
+              "round": "Q2",
+              "opponent": "Rafael Jodar",
+              "outcome": "L",
+              "score_winner_first": "6-3 3-2 RET"
+            }
+          ],
+          "source": "https://www.protennislive.com/posting/2026/7393/qs.pdf",
+          "sha256": "49be1bab7e81e8ea436bc5156476c9cbadf1a36c13fc4f6fc58ca0cdbb9ec29c",
+          "verification": "Official final draw extracted and visually inspected; absent from selected local snapshot. Not yet imported."
+        }
+      ],
+      "census_progress": {
+        "checked_on": "2026-11-22",
+        "challenger_main_draws": 238,
+        "challenger_qualifying_draws_imported": 0,
+        "official_qualifying_pdfs_read": 10,
+        "official_qualifying_pdfs_pending": 228,
+        "ta_player_pages_compared": 3,
+        "ta_player_pages_pending": 47,
+        "rate_limits": "HTTP 429 from Tennis Abstract and ProTennisLive; requests stopped, cached results retained."
+      }
     }
   }
 }

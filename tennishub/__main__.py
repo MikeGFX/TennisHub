@@ -51,6 +51,9 @@ def main(argv=None):
     review.add_argument("--from-season", type=int, default=2016)
     review.add_argument("--to-season", type=int, default=2026)
     review.add_argument("--json", action="store_true")
+    inventory = commands.add_parser("inventory", help="Censimento strutturale in sola lettura dei tabelloni")
+    inventory.add_argument("--season", type=int, default=2026)
+    inventory.add_argument("--json", action="store_true")
     web = commands.add_parser("serve", help="Apri l'interfaccia locale nel browser")
     web.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
@@ -98,6 +101,17 @@ def main(argv=None):
                         print(f"{event['name']:<35} {event['placement']:<35} {points:>14}")
                     print("Riepilogo:", json.dumps(result["summary"], ensure_ascii=False))
                     print("Punti ottenuti calcolati; il subtotale esclude i valori da verificare. Non e' il ranking ATP.")
+            elif args.command == "inventory":
+                from .inventory import census
+                result = census(connection, args.season)
+                if args.json:
+                    print(json.dumps(result, ensure_ascii=False, indent=2))
+                else:
+                    print("Censimento strutturale: non certifica la completezza dei tornei.")
+                    for item in result["draws"]:
+                        print(f"{item['category']} {item['stage']}: {item['count']} tabelloni")
+                    print("Tabelloni principali senza qualificazioni registrate:", len(result["main_draws_without_qualifying_records"]))
+                    print("Conteggi da verificare sui tabelloni ufficiali:", len(result["closed_draw_count_anomalies"]))
             elif args.command == "completeness":
                 from .quality import assess_range
                 result = assess_range(connection, args.from_season, args.to_season)

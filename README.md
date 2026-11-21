@@ -58,6 +58,7 @@ python3 -m tennishub completeness --from-season 2016 --to-season 2026
 - [Importazione, fonti, cache e storico](docs/importazione-locale.md)
 - [Calcolo dei punti e limiti di copertura](docs/calcolo-punti.md)
 - [Avanzamento delle stagioni 2016-2026](docs/completezza-stagioni.md)
+- [Primo censimento 2026: lacune confermate](docs/censimento-2026.md)
 - [Verifica iniziale di Zverev 2026](docs/verifica-dati-zverev-2026.md)
 - [Prossime funzionalità e percorso Android](docs/roadmap.md)
 
@@ -67,7 +68,7 @@ python3 -m tennishub completeness --from-season 2016 --to-season 2026
 python3 -m unittest discover -s tests -v
 ```
 
-115 test coprono importazione, calcolo dei punti e API locali.
+122 test coprono importazione, calcolo dei punti e API locali.
 Il controllo DOM facoltativo delle interazioni è descritto nella guida
 all'interfaccia; Node è necessario solo per quel controllo.
 
