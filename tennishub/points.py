@@ -5,14 +5,16 @@ Le informazioni mancanti producono un valore sconosciuto, mai uno zero implicito
 """
 
 import json
+import re
 from dataclasses import dataclass, field
+from decimal import Decimal, InvalidOperation
 from functools import lru_cache
 from pathlib import Path
 
 RULES_URL = "https://www.itftennis.com/media/15608/atp-2026-points-table.pdf"
 UNITED_URL = "https://www.atptour.com/-/media/0030c0c028734686b55efd45fe463926.pdf"
 FINALS_URL = "https://www.nittoatpfinals.com/en/event/points-and-prize-money"
-ENGINE_VERSION = "2026.3"
+ENGINE_VERSION = "2026.4"
 RULES_2025_URL = "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf"
 WALKOVER_URL = "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-10_exhibits_27apr26.pdf"
 ROUND_ORDER = {r: i for i, r in enumerate(("Q1", "Q2", "Q3", "RR", "R128", "R64", "R32", "R16", "QF", "SF", "F"))}
@@ -55,6 +57,38 @@ def challenger_editions():
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+@lru_cache(maxsize=None)
+def evidence_file(name):
+    return json.loads((Path(__file__).with_name("rules") / name).read_text(encoding="utf-8"))
+
+
+def _seed_number(value):
+    try:
+        number = Decimal(str(value))
+        return int(number) if number.is_finite() and number == number.to_integral_value() and number > 0 else None
+    except (InvalidOperation, ValueError):
+        return None
+
+
+def _united_cup_2026(rows, player_id):
+    evidence = evidence_file("united-cup-2026.json")
+    table = {"RR": (55,45,40,35,25,20,15), "QF": (80,65,55,40,35,25,20),
+             "SF": (130,105,90,60,40,35,25), "F": (180,140,120,90,60,40,35)}
+    sources = [evidence["rule_source"], evidence["ranking_source"]]
+    total = 0
+    for row in rows:
+        if not _winner(row, player_id):
+            continue
+        rank = evidence["rankings"].get(row["loser_id"])
+        if row["round"] not in table or rank is None:
+            return PointsResult(reason="United Cup: ranking congelato o turno non verificato.", sources=sources)
+        index = next(i for i, upper in enumerate((10,20,30,50,100,250,float("inf"))) if rank <= upper)
+        if "W/O" in row["score"].upper():
+            return PointsResult(reason="United Cup: verificare che altri incontri della sfida siano stati giocati prima di assegnare punti al walkover.", sources=sources)
+        total += table[row["round"]][index]
+    return PointsResult(total, "United Cup: tabella 4.03 K e ranking congelato al 29 dicembre 2025.", total, 0, sources)
+
+
 def _entry(row, player_id):
     return row.get("winner_entry" if row["winner_id"] == player_id else "loser_entry", "").upper()
 
@@ -82,10 +116,10 @@ def _rule(sample, edition_metadata):
     return None
 
 
-def _qualifying_bonus(rows, main, rule, player_id):
+def _qualifying_bonus(rows, main, rule, player_id, allow_lucky_loser=False):
     """Restituisce (valore, spiegazione); il valore manca se la prova e' incompleta."""
     entries = {_entry(row, player_id) for row in main} - {""}
-    if "LL" in entries:
+    if "LL" in entries and not allow_lucky_loser:
         return None, "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
     if any(row["round"] not in {"Q1", "Q2", "Q3"} for row in rows):
         return None, "Turno anomalo nel file delle qualificazioni."
@@ -97,8 +131,13 @@ def _qualifying_bonus(rows, main, rule, player_id):
         return None, "Piu' sconfitte nelle qualificazioni della stessa edizione."
     won_qualifying = any(row["round"] == last_round and _winner(row, player_id) for row in rows)
     if main:
-        if losses:
-            return None, "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
+        if losses or "LL" in entries:
+            if not allow_lucky_loser:
+                return None, "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
+            if "Q" in entries or won_qualifying or not losses:
+                return None, "Lucky loser: percorso qualificazioni mancante o incoerente."
+            value, explanation = _qualifying_bonus(rows, [], rule, player_id)
+            return value, "Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. " + explanation
         if "Q" in entries or won_qualifying:
             return QUALIFYING[rule][0], "Bonus qualificato aggiunto una sola volta."
         if rows:
@@ -140,23 +179,25 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
     # Il vincitore di un walkover nel main draw avanza per i punti come da Exhibit K.
     # Ritiri prima del proprio match e risultati amministrativi restano da verificare.
     safe_walkovers = [row for row in main if "W/O" in row["score"].upper() and _winner(row, player_id)] if season == 2026 else []
+    edition_evidence = evidence_file("edition-evidence.json").get(edition_id, {})
+    sanction = edition_evidence.get("disciplinary_defaults", {}).get(player_id)
+    if sanction and sanction.get("forfeit_event_points") is True:
+        if any(row["loser_id"] == player_id and row["winner_id"] == sanction["opponent_id"] and row["round"] == sanction["round"] and "DEF" in row["score"].upper() for row in main):
+            return PointsResult(0, "Default disciplinare documentato: punti dell evento revocati, regola 8.04 M.", 0, 0, [sanction["rule_source"], sanction["source"]])
+    withdrawal = edition_evidence.get("medical_withdrawals", {}).get(player_id)
+    medical_walkovers = [row for row in rows if "W/O" in row["score"].upper() and not _winner(row, player_id)] if withdrawal else []
+    if medical_walkovers and not any(row["score"].strip() and not any(code in row["score"].upper() for code in ("W/O", "DEF", "ABN", "BYE")) for row in rows):
+        return PointsResult(reason="Ritiro medico prima di un incontro giocato: verificare punti e percorso.", sources=[rules_url, withdrawal["source"]])
+    default_wins = [row for row in main if "DEF" in row["score"].upper() and _winner(row, player_id)
+                    and re.search(r"\d+-\d+", row["score"])] if season == 2026 else []
+    allowed_special = safe_walkovers + medical_walkovers + default_wins
     if any(not row["score"].strip() or any(code in row["score"].upper() for code in ("W/O", "DEF", "ABN", "BYE"))
-           for row in rows if not any(row is safe for safe in safe_walkovers)):
+           for row in rows if not any(row is safe for safe in allowed_special)):
         return PointsResult(reason="Walkover perso, risultato speciale o non concluso: verifica necessaria.", sources=[rules_url])
     if edition_id == f"{season}-9900":
         if season != 2026:
             return PointsResult(reason="United Cup: ranking congelato e regole dell'edizione da verificare.", sources=[rules_url])
-        # GJ37 e' nella fascia 21-30 sia al 22 sia al 29 dicembre 2025.
-        # I documenti ufficiali consultati differiscono sulla data di congelamento;
-        # non si applica il ranking del match agli avversari non ancora verificati.
-        total = 0
-        for row in main:
-            if not _winner(row, player_id):
-                continue
-            if row["loser_id"] != "GJ37" or row["round"] != "RR":
-                return PointsResult(reason="United Cup: ranking congelato o turno ancora da verificare.", sources=[UNITED_URL])
-            total += 40
-        return PointsResult(total, "United Cup: vittorie con fascia avversario verificata.", total, 0, [UNITED_URL])
+        return _united_cup_2026(main, player_id)
     if category == "F":
         if any(row["round"] not in {"RR", "SF", "F"} for row in main):
             return PointsResult(reason="Turno Finals sconosciuto.", sources=[rules_url])
@@ -167,9 +208,11 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
     if rule is None:
         return PointsResult(reason="Livello dell'edizione Challenger o formato del tabellone non verificato.", sources=[rules_url])
     sources = [rules_url] + ([metadata["source"]] if category == "C" else [])
-    if safe_walkovers:
+    if safe_walkovers or default_wins:
         sources.append(WALKOVER_URL)
-    bonus, bonus_reason = _qualifying_bonus(qualifying, main, rule, player_id)
+    if medical_walkovers:
+        sources.append(withdrawal["source"])
+    bonus, bonus_reason = _qualifying_bonus(qualifying, main, rule, player_id, allow_lucky_loser=season == 2026)
     if bonus is None:
         return PointsResult(reason=bonus_reason, sources=sources)
     if not main:
@@ -193,8 +236,15 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
             first_round = "R" + str(bracket)
             second_round = "R" + str(bracket // 2)
             if points_round == second_round and bracket > draw:
-                seed = last.get("loser_seed", "")
-                if not seed.isdigit() or not 1 <= int(seed) <= bracket - draw:
+                seed = _seed_number(last.get("loser_seed", ""))
+                bye_confirmed = seed is not None and 1 <= seed <= bracket - draw
+                if not bye_confirmed:
+                    verified = edition_evidence.get("confirmed_byes", {}).get(player_id)
+                    if verified:
+                        seed = verified.get("seed")
+                        bye_confirmed = verified.get("confirmed") is True or seed is not None and 1 <= seed <= bracket - draw
+                        sources.append(verified["source"])
+                if not bye_confirmed:
                     return PointsResult(reason="Possibile bye o turno mancante: verificare il tabellone.", qualifying=bonus, sources=sources)
                 points_round, reason = first_round, "Sconfitta al debutto dopo bye: punti del primo turno."
             if _entry(last, player_id) == "WC" and category in {"G", "M"} and points_round == first_round:
@@ -202,6 +252,10 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
         if points_round not in table:
             return PointsResult(reason="Turno non presente nella tabella punti.", qualifying=bonus, sources=sources)
         base = table[points_round]
+    if medical_walkovers:
+        reason += " Ritiro medico documentato dopo incontri giocati."
+    if default_wins:
+        reason += " Vittoria per default ad incontro iniziato."
     if safe_walkovers:
         reason += " Avanzamento per walkover vinto incluso secondo Exhibit K."
     return PointsResult(base + bonus, reason + " " + bonus_reason, base, bonus, sources)

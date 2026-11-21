@@ -4,11 +4,11 @@ import json
 from collections import Counter
 
 from .database import latest_import
+from .results import match_was_played
 from .importer import search_key
 from .queries import resolve_player, season
 
 SURFACES = ("Hard", "Clay", "Grass", "Carpet", "Unknown")
-UNPLAYED = ("W/O", "DEF", "ABN", "BYE")
 
 
 def archive_years(connection):
@@ -48,7 +48,7 @@ def head_to_head(connection, first, second, year=None, surface="all", stage="all
             if stage != "all" and row["stage"] != stage:
                 continue
             raw = json.loads(row["raw_json"])
-            counted = bool(row["score"].strip()) and not any(code in row["score"].upper() for code in UNPLAYED)
+            counted = match_was_played(row["score"])
             matches.append({"key": row["match_key"], "year": value, "date": row["match_date"],
                             "tournament": row["name"], "category": row["category"],
                             "surface": row["surface"] if row["surface"] in SURFACES else "Unknown",

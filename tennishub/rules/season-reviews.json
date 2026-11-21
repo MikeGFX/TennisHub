@@ -1,0 +1,19 @@
+{
+  "scope": "singolare dei 50 giocatori selezionati, tutti i tornei con punti ATP inclusi ITF/Futures",
+  "seasons": {
+    "2026": {
+      "inventory_verified": false,
+      "itf_status": "partial_external_snapshot_not_integrated",
+      "itf_source": {
+        "url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/8ac86f7c62889b5d5c4cfec4c6403edcb8c5d993/atp/atp_matches_futures_2026.csv",
+        "snapshot": "8ac86f7c62889b5d5c4cfec4c6403edcb8c5d993",
+        "sha256": "f571907c3e884bc2046261e911ddf35ed1e803d5ea8bff164391a59829b9d107",
+        "records": 6894,
+        "latest_observed_tournament_date": "2026-06-01",
+        "cohort_exact_name_matches": 0,
+        "status": "Esaminata una copia parziale. Zero corrispondenze esatte dei 50 non prova assenza di altri tornei ITF nella stagione."
+      },
+      "notes": "I punti calcolati coprono le partecipazioni registrate, non certificano un inventario completo di tornei. Dati app al 18 novembre 2026; Finals ancora in corso."
+    }
+  }
+}

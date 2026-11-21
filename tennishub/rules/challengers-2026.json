@@ -1,37 +1,184 @@
 {
-  "2026-7393": {"name": "Canberra", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-2205": {"name": "Noumea", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-2831": {"name": "Oeiras 1", "level": 100, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-9635": {"name": "Manama", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-6239": {"name": "Quimper", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-9452": {"name": "Concepcion", "level": 100, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-9623": {"name": "Tenerife 1", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-2839": {"name": "Tenerife 2", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-9162": {"name": "Pau", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-7874": {"name": "Lille", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-2913": {"name": "Kigali", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"},
-  "2026-2915": {"name": "Kigali 2", "level": 100, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-2975": {"name": "Cap Cana", "level": 175, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-9167": {"name": "Phoenix", "level": 175, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-9472": {"name": "Zadar", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-2955": {"name": "Alicante", "level": 100, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-2989": {"name": "Monza", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-9687": {"name": "Madrid", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-9514": {"name": "Oeiras", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-2151": {"name": "Rome", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"},
-  "2026-7009": {"name": "Aix-en-Provence", "level": 175, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"},
-  "2026-2861": {"name": "Cagliari", "level": 175, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"},
-  "2026-3824": {"name": "Bordeaux", "level": 175, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"},
-  "2026-2823": {"name": "Valencia", "level": 175, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"},
-  "2026-9500": {"name": "Zagreb", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"},
-  "2026-4940": {"name": "Birmingham", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"},
-  "2026-9001": {"name": "Perugia", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"},
-  "2026-9005": {"name": "Ilkley", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-11-february-2026.pdf"},
-  "2026-7536": {"name": "Lyon", "level": 100, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-11-february-2026.pdf"},
-  "2026-9835": {"name": "Parma", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-11-february-2026.pdf"},
-  "2026-7740": {"name": "Nottingham", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-11-february-2026.pdf"},
-  "2026-315": {"name": "Newport", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-jun-2026.pdf"},
-  "2026-877": {"name": "Granby", "level": 75, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-jun-2026.pdf"},
-  "2026-3009": {"name": "Cancun", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-jun-2026.pdf"},
-  "2026-3103": {"name": "Quebec City", "level": 125, "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-jun-2026.pdf"}
+  "2026-7393": {
+    "name": "Canberra",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-2205": {
+    "name": "Noumea",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-2831": {
+    "name": "Oeiras 1",
+    "level": 100,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-9635": {
+    "name": "Manama",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-6239": {
+    "name": "Quimper",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-9452": {
+    "name": "Concepcion",
+    "level": 100,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-9623": {
+    "name": "Tenerife 1",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-2839": {
+    "name": "Tenerife 2",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-9162": {
+    "name": "Pau",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-7874": {
+    "name": "Lille",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-2913": {
+    "name": "Kigali",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-7-april-2026-updated.pdf"
+  },
+  "2026-2915": {
+    "name": "Kigali 2",
+    "level": 100,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-2975": {
+    "name": "Cap Cana",
+    "level": 175,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-9167": {
+    "name": "Phoenix",
+    "level": 175,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-9472": {
+    "name": "Zadar",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-2955": {
+    "name": "Alicante",
+    "level": 100,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-2989": {
+    "name": "Monza",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-9687": {
+    "name": "Madrid",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-9514": {
+    "name": "Oeiras",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-2151": {
+    "name": "Rome",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-10-may-2026.pdf"
+  },
+  "2026-7009": {
+    "name": "Aix-en-Provence",
+    "level": 175,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"
+  },
+  "2026-2861": {
+    "name": "Cagliari",
+    "level": 175,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"
+  },
+  "2026-3824": {
+    "name": "Bordeaux",
+    "level": 175,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"
+  },
+  "2026-2823": {
+    "name": "Valencia",
+    "level": 175,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"
+  },
+  "2026-9500": {
+    "name": "Zagreb",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"
+  },
+  "2026-4940": {
+    "name": "Birmingham",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"
+  },
+  "2026-9001": {
+    "name": "Perugia",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-27-february-2026.pdf"
+  },
+  "2026-9005": {
+    "name": "Ilkley",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-11-february-2026.pdf"
+  },
+  "2026-7536": {
+    "name": "Lyon",
+    "level": 100,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-11-february-2026.pdf"
+  },
+  "2026-9835": {
+    "name": "Parma",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-11-february-2026.pdf"
+  },
+  "2026-7740": {
+    "name": "Nottingham",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-11-february-2026.pdf"
+  },
+  "2026-315": {
+    "name": "Newport",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-jun-2026.pdf"
+  },
+  "2026-877": {
+    "name": "Granby",
+    "level": 75,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-jun-2026.pdf"
+  },
+  "2026-3009": {
+    "name": "Cancun",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-jun-2026.pdf"
+  },
+  "2026-3103": {
+    "name": "Quebec City",
+    "level": 125,
+    "source": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-jun-2026.pdf"
+  },
+  "2026-2883": {
+    "name": "Bloomfield Hills",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2026/2883/mds.pdf",
+    "source_sha256": "e12c7586243111f49c785c233a1c1e4aa8315da6d3abc638573c887dbab739c9",
+    "note": "Tabellone ufficiale rilasciato il 26 luglio 2026: Challenger 125, 125 punti al vincitore."
+  }
 }

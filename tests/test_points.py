@@ -74,11 +74,11 @@ class PointsTests(unittest.TestCase):
 
     def test_lucky_loser_does_not_receive_qualifier_bonus_automatically(self):
         rows = [match(round="Q1", won=True, stage="qualifying"), match(round="Q2", stage="qualifying"), match(loser_entry="LL")]
-        self.assertIsNone(self.points(rows).value)
+        self.assertEqual((self.points(rows).value, self.points(rows).qualifying), (7, 7))
 
-    def test_qualifying_defeat_followed_by_unmarked_main_entry_needs_review(self):
+    def test_qualifying_defeat_followed_by_unmarked_main_entry_is_recognized(self):
         rows = [match(round="Q1", stage="qualifying"), match()]
-        self.assertIsNone(self.points(rows).value)
+        self.assertEqual(self.points(rows).value, 0)
 
     def test_anomalous_main_draw_round_in_qualifying_file_stays_unknown(self):
         self.assertIsNone(self.points([match(round="R128", stage="qualifying")]).value)
@@ -141,6 +141,67 @@ class PointsTests(unittest.TestCase):
 
     def test_year_cannot_be_applied_to_a_different_edition(self):
         self.assertIsNone(self.points([match()], season=2025).value)
+
+    def test_united_cup_uses_frozen_rank_for_all_stages(self):
+        for round, expected in (("RR", 55), ("QF", 80), ("SF", 130), ("F", 180)):
+            result = self.points([match(round=round, won=True, level="A", tourney_id="2026-9900", loser_id="Z355")])
+            self.assertEqual(result.value, expected)
+            self.assertIn("2025-12-29", result.sources[1])
+
+    def test_united_cup_missing_frozen_rank_stays_unknown(self):
+        self.assertIsNone(self.points([match(round="RR", won=True, level="A", tourney_id="2026-9900", loser_id="UNKNOWN")]).value)
+
+    def test_united_cup_2025_is_not_assigned_2026_rankings(self):
+        self.assertIsNone(self.points([match(round="RR", won=True, level="A", tourney_id="2025-9900", loser_id="Z355")], season=2025).value)
+
+    def test_united_cup_walkover_needs_evidence_that_the_tie_was_played(self):
+        self.assertIsNone(self.points([match(round="RR", won=True, level="A", score="W/O", tourney_id="2026-9900", loser_id="Z355")]).value)
+
+    def test_seed_decimal_integral_is_valid_but_fractional_is_not(self):
+        self.assertEqual(self.points([match(round="R16", loser_seed="1.0")]).value, 0)
+        for seed in ("1.5", "NaN", "inf", ""):
+            self.assertIsNone(self.points([match(round="R16", loser_seed=seed)]).value)
+
+    def test_lucky_loser_slam_regression_qualifying_plus_main(self):
+        rows = [match(round=r, won=r!="Q3", stage="qualifying", level="G", draw="128") for r in ("Q1","Q2","Q3")]
+        rows += [match(round="R128", level="G", draw="128", loser_entry="LL")]
+        result = self.points(rows)
+        self.assertEqual((result.value,result.qualifying,result.main_draw), (26,16,10))
+
+    def test_lucky_loser_masters_regression_is_not_qualifier_bonus(self):
+        rows = [match(round=r, won=r=="Q1", stage="qualifying", level="M", draw="56") for r in ("Q1","Q2")]
+        rows += [match(round="QF", level="M", draw="56", loser_entry="LL")]
+        result = self.points(rows)
+        self.assertEqual((result.value,result.qualifying,result.main_draw), (216,16,200))
+
+    def test_lucky_loser_without_qualifying_path_is_unknown(self):
+        self.assertIsNone(self.points([match(loser_entry="LL")]).value)
+        rows = [match(round=r, won=True, stage="qualifying") for r in ("Q1","Q2")]
+        self.assertIsNone(self.points(rows+[match(loser_entry="LL")]).value)
+
+    def test_lucky_loser_2025_remains_pending_annual_validation(self):
+        rows = [match(round=r, won=r=="Q1", stage="qualifying", tourney_id="2025-test") for r in ("Q1","Q2")]
+        rows += [match(tourney_id="2025-test",loser_entry="LL")]
+        self.assertIsNone(self.points(rows,season=2025).value)
+
+    def test_documented_lucky_loser_bye_does_not_invent_a_seed(self):
+        rows = [match(round=r, won=r=="Q1", stage="qualifying", level="M", draw="56", winner_id="T0A1" if r=="Q1" else "OTHER", loser_id="OTHER" if r=="Q1" else "T0A1", tourney_id="2026-352") for r in ("Q1","Q2")]
+        rows += [match(round="R32",level="M",draw="56",loser_id="T0A1",tourney_id="2026-352")]
+        result = evaluate_points(rows,"T0A1")
+        self.assertEqual((result.value,result.main_draw,result.qualifying),(26,10,16))
+
+    def test_documented_medical_walkover_preserves_reached_round_points(self):
+        rows = [match(round="R32",won=True,level="500",draw="32",winner_id="A0E2",tourney_id="2026-425"), match(round="R16",score="W/O",level="500",draw="32",loser_id="A0E2",tourney_id="2026-425")]
+        self.assertEqual(evaluate_points(rows,"A0E2").value, 50)
+        self.assertIsNone(evaluate_points(rows[1:],"A0E2").value)
+        self.assertIsNone(self.points([match(round="F",score="W/O")]).value)
+
+    def test_default_winner_keeps_points_but_loser_needs_specific_evidence(self):
+        rows = [match(round="SF",won=True,score="7-5 5-3 DEF"),match(round="F",won=True)]
+        self.assertEqual(self.points(rows).value,250)
+        self.assertIsNone(self.points([match(round="SF",score="7-5 5-3 DEF")]).value)
+        documented = [match(round="SF",score="7-5 5-3 DEF",winner_id="D643",loser_id="MM58",level="500",draw="32",tourney_id="2026-747")]
+        self.assertEqual(evaluate_points(documented,"MM58").value,0)
 
     def test_unverified_year_and_empty_input_remain_unknown(self):
         self.assertIsNone(self.points([match()], season=2024).value)

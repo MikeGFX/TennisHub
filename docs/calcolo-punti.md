@@ -1,4 +1,4 @@
-# Calcolo dei punti ottenuti — motore 2026.3
+# Calcolo dei punti ottenuti — motore 2026.4
 
 Il calcolo e' ora nel modulo `tennishub/points.py`, condiviso dalle query
 dell'app e dallo script di ricerca. Funziona per un identificativo ATP qualsiasi.
@@ -8,11 +8,11 @@ Non applica la selezione dei risultati del ranking e non calcola la Race.
 
 Dati al 18 novembre 2026, primi 50 della classifica del 16 novembre.
 
-| Stato | Motore iniziale | 2026.2 | 2026.3 |
-|---|---:|---:|---:|
-| Partecipazioni con punti calcolabili | 795 | 1.135 | 1.152 |
-| Partecipazioni con punti da verificare | 391 | 51 | 34 |
-| Partecipazioni complessive | 1.186 | 1.186 | 1.186 |
+| Stato | Motore iniziale | 2026.2 | 2026.3 | 2026.4 |
+|---|---:|---:|---:|---:|
+| Partecipazioni con punti calcolabili | 795 | 1.135 | 1.152 | 1.186 |
+| Partecipazioni con punti da verificare | 391 | 51 | 34 | 0 |
+| Partecipazioni complessive | 1.186 | 1.186 | 1.186 | 1.186 |
 
 La copertura misura i casi risolti con regole e dati disponibili; non certifica
 la completezza o la correttezza del database sorgente. Nessun valore gia'
@@ -32,7 +32,7 @@ Su Windows usare `py -3` al posto di `python3`.
 - Masters 1000: main draw a 48/56 e 96 giocatori.
 - ATP 500 e 250: tabelloni a 28/32 e 48 giocatori.
 - Challenger 50, 75, 100, 125 e 175, quando il livello dell'edizione e' verificato.
-  Il registro `tennishub/rules/challengers-2026.json` contiene 35 edizioni 2026
+  Il registro `tennishub/rules/challengers-2026.json` contiene 36 edizioni 2026
   rilevanti per il campione, con l'URL della fonte per ogni voce.
 - Bonus qualificato aggiunto una sola volta ai punti del tabellone principale.
 - Sconfitte Q1/Q2/Q3, quando percorso e formato sono riconoscibili.
@@ -41,8 +41,8 @@ Su Windows usare `py -3` al posto di `python3`.
 - Wild card: zero punti per sconfitta al primo turno Slam/Masters; negli altri
   casi si applica la tabella del torneo.
 - Walkover vinto nel main draw 2026: avanzamento valido per i punti secondo
-  Exhibit K. Sono stati risolti 17 casi; un walkover perso o nelle qualificazioni
-  rimane da verificare. Il walkover non diventa una vittoria nel record degli
+  Exhibit K. Un walkover perso o nelle qualificazioni
+  richiede ulteriori prove specifiche prima di assegnare punti. Il walkover non diventa una vittoria nel record degli
   incontri giocati o negli H2H.
 - Finals: punti per vittoria; gli eventi in corso rimangono provvisori.
 - Davis Cup e Laver Cup: zero punti ATP individuali.
@@ -74,37 +74,43 @@ Un valore non determinabile resta `null` con stato `needs_review`. Zero e
 sconosciuto rimangono distinti nel riepilogo. Il risultato include la versione
 del motore, poiche' i conteggi sono ricalcolati alla lettura senza alterare i dati.
 
-## Casi ancora aperti
+## Risoluzione dei casi 2026
 
-| Motivo | Partecipazioni |
-|---|---:|
-| Walkover perso, risultato speciale o non concluso | 13 |
-| Lucky loser o qualificazioni perse seguite da main draw | 9 |
-| United Cup: ranking congelato o turno da verificare | 9 |
-| Possibile bye con testa di serie o turno mancante | 2 |
-| Livello Challenger non risolto: Bloomfield Hills | 1 |
+Le 34 partecipazioni precedentemente sospese sono ora calcolabili:
 
-I documenti United Cup consultati differiscono sulla data del ranking congelato:
-il [preview ATP](https://www.atptour.com/-/media/0030c0c028734686b55efd45fe463926.pdf)
-indica 22 dicembre 2025, mentre il
-[Rulebook del 14 gennaio 2026, 4.03 K](https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook_14jan26.pdf)
-indica 29 dicembre. Griekspoor resta nella fascia 21-30 in entrambi i casi:
-la vittoria di Zverev vale 40. Il ranking del match non viene applicato agli
-altri avversari senza una verifica del dato congelato.
+- Lucky loser: si sommano i punti effettivi della sconfitta nelle qualificazioni
+  a quelli del tabellone principale, senza assegnare il bonus del qualificato.
+  Blockx Australian Open: 16 + 10 = 26; Borges Parigi: 16 + 200 = 216.
+  I due valori comunicati dall'utente sono riscontri, non override del motore:
+  le schede ATP hanno restituito 403 alla verifica automatica.
+- United Cup: fasce degli avversari congelate al 29 dicembre 2025, secondo
+  il Rulebook del 14 gennaio 2026, sezioni 4.03 K-L. Il ranking del match
+  non sostituisce il ranking congelato.
+- Bye: riscontri nei tabelloni ufficiali; supportate teste di serie espresse
+  come numeri interi decimali e sostituzioni documentate con lucky loser.
+- Ritiri medici prima del match: punti assegnati soltanto con prova specifica
+  del ritiro e di un incontro effettivamente disputato nel percorso.
+- Default: il caso disciplinare documentato di Medvedev a Pechino comporta
+  la perdita dei punti dell'evento. Un default con punteggio resta un incontro
+  giocato; il trattamento dei punti e' distinto dal record degli incontri.
+- Bloomfield Hills: Challenger 125 confermato dal tabellone ufficiale finale,
+  che risolve la discordanza con i calendari precedenti.
 
-Anche il livello di Bloomfield Hills e' discordante tra pagine ufficiali:
-alcune indicano Challenger 100, i calendari aggiornati 125. L'edizione resta
-da verificare; il livello dell'edizione precedente non viene riutilizzato.
+Fonti e dettagli sono conservati nei registri `edition-evidence.json`,
+`united-cup-2026.json`, `challengers-2026.json` e `user-confirmations-2026.json`
+all'interno di `tennishub/rules/`. Le prove sono specifiche per anno ed edizione;
+non si applicano automaticamente alle stagioni precedenti.
 
-## Verifica
+## Limiti e verifica
 
-95 test passati, inclusi: formati dei tabelloni, bye, bonus qualificati,
-qualificazioni perse, wild card, Challenger, valori sconosciuti e audit.
-Zverev conserva i 9.760 punti ottenuti precedentemente calcolati.
+115 test passati. Zverev conserva 9.760 punti, con Finals ancora provvisorie
+nella fotografia del 18 novembre. I risultati speciali senza evidenza sufficiente
+continuano a produrre un valore sconosciuto.
 
-Il confronto con il motore precedente sullo stesso archivio conferma che nessun
-valore gi? calcolato ? cambiato: i 17 risultati risolti erano tutti sconosciuti.
-L'audit locale ? in `.cache/session-audit.json`, escluso da Git.
+Il 100% delle partecipazioni registrate non certifica l'assenza di tornei mancanti.
+Il censimento ITF/Futures e il confronto con una fonte indipendente restano aperti.
+Il comando `completeness` espone separatamente questi controlli; nessuna stagione
+2016-2026 viene attualmente dichiarata completa.
 
 ## Stagione 2025
 

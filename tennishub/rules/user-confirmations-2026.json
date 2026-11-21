@@ -1,0 +1,23 @@
+{
+  "received_on": "2026-11-22",
+  "verification": "user_reported_primary_reference",
+  "note": "Valori comunicati dall utente con riferimento alla scheda ATP, non scaricata automaticamente per risposta 403. Usati come riscontro dei casi di regressione, non come override del calcolo.",
+  "results": [
+    {
+      "player_id": "B0PG",
+      "edition_id": "2026-580",
+      "total": 26,
+      "qualifying": 16,
+      "main_draw": 10,
+      "source": "https://www.atptour.com/en/players/alexander-blockx/b0pg/rankings-breakdown"
+    },
+    {
+      "player_id": "BT72",
+      "edition_id": "2026-352",
+      "total": 216,
+      "qualifying": 16,
+      "main_draw": 200,
+      "source": "https://www.atptour.com/en/players/nuno-borges/bt72/rankings-breakdown"
+    }
+  ]
+}

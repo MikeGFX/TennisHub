@@ -6,6 +6,8 @@ from collections import defaultdict
 from .points import ENGINE_VERSION, LABELS, ROUND_ORDER, PointsResult, evaluate_points
 
 from .database import latest_import
+from .results import match_was_played
+from .quality import inventory_status
 from .importer import search_key
 
 
@@ -67,7 +69,7 @@ def season(connection, player, year):
         if 2020 <= year <= 2022:
             team_editions.add(f"{year}-8888")
         is_team = last["category"] == "D" or edition_id in team_editions
-        played = [row for row in rows if row["score"] and not any(code in row["score"].upper() for code in ("W/O", "DEF", "ABN", "BYE"))]
+        played = [row for row in rows if match_was_played(row["score"])]
         wins = sum(row["winner_id"] == player_id for row in played)
         losses = len(played) - wins
         final_win = last["round"] == "F" and last["winner_id"] == player_id and not is_team
@@ -103,13 +105,13 @@ def season(connection, player, year):
             "points_sources": result.sources,
             "matches": [{"date": row["match_date"], "stage": row["stage"], "round": row["round"],
                          "winner_id": row["winner_id"], "loser_id": row["loser_id"],
-                         "score_winner_first": row["score"], "raw": json.loads(row["raw_json"]),
+                         "score_winner_first": row["score"], "played": match_was_played(row["score"]), "raw": json.loads(row["raw_json"]),
                          "sources": provenances[row["match_key"]]} for row in rows],
         })
     events.sort(key=lambda event: (event["first_recorded_date"], event["id"]))
     return {"player_id": player_id, "player_name": person["name"], "season": year,
             "as_of": snapshot["as_of"], "ranking_date": snapshot["ranking_date"], "import_id": snapshot["id"],
-            "points_engine_version": ENGINE_VERSION,
+            "points_engine_version": ENGINE_VERSION, "inventory": inventory_status(snapshot),
             "summary": {"events": len(events), "matches_recorded": len(records),
                         "wins": sum(event["wins"] for event in events), "losses": sum(event["losses"] for event in events),
                         "titles": sum(event["placement"] == "Vincitore" for event in events),
@@ -128,10 +130,11 @@ def status(connection, year=None):
 def coverage(connection, year):
     roster = players(connection, season=year)
     unresolved, reasons = [], defaultdict(int)
-    total = 0
+    total = provisional = 0
     for player in roster["players"]:
         report = season(connection, player["id"], year)
         total += len(report["events"])
+        provisional += sum(event["provisional"] for event in report["events"])
         for event in report["events"]:
             if event["earned_points"] is None:
                 reasons[event["points_reason"]] += 1
@@ -139,6 +142,6 @@ def coverage(connection, year):
                                    "event_id": event["id"], "event_name": event["name"],
                                    "category": event["category"], "reason": event["points_reason"]})
     return {"season": year, "ranking_date": roster["ranking_date"], "points_engine_version": ENGINE_VERSION,
-            "players": len(roster["players"]), "participations": total,
+            "players": len(roster["players"]), "participations": total, "provisional_events": provisional,
             "calculated": total - len(unresolved), "needs_review": len(unresolved),
             "reasons": dict(sorted(reasons.items())), "unresolved": unresolved}

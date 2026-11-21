@@ -1,0 +1,25 @@
+{
+  "ranking_date": "2025-12-29",
+  "ranking_source": "https://stats.tennismylife.org/api/ranking?date=2025-12-29",
+  "ranking_sha256": "ab2358b68dd1277207c57c8a5baa3c7b63ae154c7b98e5497fd4854a3fe20172",
+  "rule_source": "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook_14jan26.pdf",
+  "rule_section": "4.03 K-L",
+  "rankings": {
+    "AG37": 5,
+    "BU13": 42,
+    "C0E9": 22,
+    "DH58": 7,
+    "FB98": 6,
+    "GJ37": 26,
+    "HB71": 72,
+    "HD68": 128,
+    "M0HU": 99,
+    "M0NI": 19,
+    "MU94": 33,
+    "RC91": 29,
+    "RH16": 12,
+    "W367": 157,
+    "Z355": 3,
+    "Z371": 410
+  }
+}

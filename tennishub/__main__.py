@@ -47,6 +47,10 @@ def main(argv=None):
     audit = commands.add_parser("coverage", help="Copertura del calcolo punti sui primi 50")
     audit.add_argument("--season", type=int, default=2026)
     audit.add_argument("--json", action="store_true")
+    review = commands.add_parser("completeness", help="Verifica separatamente punti e inventario delle stagioni")
+    review.add_argument("--from-season", type=int, default=2016)
+    review.add_argument("--to-season", type=int, default=2026)
+    review.add_argument("--json", action="store_true")
     web = commands.add_parser("serve", help="Apri l'interfaccia locale nel browser")
     web.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
@@ -94,6 +98,19 @@ def main(argv=None):
                         print(f"{event['name']:<35} {event['placement']:<35} {points:>14}")
                     print("Riepilogo:", json.dumps(result["summary"], ensure_ascii=False))
                     print("Punti ottenuti calcolati; il subtotale esclude i valori da verificare. Non e' il ranking ATP.")
+            elif args.command == "completeness":
+                from .quality import assess_range
+                result = assess_range(connection, args.from_season, args.to_season)
+                if args.json:
+                    print(json.dumps(result, ensure_ascii=False, indent=2))
+                else:
+                    print("Punti calcolabili sulle partecipazioni registrate; non e' una certificazione di tutti i tornei.")
+                    for item in result["seasons"]:
+                        if "recorded_participations" in item:
+                            print(f"{item['season']}: {item['calculated']}/{item['recorded_participations']} punti calcolabili; "
+                                  f"{item['needs_review']} da verificare; stagione completa: {'si' if item['complete'] else 'no'}")
+                        else:
+                            print(f"{item['season']}: non importata")
             elif args.command == "coverage":
                 result = queries.coverage(connection, args.season)
                 if not args.json:

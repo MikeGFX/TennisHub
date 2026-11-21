@@ -1,0 +1,120 @@
+{
+  "2026-375": {
+    "confirmed_byes": {
+      "C0E9": {
+        "seed": 2,
+        "source": "https://www.atptour.com/en/news/montpellier-2026-report-thursday",
+        "note": "Seconda testa di serie nel tabellone a 28, eliminata al debutto in R16."
+      }
+    }
+  },
+  "2026-352": {
+    "confirmed_byes": {
+      "T0A1": {
+        "confirmed": true,
+        "source": "https://www.protennislive.com/posting/2026/352/mds.pdf",
+        "source_sha256": "7beadc3bc7c6f664afaee6a87a32bbdd09cfd1309a9cef9e4e64d7af056e9477",
+        "note": "Tirante LL in posizione 33, bye in posizione 34 nel tabellone ufficiale."
+      }
+    },
+    "medical_withdrawals": {
+      "BK40": {
+        "reason": "arm pain",
+        "source": "https://www.skysports.com/tennis/news/13608304/carlos-alcaraz-through-to-rolex-paris-masters-quarter-finals-after-matteo-berrettini-withdraws-injured",
+        "note": "Resoconto della dichiarazione del giocatore, corroborato dal tabellone ufficiale ATP."
+      }
+    }
+  },
+  "2026-425": {
+    "medical_withdrawals": {
+      "A0E2": {
+        "reason": "Right Wrist",
+        "source": "https://www.protennislive.com/posting/2026/425/mds.pdf",
+        "source_sha256": "fb80ee83202e553bf5c471d494f3dca519c5b878213077402574560f77d25f2e"
+      }
+    }
+  },
+  "2026-429": {
+    "medical_withdrawals": {
+      "EA24": {
+        "reason": "Left Calf",
+        "source": "https://www.protennislive.com/posting/2026/429/mds.pdf",
+        "source_sha256": "54ae45c8b5b7b972cd3e2bb7637ab8a181d2891f464fa6823792fcc695e200a5"
+      }
+    }
+  },
+  "2026-339": {
+    "medical_withdrawals": {
+      "A0FC": {
+        "reason": "left ankle",
+        "source": "https://www.protennislive.com/posting/2026/339/qs.pdf",
+        "source_sha256": "895ed2eeb6fdc17dd95a72b238a6623a8e98bf878f6267b01a03304be93c77f7"
+      }
+    }
+  },
+  "2026-422": {
+    "medical_withdrawals": {
+      "F0FV": {
+        "reason": "Abdominals",
+        "source": "https://www.protennislive.com/posting/2026/422/mds.pdf",
+        "source_sha256": "610b3631fbf503a1f3bec1268be59559e2eab93bf7e8b3ab98aadee5573dff8a"
+      }
+    }
+  },
+  "2026-316": {
+    "medical_withdrawals": {
+      "T0A1": {
+        "reason": "Injury",
+        "source": "https://www.protennislive.com/posting/2026/316/mds.pdf",
+        "source_sha256": "f10fe42b9d3768902e8934262e9dbe6419cc91ae9e1dad3a07cf1c45ba32d66a"
+      }
+    }
+  },
+  "2026-495": {
+    "medical_withdrawals": {
+      "GJ37": {
+        "reason": "left hamstring",
+        "source": "https://www.protennislive.com/posting/2026/495/mds.pdf",
+        "source_sha256": "cbd6c09ec174152a12dd40ee60eb2efe773ba57ba7c2d326dc439589a3c6a31e"
+      }
+    }
+  },
+  "2026-520": {
+    "medical_withdrawals": {
+      "A0FC": {
+        "reason": "viral illness",
+        "source": "https://www.atptour.com/en/news/arnaldi-roland-garros-2026-friday-reaction"
+      },
+      "B0PG": {
+        "reason": "ankle injury",
+        "source": "https://www.atptour.com/-/media/38d5b6495c334c34bb08295108c8b64c.pdf"
+      },
+      "VA25": {
+        "reason": "left-foot injury",
+        "source": "https://www.rolandgarros.com/en-us/article/2026-edition-rg-live-thursday-may-28",
+        "corroboration": "https://www.tennismajors.com/roland-garros-news/vacherot-withdraws-from-roland-garros-with-a-foot-injury-he-had-been-signalling-all-week-tabilo-advances-851727.html"
+      }
+    }
+  },
+  "2026-580": {
+    "medical_withdrawals": {
+      "M0NI": {
+        "reason": "abdominal muscle injury",
+        "source": "https://www.atptour.com/en/news/mensik-australian-open-2026-withdrawal"
+      }
+    }
+  },
+  "2026-747": {
+    "disciplinary_defaults": {
+      "MM58": {
+        "opponent_id": "D643",
+        "round": "SF",
+        "forfeit_event_points": true,
+        "source": "https://www.abc.net.au/news/2026-10-06/demon-faces-djokovic-china-final-after-medvedev-disqualified/107231760",
+        "rule_source": "https://www.itftennis.com/media/15604/atp-2026-rulebook.pdf",
+        "rule_section": "8.04 M(iv)-(v)",
+        "note": "Default per palla che colpisce spettatore: persi i punti dell evento. Nessuna applicazione automatica ai default medici."
+      }
+    }
+  }
+}

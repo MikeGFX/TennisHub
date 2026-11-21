@@ -77,6 +77,17 @@ class AnalyticsTests(unittest.TestCase):
         reports = points_history(self.connection, "OUT1")["seasons"]
         self.assertTrue(all(item["events"] == 0 and item["total"] is None for item in reports))
 
+    def test_default_after_play_counts_in_h2h_and_player_record(self):
+        before = head_to_head(self.connection,"Z355","S0AG",year=2026)["summary"]
+        self.load(2026, [*self.main,row(tourney_id="2026-default",round="SF",score="7-5 5-3 DEF")], self.qualifying)
+        after = head_to_head(self.connection,"Z355","S0AG",year=2026)["summary"]
+        self.assertEqual(after["matches"],before["matches"]+1)
+        self.assertEqual(after["first_wins"],before["first_wins"]+1)
+        from tennishub.queries import season
+        match = next(event for event in season(self.connection,"Z355",2026)["events"] if event["id"] == "2026-default")
+        self.assertTrue(match["matches"][0]["played"])
+        self.assertEqual(match["wins"],1)
+
     def test_unvalidated_year_is_unavailable_instead_of_a_zero_total(self):
         self.load(2024, [row(tourney_id="2024-1", tourney_date="20240201", round="F")])
         series = points_history(self.connection, "Z355")["seasons"][0]

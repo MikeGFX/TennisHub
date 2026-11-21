@@ -176,6 +176,7 @@ function renderSeason() {
       <div class="metric metric-featured"><span class="metric-label">${unknown ? "Subtotale punti ottenuti" : "Punti ottenuti"}</span><strong class="metric-value">${totalText}</strong><span class="metric-caption">${unknown ? `${unknown} torne${unknown === 1 ? "o da verificare" : "i da verificare"}` : provisional ? `${formatNumber(provisional)} provvisori inclusi` : "Calcolati per ogni torneo"}</span></div>
     </div>
     <p class="points-note"><span class="note-icon" aria-hidden="true">i</span><span>Punti ottenuti nei tornei, compresi quelli in corso. Il totale può differire dai punti della classifica ATP.${unknown ? " I valori da verificare sono esclusi dal subtotale." : ""}</span></p>
+    ${report.inventory?.verified === false ? '<p class="analytics-note inventory-notice">Completezza dei tornei, inclusi ITF/Futures, ancora da verificare. I totali si riferiscono alle partecipazioni presenti nell’archivio.</p>' : ""}
     ${renderContributions(report)}
     <section aria-labelledby="tournaments-heading"><div class="tournament-heading"><h2 id="tournaments-heading">Il percorso della stagione <span id="event-count" class="count-label"></span></h2><span class="data-date">Dati al ${dateText(report.as_of)}</span></div>
     <div class="filters">
@@ -246,7 +247,7 @@ function renderMatch(match) {
   const raw = match.raw;
   const won = match.winner_id === state.report.player_id;
   const opponent = won ? raw.loser_name : raw.winner_name;
-  const unplayed = /W\/O|DEF|ABN|BYE/i.test(match.score_winner_first);
+  const unplayed = match.played === undefined ? /W\/O|DEF|ABN|BYE/i.test(match.score_winner_first) : !match.played;
   const score = won ? match.score_winner_first : match.score_winner_first.replace(/(\d+)-(\d+)/g, "$2-$1");
   const own = won ? "w_" : "l_", other = won ? "l_" : "w_";
   const statistics = [
