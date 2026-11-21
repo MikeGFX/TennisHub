@@ -37,7 +37,7 @@ non sono scaricabili dal browser.
 - La ricerca seleziona fra i primi 50 della classifica datata indicata nella barra
   laterale; ignora maiuscole e accenti.
 - Il selettore delle stagioni contiene soltanto gli anni già importati. La versione
-  attuale dell'archivio contiene il 2025 e il 2026.
+  attuale dell'archivio contiene le stagioni dal 2007 al 2026.
 - Il riepilogo mostra partecipazioni, vittorie/sconfitte, titoli e punti ottenuti
   nella stagione. I punti del ranking ATP compaiono separatamente sotto il nome.
 - Il grafico mostra i punti calcolabili divisi per categoria. Selezionare una voce
@@ -90,7 +90,7 @@ Disponibilità delle fonti, classifica utilizzata e cache sono descritte nella
 python3 -m unittest discover -s tests -v
 ```
 
-80 test verificano importazione, calcolo dei punti e server HTTP, compresi cambio
+95 test verificano importazione, calcolo dei punti e server HTTP, compresi cambio
 anno, ricerca, errori e accesso in sola lettura. Il controllo DOM facoltativo
 esegue il JavaScript dell'interfaccia contro server e dati reali, provando ricerca,
 filtri, dettagli, orientamento del punteggio, cambio rapido del giocatore,
@@ -120,8 +120,17 @@ sempre visibili: il bilancio del 2025/2026 non ? un H2H completo in carriera.
 
 Nella scheda **Stagione**, il grafico **Andamento dei punti** mostra il cumulato
 ottenuto torneo dopo torneo. Il selettore **Confronta le stagioni** sovrappone gli
-anni importati sul calendario; sotto compare anche il confronto dei subtotali.
+anni con punti calcolabili sul calendario; sotto compare anche il confronto dei
+subtotali. Gli anni senza punti validati sono elencati in una nota, senza linee
+a zero o totali inventati.
 I tornei con punti mancanti sono segnalati con cerchi vuoti e i cumulati parziali
 con linee tratteggiate. La tabella espandibile contiene tutti i valori disponibili.
 Le date sono quelle degli ultimi incontri registrati nelle edizioni: questo non
 ? il grafico del ranking storico n? delle date ufficiali di accredito ATP.
+
+La copertura H2H 2007-2026 contiene principali, qualificazioni e Challenger.
+Aprire **Date e copertura per stagione** per leggere i singoli aggiornamenti.
+La classifica di riferimento rimane quella del 16 novembre 2026 anche quando
+si seleziona una stagione passata: i primi 50 sono lo stesso gruppo di giocatori,
+non la classifica storica di ciascun anno. La ricerca H2H comprende comunque
+anche gli altri giocatori presenti nei file importati.

@@ -50,6 +50,8 @@ async function main() {
   assert.equal(all(".chart-line").length, 2);
   assert.match($(".chart-legend").textContent, /2025/);
   assert.match($(".chart-legend").textContent, /2026/);
+  assert.ok($(".historical-points-notice"));
+  assert.doesNotMatch($("#points-charts").textContent, /\\u[0-9a-f]{4}/i, "Escape Unicode visibili nei grafici");
   assert.doesNotMatch($("#points-charts").textContent, /[?\uFFFD]/, "Caratteri corrotti nei grafici");
   $(".chart-data summary").click();
   assert.equal($(".chart-data").open, true);
@@ -64,6 +66,8 @@ async function main() {
   assert.equal(all(".h2h-score strong")[1].textContent, String(h2h.summary.second_wins));
   assert.match($("#h2h-results").textContent, /2025/);
   assert.doesNotMatch($("#h2h-panel").textContent, /[?\uFFFD]/, "Caratteri corrotti nella vista H2H");
+  assert.doesNotMatch($("#h2h-panel").textContent, /\\u[0-9a-f]{4}/i, "Escape Unicode visibili nella copertura");
+  assert.equal(all(".h2h-coverage li").length, h2h.coverage.length);
   $('[data-h2h-surface="Clay"]').click();
   await until(() => $('[data-h2h-surface="Clay"]')?.getAttribute("aria-pressed") === "true", "filtro superficie H2H");
   const clay = h2h.by_surface.find((item) => item.surface === "Clay");

@@ -58,6 +58,20 @@ La beta non include risultati in diretta.
 python3 -m unittest discover -s tests -v
 ```
 
-80 test coprono importazione, calcolo dei punti e API locali.
+95 test coprono importazione, calcolo dei punti e API locali.
 Il controllo DOM facoltativo delle interazioni è descritto nella guida
 all'interfaccia; Node è necessario solo per quel controllo.
+
+## Storico H2H
+
+Per estendere i confronti con principali, Challenger e qualificazioni dal 2007:
+
+```bash
+python3 -m tennishub import-history --from-season 2007 --to-season 2024 --as-of 2026-11-18 --ranking-date 2026-11-16
+```
+
+La verifica locale comprende ora 20 stagioni, dal 2007 al 2026, e 182.795
+incontri unici nelle fotografie selezionate. La copertura non equivale a un H2H
+ufficiale ATP o all'intera carriera dei giocatori attivi prima del 2007.
+Le regole dei punti anteriori al 2025 restano da validare: i risultati storici
+sono disponibili senza trasformare punti sconosciuti in zeri.

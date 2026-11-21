@@ -11,6 +11,7 @@ from urllib.error import URLError
 from . import queries
 from .database import connect, open_existing
 from .importer import import_bundle
+from .history import import_history
 from .sources import SourceClient, load_bundle
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +27,13 @@ def main(argv=None):
     importer.add_argument("--ranking-date", type=date.fromisoformat)
     importer.add_argument("--cache-dir", type=Path, default=ROOT / ".cache/importer")
     importer.add_argument("--offline", action="store_true")
+    historical = commands.add_parser("import-history", help="Importa un intervallo di stagioni passate per H2H e risultati")
+    historical.add_argument("--from-season", type=int, required=True)
+    historical.add_argument("--to-season", type=int, required=True)
+    historical.add_argument("--as-of", type=date.fromisoformat, required=True)
+    historical.add_argument("--ranking-date", type=date.fromisoformat)
+    historical.add_argument("--cache-dir", type=Path, default=ROOT / ".cache/importer")
+    historical.add_argument("--offline", action="store_true")
     listing = commands.add_parser("players", help="Elenca o cerca i primi 50 importati")
     listing.add_argument("--query", default="")
     listing.add_argument("--season", type=int)
@@ -49,6 +57,14 @@ def main(argv=None):
             if not 1 <= args.port <= 65535:
                 raise ValueError("La porta deve essere compresa tra 1 e 65535.")
             serve(args.db, args.port)
+        elif args.command == "import-history":
+            client = SourceClient(args.cache_dir, args.offline)
+            connection = connect(args.db)
+            result = import_history(connection, client, args.from_season, args.to_season, args.as_of,
+                                    args.ranking_date, progress=lambda item: print(
+                                        f"Stagione {item['season']}: {item['matches']} incontri, "
+                                        + ("gia presente" if item["reused"] else "importata"), file=sys.stderr, flush=True))
+            print(json.dumps(result, ensure_ascii=False, indent=2))
         elif args.command == "import":
             if not 1968 <= args.season <= args.as_of.year:
                 raise ValueError("La stagione deve essere compresa tra 1968 e l'anno della data limite.")

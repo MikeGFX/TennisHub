@@ -9,6 +9,17 @@
   let h2hRequest, h2hSurface = "all", submitted = false, historyRequest, historyData, currentReport;
   let chartMode = "year";
 
+  function yearRanges(values) {
+    const years = [...new Set(values)].sort((a,b) => a-b);
+    const groups = [];
+    for (const year of years) {
+      const last = groups[groups.length-1];
+      if (last && year === last[1]+1) last[1] = year;
+      else groups.push([year,year]);
+    }
+    return groups.map(([first,last]) => first === last ? String(first) : `${first}\u2013${last}`).join(", ");
+  }
+
   async function json(url, signal) {
     const response = await fetch(url, {signal, cache:"no-store"});
     const data = await response.json();
@@ -75,10 +86,15 @@
       const firstTotal = report.by_surface.reduce((sum, row) => sum + row.first_wins, 0);
       const secondTotal = total - firstTotal;
       const chips = [{surface:"all", matches:total, first_wins:firstTotal, second_wins:secondTotal}, ...report.by_surface.filter((row) => row.surface !== "Unknown" || row.matches)];
-      const periods = report.coverage.map((item) => `${item.year} (dati al ${date(item.as_of)})`).join(" · ");
+      const newestDate = report.coverage.map((item) => item.as_of).sort().at(-1);
+      const periods = report.coverage.length === 1
+        ? `${report.coverage[0].year} (dati al ${date(report.coverage[0].as_of)})`
+        : `${yearRanges(report.coverage.map((item) => item.year))} (${report.coverage.length} stagioni; aggiornamento pi\u00f9 recente al ${date(newestDate)})`;
+      const coverageDetails = report.coverage.length > 1 ? `<details class="chart-data h2h-coverage"><summary>Date e copertura per stagione</summary><ul>${report.coverage.map((item) => `<li>${item.year}: dati al ${date(item.as_of)}</li>`).join("")}</ul></details>` : "";
       host.innerHTML = `<div class="h2h-scoreboard"><div><span class="eyebrow">${html(report.first.ioc)}</span><h2>${html(report.first.name)}</h2></div><div class="h2h-score"><strong>${summary.first_wins}</strong><span>–</span><strong>${summary.second_wins}</strong><small>${summary.matches} incontr${summary.matches === 1 ? "o" : "i"} conteggiati</small></div><div><span class="eyebrow">${html(report.second.ioc)}</span><h2>${html(report.second.name)}</h2></div></div>
         <div class="surface-choices" aria-label="Filtra per superficie">${chips.map((row) => `<button type="button" data-h2h-surface="${row.surface}" aria-pressed="${row.surface === h2hSurface}"><span>${surfaceNames[row.surface]}</span><strong>${row.first_wins} – ${row.second_wins}</strong><small>${row.matches} incontri</small></button>`).join("")}</div>
         <p class="analytics-note"><strong>Copertura: ${html(periods)}.</strong> Singolare, inclusi Challenger e qualificazioni se selezionate. È il bilancio dell’archivio disponibile: può differire dall’H2H ufficiale ATP e non copre automaticamente tutta la carriera.</p>
+        ${coverageDetails}
         ${summary.excluded_results ? `<p class="analytics-warning">${summary.excluded_results} risultat${summary.excluded_results === 1 ? "o escluso" : "i esclusi"} dal bilancio: walkover, risultati speciali o punteggio assente. Sono elencati qui sotto.</p>` : ""}
         ${report.matches.length ? `<p class="analytics-note">Punteggi dal punto di vista di ${html(report.first.name)}. Le date sono quelle registrate nella fonte.</p><div class="analytics-table-wrap"><table class="analytics-table"><thead><tr><th>Data</th><th>Torneo / turno</th><th>Superficie</th><th>Vincitore</th><th>Punteggio</th></tr></thead><tbody>${report.matches.map((match) => {
           const won = match.winner_id === report.first.id;
@@ -123,15 +139,20 @@
   function renderCharts() {
     const host = find("#points-charts");
     if (!host || !historyData || !currentReport || historyData.player_id !== currentReport.player_id) return;
-    const series = chartMode === "compare" ? historyData.seasons : historyData.seasons.filter((item) => item.year === currentReport.season);
-    const maximum = Math.max(1,...historyData.seasons.map((item)=>item.known_subtotal));
+    const calculatedSeasons = historyData.seasons.filter((item) => item.calculated_events > 0);
+    const unavailableYears = historyData.seasons.filter((item) => item.calculated_events === 0).map((item) => item.year);
+    const series = chartMode === "compare" ? calculatedSeasons : historyData.seasons.filter((item) => item.year === currentReport.season);
+    const maximum = Math.max(1,...calculatedSeasons.map((item)=>item.known_subtotal));
     host.innerHTML = `<div class="chart-heading"><div><span class="eyebrow">TORNEO DOPO TORNEO</span><h2>Andamento dei punti</h2></div><label><span class="sr-only">Vista del grafico</span><select id="chart-mode"><option value="year">Stagione ${currentReport.season}</option><option value="compare">Confronta le stagioni</option></select></label></div>
       <div class="chart-legend">${series.map((item,index)=>`<span class="series-${index%4}"><i></i>${item.year} · ${item.calculated_events ? number(item.known_subtotal) + (item.unknown_events ? " (subtotale)" : "") : "punti non disponibili"}</span>`).join("")}</div>
       ${chartMarkup(series)}
       <p class="analytics-note">Punti ottenuti nei tornei, non punti della classifica ATP. I valori provvisori sono inclusi. Le date sono quelle degli ultimi incontri registrati nei tornei, non quelle di accredito dei punti.</p>
       ${series.some((item)=>item.unknown_events) ? '<p class="analytics-warning">Le linee tratteggiate mostrano il cumulato dei soli punti calcolabili. I cerchi vuoti segnalano tornei con punti mancanti: non sono zeri.</p>' : ""}
       <details class="chart-data"><summary>Vedi i valori torneo per torneo</summary><div class="analytics-table-wrap"><table class="analytics-table"><thead><tr><th>Anno / data</th><th>Torneo</th><th>Punti ottenuti</th><th>Cumulato calcolabile</th></tr></thead><tbody>${series.flatMap((item)=>item.timeline.map((event)=>`<tr><td>${date(event.date)}</td><td>${html(event.name)}</td><td>${event.earned_points === null ? "Da verificare" : number(event.earned_points)}${event.provisional ? " · provvisori" : ""}</td><td>${number(event.cumulative_known_points)}${event.partial ? " · parziale" : ""}</td></tr>`)).join("")}</tbody></table></div></details>
-      <div class="season-totals"><h3>Punti nelle stagioni importate</h3><p class="analytics-note">Confronto dei totali disponibili, senza sommare stagioni diverse. Ogni anno mostra la propria data di aggiornamento.</p>${historyData.seasons.map((item)=>`<div class="season-total-row"><strong>${item.year}</strong>${item.calculated_events ? `<progress value="${item.known_subtotal}" max="${maximum}" aria-label="Punti calcolabili ${item.year}"></progress>` : '<span class="unavailable-bar" aria-hidden="true">—</span>'}<span>${item.calculated_events ? number(item.known_subtotal) : "Non disponibili"}${item.unknown_events && item.calculated_events ? " (parziale)" : ""}</span><small>${item.calculated_events}/${item.events} tornei calcolati · dati al ${date(item.as_of)}${item.unknown_events ? ` · ${item.unknown_events} da verificare` : ""}</small></div>`).join("")}</div>`;
+      <div class="season-totals"><h3>Punti nelle stagioni importate</h3><p class="analytics-note">Confronto dei totali disponibili, senza sommare stagioni diverse. Ogni anno mostra la propria data di aggiornamento.</p>${calculatedSeasons.map((item)=>`<div class="season-total-row"><strong>${item.year}</strong>${item.calculated_events ? `<progress value="${item.known_subtotal}" max="${maximum}" aria-label="Punti calcolabili ${item.year}"></progress>` : '<span class="unavailable-bar" aria-hidden="true">—</span>'}<span>${item.calculated_events ? number(item.known_subtotal) : "Non disponibili"}${item.unknown_events && item.calculated_events ? " (parziale)" : ""}</span><small>${item.calculated_events}/${item.events} tornei calcolati · dati al ${date(item.as_of)}${item.unknown_events ? ` · ${item.unknown_events} da verificare` : ""}</small></div>`).join("")}</div>`;
+    if (unavailableYears.length) {
+      host.insertAdjacentHTML("beforeend", `<p class="analytics-note historical-points-notice"><strong>${yearRanges(unavailableYears)}:</strong> nessun totale punti calcolabile per questo giocatore. I risultati e gli H2H presenti nell\u2019archivio restano consultabili; le regole dei punti anteriori al 2025 sono ancora da validare.</p>`);
+    }
     find("#chart-mode").value = chartMode;
     find("#chart-mode").addEventListener("change", (event) => { chartMode = event.target.value; renderCharts(); });
   }

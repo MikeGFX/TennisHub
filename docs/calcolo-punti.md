@@ -98,7 +98,7 @@ da verificare; il livello dell'edizione precedente non viene riutilizzato.
 
 ## Verifica
 
-80 test passati, inclusi: formati dei tabelloni, bye, bonus qualificati,
+95 test passati, inclusi: formati dei tabelloni, bye, bonus qualificati,
 qualificazioni perse, wild card, Challenger, valori sconosciuti e audit.
 Zverev conserva i 9.760 punti ottenuti precedentemente calcolati.
 

@@ -3,7 +3,7 @@
 import json
 from collections import defaultdict
 
-from .points import ENGINE_VERSION, LABELS, ROUND_ORDER, evaluate_points
+from .points import ENGINE_VERSION, LABELS, ROUND_ORDER, PointsResult, evaluate_points
 
 from .database import latest_import
 from .importer import search_key
@@ -43,7 +43,7 @@ def season(connection, player, year):
     )
     parameters = (snapshot["id"], player_id, snapshot["id"], player_id)
     records = connection.execute(
-        player_matches + "SELECT m.*, e.name, e.category, e.surface, e.final_recorded "
+        player_matches + "SELECT m.*, e.name, e.category, e.surface, e.final_recorded, e.draw_size AS event_draw_size "
         "FROM player_matches m CROSS JOIN events e WHERE e.import_id=m.import_id AND e.edition_id=m.edition_id AND e.stage=m.stage "
         "ORDER BY m.match_date, m.match_key", parameters).fetchall()
     provenances = defaultdict(list)
@@ -61,7 +61,12 @@ def season(connection, player, year):
         main = [row for row in rows if row["stage"] == "main"]
         primary = main or rows
         last = max(primary, key=lambda row: (ROUND_ORDER.get(row["round"], {"Q1": -3, "Q2": -2, "Q3": -1}.get(row["round"], -99)), row["match_date"]))
-        is_team = last["category"] == "D" or edition_id in {f"{year}-9900", f"{year}-9210"}
+        team_editions = {f"{year}-9900", f"{year}-9210"}
+        if year <= 2012:
+            team_editions.add(f"{year}-615")
+        if 2020 <= year <= 2022:
+            team_editions.add(f"{year}-8888")
+        is_team = last["category"] == "D" or edition_id in team_editions
         played = [row for row in rows if row["score"] and not any(code in row["score"].upper() for code in ("W/O", "DEF", "ABN", "BYE"))]
         wins = sum(row["winner_id"] == player_id for row in played)
         losses = len(played) - wins
@@ -83,10 +88,12 @@ def season(connection, player, year):
         else:
             placement = "In corso: " + last["round"]
         inputs = [{"raw": json.loads(row["raw_json"]), "stage": row["stage"]} for row in rows]
-        result = evaluate_points(inputs, player_id=player_id, season=year)
+        result = (evaluate_points(inputs, player_id=player_id, season=year) if last["event_draw_size"] else
+                  PointsResult(reason="Formato del tabellone discordante nella fonte: punti da verificare.", sources=[]))
         points, reason = result.value, result.reason
         events.append({
             "id": edition_id, "name": last["name"], "category": last["category"], "surface": last["surface"],
+            "competition_type": "team" if is_team else "individual",
             "first_recorded_date": min(row["match_date"] for row in rows),
             "last_recorded_date": max(row["match_date"] for row in rows),
             "placement": placement, "provisional": not known_end and not is_team,

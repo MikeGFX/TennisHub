@@ -86,3 +86,16 @@ storici aggiuntivi per H2H pi? completi e le verifiche delle edizioni Challenger
 2025 e dei casi speciali. Il grafico riguarda i punti ottenuti nei tornei;
 uno storico settimanale dei punti del ranking ATP richiede una serie diversa.
 La prima prova Android resta un passo successivo.
+
+## Storico esteso: 21 novembre 2026
+
+Importate le stagioni 2007-2024, oltre al 2025/2026 gia presenti: 20 anni di
+risultati, 182.795 incontri nelle ultime fotografie. Aggiunto `import-history`
+con riuso delle fonti comuni, verifica preventiva della disponibilita e ripresa
+idempotente. Interfaccia H2H con copertura compatta e dettaglio per anno; grafici
+limitati agli anni con punti calcolabili. La classifica di riferimento e ora
+esplicita anche nelle schede delle stagioni passate.
+
+Il salvataggio GitHub della beta approvata e il commit `54cc8e6`.
+Il prossimo passo proposto resta la prova Android offline su una stagione,
+mentre le regole punti anteriori al 2025 richiedono una validazione dedicata.

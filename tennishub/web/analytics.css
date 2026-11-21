@@ -75,3 +75,7 @@
 @media(max-width:520px) { .chart-label { font-size:21px; } }
 
 .workspace.h2h-workspace { grid-template-columns:minmax(0,1fr); max-width:1120px; }
+
+.player-ranking-note { color:#718063; font-size:10px; margin:7px 0 0; }
+.color-other { --segment:#8e826a; --dot:#8e826a; }
+.h2h-coverage ul { padding-left:18px; font-size:11px; line-height:1.7; color:#66735f; }

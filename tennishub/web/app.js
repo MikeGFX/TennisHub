@@ -4,7 +4,7 @@ const $ = (selector) => document.querySelector(selector);
 const formatNumber = (value) => new Intl.NumberFormat("it-IT", {useGrouping: true}).format(value);
 const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[char]));
 const initials = (name) => name.split(/\s+/).filter(Boolean).filter((word) => word.length > 2).slice(0, 2).map((word) => word[0]).join("").toUpperCase();
-const categoryLabels = {G: "Grand Slam", M: "Masters 1000", "500": "ATP 500", "250": "ATP 250", C: "Challenger", F: "ATP Finals", team: "Squadre"};
+const categoryLabels = {G: "Grand Slam", M: "Masters 1000", "500": "ATP 500", "250": "ATP 250", C: "Challenger", F: "ATP Finals", team: "Squadre", other: "Altri eventi"};
 const countryNames = {GER: "Germania", ITA: "Italia", ESP: "Spagna", USA: "Stati Uniti", FRA: "Francia", AUS: "Australia", GBR: "Gran Bretagna", CAN: "Canada", ARG: "Argentina", BRA: "Brasile", RUS: "Russia", NED: "Paesi Bassi", SRB: "Serbia", CZE: "Cechia", KAZ: "Kazakistan", GRE: "Grecia", NOR: "Norvegia", DEN: "Danimarca", CHI: "Cile", PER: "Perù", BEL: "Belgio", POL: "Polonia", MON: "Monaco", POR: "Portogallo", JPN: "Giappone", CHN: "Cina", CRO: "Croazia", BIH: "Bosnia ed Erzegovina", AUT: "Austria", SUI: "Svizzera", FIN: "Finlandia"};
 const surfaces = {Hard: ["Cemento", "hard"], Clay: ["Terra", "clay"], Grass: ["Erba", "grass"], Carpet: ["Sintetico", "carpet"]};
 const chevron = '<svg class="chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m4 2 4 4-4 4"></path></svg>';
@@ -16,7 +16,7 @@ function dateText(value, options = {day: "numeric", month: "short", year: "numer
   return Number.isNaN(day.getTime()) ? "—" : new Intl.DateTimeFormat("it-IT", options).format(day).replaceAll(".", "");
 }
 
-function kind(event) { return ["A", "D"].includes(event.category) ? "team" : event.category; }
+function kind(event) { return event.competition_type === "team" || event.category === "D" ? "team" : event.category === "A" ? "other" : event.category; }
 function categoryName(event) { return event.category_detail || (event.category === "D" ? "Coppa Davis" : categoryLabels[kind(event)]) || event.category; }
 function announce(text) { $("#app-status").textContent = text; }
 function activePlayer() { return state.players.find((player) => player.id === state.playerId); }
@@ -143,7 +143,7 @@ async function reloadArchive() {
 }
 
 function playerHeading(person) {
-  return `<div class="player-heading"><div><span class="eyebrow">LA STAGIONE ${state.year}</span><h1 id="player-name">${escapeHtml(person.name)}</h1><p class="player-subtitle">${escapeHtml(countryNames[person.ioc] || person.ioc)} <span aria-hidden="true">·</span> N. ${person.rank} ATP <span aria-hidden="true">·</span> ${formatNumber(person.ranking_points)} punti in classifica</p></div><div class="player-heading-avatar" aria-hidden="true">${escapeHtml(initials(person.name))}</div></div>`;
+  return `<div class="player-heading"><div><span class="eyebrow">LA STAGIONE ${state.year}</span><h1 id="player-name">${escapeHtml(person.name)}</h1><p class="player-subtitle">${escapeHtml(countryNames[person.ioc] || person.ioc)} <span aria-hidden="true">·</span> N. ${person.rank} ATP <span aria-hidden="true">·</span> ${formatNumber(person.ranking_points)} punti in classifica</p><p class="player-ranking-note">Classifica di riferimento: ${dateText(state.report?.ranking_date || state.seasons.find((item) => item.year === state.year)?.ranking_date)}</p></div><div class="player-heading-avatar" aria-hidden="true">${escapeHtml(initials(person.name))}</div></div>`;
 }
 
 function renderContributions(report) {
@@ -179,7 +179,7 @@ function renderSeason() {
     ${renderContributions(report)}
     <section aria-labelledby="tournaments-heading"><div class="tournament-heading"><h2 id="tournaments-heading">Il percorso della stagione <span id="event-count" class="count-label"></span></h2><span class="data-date">Dati al ${dateText(report.as_of)}</span></div>
     <div class="filters">
-      <label class="sr-only" for="category-filter">Categoria del torneo</label><select id="category-filter" class="filter-select"><option value="all">Tutte le categorie</option>${["G", "M", "500", "250", "C", "F", "team"].filter((category) => categories.includes(category)).map((category) => `<option value="${category}">${categoryLabels[category]}</option>`).join("")}</select>
+      <label class="sr-only" for="category-filter">Categoria del torneo</label><select id="category-filter" class="filter-select"><option value="all">Tutte le categorie</option>${["G", "M", "500", "250", "C", "F", "team", "other"].filter((category) => categories.includes(category)).map((category) => `<option value="${category}">${categoryLabels[category]}</option>`).join("")}</select>
       <label class="sr-only" for="surface-filter">Superficie</label><select id="surface-filter" class="filter-select"><option value="all">Tutte le superfici</option>${Object.entries(surfaces).filter(([surface]) => report.events.some((event) => event.surface === surface)).map(([surface, [label]]) => `<option value="${surface}">${label}</option>`).join("")}</select>
       ${unknown ? `<button type="button" id="review-filter" class="review-filter" aria-pressed="false">Da verificare · ${unknown}</button>` : ""}
       <label class="sr-only" for="sort-filter">Ordine dei tornei</label><select id="sort-filter" class="filter-select"><option value="recent">Più recenti</option><option value="oldest">Prima i più lontani</option><option value="points">Più punti</option></select>

@@ -1,6 +1,7 @@
 """Importazioni atomiche e idempotenti; nessuna sostituzione silenziosa di conflitti."""
 
 import json
+import re
 import unicodedata
 from collections import defaultdict
 from datetime import datetime
@@ -16,6 +17,25 @@ def search_key(name):
 def prepare(datasets, season, as_of):
     matches, players, events, issues = {}, {}, {}, []
     duplicates = excluded = 0
+    draw_conflicts = set()
+    # Alcuni file storici riutilizzano un ID Davis per sfide fra nazioni diverse.
+    # Separiamo solo questi casi; il tourney_id originale rimane nel JSON della fonte.
+    davis_names = defaultdict(set)
+    for resource in datasets:
+        for _, row in csv_rows(resource):
+            if row["tourney_level"].strip() != "D" or not row["tourney_id"].strip().startswith(str(season) + "-"):
+                continue
+            try:
+                day = datetime.strptime(row["tourney_date"].strip(), "%Y%m%d").date()
+            except ValueError:
+                continue
+            if day <= as_of:
+                davis_names[row["tourney_id"].strip()].add(row["tourney_name"].strip())
+    separable_ties = set()
+    for event_id, names in davis_names.items():
+        pairs = [re.search(r":\s*([A-Z]{3}) vs ([A-Z]{3})$", name) for name in names]
+        if len(names) > 1 and all(pairs) and len({frozenset(pair.groups()) for pair in pairs}) == len(names):
+            separable_ties.add(event_id)
     for resource in datasets:
         stage = "qualifying" if resource.name.startswith("atp_quali/") else "main"
         for line, original in csv_rows(resource):
@@ -40,32 +60,59 @@ def prepare(datasets, season, as_of):
                 continue
             if not row["round"]:
                 issues.append((resource.name, line, "missing_round", "Turno assente: incontro conservato, piazzamento da verificare."))
-            identity = [row["tourney_id"], stage, row["round"], row["winner_id"], row["loser_id"]]
+            edition_id = row["tourney_id"]
+            if row["tourney_level"] == "D" and edition_id in separable_ties:
+                edition_id += "-tie-" + digest(row["tourney_name"].encode("utf-8"))[:12]
+            identity = [edition_id, stage, row["round"], row["winner_id"], row["loser_id"]]
             key = digest(json.dumps(identity).encode())
             if key in matches:
                 previous = matches[key]["raw"]
                 presentation = {"winner_name", "loser_name", "match_num"}
-                if any(previous.get(field) != row.get(field) for field in (previous.keys() | row.keys()) - presentation):
+                differences = {field for field in (previous.keys() | row.keys()) - presentation
+                               if previous.get(field, "") != row.get(field, "")}
+                enrichable = {field for field in differences if field == "minutes" or field.startswith(("w_", "l_"))}
+                if differences - enrichable or any(previous.get(field) and row.get(field) for field in differences):
                     raise ValueError(f"Dati discordanti per lo stesso incontro: {resource.name}:{line}. Importazione annullata.")
-                if previous != row:
+                if differences:
+                    for field in differences:
+                        if not previous.get(field):
+                            previous[field] = row[field]
+                    issues.append((resource.name, line, "duplicate_enrichment", "Statistiche mancanti completate da un duplicato concordante; entrambe le provenienze conservate."))
+                if any(previous.get(field) != row.get(field) for field in presentation):
                     issues.append((resource.name, line, "duplicate_variant", "Stesso incontro e stessi ID con nome o numero riga diversi; provenienze conservate."))
                 matches[key]["sources"].append((resource.name, line))
                 duplicates += 1
                 continue
-            matches[key] = {"raw": row, "stage": stage, "day": str(day), "sources": [(resource.name, line)]}
+            matches[key] = {"raw": row, "edition_id": edition_id, "stage": stage, "day": str(day), "sources": [(resource.name, line)]}
             for side in ("winner", "loser"):
                 player_id = row[side + "_id"]
                 candidate = {"id": player_id, "name": row[side + "_name"],
                              "ioc": row.get(side + "_ioc", ""), "day": str(day)}
                 if player_id not in players or candidate["day"] >= players[player_id]["day"]:
                     players[player_id] = candidate
-            event_key = (row["tourney_id"], stage)
+            event_key = (edition_id, stage)
             metadata = (row["tourney_name"], row["tourney_level"], row["surface"], row["draw_size"])
             if event_key not in events:
+                if edition_id != row["tourney_id"]:
+                    issues.append((resource.name, line, "team_tie_identity", "ID Davis condiviso da sfide diverse: identita locale separata, ID originale conservato."))
                 events[event_key] = {"metadata": metadata, "first": str(day), "last": str(day), "final": False}
             event = events[event_key]
             if event["metadata"] != metadata:
-                raise ValueError(f"Metadati del torneo discordanti: {resource.name}:{line}.")
+                previous_metadata = event["metadata"]
+                same_event = all(previous_metadata[index] == metadata[index] for index in (0, 1, 3))
+                if previous_metadata[0].casefold() == metadata[0].casefold() and previous_metadata[1:] == metadata[1:]:
+                    issues.append((resource.name, line, "event_label_variant", "Nome della stessa edizione con sole maiuscole diverse; etichetta originale conservata nei dati della fonte."))
+                elif same_event and (not previous_metadata[2] or not metadata[2]):
+                    if metadata[2]:
+                        event["metadata"] = metadata
+                    issues.append((resource.name, line, "event_surface_completed", "Superficie assente in alcune righe: usato il valore noto della stessa edizione; dati originali conservati."))
+                elif previous_metadata[:3] == metadata[:3] and previous_metadata[3] != metadata[3]:
+                    event["metadata"] = (*metadata[:3], "")
+                    if event_key not in draw_conflicts:
+                        issues.append((resource.name, line, "draw_size_conflict", "Dimensione tabellone discordante: conservati risultati e valori originali, formato locale sconosciuto e punti da verificare."))
+                        draw_conflicts.add(event_key)
+                else:
+                    raise ValueError(f"Metadati del torneo discordanti: {resource.name}:{line}.")
             event["first"] = min(event["first"], str(day))
             event["last"] = max(event["last"], str(day))
             event["final"] |= row["round"] == "F" and bool(row["score"])
@@ -113,7 +160,7 @@ def import_bundle(connection, season, as_of, ranking_date, rankings, datasets, r
         for key, match in matches.items():
             row = match["raw"]
             connection.execute("INSERT INTO matches VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                               (import_id, key, row["tourney_id"], match["stage"], match["day"], row["round"],
+                               (import_id, key, match["edition_id"], match["stage"], match["day"], row["round"],
                                 row["winner_id"], row["loser_id"], row["score"], json.dumps(row, ensure_ascii=False)))
             connection.executemany("INSERT INTO match_sources VALUES (?, ?, ?, ?)",
                                    [(import_id, key, name, line) for name, line in match["sources"]])

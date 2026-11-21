@@ -149,8 +149,46 @@ sono in una transazione: un errore non lascia un'importazione parziale.
 python3 -m unittest discover -s tests -v
 ```
 
-80 test passati: punti, selezione dei primi 50, idempotenza,
+95 test passati: punti, selezione dei primi 50, idempotenza,
 provenienze, correzioni della fonte, rollback, nomi, cache corrotta, date limite
 e server HTTP locale. La guida all'interfaccia include il controllo DOM facoltativo.
 Controlli SQLite sul database reale: integrita' valida e nessuna violazione
 delle chiavi esterne.
+
+## Intervalli storici per gli H2H
+
+```bash
+python3 -m tennishub import-history --from-season 2007 --to-season 2024 --as-of 2026-11-18 --ranking-date 2026-11-16
+```
+
+Il comando verifica prima che ogni anno abbia principale, Challenger e
+qualificazioni nell'indice. L'indice e la classifica sono letti una sola volta
+per esecuzione. Ogni stagione viene salvata in una transazione separata: in caso
+di errore quelle completate rimangono disponibili. Ripetere lo stesso comando
+riprende il lavoro riutilizzando le fotografie identiche. Aggiungere `--offline`
+per usare solo la cache verificata.
+
+Verifica locale: 2007-2026, 20 stagioni, 182.795 incontri unici nelle ultime
+fotografie. La ripetizione offline dello storico 2007-2024 ha riutilizzato tutte
+le 18 stagioni senza nuove importazioni. SQLite: integrita valida e nessuna
+violazione delle chiavi esterne. Punti e risultati 2026 sono invariati.
+
+Anomalie storiche gestite e registrate nel resoconto di importazione:
+
+- ID Davis riutilizzato per sfide fra nazioni diverse: identita locali separate
+  solo quando le coppie di nazioni sono distinguibili; `tourney_id` originale
+  conservato nei dati della fonte.
+- Superficie assente in alcune righe: usato solo un valore noto della stessa
+  edizione. Due superfici non vuote discordanti restano bloccanti.
+- Duplicati con statistiche mancanti: completati soltanto i campi vuoti quando
+  il resto concorda, preservando zeri e provenienze. Due valori noti discordanti,
+  punteggi diversi o date diverse restano bloccanti.
+- Dimensione tabellone discordante: risultati conservati, formato locale
+  sconosciuto e calcolo punti bloccato per quell'edizione. Sono 10 edizioni
+  storiche nei file 2019, 2021 e 2024; non viene scelta una dimensione a maggioranza.
+- Nomi della stessa edizione con sole maiuscole diverse: etichetta locale stabile
+  e testi originali conservati nelle righe.
+
+Le anomalie sono consultabili con `status --season ANNO`; il resoconto distingue
+anche i giocatori della classifica scelta che non hanno incontri in un anno
+passato. Questo non indica necessariamente un errore: molti erano ancora bambini.
