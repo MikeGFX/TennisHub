@@ -94,6 +94,20 @@
       }
     }
   },
+  "2025-496": {
+    "medical_withdrawals": {
+      "V0DZ": {
+        "reason": "flu (grippe)",
+        "source": "https://www.atptour.com/en/players/luca-van-assche/v0dz/player-activity?matchType=Singles&year=2025&tournament=all",
+        "official_points_record": 32,
+        "checked_on": "2026-11-23",
+        "cause_source": "https://www.tennismajors.com/fr/atp-actualite/tournoi-de-marseille-sonego-en-quarts-de-finale-apres-le-forfait-de-van-assche-761613.html",
+        "draw_source": "https://www.protennislive.com/posting/2025/496/mds.pdf",
+        "draw_source_sha256": "e361d940e51a9b069c2a5a25d8961ee6bd46a92d38ea9983cae6afe7a3e4a312",
+        "note": "Marsiglia 2025: il PDF ufficiale elenca 'L. Van Assche ()' fra i Retirements/W.O. senza causa. La pagina ATP Player Activity riporta Q1 V, Q2 S, R32 V, R16 W/O contro Sonego e 32 punti assegnati, quindi nessuna revoca disciplinare; Tennis Majors (12 febbraio 2025) indica forfait per influenza. Pagina ATP letta nel browser: gli script ricevono 403."
+      }
+    }
+  },
   "2025-506": {
     "medical_withdrawals": {
       "M0EJ": {

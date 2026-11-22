@@ -247,11 +247,15 @@ class PointsTests(unittest.TestCase):
         self.assertIn("https://www.protennislive.com/posting/2025/337/mds.pdf", result.sources)
         self.assertIsNone(evaluate_points(documented[2:], "GJ37", season=2025).value)
 
-    def test_2025_lost_walkover_without_listed_reason_stays_unknown(self):
-        rows = [match(round=r, won=r=="Q1", stage="qualifying", tourney_id="2025-496", winner_id="V0DZ" if r=="Q1" else "OTHER", loser_id="OTHER" if r=="Q1" else "V0DZ") for r in ("Q1","Q2")]
-        rows += [match(round="R32", won=True, tourney_id="2025-496", winner_id="V0DZ", loser_id="OTHER", winner_entry="LL"),
-                 match(round="R16", score="W/O", tourney_id="2025-496", winner_id="OTHER", loser_id="V0DZ", loser_entry="LL")]
-        self.assertIsNone(evaluate_points(rows, "V0DZ", season=2025).value)
+    def test_2025_lucky_loser_walkover_needs_evidence_and_matches_atp_record(self):
+        def path(edition):
+            rows = [match(round=r, won=r=="Q1", stage="qualifying", tourney_id=edition, winner_id="V0DZ" if r=="Q1" else "OTHER", loser_id="OTHER" if r=="Q1" else "V0DZ") for r in ("Q1","Q2")]
+            return rows + [match(round="R32", won=True, tourney_id=edition, winner_id="V0DZ", loser_id="OTHER", winner_entry="LL"),
+                           match(round="R16", score="W/O", tourney_id=edition, winner_id="OTHER", loser_id="V0DZ", loser_entry="LL")]
+        self.assertIsNone(evaluate_points(path("2025-test"), "V0DZ", season=2025).value)
+        result = evaluate_points(path("2025-496"), "V0DZ", season=2025)
+        self.assertEqual((result.value, result.qualifying, result.main_draw), (32, 7, 25))
+        self.assertTrue(any("player-activity" in source for source in result.sources))
 
     def test_documented_2025_byes_resolve_only_listed_players(self):
         for edition, player, round, draw in (("2025-301", "S0S1", "R16", "28"), ("2025-336", "RE44", "R16", "28"),

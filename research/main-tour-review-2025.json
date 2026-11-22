@@ -58,7 +58,7 @@
     },
     "lost_walkover_medical": {
       "cases": 8,
-      "resolved": 7
+      "resolved": 8
     },
     "bye": {
       "cases": 6,
@@ -69,13 +69,13 @@
       "resolved": 7
     }
   },
-  "resolved": 33,
-  "open": 1,
+  "resolved": 34,
+  "open": 0,
   "previously_calculated_values_changed": 0,
   "matches_or_records_changed": 0,
   "notes": [
     "Le prove sono specifiche per edizione e giocatore in tennishub/rules/edition-evidence.json; non si applicano ad altri anni.",
-    "Van Assche, Marsiglia 2025: il PDF ufficiale elenca 'L. Van Assche ()' senza causa del walkover, quindi non si distingue un ritiro medico da una sanzione. Punti lasciati sconosciuti.",
+    "Van Assche, Marsiglia 2025: il PDF ufficiale elenca 'L. Van Assche ()' senza causa. Risolto con la pagina ATP Player Activity (32 punti assegnati, nessuna revoca) e Tennis Majors del 12 febbraio 2025 (forfait per influenza). Il motore calcola 7 + 25 = 32 dalle regole, senza usare il valore ATP come override.",
     "Le pagine ufficiali degli Slam su ProTennisLive non contengono il tabellone ('Tournament Information Not Yet Available'); per Fils al Roland Garros e' usata la notizia ufficiale ATP del ritiro per infortunio.",
     "Winston-Salem 2025: la fonte TML non riporta wild card e testa di serie di Griekspoor (WC e TdS 2 nel PDF). Ininfluente sui punti di un ATP 250.",
     "Risolvere il sottoinsieme prioritario non certifica la stagione 2025: restano incognite Challenger, United Cup e altri eventi."
@@ -97,7 +97,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 330
     },
     {
       "player_id": "S0S1",
@@ -117,7 +118,8 @@
       "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/301/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 0
     },
     {
       "player_id": "S0S1",
@@ -135,7 +137,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 200
     },
     {
       "player_id": "MM58",
@@ -153,7 +156,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 200
     },
     {
       "player_id": "MM58",
@@ -171,7 +175,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 200
     },
     {
       "player_id": "F0F1",
@@ -191,7 +196,8 @@
       "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.atptour.com/en/news/fils-roland-garros-2025-withdrawal"
-      ]
+      ],
+      "atp_player_activity_points": 100
     },
     {
       "player_id": "DH58",
@@ -209,7 +215,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 200
     },
     {
       "player_id": "PL56",
@@ -229,7 +236,8 @@
       "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/807/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 50
     },
     {
       "player_id": "M0NI",
@@ -247,7 +255,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del titolo. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 1000
     },
     {
       "player_id": "M0NI",
@@ -267,7 +276,8 @@
       "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/328/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 50
     },
     {
       "player_id": "AG37",
@@ -285,7 +295,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 200
     },
     {
       "player_id": "RH16",
@@ -305,7 +316,8 @@
       "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/807/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 50
     },
     {
       "player_id": "N0AE",
@@ -323,7 +335,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 50
     },
     {
       "player_id": "C0AU",
@@ -343,7 +356,8 @@
       "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/301/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 0
     },
     {
       "player_id": "RE44",
@@ -363,7 +377,8 @@
       "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/336/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 0
     },
     {
       "player_id": "RE44",
@@ -381,7 +396,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 50
     },
     {
       "player_id": "RE44",
@@ -399,7 +415,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 200
     },
     {
       "player_id": "KE29",
@@ -419,7 +436,8 @@
       "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/336/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 0
     },
     {
       "player_id": "M0EJ",
@@ -439,7 +457,8 @@
       "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/506/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 50
     },
     {
       "player_id": "HB71",
@@ -459,7 +478,8 @@
       "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/440/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 25
     },
     {
       "player_id": "TE30",
@@ -479,7 +499,8 @@
       "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/301/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 0
     },
     {
       "player_id": "V0DZ",
@@ -490,14 +511,17 @@
       "group": "lost_walkover_medical",
       "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
       "before": null,
-      "after": null,
+      "after": 32,
       "breakdown": {
-        "main_draw": null,
-        "qualifying": null
+        "main_draw": 25,
+        "qualifying": 7
       },
-      "status": "needs_review",
-      "reason_now": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
-      "evidence": []
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
+      "evidence": [
+        "https://www.atptour.com/en/players/luca-van-assche/v0dz/player-activity?matchType=Singles&year=2025&tournament=all"
+      ],
+      "atp_player_activity_points": 32
     },
     {
       "player_id": "V812",
@@ -515,7 +539,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 60
     },
     {
       "player_id": "V812",
@@ -533,7 +558,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 63
     },
     {
       "player_id": "V812",
@@ -551,7 +577,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 20
     },
     {
       "player_id": "V812",
@@ -572,7 +599,8 @@
       "evidence": [
         "https://www.protennislive.com/posting/2025/328/mds.pdf",
         "https://www.protennislive.com/posting/2025/328/qs.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 63
     },
     {
       "player_id": "BT72",
@@ -590,7 +618,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 50
     },
     {
       "player_id": "BU13",
@@ -608,7 +637,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 100
     },
     {
       "player_id": "HB64",
@@ -629,7 +659,8 @@
       "evidence": [
         "https://www.protennislive.com/posting/2025/328/mds.pdf",
         "https://www.protennislive.com/posting/2025/328/qs.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 13
     },
     {
       "player_id": "F0FV",
@@ -647,7 +678,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del titolo. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 500
     },
     {
       "player_id": "T0A1",
@@ -665,7 +697,8 @@
       },
       "status": "calculated",
       "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
-      "evidence": []
+      "evidence": [],
+      "atp_player_activity_points": 26
     },
     {
       "player_id": "N0BS",
@@ -686,7 +719,8 @@
       "evidence": [
         "https://www.protennislive.com/posting/2025/422/mds.pdf",
         "https://www.protennislive.com/posting/2025/422/qs.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 20
     },
     {
       "player_id": "GJ37",
@@ -706,7 +740,8 @@
       "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/6242/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 0
     },
     {
       "player_id": "GJ37",
@@ -726,7 +761,17 @@
       "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
       "evidence": [
         "https://www.protennislive.com/posting/2025/337/mds.pdf"
-      ]
+      ],
+      "atp_player_activity_points": 100
     }
-  ]
+  ],
+  "atp_cross_check": {
+    "source": "https://www.atptour.com/en/players/{slug}/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
+    "checked_on": "2026-11-23",
+    "method": "Pagine lette nel browser integrato (gli script ricevono 403); valore 'Points' per torneo confrontato con il motore.",
+    "cases_compared": 34,
+    "matching": 34,
+    "mismatches": [],
+    "note": "Riscontro ufficiale dei punti del torneo, non del ranking. Il valore ATP non sostituisce il calcolo: serve a verificarlo."
+  }
 }

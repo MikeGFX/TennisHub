@@ -120,7 +120,7 @@ Ogni risultato 2025 cita quella fonte, senza assumere che le regole di un altro
 anno siano applicabili. L'edizione deve appartenere all'anno richiesto.
 
 Per i primi 50 selezionati dalla classifica del 16 novembre 2026, l'archivio 2025
-contiene 1.227 partecipazioni: 1.016 calcolabili e 211 da verificare (motore 2026.7;
+contiene 1.227 partecipazioni: 1.017 calcolabili e 210 da verificare (motore 2026.7;
 erano 983 e 244). I livelli delle edizioni Challenger 2025, United Cup e altri casi
 speciali non sono ancora tutti validati. Non si riutilizza il registro delle
 edizioni Challenger 2026.
@@ -149,7 +149,7 @@ Copertura attuale: 1.188/1.188 partecipazioni registrate, inventario non certifi
 
 ## Casi prioritari 2025, motore 2026.7
 
-Risolte 33 delle 34 partecipazioni 2025 del circuito principale ancora aperte.
+Risolte tutte le 34 partecipazioni 2025 del circuito principale ancora aperte.
 Regole lette sui PDF ufficiali ATP 2025, privi di testo e quindi controllati
 visivamente; gli script ricevono 403 e i file sono stati salvati dal browser:
 
@@ -164,7 +164,7 @@ visivamente; gli script ricevono 403 e i file sono stati salvati dal browser:
 | Gruppo | Casi | Risolti | Criterio |
 |---|---:|---:|---|
 | Walkover vinti | 13 | 13 | Exhibit K 2025 |
-| Walkover persi | 8 | 7 | causa medica nel PDF ufficiale o notizia ATP, e almeno un incontro giocato |
+| Walkover persi | 8 | 8 | causa medica (PDF ufficiale, notizia ATP o stampa) senza revoca dei punti, e almeno un incontro giocato |
 | Bye | 6 | 6 | posizione e testa di serie nel tabellone ufficiale |
 | Lucky loser | 7 | 7 | etichetta LL nella fonte o tabellone ufficiale per i 3 casi senza etichetta |
 
@@ -173,8 +173,14 @@ Esempi: Zverev Vienna 330 (finale, walkover vinto nei quarti); Griekspoor Vienna
 10 + 50 = 60; Halys Basilea 13 + 0 = 13; Shelton, F. Cerundolo e Tabilo ad
 Auckland 0 punti dopo bye.
 
-Resta da verificare Van Assche a Marsiglia: il PDF elenca il walkover senza causa,
-quindi non si distingue un ritiro medico da una sanzione. Nessun valore gia'
+Van Assche a Marsiglia: il PDF elenca il walkover senza causa. La pagina ATP
+Player Activity riporta 32 punti assegnati (nessuna revoca disciplinare) e Tennis
+Majors indica un forfait per influenza; il motore calcola 7 + 25 = 32.
+
+Riscontro ufficiale: per tutti i 34 casi i punti calcolati coincidono con il
+valore "Points" delle pagine ATP Player Activity 2025, lette nel browser perche'
+gli script ricevono 403. Il valore ATP verifica il calcolo, non lo sostituisce.
+Nessun valore gia'
 calcolato e' cambiato; incontri, vittorie e sconfitte sono invariati. Il 2026 resta
 identico (Zverev 9.760). Dettaglio caso per caso nel
 [rapporto](../research/main-tour-review-2025.json) e prove in `edition-evidence.json`.

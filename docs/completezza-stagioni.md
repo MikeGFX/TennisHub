@@ -19,7 +19,7 @@ Non e' la top 50 di ciascun anno.
 | Anno | Tutti: calcolabili / registrate | Priorita circuito principale: calcolabili / registrate | Casi prioritari aperti |
 |---|---:|---:|---:|
 | 2026 | 1188 / 1188 | Tutti i livelli da verificare | - |
-| 2025 | 1016 / 1227 | 958 / 959 | 1 |
+| 2025 | 1017 / 1227 | 959 / 959 | 0 |
 | 2024 | 0 / 1243 | 0 / 923 | 923 |
 | 2023 | 0 / 1124 | 0 / 797 | 797 |
 | 2022 | 0 / 1012 | 0 / 659 | 659 |
@@ -35,14 +35,15 @@ ottenuti dai giocatori. Nessuna stagione e' attualmente certificata completa.
 
 ## Prossimo lavoro sullo storico
 
-Per il 2025 sono stati risolti 33 dei 34 casi prioritari (walkover, bye e lucky
-loser) con le regole ufficiali 2025 e prove per edizione: dettagli nel
-[rapporto dei casi](../research/main-tour-review-2025.json). Resta aperto Van Assche
-a Marsiglia, walkover senza causa nel tabellone ufficiale; e' elencato nel
+Per il 2025 sono stati risolti tutti i 34 casi prioritari (walkover, bye e lucky
+loser) con le regole ufficiali 2025 e prove per edizione; i 34 valori coincidono
+con i punti delle pagine ATP Player Activity. Dettagli nel
+[rapporto dei casi](../research/main-tour-review-2025.json) e nel
 [registro delle priorita](../research/historical-main-tour-priority-2016-2025.json).
-Le 211 partecipazioni complessive da verificare non sono state cancellate o
-trasformate in zeri: 1 appartiene al perimetro prioritario, le altre soprattutto
-a Challenger e United Cup. Il prossimo anno da affrontare e' il 2024, le cui
+Questo riguarda solo le partecipazioni registrate dei tornei principali: non
+certifica che l'elenco dei tornei sia completo. Le 210 partecipazioni complessive
+da verificare non sono state cancellate o trasformate in zeri: riguardano
+soprattutto Challenger e United Cup. Il prossimo anno da affrontare e' il 2024, le cui
 regole punti vanno validate prima di calcolare qualsiasi valore.
 
 ## Censimento 2026

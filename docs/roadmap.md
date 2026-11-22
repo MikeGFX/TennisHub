@@ -113,6 +113,7 @@ Dettagli e conteggi: [completezza e priorita](completezza-stagioni.md).
 
 ## Aggiornamento del 23 novembre 2026
 
-Risolti 33 dei 34 casi prioritari 2025 con il capitolo 9 e l'Exhibit K del
-Rulebook 2025 e i tabelloni ufficiali: priorita circuito principale 958/959.
-Resta Van Assche a Marsiglia. La stagione 2025 non e' certificata completa.
+Risolti tutti i 34 casi prioritari 2025 con il capitolo 9 e l'Exhibit K del
+Rulebook 2025 e i tabelloni ufficiali: priorita circuito principale 959/959, con
+riscontro dei 34 valori sulle pagine ATP Player Activity. La stagione 2025 non e'
+certificata completa (Challenger, United Cup, inventario dei tornei).

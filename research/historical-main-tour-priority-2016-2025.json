@@ -25,8 +25,8 @@
       "as_of": "2026-11-18",
       "ranking_date": "2026-11-16",
       "recorded_participations": 1227,
-      "calculated": 1016,
-      "needs_review": 211,
+      "calculated": 1017,
+      "needs_review": 210,
       "priority": {
         "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
         "categories": [
@@ -38,13 +38,11 @@
         ],
         "include_qualifying": true,
         "participations": 959,
-        "calculated": 958,
-        "needs_review": 1,
-        "recorded_points_resolved": false,
+        "calculated": 959,
+        "needs_review": 0,
+        "recorded_points_resolved": true,
         "certifies_complete_season": false,
-        "reasons": {
-          "Walkover perso, risultato speciale o non concluso: verifica necessaria.": 1
-        }
+        "reasons": {}
       },
       "complete": false
     },
@@ -313,19 +311,11 @@
       "complete": false
     }
   ],
-  "next_2025_review_cases": [
-    {
-      "player_id": "V0DZ",
-      "player_name": "Luca Van Assche",
-      "event_id": "2025-496",
-      "event_name": "Marseille",
-      "category": "250",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    }
-  ],
+  "next_2025_review_cases": [],
   "resolved_2025_review_cases": {
-    "count": 33,
+    "count": 34,
     "evidence": "research/main-tour-review-2025.json",
-    "points_engine_version": "2026.7"
+    "points_engine_version": "2026.7",
+    "atp_player_activity_matches": 34
   }
 }
