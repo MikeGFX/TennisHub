@@ -38,7 +38,7 @@ sono esclusi da Git: un clone del repository richiede una nuova importazione.
 
 I punti ottenuti nella stagione sono distinti dai punti della classifica ATP.
 I valori sconosciuti restano tali e non diventano zero. Con il campione del
-18 novembre 2026 sono calcolabili 1.187 delle 1.187 partecipazioni dei primi 50.
+18 novembre 2026 sono calcolabili 1.188 delle 1.188 partecipazioni dei primi 50.
 Questo verifica i punti delle partecipazioni registrate: il censimento di tutti
 i tornei, inclusi ITF/Futures, resta da completare.
 Le tabelle principali 2025 sono validate; diverse edizioni Challenger e casi
@@ -68,7 +68,7 @@ python3 -m tennishub completeness --from-season 2016 --to-season 2026
 python3 -m unittest discover -s tests -v
 ```
 
-128 test coprono importazione, calcolo dei punti e API locali.
+136 test coprono importazione, calcolo dei punti e API locali.
 Il controllo DOM facoltativo delle interazioni è descritto nella guida
 all'interfaccia; Node è necessario solo per quel controllo.
 
@@ -80,7 +80,7 @@ Per estendere i confronti con principali, Challenger e qualificazioni dal 2007:
 python3 -m tennishub import-history --from-season 2007 --to-season 2024 --as-of 2026-11-18 --ranking-date 2026-11-16
 ```
 
-La verifica locale comprende ora 20 stagioni, dal 2007 al 2026, e 182.798
+La verifica locale comprende ora 20 stagioni, dal 2007 al 2026, e 182.802
 incontri unici nelle fotografie selezionate. La copertura non equivale a un H2H
 ufficiale ATP o all'intera carriera dei giocatori attivi prima del 2007.
 Le regole dei punti anteriori al 2025 restano da validare: i risultati storici

@@ -1,0 +1,3708 @@
+{
+  "checked_on": "2026-11-22",
+  "scope": "Surname/full-name screening for the same 50 selected players in qualifying PDFs of the 238 Challenger main draws already present; not a census of all possible events or ITF/Futures.",
+  "import_id": "248fbde78eb06d4de870486423d05985e486cabf6743bba2fd06515927d9abee",
+  "as_of": "2026-11-18",
+  "documents_downloaded": 238,
+  "validated_challenger_documents": 237,
+  "pending_editions": [
+    "2026-3143"
+  ],
+  "inventory_verified": false,
+  "documents": [
+    {
+      "edition_id": "2026-2205",
+      "event": "Noumea",
+      "url": "https://www.protennislive.com/posting/2026/2205/qs.pdf",
+      "sha256": "97e6ecc850aa610f725783b6b2dd063200f85baea0e5299afc7466ab769247e3",
+      "retrieved_at": "2026-11-21T23:46:20.214985+00:00",
+      "validation": {
+        "header_date": "2026-01-05",
+        "recorded_event_date": "2026-01-05",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2791",
+      "event": "Nonthaburi 1",
+      "url": "https://www.protennislive.com/posting/2026/2791/qs.pdf",
+      "sha256": "3cbc5953f4456ff67e07668478d0d255f40b61e96a8ac16bdaed2ece33d8aa92",
+      "retrieved_at": "2026-11-21T23:46:21.648623+00:00",
+      "validation": {
+        "header_date": "2026-01-05",
+        "recorded_event_date": "2026-01-05",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2907",
+      "event": "Nottingham 1",
+      "url": "https://www.protennislive.com/posting/2026/2907/qs.pdf",
+      "sha256": "e80f0088f993a1f085a1ef81ce64908cb849517571f5ffd7d88ef20630d27f90",
+      "retrieved_at": "2026-11-21T23:46:23.491482+00:00",
+      "validation": {
+        "header_date": "2026-01-05",
+        "recorded_event_date": "2026-01-05",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7393",
+      "event": "Canberra",
+      "url": "https://www.protennislive.com/posting/2026/7393/qs.pdf",
+      "sha256": "49be1bab7e81e8ea436bc5156476c9cbadf1a36c13fc4f6fc58ca0cdbb9ec29c",
+      "retrieved_at": "2026-11-21T23:46:24.941436+00:00",
+      "validation": {
+        "header_date": "2026-01-05",
+        "recorded_event_date": "2026-01-05",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "F0DM",
+          "cohort_name": "Arthur Fery",
+          "identity_status": "exact_full_name",
+          "printed_entries": [
+            "FERY, Arthur",
+            "Fery, Arthur"
+          ],
+          "review": "verified_path_integrated",
+          "actual_name_if_incidental": null
+        },
+        {
+          "player_id": "J0DZ",
+          "cohort_name": "Rafael Jodar",
+          "identity_status": "exact_full_name",
+          "printed_entries": [
+            "JODAR, Rafael",
+            "3 Jodar, Rafael"
+          ],
+          "review": "verified_path_integrated",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-7808",
+      "event": "Bengaluru",
+      "url": "https://www.protennislive.com/posting/2026/7808/qs.pdf",
+      "sha256": "ce53dbdff7cf552d131ad8cda8e43e4dc32fb7cd6b087968269aceeddc666eed",
+      "retrieved_at": "2026-11-21T23:46:26.668180+00:00",
+      "validation": {
+        "header_date": "2026-01-05",
+        "recorded_event_date": "2026-01-05",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-1210",
+      "event": "Buenos Aires",
+      "url": "https://www.protennislive.com/posting/2026/1210/qs.pdf",
+      "sha256": "264e20a42e7029e16c8e5fd7ec4c4a55ba6429f86fbd931c3fb05383defde891",
+      "retrieved_at": "2026-11-21T23:46:28.340469+00:00",
+      "validation": {
+        "header_date": "2026-01-12",
+        "recorded_event_date": "2026-01-12",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2795",
+      "event": "Nonthaburi 2",
+      "url": "https://www.protennislive.com/posting/2026/2795/qs.pdf",
+      "sha256": "a6184d13eed4ffe6dde74797ba9fff75e59ea242d4895046b1f8d279ec88015e",
+      "retrieved_at": "2026-11-21T23:46:30.497119+00:00",
+      "validation": {
+        "header_date": "2026-01-12",
+        "recorded_event_date": "2026-01-12",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7916",
+      "event": "Glasgow",
+      "url": "https://www.protennislive.com/posting/2026/7916/qs.pdf",
+      "sha256": "72a53e130bbe5cea4ffcaf3ecae260d1f579e16ede9d411f11fb4bc484cc1efd",
+      "retrieved_at": "2026-11-21T23:46:32.539953+00:00",
+      "validation": {
+        "header_date": "2026-01-12",
+        "recorded_event_date": "2026-01-12",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2831",
+      "event": "Oeiras 1",
+      "url": "https://www.protennislive.com/posting/2026/2831/qs.pdf",
+      "sha256": "3e95e51a46555eaa3d8f0e937410f519bf6efeab0c378f4c9b0c30415595575f",
+      "retrieved_at": "2026-11-21T23:46:34.321364+00:00",
+      "validation": {
+        "header_date": "2026-01-19",
+        "recorded_event_date": "2026-01-19",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3053",
+      "event": "Itajai",
+      "url": "https://www.protennislive.com/posting/2026/3053/qs.pdf",
+      "sha256": "a8a3d653e11ec93009eedc648038fbe637c339c014d521aba785d7207de1cdd9",
+      "retrieved_at": "2026-11-21T23:46:36.363837+00:00",
+      "validation": {
+        "header_date": "2026-01-19",
+        "recorded_event_date": "2026-01-19",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3055",
+      "event": "Soma Bay",
+      "url": "https://www.protennislive.com/posting/2026/3055/qs.pdf",
+      "sha256": "daea7af5cd757d0651dde596c2608d6e63add8de19a9973487ba4c38a641fdcf",
+      "retrieved_at": "2026-11-22T21:59:04.917083+00:00",
+      "validation": {
+        "header_date": "2026-01-19",
+        "recorded_event_date": "2026-01-19",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3057",
+      "event": "Phan Thiet 1",
+      "url": "https://www.protennislive.com/posting/2026/3057/qs.pdf",
+      "sha256": "ac446a2d4a5410763c742f71096bb8f438b3b68344308842706cbdf0987f9d98",
+      "retrieved_at": "2026-11-22T21:59:11.364177+00:00",
+      "validation": {
+        "header_date": "2026-01-19",
+        "recorded_event_date": "2026-01-19",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2833",
+      "event": "Oeiras 2",
+      "url": "https://www.protennislive.com/posting/2026/2833/qs.pdf",
+      "sha256": "ee867e2df42aee26cd28587b37ed01a78b326fbb59afd4d470bd41767522b380",
+      "retrieved_at": "2026-11-22T21:59:17.716127+00:00",
+      "validation": {
+        "header_date": "2026-01-26",
+        "recorded_event_date": "2026-01-26",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "BK40",
+          "cohort_name": "Matteo Berrettini",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "BERRETTINI, Jacopo",
+            "4 Berrettini, Jacopo"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2971",
+      "event": "San Diego",
+      "url": "https://www.protennislive.com/posting/2026/2971/qs.pdf",
+      "sha256": "cd8e6073098243b1303614449080c4bb72c533bf28650f86caa72455ec285c3e",
+      "retrieved_at": "2026-11-22T21:59:24.104975+00:00",
+      "validation": {
+        "header_date": "2026-01-27",
+        "recorded_event_date": "2026-01-26",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "ambiguous_or_outside_entrant_list",
+          "printed_entries": [],
+          "review": "incidental_name_or_footer",
+          "actual_name_if_incidental": "Paul Inchauspe"
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3059",
+      "event": "Phan Thiet 2",
+      "url": "https://www.protennislive.com/posting/2026/3059/qs.pdf",
+      "sha256": "e227d347cc73a3d6ff6dd2c83157d22e44a0599cb8b0b8c860aeac2613bfb3c7",
+      "retrieved_at": "2026-11-22T21:59:30.569323+00:00",
+      "validation": {
+        "header_date": "2026-01-26",
+        "recorded_event_date": "2026-01-26",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6239",
+      "event": "Quimper",
+      "url": "https://www.protennislive.com/posting/2026/6239/qs.pdf",
+      "sha256": "a4b5f3b78d4dd530919e01e4ee09ce2d17b45b22d22bf84e6818b1c4a7d3a5b2",
+      "retrieved_at": "2026-11-22T21:59:37.232352+00:00",
+      "validation": {
+        "header_date": "2026-01-27",
+        "recorded_event_date": "2026-01-26",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9452",
+      "event": "Concepcion",
+      "url": "https://www.protennislive.com/posting/2026/9452/qs.pdf",
+      "sha256": "f4a417288f9664ac3ceda68aa67203c9ec39f90ba597faaf0db9e094c32496b9",
+      "retrieved_at": "2026-11-22T21:59:44.000894+00:00",
+      "validation": {
+        "header_date": "2026-01-27",
+        "recorded_event_date": "2026-01-26",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9635",
+      "event": "Manama",
+      "url": "https://www.protennislive.com/posting/2026/9635/qs.pdf",
+      "sha256": "004652fd73ce6dbac3f55816afc0cfc9bbc03d3b6376711b93033e1096aece24",
+      "retrieved_at": "2026-11-22T21:59:50.350410+00:00",
+      "validation": {
+        "header_date": "2026-01-27",
+        "recorded_event_date": "2026-01-26",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Petros"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2965",
+      "event": "Rosario",
+      "url": "https://www.protennislive.com/posting/2026/2965/qs.pdf",
+      "sha256": "98c56b60477b0bab5a6cf74d030916238febcb0e957edba56da15ce411474865",
+      "retrieved_at": "2026-11-22T21:59:57.025658+00:00",
+      "validation": {
+        "header_date": "2026-02-02",
+        "recorded_event_date": "2026-02-02",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2967",
+      "event": "Brisbane 1",
+      "url": "https://www.protennislive.com/posting/2026/2967/qs.pdf",
+      "sha256": "89e588c8cc1e4d38506cc63efce78fb2d08b86e316c6b41eb1d0b3e8bbf33f0a",
+      "retrieved_at": "2026-11-22T22:00:03.495029+00:00",
+      "validation": {
+        "header_date": "2026-02-02",
+        "recorded_event_date": "2026-02-02",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3061",
+      "event": "Cesenatico",
+      "url": "https://www.protennislive.com/posting/2026/3061/qs.pdf",
+      "sha256": "8f6eb753c38bf98d3f7d36643258f375bc8e8a2e1efa8811871725f7fa670348",
+      "retrieved_at": "2026-11-22T22:00:09.914831+00:00",
+      "validation": {
+        "header_date": "2026-02-02",
+        "recorded_event_date": "2026-02-02",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3077",
+      "event": "Koblenz",
+      "url": "https://www.protennislive.com/posting/2026/3077/qs.pdf",
+      "sha256": "f1e8b99f52973c5be4764c5f7bd1d8576455535dd1534fb1293ce45af1005bb9",
+      "retrieved_at": "2026-11-22T22:00:16.259602+00:00",
+      "validation": {
+        "header_date": "2026-02-02",
+        "recorded_event_date": "2026-02-02",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9154",
+      "event": "Cleveland",
+      "url": "https://www.protennislive.com/posting/2026/9154/qs.pdf",
+      "sha256": "ad55f0b7d28f18d3f999d4a10de8e43f082232030cc90f3b80ea974acc3783ad",
+      "retrieved_at": "2026-11-22T22:00:23.257751+00:00",
+      "validation": {
+        "header_date": "2026-02-02",
+        "recorded_event_date": "2026-02-02",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9623",
+      "event": "Tenerife 1",
+      "url": "https://www.protennislive.com/posting/2026/9623/qs.pdf",
+      "sha256": "2f507cf78c80717ff89499200f930b8d04c8f5efe66520ab101b0fbcf7fdb974",
+      "retrieved_at": "2026-11-22T22:00:30.344146+00:00",
+      "validation": {
+        "header_date": "2026-02-02",
+        "recorded_event_date": "2026-02-02",
+        "entrant_name_lines": 33
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Petros",
+            "6 Tsitsipas, Petros"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2839",
+      "event": "Tenerife 2",
+      "url": "https://www.protennislive.com/posting/2026/2839/qs.pdf",
+      "sha256": "6fe31f41caabed87fd2248ee1a11a7e5526e1cb33057f5f8b4407114ca5218ba",
+      "retrieved_at": "2026-11-22T22:00:36.798252+00:00",
+      "validation": {
+        "header_date": "2026-02-09",
+        "recorded_event_date": "2026-02-09",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2969",
+      "event": "Brisbane 2",
+      "url": "https://www.protennislive.com/posting/2026/2969/qs.pdf",
+      "sha256": "5ed0ea37b4cf9c97960dd9d96ce83f9ecf410a037ea077ac2a2bd839905bcce8",
+      "retrieved_at": "2026-11-22T22:00:43.141243+00:00",
+      "validation": {
+        "header_date": "2026-02-09",
+        "recorded_event_date": "2026-02-09",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3063",
+      "event": "Baton Rouge",
+      "url": "https://www.protennislive.com/posting/2026/3063/qs.pdf",
+      "sha256": "dcdadadccec3cc2beb51e92476b28c10d22e05f9521deb1499ff570d50d45f78",
+      "retrieved_at": "2026-11-22T22:00:49.493703+00:00",
+      "validation": {
+        "header_date": "2026-02-09",
+        "recorded_event_date": "2026-02-09",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7849",
+      "event": "Chennai",
+      "url": "https://www.protennislive.com/posting/2026/7849/qs.pdf",
+      "sha256": "316ec7f687f8f3b17bb41f6ee495ee6b10932145004d6cd4262aeada5bae24f6",
+      "retrieved_at": "2026-11-22T22:00:56.005190+00:00",
+      "validation": {
+        "header_date": "2026-02-09",
+        "recorded_event_date": "2026-02-09",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9162",
+      "event": "Pau",
+      "url": "https://www.protennislive.com/posting/2026/9162/qs.pdf",
+      "sha256": "5042113fb24b15d8e0a40d374aa200d266fec4c79d544d2bc87e528f4cd06cb0",
+      "retrieved_at": "2026-11-22T22:01:02.407630+00:00",
+      "validation": {
+        "header_date": "2026-02-09",
+        "recorded_event_date": "2026-02-09",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3075",
+      "event": "Metepec",
+      "url": "https://www.protennislive.com/posting/2026/3075/qs.pdf",
+      "sha256": "23cb4a14a2943a8fde786537a883feb73789fd901af625482e1cd93bde64023c",
+      "retrieved_at": "2026-11-22T22:01:08.867751+00:00",
+      "validation": {
+        "header_date": "2026-02-16",
+        "recorded_event_date": "2026-02-16",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6961",
+      "event": "New Delhi",
+      "url": "https://www.protennislive.com/posting/2026/6961/qs.pdf",
+      "sha256": "7bceb3546b933b52cde28648808975d9707c9a96c38844adebdda93a37583a55",
+      "retrieved_at": "2026-11-22T22:01:15.221110+00:00",
+      "validation": {
+        "header_date": "2026-02-16",
+        "recorded_event_date": "2026-02-16",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7874",
+      "event": "Lille",
+      "url": "https://www.protennislive.com/posting/2026/7874/qs.pdf",
+      "sha256": "bfcd1f07806a2201908580d2421274bedb630ee9b58902cad999b67f8ad7dea0",
+      "retrieved_at": "2026-11-22T22:01:22.260967+00:00",
+      "validation": {
+        "header_date": "2026-02-16",
+        "recorded_event_date": "2026-02-16",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "PAUL, Jakub"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-9678",
+      "event": "Tigre",
+      "url": "https://www.protennislive.com/posting/2026/9678/qs.pdf",
+      "sha256": "71f2de6c5f36bb47ea6710f64fa9c1bae3d0878d9569962bd249693f8ee57639",
+      "retrieved_at": "2026-11-22T22:01:28.768510+00:00",
+      "validation": {
+        "header_date": "2026-02-16",
+        "recorded_event_date": "2026-02-16",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-1796",
+      "event": "Saint-Brieuc",
+      "url": "https://www.protennislive.com/posting/2026/1796/qs.pdf",
+      "sha256": "9cb35809f4355b3e795a76fe535f8e37f2714492e97a38023e97fb108e233860",
+      "retrieved_at": "2026-11-22T22:01:35.904998+00:00",
+      "validation": {
+        "header_date": "2026-02-23",
+        "recorded_event_date": "2026-02-23",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "11 PAUL, Jakub",
+            "11 Paul, Jakub"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-7100",
+      "event": "Pune",
+      "url": "https://www.protennislive.com/posting/2026/7100/qs.pdf",
+      "sha256": "b4888a3a4fe8c4421e0f0e3d76dcd7c1196339bedcf84fc087e801e7e8205637",
+      "retrieved_at": "2026-11-22T22:01:43.136495+00:00",
+      "validation": {
+        "header_date": "2026-02-23",
+        "recorded_event_date": "2026-02-23",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9516",
+      "event": "Lugano",
+      "url": "https://www.protennislive.com/posting/2026/9516/qs.pdf",
+      "sha256": "a736b8343e04d2a96ba9c988c51d324347488527aae1ea64633da63dbe96e61a",
+      "retrieved_at": "2026-11-22T22:01:49.523644+00:00",
+      "validation": {
+        "header_date": "2026-02-23",
+        "recorded_event_date": "2026-02-23",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9695",
+      "event": "Tigre 2",
+      "url": "https://www.protennislive.com/posting/2026/9695/qs.pdf",
+      "sha256": "39d05a796c9ec422e96d85615dce347a4f886c2019893467906eae4409e51a9d",
+      "retrieved_at": "2026-11-22T22:01:55.886202+00:00",
+      "validation": {
+        "header_date": "2026-02-23",
+        "recorded_event_date": "2026-02-23",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2913",
+      "event": "Kigali",
+      "url": "https://www.protennislive.com/posting/2026/2913/qs.pdf",
+      "sha256": "53ab3b11a4a6f04b77cda27ef11b73a5072250df94bf767bae007da8402faec7",
+      "retrieved_at": "2026-11-22T22:02:02.946775+00:00",
+      "validation": {
+        "header_date": "2026-03-02",
+        "recorded_event_date": "2026-03-02",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2973",
+      "event": "Thionville",
+      "url": "https://www.protennislive.com/posting/2026/2973/qs.pdf",
+      "sha256": "1897bfa7da155df1947f0d59c56be1d341332bd00ca1ca511444a6b83148abb3",
+      "retrieved_at": "2026-11-22T22:02:09.518222+00:00",
+      "validation": {
+        "header_date": "2026-03-02",
+        "recorded_event_date": "2026-03-02",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2983",
+      "event": "Crete 1",
+      "url": "https://www.protennislive.com/posting/2026/2983/qs.pdf",
+      "sha256": "e9ca674eb3b9fa419e00c93da015dcec522b89bc79f137e5b13999438f2833ac",
+      "retrieved_at": "2026-11-22T22:02:16.202990+00:00",
+      "validation": {
+        "header_date": "2026-03-02",
+        "recorded_event_date": "2026-03-02",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Petros"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3065",
+      "event": "Brasilia",
+      "url": "https://www.protennislive.com/posting/2026/3065/qs.pdf",
+      "sha256": "f0f6b3ab8d7321ef4e4b2111c9a58adbe09160307d4ab6a8cbc6d295cf051dd7",
+      "retrieved_at": "2026-11-22T22:02:23.243977+00:00",
+      "validation": {
+        "header_date": "2026-03-02",
+        "recorded_event_date": "2026-03-02",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2915",
+      "event": "Kigali 2",
+      "url": "https://www.protennislive.com/posting/2026/2915/qs.pdf",
+      "sha256": "b9c85c07d193e4c9dcc298e72215c3a687a34b1efc0e5d4e66956731226c0c8d",
+      "retrieved_at": "2026-11-22T22:02:29.921609+00:00",
+      "validation": {
+        "header_date": "2026-03-09",
+        "recorded_event_date": "2026-03-09",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2975",
+      "event": "Cap Cana",
+      "url": "https://www.protennislive.com/posting/2026/2975/qs.pdf",
+      "sha256": "4fb5690d33406a3e93016b4772ae8fc5dc4cf57b9789a9c531af8156aa1fefa4",
+      "retrieved_at": "2026-11-22T22:02:36.295378+00:00",
+      "validation": {
+        "header_date": "2026-03-10",
+        "recorded_event_date": "2026-03-09",
+        "entrant_name_lines": 27
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "F0DM",
+          "cohort_name": "Arthur Fery",
+          "identity_status": "exact_full_name",
+          "printed_entries": [
+            "FERY, Arthur"
+          ],
+          "review": "verified_path_integrated",
+          "actual_name_if_incidental": null
+        },
+        {
+          "player_id": "V0DZ",
+          "cohort_name": "Luca Van Assche",
+          "identity_status": "exact_full_name",
+          "printed_entries": [
+            "VAN ASSCHE, Luca",
+            "1 Van Assche, Luca"
+          ],
+          "review": "verified_path_integrated",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2985",
+      "event": "Crete 2",
+      "url": "https://www.protennislive.com/posting/2026/2985/qs.pdf",
+      "sha256": "34db357a3e80016636455ab6e79f8913cb3dc0dc490bed3a270e8559bcdbbe55",
+      "retrieved_at": "2026-11-22T22:02:43.012295+00:00",
+      "validation": {
+        "header_date": "2026-03-09",
+        "recorded_event_date": "2026-03-09",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Petros"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3406",
+      "event": "Santiago",
+      "url": "https://www.protennislive.com/posting/2026/3406/qs.pdf",
+      "sha256": "ec30caeea78539ea9f374c25cb88689ad946c6ab554e19106f8648fa7c477de6",
+      "retrieved_at": "2026-11-22T22:02:49.405822+00:00",
+      "validation": {
+        "header_date": "2026-03-09",
+        "recorded_event_date": "2026-03-09",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "ambiguous_or_outside_entrant_list",
+          "printed_entries": [],
+          "review": "incidental_name_or_footer",
+          "actual_name_if_incidental": "Paul Jan-Henrik"
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-398",
+      "event": "Cherbourg",
+      "url": "https://www.protennislive.com/posting/2026/398/qs.pdf",
+      "sha256": "9c61ea360b55cbe77e775499609a0fabe7eb1eb706eb889b81c8f9f72df6099a",
+      "retrieved_at": "2026-11-22T22:02:55.860183+00:00",
+      "validation": {
+        "header_date": "2026-03-09",
+        "recorded_event_date": "2026-03-09",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9167",
+      "event": "Phoenix",
+      "url": "https://www.protennislive.com/posting/2026/9167/qs.pdf",
+      "sha256": "bd8926933639dbc61426fa5b1649d2780f9ca54a7600865cf33cea843b33b860",
+      "retrieved_at": "2026-11-22T22:03:02.256268+00:00",
+      "validation": {
+        "header_date": "2026-03-10",
+        "recorded_event_date": "2026-03-09",
+        "entrant_name_lines": 26
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2909",
+      "event": "Asuncion",
+      "url": "https://www.protennislive.com/posting/2026/2909/qs.pdf",
+      "sha256": "97210f3ab5ad7472854aa87f1a23989e81b307dfe255ec76a7810df5668e7e59",
+      "retrieved_at": "2026-11-22T22:03:09.313770+00:00",
+      "validation": {
+        "header_date": "2026-03-16",
+        "recorded_event_date": "2026-03-16",
+        "entrant_name_lines": 30
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6963",
+      "event": "Morelos",
+      "url": "https://www.protennislive.com/posting/2026/6963/qs.pdf",
+      "sha256": "196104cc5665c2ab22fe40b92cac0a6bbb5f279325cf95b19627f43e331c4f21",
+      "retrieved_at": "2026-11-22T22:03:15.667676+00:00",
+      "validation": {
+        "header_date": "2026-03-16",
+        "recorded_event_date": "2026-03-16",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9171",
+      "event": "Murcia",
+      "url": "https://www.protennislive.com/posting/2026/9171/qs.pdf",
+      "sha256": "b977d3e5bfba8576576cc167357575254bb611cf38d5b36765c8094037fe7d7d",
+      "retrieved_at": "2026-11-22T22:03:22.401485+00:00",
+      "validation": {
+        "header_date": "2026-03-16",
+        "recorded_event_date": "2026-03-16",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9472",
+      "event": "Zadar",
+      "url": "https://www.protennislive.com/posting/2026/9472/qs.pdf",
+      "sha256": "c6db18b7a6ca31e07dd08da2738526610c756dcc23d0114be85848cc9ed6dbcf",
+      "retrieved_at": "2026-11-22T22:03:29.199705+00:00",
+      "validation": {
+        "header_date": "2026-03-16",
+        "recorded_event_date": "2026-03-16",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2911",
+      "event": "Naples",
+      "url": "https://www.protennislive.com/posting/2026/2911/qs.pdf",
+      "sha256": "a5759b2de24149080ba851b0077bebd8685391cdb9b8a02042b7cc6114c0b02f",
+      "retrieved_at": "2026-11-22T22:03:35.593116+00:00",
+      "validation": {
+        "header_date": "2026-03-23",
+        "recorded_event_date": "2026-03-23",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "PAUL, Jakub"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2955",
+      "event": "Alicante",
+      "url": "https://www.protennislive.com/posting/2026/2955/qs.pdf",
+      "sha256": "33319345fdb9b54d17c0df661d45c14065b2d55cce2b5eac200e578ac91dc437",
+      "retrieved_at": "2026-11-22T22:03:41.955610+00:00",
+      "validation": {
+        "header_date": "2026-03-23",
+        "recorded_event_date": "2026-03-23",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2991",
+      "event": "Morelia",
+      "url": "https://www.protennislive.com/posting/2026/2991/qs.pdf",
+      "sha256": "61120054d9a0dfa89b219d44c1c83ffac19aa2d9a453e423e6667f3f0482ab31",
+      "retrieved_at": "2026-11-22T22:03:48.334098+00:00",
+      "validation": {
+        "header_date": "2026-03-23",
+        "recorded_event_date": "2026-03-23",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3071",
+      "event": "Sao Paulo",
+      "url": "https://www.protennislive.com/posting/2026/3071/qs.pdf",
+      "sha256": "b6da9ee55d5b22c960cd641ca02a0652d1aa055f99a74538e09274a9e50a3e4b",
+      "retrieved_at": "2026-11-22T22:03:55.320273+00:00",
+      "validation": {
+        "header_date": "2026-03-23",
+        "recorded_event_date": "2026-03-23",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-5016",
+      "event": "Bucaramanga",
+      "url": "https://www.protennislive.com/posting/2026/5016/qs.pdf",
+      "sha256": "c23fb8c147e2323677a63e452e503628c2eb13e751c3a41b6523d39f23c6df47",
+      "retrieved_at": "2026-11-22T22:04:02.485692+00:00",
+      "validation": {
+        "header_date": "2026-03-23",
+        "recorded_event_date": "2026-03-23",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8268",
+      "event": "Yokkaichi",
+      "url": "https://www.protennislive.com/posting/2026/8268/qs.pdf",
+      "sha256": "ee917eacacd431ef92da680d40ec6c58f6f244e47580ede14ddd2ac740797829",
+      "retrieved_at": "2026-11-22T22:04:09.173549+00:00",
+      "validation": {
+        "header_date": "2026-03-23",
+        "recorded_event_date": "2026-03-23",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8388",
+      "event": "Split",
+      "url": "https://www.protennislive.com/posting/2026/8388/qs.pdf",
+      "sha256": "2b4f4cb48f5746e7f9c2ca2f27f8890a331e37555d7092390a58e74acfd3df42",
+      "retrieved_at": "2026-11-22T22:04:16.194083+00:00",
+      "validation": {
+        "header_date": "2026-03-23",
+        "recorded_event_date": "2026-03-23",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-213",
+      "event": "San Luis Potosi",
+      "url": "https://www.protennislive.com/posting/2026/213/qs.pdf",
+      "sha256": "4e83608ef7d543cda78f4edb40217cec71ae07c7e8d5fd35e1b19c4f1a88c92f",
+      "retrieved_at": "2026-11-22T22:04:23.333260+00:00",
+      "validation": {
+        "header_date": "2026-03-30",
+        "recorded_event_date": "2026-03-30",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2821",
+      "event": "Sao Leopoldo",
+      "url": "https://www.protennislive.com/posting/2026/2821/qs.pdf",
+      "sha256": "1c1ba699ace331108a406700bcaed94c2b50de23a24d9e19cd1572c35c1c57f8",
+      "retrieved_at": "2026-11-22T22:04:29.833023+00:00",
+      "validation": {
+        "header_date": "2026-03-30",
+        "recorded_event_date": "2026-03-30",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2987",
+      "event": "Menorca",
+      "url": "https://www.protennislive.com/posting/2026/2987/qs.pdf",
+      "sha256": "85d0981d82bf130f85c7f5915801c95eb5ecff940a5c76aa321789adc65820f7",
+      "retrieved_at": "2026-11-22T22:04:36.858459+00:00",
+      "validation": {
+        "header_date": "2026-03-30",
+        "recorded_event_date": "2026-03-30",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3073",
+      "event": "Miyazaki",
+      "url": "https://www.protennislive.com/posting/2026/3073/qs.pdf",
+      "sha256": "2dfa68ce5a510002d3b36dcd8e92497ff134d95f8f1a15376fd415d0ca1a26b5",
+      "retrieved_at": "2026-11-22T22:04:43.283063+00:00",
+      "validation": {
+        "header_date": "2026-03-30",
+        "recorded_event_date": "2026-03-30",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7494",
+      "event": "Barletta",
+      "url": "https://www.protennislive.com/posting/2026/7494/qs.pdf",
+      "sha256": "7b86c113a718a402a0808a2495b1d7405eeba1e6fbc9008d9266d1a7127b6a0c",
+      "retrieved_at": "2026-11-22T22:04:49.648284+00:00",
+      "validation": {
+        "header_date": "2026-03-30",
+        "recorded_event_date": "2026-03-30",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2989",
+      "event": "Monza",
+      "url": "https://www.protennislive.com/posting/2026/2989/qs.pdf",
+      "sha256": "b467c57e595fdb3e6b11444385cfb9075925d35e9e5a37b1dfa33e760387e328",
+      "retrieved_at": "2026-11-22T22:04:55.987195+00:00",
+      "validation": {
+        "header_date": "2026-04-06",
+        "recorded_event_date": "2026-04-06",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3079",
+      "event": "Wuning",
+      "url": "https://www.protennislive.com/posting/2026/3079/qs.pdf",
+      "sha256": "6ba2bf374f89e3ca648dd975176b8467d5ea40ef77419065eff46c4027feaa11",
+      "retrieved_at": "2026-11-22T22:05:02.655234+00:00",
+      "validation": {
+        "header_date": "2026-04-06",
+        "recorded_event_date": "2026-04-06",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-5069",
+      "event": "Sarasota",
+      "url": "https://www.protennislive.com/posting/2026/5069/qs.pdf",
+      "sha256": "685a51f3a29dd5519b3cc1c818a4706d16311d68cd06ad0a6049391ab2a08e64",
+      "retrieved_at": "2026-11-22T22:05:09.042213+00:00",
+      "validation": {
+        "header_date": "2026-04-06",
+        "recorded_event_date": "2026-04-06",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6307",
+      "event": "Campinas",
+      "url": "https://www.protennislive.com/posting/2026/6307/qs.pdf",
+      "sha256": "7e01f80f5323ab47c620f354df935f9212547df0d19fbf7d7cd4eac564f2d43c",
+      "retrieved_at": "2026-11-22T22:05:15.730884+00:00",
+      "validation": {
+        "header_date": "2026-04-06",
+        "recorded_event_date": "2026-04-06",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8375",
+      "event": "Mexico City",
+      "url": "https://www.protennislive.com/posting/2026/8375/qs.pdf",
+      "sha256": "4609860f0e729579a29d239c2493a48891618d2dcdb79868e7f08f292e1b1177",
+      "retrieved_at": "2026-11-22T22:05:22.131745+00:00",
+      "validation": {
+        "header_date": "2026-04-06",
+        "recorded_event_date": "2026-04-06",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9687",
+      "event": "Madrid",
+      "url": "https://www.protennislive.com/posting/2026/9687/qs.pdf",
+      "sha256": "1edea1bd3a9f016279a0af500c226a95db4feff80e2ab6d458c58d5929dfd86d",
+      "retrieved_at": "2026-11-22T22:05:28.596185+00:00",
+      "validation": {
+        "header_date": "2026-04-06",
+        "recorded_event_date": "2026-04-06",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-1741",
+      "event": "Busan",
+      "url": "https://www.protennislive.com/posting/2026/1741/qs.pdf",
+      "sha256": "ac71eb95f546b708f0aef748223a7d04dc3332a13543555454c727d3a6eaca8f",
+      "retrieved_at": "2026-11-22T22:05:35.585801+00:00",
+      "validation": {
+        "header_date": "2026-04-13",
+        "recorded_event_date": "2026-04-13",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3081",
+      "event": "Wuning",
+      "url": "https://www.protennislive.com/posting/2026/3081/qs.pdf",
+      "sha256": "4278a6d976bb814d6f2d5fa2864154d64883ff9430fa1d978c3e03100fd054e7",
+      "retrieved_at": "2026-11-22T22:05:41.990758+00:00",
+      "validation": {
+        "header_date": "2026-04-13",
+        "recorded_event_date": "2026-04-13",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-692",
+      "event": "Tallahassee",
+      "url": "https://www.protennislive.com/posting/2026/692/qs.pdf",
+      "sha256": "23ba2da384263cbcd0afa263d7ce78b8a7fe96d961513e4ee290c3fdbe486ab6",
+      "retrieved_at": "2026-11-22T22:05:49.018327+00:00",
+      "validation": {
+        "header_date": "2026-04-13",
+        "recorded_event_date": "2026-04-13",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9479",
+      "event": "Santa Cruz",
+      "url": "https://www.protennislive.com/posting/2026/9479/qs.pdf",
+      "sha256": "d267b0570050a38c8419705bb159a93b12b03771036bb8e3620aa272c4fa01e7",
+      "retrieved_at": "2026-11-22T22:05:56.027312+00:00",
+      "validation": {
+        "header_date": "2026-04-13",
+        "recorded_event_date": "2026-04-13",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9514",
+      "event": "Oeiras",
+      "url": "https://www.protennislive.com/posting/2026/9514/qs.pdf",
+      "sha256": "5060eaa8395669b0aaa05e3b4eae5010589b785bda7db812639e27fa41b3701f",
+      "retrieved_at": "2026-11-22T22:06:02.922759+00:00",
+      "validation": {
+        "header_date": "2026-04-13",
+        "recorded_event_date": "2026-04-13",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2151",
+      "event": "Rome",
+      "url": "https://www.protennislive.com/posting/2026/2151/qs.pdf",
+      "sha256": "03e7d1e1c92705088811e898b578216843f3edcbfedf1251a38ef6c6fef7349e",
+      "retrieved_at": "2026-11-22T22:06:09.936710+00:00",
+      "validation": {
+        "header_date": "2026-04-20",
+        "recorded_event_date": "2026-04-20",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2995",
+      "event": "Abidjan",
+      "url": "https://www.protennislive.com/posting/2026/2995/qs.pdf",
+      "sha256": "c8309fbb68e2d6135002ffe68eb0cc2bfd2b4c34c6b6c92eaf45857cc633a002",
+      "retrieved_at": "2026-11-22T22:06:16.398027+00:00",
+      "validation": {
+        "header_date": "2026-04-20",
+        "recorded_event_date": "2026-04-20",
+        "entrant_name_lines": 29
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-5067",
+      "event": "Savannah",
+      "url": "https://www.protennislive.com/posting/2026/5067/qs.pdf",
+      "sha256": "bf2ea1d550cb5f09d2c89d0b422f5c208ab954a8e237e2168131e16e0af7bc4a",
+      "retrieved_at": "2026-11-22T22:06:22.869833+00:00",
+      "validation": {
+        "header_date": "2026-04-20",
+        "recorded_event_date": "2026-04-20",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7490",
+      "event": "Gwangju",
+      "url": "https://www.protennislive.com/posting/2026/7490/qs.pdf",
+      "sha256": "9527823d4726f080505e8769b1fe6100835efef4ba76a1a141a2dfbd2e0e6cbd",
+      "retrieved_at": "2026-11-22T22:06:29.550148+00:00",
+      "validation": {
+        "header_date": "2026-04-20",
+        "recorded_event_date": "2026-04-20",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7736",
+      "event": "Shymkent",
+      "url": "https://www.protennislive.com/posting/2026/7736/qs.pdf",
+      "sha256": "586368996dd69b451ae3412e2b3dbdb85fa5caa5adb87c5ba9fb9416e45d9667",
+      "retrieved_at": "2026-11-22T22:06:36.589986+00:00",
+      "validation": {
+        "header_date": "2026-04-20",
+        "recorded_event_date": "2026-04-20",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-1797",
+      "event": "Ostrava",
+      "url": "https://www.protennislive.com/posting/2026/1797/qs.pdf",
+      "sha256": "e051280f74ea0774d1c48c0707f291e00939df55e589b79c169cf96675499177",
+      "retrieved_at": "2026-11-22T22:06:43.753886+00:00",
+      "validation": {
+        "header_date": "2026-04-27",
+        "recorded_event_date": "2026-04-27",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2861",
+      "event": "Cagliari",
+      "url": "https://www.protennislive.com/posting/2026/2861/qs.pdf",
+      "sha256": "709a473947f5fa14121b42fb3fe73e6fe7246db124311164a3775d03a18f8a5f",
+      "retrieved_at": "2026-11-22T22:06:50.069054+00:00",
+      "validation": {
+        "header_date": "2026-04-28",
+        "recorded_event_date": "2026-04-27",
+        "entrant_name_lines": 26
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2997",
+      "event": "Abidjan 2",
+      "url": "https://www.protennislive.com/posting/2026/2997/qs.pdf",
+      "sha256": "b9c75a0fd27c0d7a55e5314cc05c0c649046ee343a3c0622ae8b45ffb4f3100b",
+      "retrieved_at": "2026-11-22T22:06:56.453572+00:00",
+      "validation": {
+        "header_date": "2026-04-27",
+        "recorded_event_date": "2026-04-27",
+        "entrant_name_lines": 34
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3083",
+      "event": "Jiujiang",
+      "url": "https://www.protennislive.com/posting/2026/3083/qs.pdf",
+      "sha256": "9f313d9adc91fb1f3fa313a7a59cdcf0a1996a2a6f2bf8a5d35f2f802c0f1e32",
+      "retrieved_at": "2026-11-22T22:07:03.594710+00:00",
+      "validation": {
+        "header_date": "2026-04-27",
+        "recorded_event_date": "2026-04-27",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7009",
+      "event": "Aix-en-Provence",
+      "url": "https://www.protennislive.com/posting/2026/7009/qs.pdf",
+      "sha256": "65c80fb2dea70a7bc9cb4709a4db2763119e5fb21c4762002f1c831c6287b2db",
+      "retrieved_at": "2026-11-22T22:07:09.915986+00:00",
+      "validation": {
+        "header_date": "2026-04-28",
+        "recorded_event_date": "2026-04-27",
+        "entrant_name_lines": 26
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9192",
+      "event": "Shymkent",
+      "url": "https://www.protennislive.com/posting/2026/9192/qs.pdf",
+      "sha256": "5198bbb3b30bbc6493264fad06d30430ce5412bb08d2f36ba75e7088ad2710bf",
+      "retrieved_at": "2026-11-22T22:07:16.592387+00:00",
+      "validation": {
+        "header_date": "2026-04-27",
+        "recorded_event_date": "2026-04-27",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9697",
+      "event": "Mauthausen",
+      "url": "https://www.protennislive.com/posting/2026/9697/qs.pdf",
+      "sha256": "95e71c1adb43ecf8ff9535b45b2ff5a9033eb8fb411c0e269b249acd1cf1c678",
+      "retrieved_at": "2026-11-22T22:07:23.568772+00:00",
+      "validation": {
+        "header_date": "2026-04-27",
+        "recorded_event_date": "2026-04-27",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2921",
+      "event": "Wuxi",
+      "url": "https://www.protennislive.com/posting/2026/2921/qs.pdf",
+      "sha256": "4c136bb322fda26dc454556b0713a1e197d954bd0abd2ba9f42941d7d26c7cfa",
+      "retrieved_at": "2026-11-22T22:07:30.268068+00:00",
+      "validation": {
+        "header_date": "2026-05-04",
+        "recorded_event_date": "2026-05-04",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2923",
+      "event": "Santos",
+      "url": "https://www.protennislive.com/posting/2026/2923/qs.pdf",
+      "sha256": "8084f010a301002d59d9f2eeb96f5085d882a6073b0e8491a1cfaa4dfa7ae46a",
+      "retrieved_at": "2026-11-22T22:07:36.606956+00:00",
+      "validation": {
+        "header_date": "2026-05-04",
+        "recorded_event_date": "2026-05-04",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Pavlos",
+            "12 Tsitsipas, Pavlos"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2961",
+      "event": "Brazzaville",
+      "url": "https://www.protennislive.com/posting/2026/2961/qs.pdf",
+      "sha256": "2504e8c900744bb6828760ec46ec4bc5148d6fd4cc2378482738159147c35123",
+      "retrieved_at": "2026-11-22T22:07:43.273012+00:00",
+      "validation": {
+        "header_date": "2026-05-04",
+        "recorded_event_date": "2026-05-04",
+        "entrant_name_lines": 24
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7707",
+      "event": "Francavilla al Mare",
+      "url": "https://www.protennislive.com/posting/2026/7707/qs.pdf",
+      "sha256": "76b2076a8fdfe5c93e129dc49146fcf00df516c3a9a6dd66f4304726de0db1b6",
+      "retrieved_at": "2026-11-22T22:07:49.620885+00:00",
+      "validation": {
+        "header_date": "2026-05-04",
+        "recorded_event_date": "2026-05-04",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-1541",
+      "event": "Tunis",
+      "url": "https://www.protennislive.com/posting/2026/1541/qs.pdf",
+      "sha256": "dd1a3dd2ae8570e74a6974e134dbcef964a841482e4c5025c73b14a71e3bc781",
+      "retrieved_at": "2026-11-22T22:07:55.960204+00:00",
+      "validation": {
+        "header_date": "2026-05-11",
+        "recorded_event_date": "2026-05-11",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2823",
+      "event": "Valencia",
+      "url": "https://www.protennislive.com/posting/2026/2823/qs.pdf",
+      "sha256": "21ec4857f0ee686c268a1b14a9b2ab449f4566724e6d03be22318661e38fe31b",
+      "retrieved_at": "2026-11-22T22:08:02.973603+00:00",
+      "validation": {
+        "header_date": "2026-05-12",
+        "recorded_event_date": "2026-05-11",
+        "entrant_name_lines": 27
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "PAUL, Jakub"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2981",
+      "event": "Cordoba",
+      "url": "https://www.protennislive.com/posting/2026/2981/qs.pdf",
+      "sha256": "4c4e9c77e5dc6a8d8991ea9f5416d358d52e526589adb84068c2fceaa5246555",
+      "retrieved_at": "2026-11-22T22:08:09.751789+00:00",
+      "validation": {
+        "header_date": "2026-05-11",
+        "recorded_event_date": "2026-05-11",
+        "entrant_name_lines": 33
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3107",
+      "event": "Bengaluru 2",
+      "url": "https://www.protennislive.com/posting/2026/3107/qs.pdf",
+      "sha256": "848dbd5c1cd6e05036dfd5fb98594127d1ba0f5e53c371865e39455e11300959",
+      "retrieved_at": "2026-11-22T22:08:16.181461+00:00",
+      "validation": {
+        "header_date": "2026-05-11",
+        "recorded_event_date": "2026-05-11",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3824",
+      "event": "Bordeaux",
+      "url": "https://www.protennislive.com/posting/2026/3824/qs.pdf",
+      "sha256": "0c00e126a902d60c70f117b51a59b4f141a5f5f2db96107a915fc17c50d68aaf",
+      "retrieved_at": "2026-11-22T22:08:22.944111+00:00",
+      "validation": {
+        "header_date": "2026-05-12",
+        "recorded_event_date": "2026-05-11",
+        "entrant_name_lines": 27
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9475",
+      "event": "Oeiras 2",
+      "url": "https://www.protennislive.com/posting/2026/9475/qs.pdf",
+      "sha256": "008164e24f26590fe226d21deb41c454c7471167f167aac4520e3ab69f7ae79b",
+      "retrieved_at": "2026-11-22T22:08:29.299213+00:00",
+      "validation": {
+        "header_date": "2026-05-11",
+        "recorded_event_date": "2026-05-11",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9500",
+      "event": "Zagreb",
+      "url": "https://www.protennislive.com/posting/2026/9500/qs.pdf",
+      "sha256": "fcdfb1874212b560bbaf199d18352e18d8a2756a82c40a73d94a51792a1e69cc",
+      "retrieved_at": "2026-11-22T22:08:35.998071+00:00",
+      "validation": {
+        "header_date": "2026-05-11",
+        "recorded_event_date": "2026-05-11",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3095",
+      "event": "Cervia",
+      "url": "https://www.protennislive.com/posting/2026/3095/qs.pdf",
+      "sha256": "1a5fb7140c88d43cd9a8a3600173ddb916f0f9a80fe963ee9ac541e8dee6412f",
+      "retrieved_at": "2026-11-22T22:08:43.123307+00:00",
+      "validation": {
+        "header_date": "2026-05-18",
+        "recorded_event_date": "2026-05-18",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "D0FJ",
+          "cohort_name": "Luciano Darderi",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "DARDERI, Vito Antonio"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3105",
+      "event": "Istanbul",
+      "url": "https://www.protennislive.com/posting/2026/3105/qs.pdf",
+      "sha256": "d31a95be71ffc1b84c3d5dd35e75434ff46d58b4db383595d410d01e24d8e1fa",
+      "retrieved_at": "2026-11-22T22:08:50.105113+00:00",
+      "validation": {
+        "header_date": "2026-05-18",
+        "recorded_event_date": "2026-05-18",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3109",
+      "event": "Bengaluru 3",
+      "url": "https://www.protennislive.com/posting/2026/3109/qs.pdf",
+      "sha256": "0b8aab8b8cd86e17812cf983b30630ba3aebb80afdfcafc824800fdc20772c8d",
+      "retrieved_at": "2026-11-22T22:08:57.154456+00:00",
+      "validation": {
+        "header_date": "2026-05-18",
+        "recorded_event_date": "2026-05-18",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2993",
+      "event": "Moldova",
+      "url": "https://www.protennislive.com/posting/2026/2993/qs.pdf",
+      "sha256": "e519284f277438ce2aa880f79e7acd913668f95a700dabe86113b3588f0fc1d9",
+      "retrieved_at": "2026-11-22T22:09:04.172628+00:00",
+      "validation": {
+        "header_date": "2026-05-25",
+        "recorded_event_date": "2026-05-25",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3087",
+      "event": "Centurion",
+      "url": "https://www.protennislive.com/posting/2026/3087/qs.pdf",
+      "sha256": "71908951ad85fcd83bafa053b4b43d45a3a96513852f9076e35d93640aa81952",
+      "retrieved_at": "2026-11-22T22:09:11.233779+00:00",
+      "validation": {
+        "header_date": "2026-05-25",
+        "recorded_event_date": "2026-05-25",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3097",
+      "event": "Kosice",
+      "url": "https://www.protennislive.com/posting/2026/3097/qs.pdf",
+      "sha256": "7902d74099e4f5c17db16fe6a945f2be86367d5490c42214abae5376113c4190",
+      "retrieved_at": "2026-11-22T22:09:18.222465+00:00",
+      "validation": {
+        "header_date": "2026-05-25",
+        "recorded_event_date": "2026-05-25",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7015",
+      "event": "Vicenza",
+      "url": "https://www.protennislive.com/posting/2026/7015/qs.pdf",
+      "sha256": "43e9fdf01131c3fe2457171d388e1853991f5a2c6275d5a4eb6176009e0833ce",
+      "retrieved_at": "2026-11-22T22:09:24.912980+00:00",
+      "validation": {
+        "header_date": "2026-05-25",
+        "recorded_event_date": "2026-05-25",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9188",
+      "event": "Little Rock",
+      "url": "https://www.protennislive.com/posting/2026/9188/qs.pdf",
+      "sha256": "8194f686b2f58d2f08cf00e7b724d4225f491434ce0e0e369a451beb2971c3c8",
+      "retrieved_at": "2026-11-22T22:09:31.927816+00:00",
+      "validation": {
+        "header_date": "2026-05-25",
+        "recorded_event_date": "2026-05-25",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2873",
+      "event": "Tyler",
+      "url": "https://www.protennislive.com/posting/2026/2873/qs.pdf",
+      "sha256": "10ad95b5d614e4cb8b110d05ff8790dd1b7fa57a6e55b93c4ef6b715bbd548d5",
+      "retrieved_at": "2026-11-22T22:09:39.034312+00:00",
+      "validation": {
+        "header_date": "2026-06-01",
+        "recorded_event_date": "2026-06-01",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3089",
+      "event": "Centurion 2",
+      "url": "https://www.protennislive.com/posting/2026/3089/qs.pdf",
+      "sha256": "a087102686850633e7119b86eaa96baa7636b4a700766358278aa5d03fff5e3e",
+      "retrieved_at": "2026-11-22T22:09:46.286713+00:00",
+      "validation": {
+        "header_date": "2026-06-01",
+        "recorded_event_date": "2026-06-01",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-460",
+      "event": "Heilbronn",
+      "url": "https://www.protennislive.com/posting/2026/460/qs.pdf",
+      "sha256": "755632079db9aef06f714892b83f05d4d3ab1c6b64a66246439a170f1cd48ba8",
+      "retrieved_at": "2026-11-22T22:09:52.946257+00:00",
+      "validation": {
+        "header_date": "2026-06-01",
+        "recorded_event_date": "2026-06-01",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-4940",
+      "event": "Birmingham",
+      "url": "https://www.protennislive.com/posting/2026/4940/qs.pdf",
+      "sha256": "d761a03667f7f9b4b94b849164bfcc767e037b43b09c6cf5dff92baba990e8f4",
+      "retrieved_at": "2026-11-22T22:09:59.322082+00:00",
+      "validation": {
+        "header_date": "2026-06-01",
+        "recorded_event_date": "2026-06-01",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-558",
+      "event": "Prostejov",
+      "url": "https://www.protennislive.com/posting/2026/558/qs.pdf",
+      "sha256": "02cf43286caaf0b1ad01aacae891a6ba65010b3dc32c7dea62a05b1041a479fb",
+      "retrieved_at": "2026-11-22T22:10:05.784797+00:00",
+      "validation": {
+        "header_date": "2026-06-01",
+        "recorded_event_date": "2026-06-01",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9001",
+      "event": "Perugia",
+      "url": "https://www.protennislive.com/posting/2026/9001/qs.pdf",
+      "sha256": "4accfc88c60c91bb63d61d3ceb08bcc6b9a0b25bc2e2af05d5f2b3f038cf2814",
+      "retrieved_at": "2026-11-22T22:10:12.464841+00:00",
+      "validation": {
+        "header_date": "2026-06-01",
+        "recorded_event_date": "2026-06-01",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2927",
+      "event": "San Miguel de Tucuman",
+      "url": "https://www.protennislive.com/posting/2026/2927/qs.pdf",
+      "sha256": "f8f4528f981c9d9ef8f86c8858f0369c0393cfe5495c33ddf310afc8475c3ab4",
+      "retrieved_at": "2026-11-22T22:10:19.466700+00:00",
+      "validation": {
+        "header_date": "2026-06-08",
+        "recorded_event_date": "2026-06-08",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3085",
+      "event": "Cattolica",
+      "url": "https://www.protennislive.com/posting/2026/3085/qs.pdf",
+      "sha256": "53a0617b59b10eb1ad54cf696db742aad331946c5b6f3d2db98ca5f10672010a",
+      "retrieved_at": "2026-11-22T22:10:26.527786+00:00",
+      "validation": {
+        "header_date": "2026-06-08",
+        "recorded_event_date": "2026-06-08",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7536",
+      "event": "Lyon",
+      "url": "https://www.protennislive.com/posting/2026/7536/qs.pdf",
+      "sha256": "08f41aab2d449865cf9773a0b09285531ea014e8266da173502143762b3332c3",
+      "retrieved_at": "2026-11-22T22:10:33.268506+00:00",
+      "validation": {
+        "header_date": "2026-06-08",
+        "recorded_event_date": "2026-06-08",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9003",
+      "event": "Bratislava",
+      "url": "https://www.protennislive.com/posting/2026/9003/qs.pdf",
+      "sha256": "8eb5c9d7a7f2a0a5c6726d91533194275b10ee52878ac12364e45587d5254bd0",
+      "retrieved_at": "2026-11-22T22:10:40.287733+00:00",
+      "validation": {
+        "header_date": "2026-06-08",
+        "recorded_event_date": "2026-06-08",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9005",
+      "event": "Ilkley",
+      "url": "https://www.protennislive.com/posting/2026/9005/qs.pdf",
+      "sha256": "d086094e66effdc9a2b8a9045cc3c72bcd8991c4f52fd3b09044cc2eecc4a1ad",
+      "retrieved_at": "2026-11-22T22:10:47.036151+00:00",
+      "validation": {
+        "header_date": "2026-06-08",
+        "recorded_event_date": "2026-06-08",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "ambiguous_or_outside_entrant_list",
+          "printed_entries": [],
+          "review": "incidental_name_or_footer",
+          "actual_name_if_incidental": "Paul Jubb"
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3115",
+      "event": "Dublin",
+      "url": "https://www.protennislive.com/posting/2026/3115/qs.pdf",
+      "sha256": "b9d395d599a82ab95ef5cd39f4b41cb2f9e3a194e773c9e0800c9c2ab96c7143",
+      "retrieved_at": "2026-11-22T22:10:53.485214+00:00",
+      "validation": {
+        "header_date": "2026-06-15",
+        "recorded_event_date": "2026-06-15",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "ambiguous_or_outside_entrant_list",
+          "printed_entries": [],
+          "review": "incidental_name_or_footer",
+          "actual_name_if_incidental": "Paul Jubb"
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3117",
+      "event": "Asuncion",
+      "url": "https://www.protennislive.com/posting/2026/3117/qs.pdf",
+      "sha256": "4d43acbe612fa40e42d7b988c382c6e6a1eb0e5a58b39aaaa0bcd3c468596b53",
+      "retrieved_at": "2026-11-22T22:11:00.611823+00:00",
+      "validation": {
+        "header_date": "2026-06-15",
+        "recorded_event_date": "2026-06-15",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-4942",
+      "event": "Royan",
+      "url": "https://www.protennislive.com/posting/2026/4942/qs.pdf",
+      "sha256": "51fc7b228355f3769f462a9e3ab2d7f6ad08e3aa119bcfd5050bc1992127ee00",
+      "retrieved_at": "2026-11-22T22:11:07.396268+00:00",
+      "validation": {
+        "header_date": "2026-06-15",
+        "recorded_event_date": "2026-06-15",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "ambiguous_or_outside_entrant_list",
+          "printed_entries": [],
+          "review": "incidental_name_or_footer",
+          "actual_name_if_incidental": "Paul Theate"
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-7740",
+      "event": "Nottingham",
+      "url": "https://www.protennislive.com/posting/2026/7740/qs.pdf",
+      "sha256": "8d282cffa8e79dd5ed1fa012d919f6e487027aa2ec31027b1dd5ce790bb8c711",
+      "retrieved_at": "2026-11-22T22:11:13.731210+00:00",
+      "validation": {
+        "header_date": "2026-06-13",
+        "recorded_event_date": "2026-06-15",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-786",
+      "event": "Poznan",
+      "url": "https://www.protennislive.com/posting/2026/786/qs.pdf",
+      "sha256": "f820a92173e85f47584d06a19f23d77f9ea65e676b7fe5d84c2e0c9b8c5ed0af",
+      "retrieved_at": "2026-11-22T22:11:20.488099+00:00",
+      "validation": {
+        "header_date": "2026-06-15",
+        "recorded_event_date": "2026-06-15",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9835",
+      "event": "Parma",
+      "url": "https://www.protennislive.com/posting/2026/9835/qs.pdf",
+      "sha256": "066270229429e5b02e1bd7c1f71ebe1f1d77709078d02c401fe70012464bcadf",
+      "retrieved_at": "2026-11-22T22:11:26.826686+00:00",
+      "validation": {
+        "header_date": "2026-06-15",
+        "recorded_event_date": "2026-06-15",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "PAUL, Jakub",
+            "10 Paul, Jakub"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2835",
+      "event": "Piracicaba",
+      "url": "https://www.protennislive.com/posting/2026/2835/qs.pdf",
+      "sha256": "34ada880cd7373c49fcdd01bc9ab3f83d74d18ebd5672043bcf16cfe5ac85f7e",
+      "retrieved_at": "2026-11-22T22:11:33.189725+00:00",
+      "validation": {
+        "header_date": "2026-06-22",
+        "recorded_event_date": "2026-06-22",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3021",
+      "event": "Targu Mures",
+      "url": "https://www.protennislive.com/posting/2026/3021/qs.pdf",
+      "sha256": "0936b6690bacd6471bcc509587881b6a5874262282b786442043f49685b5162b",
+      "retrieved_at": "2026-11-22T22:11:39.877583+00:00",
+      "validation": {
+        "header_date": "2026-06-22",
+        "recorded_event_date": "2026-06-22",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3149",
+      "event": "Plovdiv",
+      "url": "https://www.protennislive.com/posting/2026/3149/qs.pdf",
+      "sha256": "876cd4487f6de82866888c52c253cf51fa95d15c64387d63eacb707c16c2f9a7",
+      "retrieved_at": "2026-11-22T22:11:46.596558+00:00",
+      "validation": {
+        "header_date": "2026-06-22",
+        "recorded_event_date": "2026-06-22",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-1214",
+      "event": "Troyes",
+      "url": "https://www.protennislive.com/posting/2026/1214/qs.pdf",
+      "sha256": "d0317a90d71d68a90d865fb11673b60f35518f096446059f02f8bbdfaec9ac6b",
+      "retrieved_at": "2026-11-22T22:11:53.366076+00:00",
+      "validation": {
+        "header_date": "2026-06-29",
+        "recorded_event_date": "2026-06-29",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2931",
+      "event": "Brasov",
+      "url": "https://www.protennislive.com/posting/2026/2931/qs.pdf",
+      "sha256": "764a6789a238eb062716735a93050800ffa6179020c7cca447ee105935159eb9",
+      "retrieved_at": "2026-11-22T22:11:59.793215+00:00",
+      "validation": {
+        "header_date": "2026-06-29",
+        "recorded_event_date": "2026-06-29",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3119",
+      "event": "Quito",
+      "url": "https://www.protennislive.com/posting/2026/3119/qs.pdf",
+      "sha256": "6085320d6ad0cd1494225f9a295f7cf40dfb632c6f63b5957cd7e65d7d9aa25a",
+      "retrieved_at": "2026-11-22T22:12:06.851507+00:00",
+      "validation": {
+        "header_date": "2026-06-29",
+        "recorded_event_date": "2026-06-29",
+        "entrant_name_lines": 34
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3463",
+      "event": "Milan",
+      "url": "https://www.protennislive.com/posting/2026/3463/qs.pdf",
+      "sha256": "e97adb7b335ab653c3ebc090d2a6a2cd67e8d27fd37f485fece30c13666f8102",
+      "retrieved_at": "2026-11-22T22:12:14.034370+00:00",
+      "validation": {
+        "header_date": "2026-06-29",
+        "recorded_event_date": "2026-06-29",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7316",
+      "event": "Cary",
+      "url": "https://www.protennislive.com/posting/2026/7316/qs.pdf",
+      "sha256": "720bcbdd0a2daae4fc3c8330f101ff3ba0b0f092a251f204a128cb84779ef67a",
+      "retrieved_at": "2026-11-22T22:12:21.107780+00:00",
+      "validation": {
+        "header_date": "2026-06-29",
+        "recorded_event_date": "2026-06-29",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3007",
+      "event": "Nottingham 3",
+      "url": "https://www.protennislive.com/posting/2026/3007/qs.pdf",
+      "sha256": "7969bb9611b37512443d85d546d85eea3423292cc0e17265bcf93aefa138fcc2",
+      "retrieved_at": "2026-11-22T22:12:27.474046+00:00",
+      "validation": {
+        "header_date": "2026-07-06",
+        "recorded_event_date": "2026-07-06",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3101",
+      "event": "Liege",
+      "url": "https://www.protennislive.com/posting/2026/3101/qs.pdf",
+      "sha256": "4245a5dad79b25713895a8e071672e796239c10430d83417af339dc69d313985",
+      "retrieved_at": "2026-11-22T22:12:34.500134+00:00",
+      "validation": {
+        "header_date": "2026-07-06",
+        "recorded_event_date": "2026-07-06",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-315",
+      "event": "Newport",
+      "url": "https://www.protennislive.com/posting/2026/315/qs.pdf",
+      "sha256": "7d660c735d2c9708ffeafac85522b1a3ac08ffa71bf5dd59bcf5fbf52c3031c1",
+      "retrieved_at": "2026-11-22T22:12:40.911481+00:00",
+      "validation": {
+        "header_date": "2026-07-06",
+        "recorded_event_date": "2026-07-06",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-526",
+      "event": "Braunschweig",
+      "url": "https://www.protennislive.com/posting/2026/526/qs.pdf",
+      "sha256": "2f0fdc736a1cfda4f69522c8638a31d7f2a9d1715be187369d21e0a8e28349e9",
+      "retrieved_at": "2026-11-22T22:12:48.017165+00:00",
+      "validation": {
+        "header_date": "2026-07-06",
+        "recorded_event_date": "2026-07-06",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7389",
+      "event": "Bogota",
+      "url": "https://www.protennislive.com/posting/2026/7389/qs.pdf",
+      "sha256": "213e158436629cf3f69eaeb878079f917b05e100dea9a2d6bcbbdfc600ae1fcf",
+      "retrieved_at": "2026-11-22T22:12:55.055353+00:00",
+      "validation": {
+        "header_date": "2026-07-06",
+        "recorded_event_date": "2026-07-06",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8394",
+      "event": "Iasi",
+      "url": "https://www.protennislive.com/posting/2026/8394/qs.pdf",
+      "sha256": "34cb8c79f71fc9acc932e61ea5b6c2c18a5965a8a8bfd29c5a0ed893faacb430",
+      "retrieved_at": "2026-11-22T22:13:01.785483+00:00",
+      "validation": {
+        "header_date": "2026-07-06",
+        "recorded_event_date": "2026-07-06",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9351",
+      "event": "Trieste",
+      "url": "https://www.protennislive.com/posting/2026/9351/qs.pdf",
+      "sha256": "b0885fc318d81764d76f97bbb06896fcdf2748aa7aa971d73d340bd48a5a4a4b",
+      "retrieved_at": "2026-11-22T22:13:08.459462+00:00",
+      "validation": {
+        "header_date": "2026-07-06",
+        "recorded_event_date": "2026-07-06",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2120",
+      "event": "Cordenons",
+      "url": "https://www.protennislive.com/posting/2026/2120/qs.pdf",
+      "sha256": "d491134885f24042ed979bf898bd75a0101c07f496b42a6e6d29878cbeb48657",
+      "retrieved_at": "2026-11-22T22:13:14.845041+00:00",
+      "validation": {
+        "header_date": "2026-07-13",
+        "recorded_event_date": "2026-07-13",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2941",
+      "event": "Lincoln",
+      "url": "https://www.protennislive.com/posting/2026/2941/qs.pdf",
+      "sha256": "9a1b24ef6d17713f757419ae981f98d3ce8f3dd91a61f68366f5be4c80b628b4",
+      "retrieved_at": "2026-11-22T22:13:21.624053+00:00",
+      "validation": {
+        "header_date": "2026-07-13",
+        "recorded_event_date": "2026-07-13",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-472",
+      "event": "Pozoblanco",
+      "url": "https://www.protennislive.com/posting/2026/472/qs.pdf",
+      "sha256": "376305ae25e0d4ceb9c0998df7ca08c39bc1fa31df0a8d6f4f28efdb57c53a4f",
+      "retrieved_at": "2026-11-22T22:13:28.455460+00:00",
+      "validation": {
+        "header_date": "2026-07-13",
+        "recorded_event_date": "2026-07-13",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-877",
+      "event": "Granby",
+      "url": "https://www.protennislive.com/posting/2026/877/qs.pdf",
+      "sha256": "a7831214e8ef3f12c8ca912d4270f6d9f8a3c8bd509ce338386029ea3a276c1f",
+      "retrieved_at": "2026-11-22T22:13:35.265985+00:00",
+      "validation": {
+        "header_date": "2026-07-13",
+        "recorded_event_date": "2026-07-13",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9198",
+      "event": "Bunschoten",
+      "url": "https://www.protennislive.com/posting/2026/9198/qs.pdf",
+      "sha256": "9840fb8b2d1f306ccd86585e41bc45ce39fd51eaa96187d91832035c16c4cf9d",
+      "retrieved_at": "2026-11-22T22:13:42.574910+00:00",
+      "validation": {
+        "header_date": "2026-07-13",
+        "recorded_event_date": "2026-07-13",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-221",
+      "event": "Tampere",
+      "url": "https://www.protennislive.com/posting/2026/221/qs.pdf",
+      "sha256": "c76cac432b3bcb28bd12e17fe76fecdb68e8248c6bc84782f2bb8e487a346f93",
+      "retrieved_at": "2026-11-22T22:13:49.044115+00:00",
+      "validation": {
+        "header_date": "2026-07-20",
+        "recorded_event_date": "2026-07-20",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2785",
+      "event": "Zug",
+      "url": "https://www.protennislive.com/posting/2026/2785/qs.pdf",
+      "sha256": "e6736e71b0e0603950b4b5749ea68b5cd7d4b1e186259f1d249cee3104fac0d0",
+      "retrieved_at": "2026-11-22T22:13:55.821790+00:00",
+      "validation": {
+        "header_date": "2026-07-20",
+        "recorded_event_date": "2026-07-20",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2883",
+      "event": "Bloomfield Hills",
+      "url": "https://www.protennislive.com/posting/2026/2883/qs.pdf",
+      "sha256": "ba0a46ce2a805f0522b8f446c342f203263c5939f0d6391053409e09c3593524",
+      "retrieved_at": "2026-11-22T22:14:02.851394+00:00",
+      "validation": {
+        "header_date": "2026-07-20",
+        "recorded_event_date": "2026-07-20",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7542",
+      "event": "Winnipeg",
+      "url": "https://www.protennislive.com/posting/2026/7542/qs.pdf",
+      "sha256": "828ad3131c2e25a88960bc0d85c1bb88270f95cf0d10d85fee4a199ffcb36a30",
+      "retrieved_at": "2026-11-22T22:14:09.555005+00:00",
+      "validation": {
+        "header_date": "2026-07-20",
+        "recorded_event_date": "2026-07-20",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-783",
+      "event": "Segovia",
+      "url": "https://www.protennislive.com/posting/2026/783/qs.pdf",
+      "sha256": "9b4c788663054aa410a33eb4a764db6fc441b83e14a72c0cced961b0d41c7fe1",
+      "retrieved_at": "2026-11-22T22:14:16.390491+00:00",
+      "validation": {
+        "header_date": "2026-07-20",
+        "recorded_event_date": "2026-07-20",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2935",
+      "event": "Bonn",
+      "url": "https://www.protennislive.com/posting/2026/2935/qs.pdf",
+      "sha256": "2a4de5650f14fb02be83046d35badbd04d1e02b830db6bc81b20a2f83876d006",
+      "retrieved_at": "2026-11-22T22:14:22.872630+00:00",
+      "validation": {
+        "header_date": "2026-07-27",
+        "recorded_event_date": "2026-07-27",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3167",
+      "event": "Samsun",
+      "url": "https://www.protennislive.com/posting/2026/3167/qs.pdf",
+      "sha256": "1eb0b4a57448316908e9b437059e03b7d2d5c23968a6ea514a6218a2d67bd6be",
+      "retrieved_at": "2026-11-22T22:14:29.254114+00:00",
+      "validation": {
+        "header_date": "2026-07-27",
+        "recorded_event_date": "2026-07-27",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6795",
+      "event": "Liberec",
+      "url": "https://www.protennislive.com/posting/2026/6795/qs.pdf",
+      "sha256": "45c074f0e22b5d92715be8b54d891fa090460a4dd0549dacf03055223308aba1",
+      "retrieved_at": "2026-11-22T22:14:35.609850+00:00",
+      "validation": {
+        "header_date": "2026-07-27",
+        "recorded_event_date": "2026-07-27",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7774",
+      "event": "Vancouver",
+      "url": "https://www.protennislive.com/posting/2026/7774/qs.pdf",
+      "sha256": "aa324ebb8f8f9b9cda38d78b36396d3e59b5c11ad79b60134dc35f5d889c0e27",
+      "retrieved_at": "2026-11-22T22:14:42.770900+00:00",
+      "validation": {
+        "header_date": "2026-07-27",
+        "recorded_event_date": "2026-07-27",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9540",
+      "event": "San Marino",
+      "url": "https://www.protennislive.com/posting/2026/9540/qs.pdf",
+      "sha256": "bb5358e33f34f20f49fcd0d1da0fab45687b7c627a4522b2a5c48bfbc5e35c28",
+      "retrieved_at": "2026-11-22T22:14:49.586226+00:00",
+      "validation": {
+        "header_date": "2026-07-27",
+        "recorded_event_date": "2026-07-27",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2789",
+      "event": "Grodzisk Mazowiecki",
+      "url": "https://www.protennislive.com/posting/2026/2789/qs.pdf",
+      "sha256": "3318f8bfd5f02cd5a418800286e41b75579030e2f76b86e9fc5c463710747433",
+      "retrieved_at": "2026-11-22T22:14:56.357721+00:00",
+      "validation": {
+        "header_date": "2026-08-03",
+        "recorded_event_date": "2026-08-03",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3111",
+      "event": "Istanbul",
+      "url": "https://www.protennislive.com/posting/2026/3111/qs.pdf",
+      "sha256": "13d299b34e952a63401b9e6f7c7e13d0f3923da76fa3bd6382ee7860ba2a324d",
+      "retrieved_at": "2026-11-22T22:15:03.167876+00:00",
+      "validation": {
+        "header_date": "2026-08-03",
+        "recorded_event_date": "2026-08-03",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3169",
+      "event": "Plovdiv 2",
+      "url": "https://www.protennislive.com/posting/2026/3169/qs.pdf",
+      "sha256": "e96f9f9db89c642c983c6f5a05369e88184dffb77e37bc3e60d520b4a0a3cb90",
+      "retrieved_at": "2026-11-22T22:15:09.553761+00:00",
+      "validation": {
+        "header_date": "2026-08-03",
+        "recorded_event_date": "2026-08-03",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-586",
+      "event": "Lexington",
+      "url": "https://www.protennislive.com/posting/2026/586/qs.pdf",
+      "sha256": "b27bd1021b24bed843df66e70a9fc175f3c2737c24ea2adc4082404ec9e362ea",
+      "retrieved_at": "2026-11-22T22:15:16.557189+00:00",
+      "validation": {
+        "header_date": "2026-08-03",
+        "recorded_event_date": "2026-08-03",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "N0AE",
+          "cohort_name": "Brandon Nakashima",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "NAKASHIMA, Bryce"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-9542",
+      "event": "Hagen",
+      "url": "https://www.protennislive.com/posting/2026/9542/qs.pdf",
+      "sha256": "d005af031fe17c0d6da135bca2a3a79c0acf8071e4349beee3b999dfae58b70c",
+      "retrieved_at": "2026-11-22T22:15:23.361569+00:00",
+      "validation": {
+        "header_date": "2026-08-03",
+        "recorded_event_date": "2026-08-03",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3131",
+      "event": "Brownsburg",
+      "url": "https://www.protennislive.com/posting/2026/3131/qs.pdf",
+      "sha256": "c3b43ee4fb45f93f806b85b088af0eb1976bfce821f93c6b80f40a125b347b50",
+      "retrieved_at": "2026-11-22T22:15:30.424748+00:00",
+      "validation": {
+        "header_date": "2026-08-10",
+        "recorded_event_date": "2026-08-10",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "ambiguous_or_outside_entrant_list",
+          "printed_entries": [],
+          "review": "incidental_name_or_footer",
+          "actual_name_if_incidental": "Paul Jubb"
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-8297",
+      "event": "Hamburg",
+      "url": "https://www.protennislive.com/posting/2026/8297/qs.pdf",
+      "sha256": "c666fef36a87fe7839ea7c5887555c5f82ea3374e27afc0006e4f6fa565aeed6",
+      "retrieved_at": "2026-11-22T22:15:37.104323+00:00",
+      "validation": {
+        "header_date": "2026-08-10",
+        "recorded_event_date": "2026-08-10",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8392",
+      "event": "Todi",
+      "url": "https://www.protennislive.com/posting/2026/8392/qs.pdf",
+      "sha256": "7a03c9a402200aa7c62cf98f69fe9a507ce1e1e2dcd617cdce153f5268cbea6a",
+      "retrieved_at": "2026-11-22T22:15:43.520631+00:00",
+      "validation": {
+        "header_date": "2026-08-10",
+        "recorded_event_date": "2026-08-10",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9533",
+      "event": "Astana",
+      "url": "https://www.protennislive.com/posting/2026/9533/qs.pdf",
+      "sha256": "da5aa90e8a373da2cc78dabee6552fdd84fcc459dc03c6baa3d51774e2d2bcfc",
+      "retrieved_at": "2026-11-22T22:15:50.181827+00:00",
+      "validation": {
+        "header_date": "2026-08-10",
+        "recorded_event_date": "2026-08-10",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3009",
+      "event": "Cancun",
+      "url": "https://www.protennislive.com/posting/2026/3009/qs.pdf",
+      "sha256": "9c4696bfa5c8a860b776356fc93ae934af07590217e29bb5b916b53d289614ae",
+      "retrieved_at": "2026-11-22T22:15:56.507809+00:00",
+      "validation": {
+        "header_date": "2026-08-18",
+        "recorded_event_date": "2026-08-17",
+        "entrant_name_lines": 27
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3103",
+      "event": "Quebec City",
+      "url": "https://www.protennislive.com/posting/2026/3103/qs.pdf",
+      "sha256": "780c86ef6283bfcf0f54d29c290177058eae4c75ee0f02d24aa4f4ef7457141e",
+      "retrieved_at": "2026-11-22T22:16:03.410171+00:00",
+      "validation": {
+        "header_date": "2026-08-18",
+        "recorded_event_date": "2026-08-17",
+        "entrant_name_lines": 26
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3121",
+      "event": "Kingston 1",
+      "url": "https://www.protennislive.com/posting/2026/3121/qs.pdf",
+      "sha256": "7b205097b430f726bfa7596c8db615238497e34e40ac27e6df96294763280d6a",
+      "retrieved_at": "2026-11-22T22:16:09.812718+00:00",
+      "validation": {
+        "header_date": "2026-08-17",
+        "recorded_event_date": "2026-08-17",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3123",
+      "event": "Roehampton 1",
+      "url": "https://www.protennislive.com/posting/2026/3123/qs.pdf",
+      "sha256": "0fa5ace3e348774fbc521170726d17e693c40f50a5b79db43f7a9af36a2fc413",
+      "retrieved_at": "2026-11-22T22:16:16.570988+00:00",
+      "validation": {
+        "header_date": "2026-08-17",
+        "recorded_event_date": "2026-08-17",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3133",
+      "event": "Sion",
+      "url": "https://www.protennislive.com/posting/2026/3133/qs.pdf",
+      "sha256": "83209b672751baedd2e0451c1c0a3869678d212fc346f46ae96daaf9b0aa794d",
+      "retrieved_at": "2026-11-22T22:16:23.770349+00:00",
+      "validation": {
+        "header_date": "2026-08-17",
+        "recorded_event_date": "2026-08-17",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Petros"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-600",
+      "event": "Prague",
+      "url": "https://www.protennislive.com/posting/2026/600/qs.pdf",
+      "sha256": "785f276685023df69288a591805b5c20148339ba7998d1660a4f143596b318a8",
+      "retrieved_at": "2026-11-22T22:16:30.142681+00:00",
+      "validation": {
+        "header_date": "2026-08-17",
+        "recorded_event_date": "2026-08-17",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "PAUL, Jakub"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3125",
+      "event": "Roehampton 2",
+      "url": "https://www.protennislive.com/posting/2026/3125/qs.pdf",
+      "sha256": "6066b61dabaf3fd9075652baeec68e3227a6dc1dec28b219d512265e9b2b3117",
+      "retrieved_at": "2026-11-22T22:16:37.289031+00:00",
+      "validation": {
+        "header_date": "2026-08-24",
+        "recorded_event_date": "2026-08-24",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3129",
+      "event": "Kingston 2",
+      "url": "https://www.protennislive.com/posting/2026/3129/qs.pdf",
+      "sha256": "20ed3811a5c57cdb7548bf71b5e9a6af1769693a9f4f19622b39366d6c390b68",
+      "retrieved_at": "2026-11-22T22:16:43.632550+00:00",
+      "validation": {
+        "header_date": "2026-08-24",
+        "recorded_event_date": "2026-08-24",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8266",
+      "event": "Augsburg",
+      "url": "https://www.protennislive.com/posting/2026/8266/qs.pdf",
+      "sha256": "a2686bed09da0db15ba26c0eee621edcb9061d185fbd116e28da2aa53d747a79",
+      "retrieved_at": "2026-11-22T22:16:50.034096+00:00",
+      "validation": {
+        "header_date": "2026-08-24",
+        "recorded_event_date": "2026-08-24",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2933",
+      "event": "Porto (CTP)",
+      "url": "https://www.protennislive.com/posting/2026/2933/qs.pdf",
+      "sha256": "9da941d3d486c672c7cc47b3222729f62686b2a1799310a74fa28959841f96aa",
+      "retrieved_at": "2026-11-22T22:16:57.029449+00:00",
+      "validation": {
+        "header_date": "2026-08-31",
+        "recorded_event_date": "2026-08-31",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "ambiguous_or_outside_entrant_list",
+          "printed_entries": [],
+          "review": "incidental_name_or_footer",
+          "actual_name_if_incidental": "Pavlos Tsitsipas (last direct acceptance note)"
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3171",
+      "event": "Plovdiv 3",
+      "url": "https://www.protennislive.com/posting/2026/3171/qs.pdf",
+      "sha256": "4ae1b49327a8d184e65cb0dbc4864460a82cbe92a2ea7789a093c3f4022fb5eb",
+      "retrieved_at": "2026-11-22T22:17:03.498082+00:00",
+      "validation": {
+        "header_date": "2026-08-31",
+        "recorded_event_date": "2026-08-31",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3473",
+      "event": "Como",
+      "url": "https://www.protennislive.com/posting/2026/3473/qs.pdf",
+      "sha256": "6ec018dc91a11fe86043232e1178f130dd81b1785077c0d1025674c47506dd4a",
+      "retrieved_at": "2026-11-22T22:17:10.586015+00:00",
+      "validation": {
+        "header_date": "2026-08-31",
+        "recorded_event_date": "2026-08-31",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7783",
+      "event": "Zhangjiagang",
+      "url": "https://www.protennislive.com/posting/2026/7783/qs.pdf",
+      "sha256": "c8e261aca55049f8406d76bc27487a3c768d8385a37ee5a8b51c5707218612e4",
+      "retrieved_at": "2026-11-22T22:17:16.956351+00:00",
+      "validation": {
+        "header_date": "2026-08-31",
+        "recorded_event_date": "2026-08-31",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7973",
+      "event": "Manacor",
+      "url": "https://www.protennislive.com/posting/2026/7973/qs.pdf",
+      "sha256": "3d3fc63ce4ff0cd9e1150a509221266636b7aa3d77fc2aaafbd03fb26e2f3834",
+      "retrieved_at": "2026-11-22T22:17:23.952113+00:00",
+      "validation": {
+        "header_date": "2026-09-01",
+        "recorded_event_date": "2026-09-01",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-1763",
+      "event": "Genoa (Nuova Valletta)",
+      "url": "https://www.protennislive.com/posting/2026/1763/qs.pdf",
+      "sha256": "bfd475289f3620b287ee39a919c1cd41d4f9de9b6f142cf4965b73e6cc2b63d7",
+      "retrieved_at": "2026-11-22T22:17:30.732547+00:00",
+      "validation": {
+        "header_date": "2026-09-07",
+        "recorded_event_date": "2026-09-07",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3137",
+      "event": "Phan Thiet 3",
+      "url": "https://www.protennislive.com/posting/2026/3137/qs.pdf",
+      "sha256": "f0d3b3bf1cba75f50a84b8df117c950e469e51fc21b40e0993473964a1b5e719",
+      "retrieved_at": "2026-11-22T22:17:37.412907+00:00",
+      "validation": {
+        "header_date": "2026-09-07",
+        "recorded_event_date": "2026-09-07",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6313",
+      "event": "Road to the Rolex Shanghai Masters",
+      "url": "https://www.protennislive.com/posting/2026/6313/qs.pdf",
+      "sha256": "20b12880f67fc9cd181c5d0c00fc8ebb50bbfbb3ca635971877a3b5c07a4c9f0",
+      "retrieved_at": "2026-11-22T22:17:44.506729+00:00",
+      "validation": {
+        "header_date": "2026-09-07",
+        "recorded_event_date": "2026-09-07",
+        "entrant_name_lines": 34
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7083",
+      "event": "Istanbul Challenger TED Open",
+      "url": "https://www.protennislive.com/posting/2026/7083/qs.pdf",
+      "sha256": "26d1c033834ea15e5b48bf9e14f47fe326bd66544d29ca9a9ad20c0f5fef7721",
+      "retrieved_at": "2026-11-22T22:17:51.228590+00:00",
+      "validation": {
+        "header_date": "2026-09-07",
+        "recorded_event_date": "2026-09-07",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-784",
+      "event": "Seville",
+      "url": "https://www.protennislive.com/posting/2026/784/qs.pdf",
+      "sha256": "9c5caac6c4e7d56eec2f7b9388389193678f90e56d36670b94a496e773a3c84d",
+      "retrieved_at": "2026-11-22T22:17:57.699843+00:00",
+      "validation": {
+        "header_date": "2026-09-07",
+        "recorded_event_date": "2026-09-07",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9120",
+      "event": "Cassis",
+      "url": "https://www.protennislive.com/posting/2026/9120/qs.pdf",
+      "sha256": "f00ca30df5fce3120e2baaa06cd34333a6ca04ae3dd7e1f5f8c861f1dc56021f",
+      "retrieved_at": "2026-11-22T22:18:04.821957+00:00",
+      "validation": {
+        "header_date": "2026-09-07",
+        "recorded_event_date": "2026-09-07",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9556",
+      "event": "Tulln",
+      "url": "https://www.protennislive.com/posting/2026/9556/qs.pdf",
+      "sha256": "62f489c880b3462ab4a27a69668a387efbdfe211ad9c84bef6e79d9a64cd8c82",
+      "retrieved_at": "2026-11-22T22:18:11.987541+00:00",
+      "validation": {
+        "header_date": "2026-09-07",
+        "recorded_event_date": "2026-09-07",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-1768",
+      "event": "Tiburon Challenger",
+      "url": "https://www.protennislive.com/posting/2026/1768/qs.pdf",
+      "sha256": "7f83897b2f66891d4ab35a86cdbfe5faca44cecfd10c72c0a3cc4a113d9c9273",
+      "retrieved_at": "2026-11-22T22:18:18.833448+00:00",
+      "validation": {
+        "header_date": "2026-09-14",
+        "recorded_event_date": "2026-09-14",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "N0AE",
+          "cohort_name": "Brandon Nakashima",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "NAKASHIMA, Bryce"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-2937",
+      "event": "Guangzhou Huangpu International Tennis Open",
+      "url": "https://www.protennislive.com/posting/2026/2937/qs.pdf",
+      "sha256": "c4529ec8af038995a2eca8be092d8d81cab0b8d810526dd50cab95bc428951ba",
+      "retrieved_at": "2026-11-22T22:18:25.177694+00:00",
+      "validation": {
+        "header_date": "2026-09-14",
+        "recorded_event_date": "2026-09-14",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3139",
+      "event": "Phan Thiet 4",
+      "url": "https://www.protennislive.com/posting/2026/3139/qs.pdf",
+      "sha256": "aebe9834ad702b3d1c3c02538337ab9ea7512c5d6a01ae138afa38b89db4f404",
+      "retrieved_at": "2026-11-22T22:18:31.853250+00:00",
+      "validation": {
+        "header_date": "2026-09-14",
+        "recorded_event_date": "2026-09-14",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3503",
+      "event": "Rennes",
+      "url": "https://www.protennislive.com/posting/2026/3503/qs.pdf",
+      "sha256": "fd7ebe70974ca79fc78ea5203bc4f52b9eda0d8f81e3a0cee54305e4f3f1046c",
+      "retrieved_at": "2026-11-22T22:18:38.634382+00:00",
+      "validation": {
+        "header_date": "2026-09-14",
+        "recorded_event_date": "2026-09-14",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-448",
+      "event": "Szczecin",
+      "url": "https://www.protennislive.com/posting/2026/448/qs.pdf",
+      "sha256": "48fafe62fcccea25f65d21e2210760ba21efac85985834531e9443fa60e1cc5e",
+      "retrieved_at": "2026-11-22T22:18:44.942417+00:00",
+      "validation": {
+        "header_date": "2026-09-14",
+        "recorded_event_date": "2026-09-14",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Pavlos"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-7085",
+      "event": "città di Biella",
+      "url": "https://www.protennislive.com/posting/2026/7085/qs.pdf",
+      "sha256": "a215fc3627829d6c33234443c5281322863b0b541eac9180664d89fc5bd62ed0",
+      "retrieved_at": "2026-11-22T22:18:51.316893+00:00",
+      "validation": {
+        "header_date": "2026-09-14",
+        "recorded_event_date": "2026-09-14",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3127",
+      "event": "Genoa 2",
+      "url": "https://www.protennislive.com/posting/2026/3127/qs.pdf",
+      "sha256": "4281410d005f50eab8693383c9fc9f8459399d1001b06d881e472d106535cacf",
+      "retrieved_at": "2026-11-22T22:18:57.734358+00:00",
+      "validation": {
+        "header_date": "2026-09-21",
+        "recorded_event_date": "2026-09-21",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3173",
+      "event": "Plovdiv 4",
+      "url": "https://www.protennislive.com/posting/2026/3173/qs.pdf",
+      "sha256": "8dab4bfa143a3b8bcc0897f9d98c12b8cd01f3a1c674f74da07da0978dddc438",
+      "retrieved_at": "2026-11-22T22:19:04.768611+00:00",
+      "validation": {
+        "header_date": "2026-09-21",
+        "recorded_event_date": "2026-09-21",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Pavlos"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3175",
+      "event": "San Diego 2",
+      "url": "https://www.protennislive.com/posting/2026/3175/qs.pdf",
+      "sha256": "7a9650a17a4c456243625d62c6758ac8bc65c5d96dfbdaa3f6ee82033c432521",
+      "retrieved_at": "2026-11-22T22:19:11.162437+00:00",
+      "validation": {
+        "header_date": "2026-09-21",
+        "recorded_event_date": "2026-09-21",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7395",
+      "event": "Buenos Aires Challenger",
+      "url": "https://www.protennislive.com/posting/2026/7395/qs.pdf",
+      "sha256": "7f04c982be1f68b538a9e817cc1993ede7690057b007d1f04d08156990c315f5",
+      "retrieved_at": "2026-11-22T22:19:18.367295+00:00",
+      "validation": {
+        "header_date": "2026-09-21",
+        "recorded_event_date": "2026-09-21",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9552",
+      "event": "Saint-Tropez Open",
+      "url": "https://www.protennislive.com/posting/2026/9552/qs.pdf",
+      "sha256": "20aa9fdf9f7aed867bfe3a161417d2b6d547c66a6ed20b280211a69232e4288c",
+      "retrieved_at": "2026-11-22T22:19:24.741592+00:00",
+      "validation": {
+        "header_date": "2026-09-21",
+        "recorded_event_date": "2026-09-21",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2895",
+      "event": "Copa Internacional de Tenis",
+      "url": "https://www.protennislive.com/posting/2026/2895/qs.pdf",
+      "sha256": "3ca1abf5f67d04f1cdf8f9584b853b10d86b7c334c447a0564f1efaacfefeda2",
+      "retrieved_at": "2026-11-22T22:19:31.914208+00:00",
+      "validation": {
+        "header_date": "2026-09-28",
+        "recorded_event_date": "2026-09-28",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3151",
+      "event": "Bari",
+      "url": "https://www.protennislive.com/posting/2026/3151/qs.pdf",
+      "sha256": "4c2b3c3d7bdc0ab2d54c1025bee483fd54a21864005c037f6504fd1cea2895ac",
+      "retrieved_at": "2026-11-22T22:19:38.329740+00:00",
+      "validation": {
+        "header_date": "2026-09-28",
+        "recorded_event_date": "2026-09-28",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6857",
+      "event": "Open de Vendée",
+      "url": "https://www.protennislive.com/posting/2026/6857/qs.pdf",
+      "sha256": "6f847ae02d23d6b11ea8b14b3499003eb24e2c72203b239c930a053a58747d9b",
+      "retrieved_at": "2026-11-22T22:19:44.704246+00:00",
+      "validation": {
+        "header_date": "2026-09-28",
+        "recorded_event_date": "2026-09-28",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "ambiguous_or_outside_entrant_list",
+          "printed_entries": [],
+          "review": "incidental_name_or_footer",
+          "actual_name_if_incidental": "Paul Theate"
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-8281",
+      "event": "Columbus Challenger",
+      "url": "https://www.protennislive.com/posting/2026/8281/qs.pdf",
+      "sha256": "87649da507ad0e04e3d7276372d578231c36cd3e28339f3b3b6d3c8d088fe513",
+      "retrieved_at": "2026-11-22T22:19:51.036821+00:00",
+      "validation": {
+        "header_date": "2026-09-28",
+        "recorded_event_date": "2026-09-28",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9526",
+      "event": "Eupago Porto Open",
+      "url": "https://www.protennislive.com/posting/2026/9526/qs.pdf",
+      "sha256": "bc1ba20b79acd85b395fa9989e3be71275ce46f81ac3b166b4a20f8f022547b4",
+      "retrieved_at": "2026-11-22T22:19:57.352981+00:00",
+      "validation": {
+        "header_date": "2026-09-28",
+        "recorded_event_date": "2026-09-28",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3013",
+      "event": "Jingshan Open",
+      "url": "https://www.protennislive.com/posting/2026/3013/qs.pdf",
+      "sha256": "f4e41945df6f1cb95f43808474e7362a1ad075377598160e90720ba427dfa83b",
+      "retrieved_at": "2026-11-22T22:20:04.362155+00:00",
+      "validation": {
+        "header_date": "2026-09-29",
+        "recorded_event_date": "2026-09-29",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2889",
+      "event": "Challenger Dove Men+Care Antofagasta",
+      "url": "https://www.protennislive.com/posting/2026/2889/qs.pdf",
+      "sha256": "3ca47fd452c59520bb41569bf7ca9234d06e17488b2d57ee49b83ba46f60656f",
+      "retrieved_at": "2026-11-22T22:20:11.021041+00:00",
+      "validation": {
+        "header_date": "2026-10-05",
+        "recorded_event_date": "2026-10-05",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3153",
+      "event": "Palermo",
+      "url": "https://www.protennislive.com/posting/2026/3153/qs.pdf",
+      "sha256": "4e6f8be038cc36bdcc001c30a7b03cc19bcace33571157cc4395fad25527ec78",
+      "retrieved_at": "2026-11-22T22:20:17.508709+00:00",
+      "validation": {
+        "header_date": "2026-10-05",
+        "recorded_event_date": "2026-10-05",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7909",
+      "event": "Ferrero Challenger",
+      "url": "https://www.protennislive.com/posting/2026/7909/qs.pdf",
+      "sha256": "6bde39837ec6e5dbaf9f57baa66e33dac8fe41a2cfc19b30a8fe01386cc603d2",
+      "retrieved_at": "2026-11-22T22:20:23.888562+00:00",
+      "validation": {
+        "header_date": "2026-10-05",
+        "recorded_event_date": "2026-10-05",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7913",
+      "event": "Braga Open",
+      "url": "https://www.protennislive.com/posting/2026/7913/qs.pdf",
+      "sha256": "42ed990e536363af2e5cdfe51c764bfbf814b2eef11bb9f19dad26b455864111",
+      "retrieved_at": "2026-11-22T22:20:30.278116+00:00",
+      "validation": {
+        "header_date": "2026-10-05",
+        "recorded_event_date": "2026-10-05",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2893",
+      "event": "Olbia Challenger",
+      "url": "https://www.protennislive.com/posting/2026/2893/qs.pdf",
+      "sha256": "d8cfd0affa24a3533d148f14bcca8b3cdbfea79a6c5c50fb4f5d5a86a189d2bd",
+      "retrieved_at": "2026-11-22T22:20:36.598902+00:00",
+      "validation": {
+        "header_date": "2026-10-12",
+        "recorded_event_date": "2026-10-12",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3143",
+      "event": "Santa Cruz de la Sierra 2",
+      "url": "https://www.protennislive.com/posting/2026/3143/qs.pdf",
+      "sha256": "c74346e37920aa34cf69bf5aeec6550cc2c3d0df4ed482d7dad15d39cca687c3",
+      "retrieved_at": "2026-11-22T22:20:43.111253+00:00",
+      "validation": null,
+      "error": "PDF does not identify an ATP Challenger; circuit/edition requires review",
+      "name_candidates": [],
+      "exclusion_note": "URL returns an ITF M15 Santa Cruz qualifying draw for 2026-11-23, not the Challenger edition dated 2026-10-12. Visually checked; no records imported."
+    },
+    {
+      "edition_id": "2026-3155",
+      "event": "Catania",
+      "url": "https://www.protennislive.com/posting/2026/3155/qs.pdf",
+      "sha256": "ba76566f99da7e4f8a674e3c1e0707a9ad237996be20948b3a5f1a446d462f29",
+      "retrieved_at": "2026-11-22T22:20:49.532240+00:00",
+      "validation": {
+        "header_date": "2026-10-12",
+        "recorded_event_date": "2026-10-12",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7746",
+      "event": "Jinan Open",
+      "url": "https://www.protennislive.com/posting/2026/7746/qs.pdf",
+      "sha256": "294225a68862306251dfd4ba1597acd37ec586f29ada83ceb740bdacd33a7d3f",
+      "retrieved_at": "2026-11-22T22:20:55.898047+00:00",
+      "validation": {
+        "header_date": "2026-10-12",
+        "recorded_event_date": "2026-10-12",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8312",
+      "event": "Maia Open",
+      "url": "https://www.protennislive.com/posting/2026/8312/qs.pdf",
+      "sha256": "57896eb058fd1e0d910155c74176da6457ab4eaa21b0ee7918d5933631eee089",
+      "retrieved_at": "2026-11-22T22:21:02.561416+00:00",
+      "validation": {
+        "header_date": "2026-10-12",
+        "recorded_event_date": "2026-10-12",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9625",
+      "event": "l'Open Auvergne-Rhone-Alpes de Roanne",
+      "url": "https://www.protennislive.com/posting/2026/9625/qs.pdf",
+      "sha256": "d10c6e14e9dd86853c8ca94c539a7010ffe6be607393874d2b5f7d6a5a9c554e",
+      "retrieved_at": "2026-11-22T22:21:08.888798+00:00",
+      "validation": {
+        "header_date": "2026-10-12",
+        "recorded_event_date": "2026-10-12",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "PL56",
+          "cohort_name": "Tommy Paul",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "PAUL, Jakub"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3185",
+      "event": "Banca Mediolanum Florence Open",
+      "url": "https://www.protennislive.com/posting/2026/3185/qs.pdf",
+      "sha256": "336fa776d7785ab62840dfbd8e8e9537e4900a1bbb34940740e599a0123692c9",
+      "retrieved_at": "2026-11-22T22:21:15.290766+00:00",
+      "validation": {
+        "header_date": "2026-10-19",
+        "recorded_event_date": "2026-10-19",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3187",
+      "event": "Fort Worth Challenger",
+      "url": "https://www.protennislive.com/posting/2026/3187/qs.pdf",
+      "sha256": "197c0214d9b004036bdb2429b34b2d9d03c4f6c3df52d5b08178f05eca7b885a",
+      "retrieved_at": "2026-11-22T22:21:21.635262+00:00",
+      "validation": {
+        "header_date": "2026-10-19",
+        "recorded_event_date": "2026-10-19",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6965",
+      "event": "Guangzhou Nansha International Challenger",
+      "url": "https://www.protennislive.com/posting/2026/6965/qs.pdf",
+      "sha256": "50b4b9f449887422fa55ccbf99e21bf2b87b9ca1a4ad072f7fa1b76d8684c509",
+      "retrieved_at": "2026-11-22T22:21:28.331325+00:00",
+      "validation": {
+        "header_date": "2026-10-19",
+        "recorded_event_date": "2026-10-19",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7742",
+      "event": "Del Monte Lisboa Belém Open",
+      "url": "https://www.protennislive.com/posting/2026/7742/qs.pdf",
+      "sha256": "a3acc72889e075d40bf11811873804c55a6e14719c18045daca721498e260419",
+      "retrieved_at": "2026-11-22T22:21:34.654651+00:00",
+      "validation": {
+        "header_date": "2026-10-19",
+        "recorded_event_date": "2026-10-19",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-9814",
+      "event": "Kia Open Cali",
+      "url": "https://www.protennislive.com/posting/2026/9814/qs.pdf",
+      "sha256": "d815dccdc6b7b3370cbe637117ff99a63079baa2aba1ec909065a38b8c3834f5",
+      "retrieved_at": "2026-11-22T22:21:41.090267+00:00",
+      "validation": {
+        "header_date": "2026-10-19",
+        "recorded_event_date": "2026-10-19",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2951",
+      "event": "MarketBeat Open",
+      "url": "https://www.protennislive.com/posting/2026/2951/qs.pdf",
+      "sha256": "7066dc72645d6daef1f1395f7cc28910aff5eb451b5dfd4f242d2eaac160feb8",
+      "retrieved_at": "2026-11-22T22:21:47.428814+00:00",
+      "validation": {
+        "header_date": "2026-10-26",
+        "recorded_event_date": "2026-10-26",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "N0AE",
+          "cohort_name": "Brandon Nakashima",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "NAKASHIMA, Bryce (576)"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-7288",
+      "event": "EUGENE Seoul Open 2025",
+      "url": "https://www.protennislive.com/posting/2026/7288/qs.pdf",
+      "sha256": "1e5381b4840b96fc21fb00f2ad57ce9cc74c8ca2b370c5c54495c4e6ff18d111",
+      "retrieved_at": "2026-11-22T22:21:53.874413+00:00",
+      "validation": {
+        "header_date": "2026-10-26",
+        "recorded_event_date": "2026-10-26",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7341",
+      "event": "BREST OPEN GROUPE VERT",
+      "url": "https://www.protennislive.com/posting/2026/7341/qs.pdf",
+      "sha256": "890a21ff97034ab481c7128843095a533efe57bef8ee305f1f0f855a3116b77a",
+      "retrieved_at": "2026-11-22T22:22:00.624105+00:00",
+      "validation": {
+        "header_date": "2026-10-26",
+        "recorded_event_date": "2026-10-26",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7343",
+      "event": "Ningbo",
+      "url": "https://www.protennislive.com/posting/2026/7343/qs.pdf",
+      "sha256": "58401ab59fa319495b9e1ace8587ab015caeb7cd254b854f44c82139fcd0cd09",
+      "retrieved_at": "2026-11-22T22:22:07.016419+00:00",
+      "validation": {
+        "header_date": "2026-10-26",
+        "recorded_event_date": "2026-10-26",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7391",
+      "event": "Challenger Ciudad de Guayaquil",
+      "url": "https://www.protennislive.com/posting/2026/7391/qs.pdf",
+      "sha256": "2c0c41b344fbf2cdc8dc2836a6885de3cd5aab14cc512bcc410ecb7ebdc1d373",
+      "retrieved_at": "2026-11-22T22:22:13.348592+00:00",
+      "validation": {
+        "header_date": "2026-10-26",
+        "recorded_event_date": "2026-10-26",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2278",
+      "event": "TAIWAN SANTAIZI CHALLENGER",
+      "url": "https://www.protennislive.com/posting/2026/2278/qs.pdf",
+      "sha256": "8845d766116f3dbda0bf4b18b5d55d9a72db342f0099fd2f5f346064b5255958",
+      "retrieved_at": "2026-11-22T22:22:19.664498+00:00",
+      "validation": {
+        "header_date": "2026-11-02",
+        "recorded_event_date": "2026-11-02",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2811",
+      "event": "Villa Maria",
+      "url": "https://www.protennislive.com/posting/2026/2811/qs.pdf",
+      "sha256": "a1cacb5e090cc2b9b0722aad7c9919405b21bc63f527f84fb9d970a70e8cb2b0",
+      "retrieved_at": "2026-11-22T22:22:26.005349+00:00",
+      "validation": {
+        "header_date": "2026-11-02",
+        "recorded_event_date": "2026-11-02",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3031",
+      "event": "Costa do Sauipe Open",
+      "url": "https://www.protennislive.com/posting/2026/3031/qs.pdf",
+      "sha256": "b78c7483ee1a42fd574d02c1383cc8469dea6768c37f7f65137c3866a1297acb",
+      "retrieved_at": "2026-11-22T22:22:32.763809+00:00",
+      "validation": {
+        "header_date": "2026-11-02",
+        "recorded_event_date": "2026-11-02",
+        "entrant_name_lines": 34
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-444",
+      "event": "Slovak Open",
+      "url": "https://www.protennislive.com/posting/2026/444/qs.pdf",
+      "sha256": "53df2bf87b8cc841d1905b800419c48ffdf7fe71081834c6b992dfc34f4852b1",
+      "retrieved_at": "2026-11-22T22:22:39.828213+00:00",
+      "validation": {
+        "header_date": "2026-11-02",
+        "recorded_event_date": "2026-11-02",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6055",
+      "event": "Jonathan Fried Men's Pro Challenger",
+      "url": "https://www.protennislive.com/posting/2026/6055/qs.pdf",
+      "sha256": "944def04ae2ac1f519f11439e2a7e91eb08ce495991e6cd463cb965fff72b96b",
+      "retrieved_at": "2026-11-22T22:22:46.852186+00:00",
+      "validation": {
+        "header_date": "2026-11-02",
+        "recorded_event_date": "2026-11-02",
+        "entrant_name_lines": 36
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2273",
+      "event": "Co'met Orleans Open",
+      "url": "https://www.protennislive.com/posting/2026/2273/qs.pdf",
+      "sha256": "630ad7ab05aee93caf015ed2836dd3f8b6fb75c0b2098e58cedfb96c3196cc47",
+      "retrieved_at": "2026-11-22T22:22:53.638281+00:00",
+      "validation": {
+        "header_date": "2026-11-09",
+        "recorded_event_date": "2026-11-09",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3017",
+      "event": "Hersonissos Challenger 3",
+      "url": "https://www.protennislive.com/posting/2026/3017/qs.pdf",
+      "sha256": "1c98fb7d040dce7f3c3495415f4218088b403a6a5c740739c6cb1633a3a01c33",
+      "retrieved_at": "2026-11-22T22:22:59.896262+00:00",
+      "validation": {
+        "header_date": "2026-11-09",
+        "recorded_event_date": "2026-11-09",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "TE51",
+          "cohort_name": "Stefanos Tsitsipas",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "TSITSIPAS, Petros"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-3037",
+      "event": "BRISBANE QTC TENNIS INTERNATIONAL #3",
+      "url": "https://www.protennislive.com/posting/2026/3037/qs.pdf",
+      "sha256": "441d394565d21faa57244394769be1a1981bd59061db53d8f1d7b6871fcfe466",
+      "retrieved_at": "2026-11-22T22:23:06.264986+00:00",
+      "validation": {
+        "header_date": "2026-11-09",
+        "recorded_event_date": "2026-11-09",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3159",
+      "event": "Monastir 1",
+      "url": "https://www.protennislive.com/posting/2026/3159/qs.pdf",
+      "sha256": "3f219fbeb6a63dfec7d8b2e02847d6c9ec81e07d9e35406cb0cdccfbf4789d55",
+      "retrieved_at": "2026-11-22T22:23:12.473720+00:00",
+      "validation": {
+        "header_date": "2026-11-09",
+        "recorded_event_date": "2026-11-09",
+        "entrant_name_lines": 34
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-363",
+      "event": "Knoxville Challenger",
+      "url": "https://www.protennislive.com/posting/2026/363/qs.pdf",
+      "sha256": "7637561d317378a6ac54e0f209958bec1dc4518e50b2b6a2ea5dad83994fd91a",
+      "retrieved_at": "2026-11-22T22:23:18.719893+00:00",
+      "validation": {
+        "header_date": "2026-11-09",
+        "recorded_event_date": "2026-11-09",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-6579",
+      "event": "Igma Open",
+      "url": "https://www.protennislive.com/posting/2026/6579/qs.pdf",
+      "sha256": "70cffd7828097abd7dfba9177f690510726455d46fc981ee0569200a04048cd5",
+      "retrieved_at": "2026-11-22T22:23:25.499304+00:00",
+      "validation": {
+        "header_date": "2026-11-09",
+        "recorded_event_date": "2026-11-09",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8386",
+      "event": "Matsuyama",
+      "url": "https://www.protennislive.com/posting/2026/8386/qs.pdf",
+      "sha256": "431d62ba369b1f469a5cee087863c92b369f605a91eb8fb09a9124d3a711c4b1",
+      "retrieved_at": "2026-11-22T22:23:31.845441+00:00",
+      "validation": {
+        "header_date": "2026-11-09",
+        "recorded_event_date": "2026-11-09",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-2817",
+      "event": "NSW Open",
+      "url": "https://www.protennislive.com/posting/2026/2817/qs.pdf",
+      "sha256": "01606ec17f6eae44bc64958163c7dfedac22d58b9675420cd83f402c040f354a",
+      "retrieved_at": "2026-11-22T22:23:37.988942+00:00",
+      "validation": {
+        "header_date": "2026-11-16",
+        "recorded_event_date": "2026-11-16",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-3165",
+      "event": "Open Metz-Grand Est",
+      "url": "https://www.protennislive.com/posting/2026/3165/qs.pdf",
+      "sha256": "17205a361103b2d0951d80b2201e493ca64210f9337ab4b1c6c51dc826a4dc33",
+      "retrieved_at": "2026-11-22T22:23:44.128904+00:00",
+      "validation": {
+        "header_date": "2026-11-16",
+        "recorded_event_date": "2026-11-16",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-544",
+      "event": "Uruguay Open",
+      "url": "https://www.protennislive.com/posting/2026/544/qs.pdf",
+      "sha256": "5f11c341f734bfa1b6bf791db1791e574bbf248ae203c49a863cd84c5fc3d5ab",
+      "retrieved_at": "2026-11-22T22:23:50.318468+00:00",
+      "validation": {
+        "header_date": "2026-11-16",
+        "recorded_event_date": "2026-11-16",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-637",
+      "event": "Champaign",
+      "url": "https://www.protennislive.com/posting/2026/637/qs.pdf",
+      "sha256": "b970653afb8a125a5684143f0fe86a597c7d3ff4296ba069f46f09052f18eaae",
+      "retrieved_at": "2026-11-22T22:23:56.493904+00:00",
+      "validation": {
+        "header_date": "2026-11-16",
+        "recorded_event_date": "2026-11-16",
+        "entrant_name_lines": 37
+      },
+      "error": null,
+      "name_candidates": [
+        {
+          "player_id": "N0AE",
+          "cohort_name": "Brandon Nakashima",
+          "identity_status": "different_full_name_review",
+          "printed_entries": [
+            "NAKASHIMA, Bryce",
+            "5 Nakashima, Bryce"
+          ],
+          "review": "other_person_full_name",
+          "actual_name_if_incidental": null
+        }
+      ]
+    },
+    {
+      "edition_id": "2026-7235",
+      "event": "CHALLENGER BANQUE NATIONALE DE DRUMMONDVILLE",
+      "url": "https://www.protennislive.com/posting/2026/7235/qs.pdf",
+      "sha256": "92044390389d2d68196f3f87094b3c6b6dbb7b0edbe6f0d312192358d5bc6119",
+      "retrieved_at": "2026-11-22T22:24:02.694850+00:00",
+      "validation": {
+        "header_date": "2026-11-16",
+        "recorded_event_date": "2026-11-16",
+        "entrant_name_lines": 35
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-7397",
+      "event": "Hyogo Noah Challenger",
+      "url": "https://www.protennislive.com/posting/2026/7397/qs.pdf",
+      "sha256": "c22f540702dd6889a2aa39d596898bd433b26c72c453b2c63ad45fd4ee913ada",
+      "retrieved_at": "2026-11-22T22:24:08.858748+00:00",
+      "validation": {
+        "header_date": "2026-11-16",
+        "recorded_event_date": "2026-11-16",
+        "entrant_name_lines": 38
+      },
+      "error": null,
+      "name_candidates": []
+    },
+    {
+      "edition_id": "2026-8310",
+      "event": "Helsinki",
+      "url": "https://www.protennislive.com/posting/2026/8310/qs.pdf",
+      "sha256": "0f75de1cb6265c53398c5a8f97c1777e6594c8c4bce044f9ab3bcacb4a455b06",
+      "retrieved_at": "2026-11-22T22:24:15.545449+00:00",
+      "validation": {
+        "header_date": "2026-11-16",
+        "recorded_event_date": "2026-11-16",
+        "entrant_name_lines": 39
+      },
+      "error": null,
+      "name_candidates": []
+    }
+  ]
+}

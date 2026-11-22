@@ -22,6 +22,7 @@ def inventory_status(snapshot, reviews=None):
     return {"verified": verified, "itf_status": review.get("itf_status", "not_integrated_or_reconciled"),
             "itf_source": review.get("itf_source"),
             "qualifying_status": review.get("qualifying_status", "not_reconciled"),
+            "qualifying_census_progress": review.get("census_progress", {}),
             "confirmed_missing_participations": review.get("confirmed_missing_participations", []) if review.get("census_import_id") == snapshot["id"] else [], "notes": review.get("notes", "Inventario completo dei tornei non ancora riconciliato con una fonte indipendente.")}
 
 

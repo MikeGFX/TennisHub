@@ -14,6 +14,20 @@
       "scope": "Only the paths of Fery and Jodar, three unique matches. Not the full qualifying draw.",
       "date_precision": "Tournament week starting 2026-01-05; individual match dates not established.",
       "identity_check": "ATP IDs and names matched against players already present in the local archive."
+    },
+    {
+      "file": "2026-cap-cana-qualifying.csv",
+      "name": "challenger_quali/curated/2026-cap-cana.csv",
+      "sha256": "9aaba9390221608c6423e77e7735dd41d98fda0a7bba0a78d74c296a2cbeccba",
+      "source_url": "https://www.protennislive.com/posting/2026/2975/qs.pdf",
+      "source_sha256": "4fb5690d33406a3e93016b4772ae8fc5dc4cf57b9789a9c531af8156aa1fefa4",
+      "verified_on": "2026-11-22",
+      "available_by": "2026-03-15",
+      "source_released_at": "2026-03-15T18:39:30",
+      "method": "Manual transcription from final official PDF, visually checked. CSV hash identifies transcription; source_sha256 identifies original PDF.",
+      "scope": "Only paths of Fery and Van Assche, four unique matches. Not the full qualifying draw.",
+      "date_precision": "Tournament week starting 2026-03-09; official main event starts March 10; individual qualifying match dates not established.",
+      "identity_check": "Full printed names and existing ATP IDs reconciled against the local player archive."
     }
   ]
 }

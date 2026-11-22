@@ -1,0 +1,5 @@
+tourney_id,tourney_name,surface,draw_size,tourney_level,tourney_date,match_num,winner_id,winner_name,winner_ioc,winner_seed,winner_entry,loser_id,loser_name,loser_ioc,loser_seed,loser_entry,score,best_of,round,source_date_precision
+2026-2975,Cap Cana,Hard,16,C,20260309,curated-Q1-V0DZ-BP79,V0DZ,Luca Van Assche,FRA,1,,BP79,Peter Bertran,DOM,,WC,6-0 6-2,3,Q1,tournament_week
+2026-2975,Cap Cana,Hard,16,C,20260309,curated-Q2-V0DZ-S0UV,V0DZ,Luca Van Assche,FRA,1,,S0UV,Rei Sakamoto,JPN,,Alt,7-6(4) 6-3,3,Q2,tournament_week
+2026-2975,Cap Cana,Hard,16,C,20260309,curated-Q1-F0DM-S0IA,F0DM,Arthur Fery,GBR,,,S0IA,Dane Sweeny,AUS,5,,6-4 4-6 6-1,3,Q1,tournament_week
+2026-2975,Cap Cana,Hard,16,C,20260309,curated-Q2-M0AW-F0DM,M0AW,Nicolas Mejia,COL,,Alt,F0DM,Arthur Fery,GBR,,,6-3 6-2,3,Q2,tournament_week

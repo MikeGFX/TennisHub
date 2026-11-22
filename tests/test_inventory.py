@@ -54,3 +54,50 @@ class StructuralCensusTests(unittest.TestCase):
         from tennishub.inventory import census
         self.load(qualifying=True)
         self.assertEqual(census(self.connection,2026)["main_draws_without_qualifying_records"],[])
+
+
+class QualifyingScreenTests(unittest.TestCase):
+    def test_berrettini_brothers_and_paul_given_name_are_not_exact_matches(self):
+        from scripts.scan_qualifying_draws import identify_candidate
+        other=identify_candidate("BERRETTINI, Jacopo",{"name":"Matteo Berrettini"})
+        self.assertEqual(other["identity_status"],"different_full_name_review")
+        incidental=identify_candidate("INCHAUSPE, Paul",{"name":"Tommy Paul"})
+        self.assertEqual(incidental["printed_entries"],[])
+        self.assertNotEqual(incidental["identity_status"],"exact_full_name")
+
+    def test_full_name_is_matched_with_accents_normalized(self):
+        from scripts.scan_qualifying_draws import identify_candidate
+        self.assertEqual(identify_candidate("JODAR, Rafael",{"name":"Rafael Jodar"})["identity_status"],"exact_full_name")
+        self.assertEqual(identify_candidate("VAN ASSCHE, Luca",{"name":"Luca Van Assche"})["identity_status"],"exact_full_name")
+
+    def test_truncated_name_is_left_for_review(self):
+        from scripts.scan_qualifying_draws import identify_candidate
+        self.assertEqual(identify_candidate("JODAR, Rafa...",{"name":"Rafael Jodar"})["identity_status"],"ambiguous_or_outside_entrant_list")
+
+    def test_wrong_week_or_generic_pdf_cannot_count_as_verified(self):
+        from scripts.scan_qualifying_draws import validate_draw
+        text="5 January - 10 January 2026 | Challenger 125\nQualifying Singles\n"+"FERY, Arthur\n"*8
+        self.assertEqual(validate_draw(text,{"first_recorded_date":"2026-01-05"})["header_date"],"2026-01-05")
+        with self.assertRaisesRegex(ValueError,"week differs"):
+            validate_draw(text,{"first_recorded_date":"2026-05-04"})
+        with self.assertRaisesRegex(ValueError,"week differs"):
+            validate_draw(text,{"first_recorded_date":"2026-01-12"})
+        with self.assertRaises(ValueError):
+            validate_draw("2026 Qualifying",{"first_recorded_date":"2026-01-05"})
+
+    def test_truncated_compound_surname_remains_a_candidate(self):
+        from scripts.scan_qualifying_draws import identify_candidate
+        result=identify_candidate("DAVIDOVICH FOK..., Alejandro",{"name":"Alejandro Davidovich Fokina"})
+        self.assertTrue(result["truncated_family_match"])
+        self.assertEqual(result["identity_status"],"ambiguous_or_outside_entrant_list")
+
+    def test_seed_number_does_not_hide_full_name_match(self):
+        from scripts.scan_qualifying_draws import identify_candidate
+        result=identify_candidate("9 FERY, Arthur",{"name":"Arthur Fery"})
+        self.assertEqual(result["identity_status"],"exact_full_name")
+
+    def test_itf_pdf_cannot_validate_a_challenger_even_in_same_week(self):
+        from scripts.scan_qualifying_draws import validate_draw
+        text="5 January - 10 January 2026\nITF World Tennis Tour\nSingles Qualifying\n"+"FERY, Arthur\n"*8
+        with self.assertRaisesRegex(ValueError,"ATP Challenger"):
+            validate_draw(text,{"first_recorded_date":"2026-01-05"})

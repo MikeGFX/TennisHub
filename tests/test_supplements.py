@@ -18,6 +18,8 @@ class SupplementTests(unittest.TestCase):
         connection=connect(Path(directory)/"test.sqlite3")
         self.addCleanup(connection.close)
         extra,provenance=load_supplements(2026,AS_OF)
+        extra=[r for r in extra if "canberra" in r.name]
+        provenance=[r for r in provenance if "canberra" in r.name or r.name.endswith(".json")]
         main=resource("2026_challenger.csv",[row(tourney_id="2026-7393",tourney_name="Canberra",tourney_date="20260105",tourney_level="C",draw_size="32",round="F",winner_id="B0PG",winner_name="Alexander Blockx",loser_id="J0DZ",loser_name="Rafael Jodar",loser_entry="Q")])
         roster=[{"id":"F0DM","name":"Arthur Fery","ioc":"GBR","rank":1,"points":100},{"id":"J0DZ","name":"Rafael Jodar","ioc":"ESP","rank":2,"points":90}]
         before=import_bundle(connection,2026,AS_OF,RANKING_DATE,roster,[main],[main])
@@ -36,6 +38,10 @@ class SupplementTests(unittest.TestCase):
         self.assertEqual(jodar["points_breakdown"],{"main_draw":64,"qualifying":5})
         self.assertEqual(len(jodar["matches"]),3)
         self.assertEqual(after["matches"]-before["matches"],3)
+        from tennishub.inventory import census
+        report=census(connection,2026)
+        self.assertEqual(report["main_draws_without_qualifying_records"],[])
+        self.assertEqual(report["qualifying_draws_with_curated_paths_only"],[{"edition_id":"2026-7393","recorded_matches":3,"status":"curated_paths_only_not_complete_draw"}])
         self.assertTrue(import_bundle(connection,2026,AS_OF,RANKING_DATE,roster,datasets,sources)["reused"])
         self.assertEqual(connection.execute("SELECT count(*) FROM imports").fetchone()[0],2)
         self.assertEqual(connection.execute("SELECT count(*) FROM matches WHERE import_id=?",(before["import_id"],)).fetchone()[0],1)
@@ -74,3 +80,20 @@ class SupplementTests(unittest.TestCase):
         extra=[{"raw":r,"stage":"qualifying"} for _,r in csv_rows(datasets[0]) if "F0DM" in (r["winner_id"],r["loser_id"])]
         evidence={"2026-7393":{"level":125,"source":"https://example.test/level"}}
         self.assertIsNone(evaluate_points(extra,"F0DM",editions=evidence).value)
+
+    def test_cap_cana_paths_use_verified_16_player_qualifying_draw(self):
+        from tennishub.points import evaluate_points
+        datasets,_=load_supplements(2026,AS_OF)
+        resource=next(r for r in datasets if "cap-cana" in r.name)
+        rows=[r for _,r in csv_rows(resource)]
+        fery=[{"raw":r,"stage":"qualifying"} for r in rows if "F0DM" in (r["winner_id"],r["loser_id"])]
+        self.assertEqual(evaluate_points(fery,"F0DM").value,3)
+        main=row(tourney_id="2026-2975",tourney_name="Cap Cana",tourney_level="C",draw_size="28",round="R16",winner_id="C0JP",loser_id="V0DZ",loser_entry="")
+        path=[{"raw":r,"stage":"qualifying"} for r in rows if "V0DZ" in (r["winner_id"],r["loser_id"])]
+        first={**main,"round":"R32","winner_id":"V0DZ","loser_id":"S0N0"}
+        matches=[{"raw":first,"stage":"main"},{"raw":main,"stage":"main"}]
+        before=evaluate_points(matches,"V0DZ")
+        after=evaluate_points([*matches,*path],"V0DZ")
+        self.assertEqual((before.value,after.value,after.qualifying),(13,19,6))
+        unverified={"2026-2975":{"level":175,"source":"https://example.test/level"}}
+        self.assertIsNone(evaluate_points(fery,"F0DM",editions=unverified).value)

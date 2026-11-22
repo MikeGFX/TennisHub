@@ -154,6 +154,19 @@ async function main() {
   assert.ok(jodarCanberra.textContent.includes("Tabellone principale: 64"));
   assert.ok(jodarCanberra.textContent.includes("Qualificazioni: 5"));
 
+  $('[data-player-id="F0DM"]').click();
+  await until(() => ready() && $("#player-name")?.textContent === "Arthur Fery", "Fery con Cap Cana integrata");
+  const feryCapCana = $("#tournament-2026-2975");
+  assert.equal(feryCapCana.querySelectorAll(".match").length, 2);
+  assert.match(feryCapCana.querySelector(".event-points").textContent, /^3/);
+  $('[data-player-id="V0DZ"]').click();
+  await until(() => ready() && $("#player-name")?.textContent === "Luca Van Assche", "Van Assche con Cap Cana integrata");
+  const vanAsscheCapCana = $("#tournament-2026-2975");
+  assert.equal(vanAsscheCapCana.querySelectorAll(".match").length, 4);
+  assert.match(vanAsscheCapCana.querySelector(".event-points").textContent, /^19/);
+  assert.ok(vanAsscheCapCana.textContent.includes("Qualificazioni: 6"));
+  assert.ok(vanAsscheCapCana.querySelector('a[href="https://www.protennislive.com/posting/2026/2975/qs.pdf"]'));
+
   let fail = true;
   const retryWindow = await page((url, options, realFetch) => {
     if (fail) { fail = false; return Promise.reject(new Error("Errore di prova")); }

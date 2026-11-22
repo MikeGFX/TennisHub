@@ -1,4 +1,4 @@
-# Calcolo dei punti ottenuti — motore 2026.5
+# Calcolo dei punti ottenuti — motore 2026.6
 
 Il calcolo e' ora nel modulo `tennishub/points.py`, condiviso dalle query
 dell'app e dallo script di ricerca. Funziona per un identificativo ATP qualsiasi.
@@ -131,10 +131,17 @@ Gli anni diversi dal 2025 e 2026 restano da validare.
 
 Fonte per i walkover vinti 2026: [Rulebook ATP, Exhibit K](https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-10_exhibits_27apr26.pdf).
 
-## Integrazione Canberra, motore 2026.5
+## Integrazione Canberra, motore 2026.6
 
 Qualificazioni Challenger a 24 giocatori supportate soltanto con formato
 verificato per l'edizione. Fery Canberra: 3 punti; Jodar: 64 + 5 = 69 punti.
 Il bonus di Jodar era prima assente per indicazione di ingresso mancante.
 Copertura dopo integrazione: 1.187/1.187 partecipazioni registrate, inventario
 ancora incompleto. Dettagli nel [rapporto del censimento](censimento-2026.md).
+
+## Cap Cana, motore 2026.6
+
+Il formato qualificazioni a 16 giocatori e' supportato solo per edizioni con
+formato verificato. Fery Cap Cana: 3 punti; Van Assche: 13 + 6 = 19. I valori
+per gli altri 48 giocatori sono invariati rispetto alla fotografia precedente.
+Copertura attuale: 1.188/1.188 partecipazioni registrate, inventario non certificato.

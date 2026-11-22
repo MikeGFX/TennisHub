@@ -6,7 +6,7 @@ anche quando si consulta una stagione precedente. Non e' la top 50 di ogni anno.
 
 | Stagione | Partecipazioni registrate | Punti calcolabili | Da verificare |
 |---|---:|---:|---:|
-| 2026 | 1187 | 1187 | 0 |
+| 2026 | 1188 | 1188 | 0 |
 | 2025 | 1227 | 983 | 244 |
 | 2024 | 1243 | 0 | 1243 |
 | 2023 | 1124 | 0 | 1124 |
@@ -57,3 +57,8 @@ Vedi [controlli e lacune riscontrate](censimento-2026.md).
 
 Canberra ora integrata: Fery 3 punti e Jodar 69 (64 + 5); i risultati 2026 noti
 sono 1.187 partecipazioni. La completezza dell'inventario resta da verificare.
+
+Cap Cana integrata: Fery 3 punti e Van Assche 19 (13 + 6). Le partecipazioni
+registrate 2026 sono ora 1.188. Esaminati 238 URL delle qualificazioni Challenger:
+237 documenti validati; Santa Cruz 2 escluso per documento di altro circuito.
+L'inventario completo e la copertura ITF/Futures restano aperti.

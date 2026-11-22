@@ -111,6 +111,7 @@ def main(argv=None):
                     for item in result["draws"]:
                         print(f"{item['category']} {item['stage']}: {item['count']} tabelloni")
                     print("Tabelloni principali senza qualificazioni registrate:", len(result["main_draws_without_qualifying_records"]))
+                    print("Qualificazioni con soli percorsi curati, non tabelloni completi:", len(result["qualifying_draws_with_curated_paths_only"]))
                     print("Conteggi da verificare sui tabelloni ufficiali:", len(result["closed_draw_count_anomalies"]))
             elif args.command == "completeness":
                 from .quality import assess_range

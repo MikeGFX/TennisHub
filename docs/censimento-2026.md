@@ -1,98 +1,104 @@
-# Primo censimento 2026 - 22 novembre 2026
+# Censimento 2026 - stato al 22 novembre
 
-Fotografia locale: 18 novembre; campione dei 50 del 16 novembre.
-Nella prima fase non sono stati importati risultati esterni. L'integrazione
-successiva di Canberra e' descritta in fondo al rapporto.
+Campione: gli stessi 50 giocatori della classifica del 16 novembre 2026.
+Fotografia dei risultati: 18 novembre. Non e' la top 50 storica di ogni anno.
 
-## Lacuna confermata
+## Qualificazioni Challenger
 
-Arthur Fery, Canberra Challenger 125, qualificazioni:
+Scaricati i PDF delle qualificazioni dei 238 Challenger gia' presenti nel database.
+237 documenti superano i controlli su circuito, anno, settimana e lista dei nomi.
+Un documento resta escluso: Santa Cruz de la Sierra 2 (2026-3143).
+Il suo URL restituisce un M15 ITF del 23 novembre, mentre l'edizione Challenger
+registrata e' del 12 ottobre. Il PDF e' stato controllato anche visivamente;
+non viene usato per dedurre partecipazioni o assenze nel Challenger.
 
-- Q1: vittoria contro Daniel Jovanovski, 3-6 6-4 6-0.
-- Q2: sconfitta contro Rafael Jodar, 6-3 3-2 RET dal lato del vincitore.
-- Punti del turno: 3, riportati nel tabellone ufficiale.
+- [Edizione Challenger di ottobre, scheda ATP](https://www.atptour.com/es/tournaments/santa-cruz-de-la-sierra/3143/overview)
+- [URL che restituisce il documento ITF diverso](https://www.protennislive.com/posting/2026/3143/qs.pdf)
 
-La partecipazione e i due incontri sono assenti dalla fotografia locale.
-Fonte primaria, controllata anche visivamente:
-[tabellone ufficiale delle qualificazioni](https://www.protennislive.com/posting/2026/7393/qs.pdf).
-Hash e dettagli sono nel registro `tennishub/rules/season-reviews.json`.
-Jodar e' gia' presente nel main draw dello stesso torneo: per lui mancano
-incontri del percorso, non un nuovo torneo.
+URL, hash dei documenti e decisioni sui candidati sono conservati nel
+[registro del censimento](../research/challenger-qualifying-census-2026.json).
+I file PDF non sono redistribuiti nel repository.
 
-## Copertura strutturale
+Il confronto usa nomi completi e segnala cognomi composti troncati. Le semplici
+corrispondenze di cognome non aggiungono dati all'app: sono emersi, per esempio,
+Jacopo Berrettini, Bryce Nakashima, Vito Antonio Darderi, Petros/Pavlos Tsitsipas,
+Jakub Paul e diversi giocatori con nome proprio Paul, distinti dal campione.
+I quattro percorsi del campione confermati sono quelli nelle due edizioni sotto.
+Il controllo rimane uno screening sui tornei noti, non la prova dell'assenza di
+altri tornei o partecipazioni nell'intera stagione.
 
-- Presenti 238 main draw Challenger e zero tabelloni Challenger di qualificazione.
-- Ogni main draw ATP 250/500, Masters e Slam presente ha un corrispondente
-  tabellone di qualificazione registrato. Questo non prova assenza di altri tornei.
-- Quattro Challenger conclusi hanno 30 incontri su un tabellone dichiarato a 32:
-  Brisbane QTC #3 (3037), Lima (6579), Guangzhou (6965), Lisbona (7742).
-  I PDF finali non elencano bye. Restano da riconciliare gli incontri mancanti:
-  rispettivamente R32, SF, R16 e R16. Nessun giocatore attualmente registrato in
-  questi quattro tornei appartiene al campione; cio' non esclude giocatori omessi.
-- Auckland e' segnalato dal controllo numerico (27 incontri, dimensione CSV 32):
-  occorre controllare il formato reale e i bye prima di parlare di dati mancanti.
+## Percorsi verificati e integrati
 
-## Confronti esterni e limiti
+| Torneo | Giocatore | Esito | Punti del torneo |
+|---|---|---|---:|
+| Canberra 125 | Arthur Fery | Q2 | 3 |
+| Canberra 125 | Rafael Jodar | Finalista da qualificato | 69 (64 + 5) |
+| Cap Cana 175 | Arthur Fery | Q2 | 3 |
+| Cap Cana 175 | Luca Van Assche | R16 da qualificato | 19 (13 + 6) |
 
-Tennis Abstract: confrontate soltanto le pagine complete di Zverev, Sinner e
-Alcaraz, con identita' ATP verificata. Sinner coincide nei 47 incontri presenti;
-Zverev ha 85 corrispondenze e 2 incontri esterni aggiuntivi; Alcaraz 50 e 3.
-Le cinque differenze riguardano le Finals gia' presenti e richiedono verifica
-rispetto al limite del 18 novembre. Le date esterne possono essere l'inizio del
-torneo, non il giorno del match: nessuna differenza e' importata automaticamente.
-Le fonti possono condividere dati a monte; la concordanza non e' certificazione
-indipendente di completezza.
+Fonti primarie controllate anche visivamente:
+[Canberra](https://www.protennislive.com/posting/2026/7393/qs.pdf) e
+[Cap Cana](https://www.protennislive.com/posting/2026/2975/qs.pdf).
 
-Lettura di 10 PDF ufficiali delle qualificazioni Challenger riuscita; altri 228
-restano da leggere. Scansione dei cognomi: i candidati devono essere verificati
-per identita', anno, turno e risultato. Tennis Abstract e ProTennisLive hanno
-risposto HTTP 429: gli scaricamenti si sono fermati, senza tentare aggiramenti.
-Il calendario ITF ha restituito una pagina di protezione; la copertura ITF/Futures
-resta aperta. Non e' stata certificata l'assenza di altre partecipazioni mancanti.
+Canberra: Fery supera Jovanovski (3-6 6-4 6-0), poi perde contro Jodar
+(6-3 3-2 RET dal lato del vincitore). Jodar supera anche Marinkov (6-4 6-3).
+Il Q2 condiviso e' memorizzato una sola volta. Jodar passa da 64 a 69 punti:
+prima mancavano sia i match sia l'indicazione di ingresso da qualificato.
 
-## Riproducibilita'
+Cap Cana: Fery supera Sweeny (6-4 4-6 6-1), poi perde con Mejia (6-3 6-2).
+Van Assche supera Bertran (6-0 6-2) e Sakamoto (7-6(4) 6-3). Il main draw
+esisteva gia', ma mancavano i 6 punti di qualificazione: da 13 a 19.
+
+Le trascrizioni in `data/curated/` contengono sette incontri unici complessivi.
+Il registro distingue hash del PDF originale e hash del CSV trascritto.
+Le date indicano la settimana del torneo; il giorno effettivo non e' accertato.
+Non sono inventate statistiche degli incontri. Le importazioni normali, anche
+offline, includono i dati curati con controllo hash e mantengono le fotografie
+precedenti. Un conflitto con dati successivi interrompe l'importazione per verifica.
+
+## Effetto sull'app
+
+Dopo Cap Cana, Fery ha 22 partecipazioni, 55 incontri e subtotale 1.485 punti;
+Van Assche 31 partecipazioni, 75 incontri e subtotale 1.527 punti.
+Gli altri 48 giocatori mantengono riepiloghi e punti precedenti.
+
+La fotografia corrente contiene 11.297 incontri e 1.188 partecipazioni del campione
+con punti calcolabili. Questo non certifica che tutte le partecipazioni esistano
+nel database. I totali stagionali sono distinti dal ranking ATP.
+
+Sono importati solo i percorsi selezionati, non i tabelloni completi: Canberra
+ha 3 incontri di qualificazione, Cap Cana 4. Gli altri 236 main draw Challenger
+non hanno qualificazioni importate; la lettura dei loro PDF non ne importa tutti
+i giocatori. Il comando `inventory` distingue questa situazione dai tabelloni
+con soli percorsi curati.
+
+## Controlli ancora aperti
+
+- Recuperare il vero tabellone Challenger di Santa Cruz 2 di ottobre.
+- Riconciliare l'inventario dei tornei con una fonte indipendente: la scansione
+  parte dalle 238 edizioni gia' presenti e non scopre automaticamente tornei assenti.
+- Completare la copertura ITF/Futures: la copia disponibile arriva a giugno.
+- Verificare quattro main draw Challenger conclusi con 30 incontri su 32 giocatori:
+  Brisbane QTC #3 (3037, R32), Lima (6579, SF), Guangzhou (6965, R16), Lisbona
+  (7742, R16). Nessun giocatore osservato in questi quattro tornei e' nel campione;
+  cio' non esclude giocatori omessi. Anche Auckland richiede controllo del formato
+  reale e dei bye prima di considerare anomalo il conteggio.
+- Aggiornare gli eventi ancora provvisori, incluse le Finals, con date verificate.
+
+Tennis Abstract era stato confrontato su tre giocatori soltanto: 47 pagine
+restano da confrontare. La concordanza tra fonti che possono condividere dati
+a monte non costituisce certificazione indipendente.
+
+## Riprodurre i controlli
 
 ```bash
 python3 -m tennishub inventory --season 2026
-python3 -m tennishub inventory --season 2026 --json
-python3 -m scripts.census_season --season 2026 --offline
-python3 -m scripts.scan_qualifying_draws --offline
+python3 -m tennishub completeness --from-season 2016 --to-season 2026
+python3 -m scripts.scan_qualifying_draws --offline --output research/local/challenger-qualifying-validated-2026.json
 ```
 
-I due script di ricerca scrivono rapporti in `research/local/`, esclusa da Git.
-Per la scansione PDF serve PyMuPDF (solo ricerca, non dipendenza dell'app).
-Una nuova scansione online riusa la cache e si ferma su 403/429; le voci non
-lette restano esplicitamente pendenti. La cache non si aggiorna automaticamente:
-per una fotografia successiva occorre gestire il rinnovo delle fonti.
-
-## Azioni successive
-
-Integrare con provenienza verificabile la partecipazione di Fery e il percorso
-di Jodar; proseguire i PDF pendenti quando la fonte consente l'accesso;
-riconciliare l'inventario ITF e i quattro Challenger; controllare le Finals
-con date dei singoli incontri prima di aggiornare la fotografia.
-
-## Integrazione di Canberra completata
-
-Aggiunti tre incontri unici: Fery-Jovanovski (Q1), Jodar-Marinkov (Q1),
-Jodar-Fery (Q2). Il Q2 comune e' memorizzato una sola volta.
-
-- Fery: 21 partecipazioni, 53 incontri registrati e subtotale 1.482 punti;
-  Canberra vale 3 punti.
-- Jodar: sempre 24 partecipazioni, 80 incontri e subtotale 3.269 punti;
-  Canberra passa da 64 a 69 per il bonus qualificazione prima assente.
-- Gli altri 48 giocatori conservano riepiloghi e punti precedenti.
-- Nuova fotografia immutabile: 11.293 incontri, 1.187 partecipazioni del campione
-  con punti calcolabili; la fotografia precedente resta conservata.
-
-La trascrizione e il suo registro sono in `data/curated/`. Il registro distingue
-hash del PDF originale e hash del CSV trascritto. Il PDF e' citato nell'app;
-non e' redistribuito nel repository. Gli incontri riportano la settimana del
-torneo: il giorno effettivo non e' stato accertato. Non sono inventate statistiche.
-L'importazione normale, anche offline, include la trascrizione e resta idempotente.
-Eventuali conflitti con dati successivi interrompono l'importazione per verifica.
-
-Questa e' un'integrazione parziale del tabellone (3 incontri, non tutti i 18).
-Restano 237 main draw Challenger senza qualificazioni registrate e uno con
-qualificazioni soltanto parziali. Il censimento ITF e la riconciliazione degli
-altri casi restano aperti: nessuna certificazione di stagione completa.
+La scansione PDF richiede PyMuPDF solo per la ricerca, non per l'app.
+La cache e i rapporti intermedi sono esclusi da Git; il registro finale delle
+verifiche e le trascrizioni sono versionati. Senza `--offline`, lo script riusa
+la cache, distanzia le richieste e interrompe gli scaricamenti su 403/429.
+Una cache esistente non e' automaticamente una fotografia aggiornata.

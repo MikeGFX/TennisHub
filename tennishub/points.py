@@ -14,7 +14,7 @@ from pathlib import Path
 RULES_URL = "https://www.itftennis.com/media/15608/atp-2026-points-table.pdf"
 UNITED_URL = "https://www.atptour.com/-/media/0030c0c028734686b55efd45fe463926.pdf"
 FINALS_URL = "https://www.nittoatpfinals.com/en/event/points-and-prize-money"
-ENGINE_VERSION = "2026.5"
+ENGINE_VERSION = "2026.6"
 RULES_2025_URL = "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf"
 WALKOVER_URL = "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-10_exhibits_27apr26.pdf"
 ROUND_ORDER = {r: i for i, r in enumerate(("Q1", "Q2", "Q3", "RR", "R128", "R64", "R32", "R16", "QF", "SF", "F"))}
@@ -109,8 +109,8 @@ def _rule(sample, edition_metadata, qualifying_only=False):
         return "M96" if draw == "96" else "M56"
     if level in {"250", "500"} and draw in {"28", "32", "48"}:
         return level + ("48" if draw == "48" else "32")
-    verified_qualifying = (qualifying_only and draw == "24" and edition_metadata
-                           and edition_metadata.get("qualifying_draw_size") == 24
+    verified_qualifying = (qualifying_only and draw in {"16", "24"} and edition_metadata
+                           and str(edition_metadata.get("qualifying_draw_size")) == draw
                            and edition_metadata.get("qualifying_source"))
     if level == "C" and (draw in {"28", "32"} or verified_qualifying) and edition_metadata:
         key = "C" + str(edition_metadata["level"])
