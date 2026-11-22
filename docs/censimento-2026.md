@@ -102,3 +102,38 @@ La cache e i rapporti intermedi sono esclusi da Git; il registro finale delle
 verifiche e le trascrizioni sono versionati. Senza `--offline`, lo script riusa
 la cache, distanzia le richieste e interrompe gli scaricamenti su 403/429.
 Una cache esistente non e' automaticamente una fotografia aggiornata.
+
+## Santa Cruz: riscontri alternativi recuperati
+
+Il confronto riproducibile su StatPick recupera 16 incontri delle qualificazioni
+con 22 nomi distinti. Nei risultati osservati non emergono candidati del nostro
+campione di 50 giocatori. I sei vincitori del gruppo finale coincidono con i
+qualificati elencati nella pagina Wikipedia italiana indicata dall'utente:
+Mateus Alves, Lucio Ratti, Hernan Casanova, Arklon Huertas del Pino, Maximo Zeitune
+e Thiago Cigarran. La variante estesa Arklon Huertas Del Pino Cordova e' trattata
+esplicitamente nel confronto, senza normalizzazioni generiche dei cognomi.
+
+Tra i tre link ricevuti, Wikipedia offre l'elenco dei sei qualificati;
+Tennis.com espone il tabellone principale con gli ingressi Q, non gli incontri
+delle qualificazioni. TennisLive mostra l'edizione corretta, ma il suo endpoint
+pubblico dei risultati restituisce 403 alla lettura automatica. La pagina ATP
+restituisce anch'essa 403; la pagina Tennis Abstract risponde temporaneamente
+disabilitata. Queste risposte non vengono interpretate come assenza di risultati.
+
+Fonti e impronte sono nel [rapporto dei riscontri](../research/santa-cruz-secondary-review-2026.json).
+La verifica e' secondaria, non una validazione del PDF ufficiale. Non certifica
+la lista completa degli iscritti o degli ingressi senza incontri pubblicati.
+Non vengono inferiti bye o convertite le etichette di turno del provider in Q1/Q2.
+Non sono stati aggiunti match o modificati punti nel database durante questa fase.
+La concordanza tra siti non prova indipendenza dei dati a monte.
+
+```bash
+python3 -m scripts.review_santa_cruz_2026 --offline
+```
+
+Il comando legge solo le sezioni delle qualificazioni e ignora main draw,
+classifiche laterali e script. Controlla anno, date e sei qualificati; si interrompe
+se il contenuto manca o non concorda. Richiede la cache raccolta per l'esecuzione offline.
+I conteggi ufficiali rimangono 237 PDF validati e uno pendente. Per proseguire sul
+2026 resta prioritaria una fonte ITF/Futures dell'intera stagione, oltre al
+recupero del vero tabellone ufficiale di Santa Cruz.

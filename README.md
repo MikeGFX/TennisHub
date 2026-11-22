@@ -68,7 +68,7 @@ python3 -m tennishub completeness --from-season 2016 --to-season 2026
 python3 -m unittest discover -s tests -v
 ```
 
-136 test coprono importazione, calcolo dei punti e API locali.
+141 test coprono importazione, calcolo dei punti e API locali.
 Il controllo DOM facoltativo delle interazioni è descritto nella guida
 all'interfaccia; Node è necessario solo per quel controllo.
 

@@ -13,7 +13,7 @@
         "cohort_exact_name_matches": 0,
         "status": "Esaminata una copia parziale. Zero corrispondenze esatte dei 50 non prova assenza di altri tornei ITF nella stagione."
       },
-      "notes": "Qualificazioni dei 238 Challenger noti esaminate: 237 PDF validati; Santa Cruz 2 resta aperto per PDF ITF di altra settimana. Integrati i percorsi selezionati a Canberra e Cap Cana (7 incontri). Non sono tabelloni completi. Inventario di tutti i tornei e ITF/Futures ancora da verificare; Finals provvisorie nella fotografia del 18 novembre.",
+      "notes": "Qualificazioni dei 238 Challenger noti: 237 PDF validati. Santa Cruz 2: 16 risultati alternativi, 22 partecipanti osservati, nessun candidato del campione; sei qualificati incrociati con Wikipedia. PDF ufficiale e completezza del suo tabellone restano aperti. Percorsi selezionati a Canberra e Cap Cana integrati (7 incontri), non tabelloni completi. ITF/Futures e inventario di tutti i tornei da verificare; Finals provvisorie al 18 novembre.",
       "qualifying_status": "challenger_qualifying_partially_imported",
       "census_import_id": "e1e0d3d2be24788e94b3999dd575a02eb3fea20fd4e2f6e5293c3d791e0c3846",
       "confirmed_missing_participations": [],
@@ -30,7 +30,12 @@
         "qualifying_paths_integrated": 4,
         "unique_qualifying_matches_integrated": 7,
         "cohort_players_with_confirmed_paths": 3,
-        "evidence": "research/challenger-qualifying-census-2026.json"
+        "evidence": "research/challenger-qualifying-census-2026.json",
+        "secondary_result_reviews": 1,
+        "santa_cruz_observed_qualifying_matches": 16,
+        "santa_cruz_observed_participants": 22,
+        "santa_cruz_cohort_candidates": 0,
+        "santa_cruz_qualifiers_crosschecked": 6
       },
       "resolved_missing_participations": [
         {
@@ -89,7 +94,14 @@
           "after": 19,
           "qualifying": 6
         }
-      ]
+      ],
+      "santa_cruz_secondary_review": {
+        "source_type": "secondary_cross_checked",
+        "evidence": "research/santa-cruz-secondary-review-2026.json",
+        "official_document_verified": false,
+        "complete_draw_verified": false,
+        "cohort_candidates_in_observed_results": 0
+      }
     }
   }
 }

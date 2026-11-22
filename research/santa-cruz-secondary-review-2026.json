@@ -1,0 +1,113 @@
+{
+  "edition_id": "2026-3143",
+  "event": "Santa Cruz de la Sierra 2",
+  "season": 2026,
+  "import_id": "248fbde78eb06d4de870486423d05985e486cabf6743bba2fd06515927d9abee",
+  "ranking_date": "2026-11-16",
+  "as_of": "2026-11-18",
+  "source": {
+    "name": "santa-statpick",
+    "url": "https://www.statpick.ai/tournaments/tennis/santa-cruz-de-la-sierra-2-challenger-atp/2026/950103974",
+    "sha256": "53253d541b60054a056f236b294db5b68e714934c9c19becff0b226324c55388",
+    "retrieved_at": "2026-11-22T22:31:09.777860+00:00",
+    "modified_at": null
+  },
+  "source_type": "secondary",
+  "corroborating_qualifiers_source": {
+    "name": "santa-wiki-it",
+    "url": "https://it.wikipedia.org/wiki/Santa_Cruz_Challenger_II_2026_-_Singolare",
+    "sha256": "4662a23411618a5ec4bb48cd7f4029599c79cb72ad001c5cc6b9bc5608a88609",
+    "retrieved_at": "2026-11-22T22:36:07.713307+00:00",
+    "modified_at": "Sun, 08 Nov 2026 12:20:40 GMT"
+  },
+  "corroborated_qualifiers": [
+    "Mateus Alves",
+    "Lucio Ratti",
+    "Hernán Casanova",
+    "Arklon Huertas del Pino",
+    "Máximo Zeitune",
+    "Thiago Cigarrán"
+  ],
+  "name_variant_note": "Arklon Huertas del Pino and Arklon Huertas Del Pino Cordova are explicitly reconciled in the six-qualifier comparison.",
+  "official_document_verified": false,
+  "complete_draw_verified": false,
+  "inventory_verified": false,
+  "observed_qualifying_matches": 16,
+  "observed_participants": [
+    "A. Bobiere",
+    "A. E. Cuellar Lorberg",
+    "Arklon Huertas Del Pino Cordova",
+    "Boris Arias",
+    "Bruno Fernandez",
+    "Federico Zeballos",
+    "Franco Ribero",
+    "Hernan Casanova",
+    "Leonardo Suarez",
+    "Lorenzo Joaquin Rodriguez",
+    "Lucio Ratti",
+    "Luis Britto",
+    "Mateus Alves",
+    "Maximo Zeitune",
+    "N. Ciancaglini",
+    "N. Donoso",
+    "Paulo Andre Saraiva Dos Santos",
+    "Samuel Heredia",
+    "Santiago De La Fuente",
+    "Santiago Rodriguez Taverna",
+    "Thiago Cigarran",
+    "Wilson Leite"
+  ],
+  "cohort_candidates": [],
+  "limitations": [
+    "Only participants in published result cards are compared; absent or unplayed entries are not established.",
+    "Source round labels are preserved, not mapped to ATP Q1/Q2.",
+    "No ranking points or match results are imported.",
+    "Official PDF currently returns an ITF event; primary-source verification remains pending."
+  ],
+  "checked_on": "2026-11-22",
+  "observed_participant_count": 22,
+  "user_suggested_sources": [
+    {
+      "url": "https://it.wikipedia.org/wiki/Santa_Cruz_Challenger_II_2026_-_Singolare",
+      "role": "Six qualifiers corroborated, not the full qualifying draw.",
+      "sha256": "4662a23411618a5ec4bb48cd7f4029599c79cb72ad001c5cc6b9bc5608a88609",
+      "retrieved_at": "2026-11-22T22:36:07.713307+00:00"
+    },
+    {
+      "url": "https://www.tennislive.it/uomini/santa-cruz-de-la-sierra-2-challenger-2026/",
+      "role": "Correct edition in HTML; dynamic results endpoint returned HTTP 403 and was not retried.",
+      "sha256": "2061600e4731832f574099ecbea04e6a1c56be7d55af12c45c93951cf363c0ed",
+      "retrieved_at": "2026-11-22T22:36:08.022495+00:00"
+    },
+    {
+      "url": "https://www.tennis.com/tournaments/atp-challenger-santa-cruz-2-bolivia/draws",
+      "role": "Main draw corroborates six Q entrants; not a qualifying-results source.",
+      "sha256": "c8bf7cae41d619f66b8a5a023f5b7ea6de99ea0332234cccca87958abb5bd21f",
+      "retrieved_at": "2026-11-22T22:36:08.624502+00:00"
+    }
+  ],
+  "access_notes": {
+    "atp_qualifying_page": "HTTP 403",
+    "tennisabstract_tournament_page": "page temporarily disabled",
+    "official_pdf": "ITF M15 dated 2026-11-23; retained as excluded evidence, not substituted."
+  },
+  "upstream_independence_verified": false,
+  "match_urls": [
+    "https://www.statpick.ai/matches/tennis/25464300/lucio-ratti-vs-federico-zeballos",
+    "https://www.statpick.ai/matches/tennis/50789460/mateus-alves-vs-bruno-fernandez",
+    "https://www.statpick.ai/matches/tennis/69506568/hernan-casanova-vs-wilson-leite",
+    "https://www.statpick.ai/matches/tennis/56961982/joaquin-rodriguez-lorenzo-vs-thiago-cigarran",
+    "https://www.statpick.ai/matches/tennis/72595299/santiago-de-la-fuente-vs-arklon-huertas-del-pino-cordova",
+    "https://www.statpick.ai/matches/tennis/64763066/santiago-rodriguez-taverna-vs-maximo-zeitune",
+    "https://www.statpick.ai/matches/tennis/17799646/n-donoso-vs-bruno-fernandez",
+    "https://www.statpick.ai/matches/tennis/79829847/luis-britto-vs-wilson-leite",
+    "https://www.statpick.ai/matches/tennis/88550162/federico-zeballos-vs-samuel-heredia",
+    "https://www.statpick.ai/matches/tennis/76400446/santiago-rodriguez-taverna-vs-n-ciancaglini",
+    "https://www.statpick.ai/matches/tennis/89246433/hernan-casanova-vs-a-bobiere",
+    "https://www.statpick.ai/matches/tennis/49785661/andre-saraiva-dos-santos-paulo-vs-santiago-de-la-fuente",
+    "https://www.statpick.ai/matches/tennis/81754905/joaquin-rodriguez-lorenzo-vs-a-e-cuellar-lorberg",
+    "https://www.statpick.ai/matches/tennis/63528456/franco-ribero-vs-maximo-zeitune",
+    "https://www.statpick.ai/matches/tennis/57812137/boris-arias-vs-thiago-cigarran",
+    "https://www.statpick.ai/matches/tennis/33193769/leonardo-suarez-vs-arklon-huertas-del-pino-cordova"
+  ]
+}

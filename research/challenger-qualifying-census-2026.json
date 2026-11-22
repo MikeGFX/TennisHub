@@ -3195,7 +3195,16 @@
       "validation": null,
       "error": "PDF does not identify an ATP Challenger; circuit/edition requires review",
       "name_candidates": [],
-      "exclusion_note": "URL returns an ITF M15 Santa Cruz qualifying draw for 2026-11-23, not the Challenger edition dated 2026-10-12. Visually checked; no records imported."
+      "exclusion_note": "URL returns an ITF M15 Santa Cruz qualifying draw for 2026-11-23, not the Challenger edition dated 2026-10-12. Visually checked; no records imported.",
+      "secondary_result_review": {
+        "evidence": "research/santa-cruz-secondary-review-2026.json",
+        "observed_qualifying_matches": 16,
+        "observed_participants": 22,
+        "cohort_candidates": 0,
+        "qualifiers_crosschecked": 6,
+        "official_document_verified": false,
+        "complete_draw_verified": false
+      }
     },
     {
       "edition_id": "2026-3155",
