@@ -1,4 +1,144 @@
 {
+  "2025-301": {
+    "confirmed_byes": {
+      "S0S1": {
+        "seed": 1,
+        "source": "https://www.protennislive.com/posting/2025/301/mds.pdf",
+        "source_sha256": "1b9f45d0ad1d8b04b3cbf8a83f608e96fcf3de9ab7e314c594e2035696dc3e71",
+        "note": "Auckland 6-11 gennaio 2025, tabellone a 28: Shelton TdS 1 in posizione 1, bye in posizione 2. Controllo visivo del PDF ufficiale."
+      },
+      "C0AU": {
+        "seed": 4,
+        "source": "https://www.protennislive.com/posting/2025/301/mds.pdf",
+        "source_sha256": "1b9f45d0ad1d8b04b3cbf8a83f608e96fcf3de9ab7e314c594e2035696dc3e71",
+        "note": "F. Cerundolo TdS 4 in posizione 9, bye in posizione 10."
+      },
+      "TE30": {
+        "seed": 2,
+        "source": "https://www.protennislive.com/posting/2025/301/mds.pdf",
+        "source_sha256": "1b9f45d0ad1d8b04b3cbf8a83f608e96fcf3de9ab7e314c594e2035696dc3e71",
+        "note": "Tabilo TdS 2 in posizione 32, bye in posizione 31."
+      }
+    }
+  },
+  "2025-328": {
+    "lucky_losers": {
+      "V812": {
+        "source": "https://www.protennislive.com/posting/2025/328/mds.pdf",
+        "source_sha256": "6b4cdd231376db9e9a8b19832216f9c5d32dd03305471662dc788af9459b1b76",
+        "qualifying_source": "https://www.protennislive.com/posting/2025/328/qs.pdf",
+        "qualifying_source_sha256": "bd2fd4fc7404c11a017ed2854897f4ce09fffe56b29baa47ba0ab13da64f356f",
+        "note": "Basilea 2025: van de Zandschulp LL in posizione 7 del main draw dopo la sconfitta in Q2 contro Opelka. La fonte TML non riporta l'etichetta LL. Controllo visivo dei PDF ufficiali."
+      },
+      "HB64": {
+        "source": "https://www.protennislive.com/posting/2025/328/mds.pdf",
+        "source_sha256": "6b4cdd231376db9e9a8b19832216f9c5d32dd03305471662dc788af9459b1b76",
+        "qualifying_source": "https://www.protennislive.com/posting/2025/328/qs.pdf",
+        "qualifying_source_sha256": "bd2fd4fc7404c11a017ed2854897f4ce09fffe56b29baa47ba0ab13da64f356f",
+        "note": "Halys LL in posizione 10 del main draw dopo la sconfitta in Q2 contro Bertola."
+      }
+    },
+    "medical_withdrawals": {
+      "M0NI": {
+        "reason": "left foot",
+        "source": "https://www.protennislive.com/posting/2025/328/mds.pdf",
+        "source_sha256": "6b4cdd231376db9e9a8b19832216f9c5d32dd03305471662dc788af9459b1b76",
+        "note": "Basilea 2025: walkover in R16 contro Fonseca dopo la vittoria in R32. Causa letta nella sezione Retirements/W.O. del PDF ufficiale, controllo visivo."
+      }
+    }
+  },
+  "2025-336": {
+    "confirmed_byes": {
+      "RE44": {
+        "seed": 1,
+        "source": "https://www.protennislive.com/posting/2025/336/mds.pdf",
+        "source_sha256": "109079129ea180bb600a612b69d9902fe86fa1e422f310fb50820280fb08546d",
+        "note": "Hong Kong 30 dicembre 2024 - 5 gennaio 2025 (il PDF stampa erroneamente 2024 come anno finale), tabellone a 28: Rublev TdS 1 in posizione 1, bye in posizione 2."
+      },
+      "KE29": {
+        "seed": 3,
+        "source": "https://www.protennislive.com/posting/2025/336/mds.pdf",
+        "source_sha256": "109079129ea180bb600a612b69d9902fe86fa1e422f310fb50820280fb08546d",
+        "note": "Khachanov TdS 3 in posizione 9, bye in posizione 10."
+      }
+    }
+  },
+  "2025-337": {
+    "medical_withdrawals": {
+      "GJ37": {
+        "reason": "Back injury",
+        "source": "https://www.protennislive.com/posting/2025/337/mds.pdf",
+        "source_sha256": "451c9616ffd60fd2f12d5c29dffb47f66ffc82d76c4600800ed951651bf96c3a",
+        "note": "Vienna 2025: walkover nei quarti contro Zverev dopo due vittorie. Causa letta nella sezione Retirements/W.O. del PDF ufficiale, controllo visivo."
+      }
+    }
+  },
+  "2025-422": {
+    "lucky_losers": {
+      "N0BS": {
+        "source": "https://www.protennislive.com/posting/2025/422/mds.pdf",
+        "source_sha256": "1ee33ef5ea4febf539aac4c5669cb83fa642771fcf0c4a52c8b3754a31254a98",
+        "qualifying_source": "https://www.protennislive.com/posting/2025/422/qs.pdf",
+        "qualifying_source_sha256": "7a38363fa5d01e417dec183be35da870d7fadcced61a23c965780080f1c779de",
+        "note": "Cincinnati 2025: Navone LL in posizione 78 del main draw dopo la sconfitta in Q2 contro Nava. La fonte TML non riporta l'etichetta LL."
+      }
+    }
+  },
+  "2025-440": {
+    "medical_withdrawals": {
+      "HB71": {
+        "reason": "Low back",
+        "source": "https://www.protennislive.com/posting/2025/440/mds.pdf",
+        "source_sha256": "ce2bfbeb2aa26f8f997cf52c02ff8b3151b9bbef8a83e25bfb941e9e50720dd2",
+        "note": "'s-Hertogenbosch 2025: walkover in R16 contro Lajal dopo la vittoria in R32. Causa letta nella sezione Retirements/W.O. del PDF ufficiale, controllo visivo."
+      }
+    }
+  },
+  "2025-506": {
+    "medical_withdrawals": {
+      "M0EJ": {
+        "reason": "Right soleous",
+        "source": "https://www.protennislive.com/posting/2025/506/mds.pdf",
+        "source_sha256": "492cf4f1ecf462efd2752ce2a0bcd31c1820c85d0ec2c472580a30dc3612257c",
+        "note": "Buenos Aires 2025: walkover nei quarti contro P. Martinez dopo la vittoria in R16 (debutto dopo bye). Causa letta nella sezione Retirements/W.O. del PDF ufficiale, controllo visivo."
+      }
+    }
+  },
+  "2025-520": {
+    "medical_withdrawals": {
+      "F0F1": {
+        "reason": "injury (back)",
+        "source": "https://www.atptour.com/en/news/fils-roland-garros-2025-withdrawal",
+        "note": "Roland Garros 2025: ritiro per infortunio annunciato dal torneo prima del terzo turno contro Rublev, dopo due incontri giocati. Notizia ufficiale ATP del 30 maggio 2025."
+      }
+    }
+  },
+  "2025-807": {
+    "medical_withdrawals": {
+      "PL56": {
+        "reason": "Stomach",
+        "source": "https://www.protennislive.com/posting/2025/807/mds.pdf",
+        "source_sha256": "b7b22cbb66cb749a5cb365ae448b1ec381ebc1b79d5f3d133e2cf49898a1eaf8",
+        "note": "Acapulco 2025: walkover in R16 contro Giron dopo la vittoria in R32. Causa letta nella sezione Retirements/W.O. del PDF ufficiale, controllo visivo."
+      },
+      "RH16": {
+        "reason": "Stomach",
+        "source": "https://www.protennislive.com/posting/2025/807/mds.pdf",
+        "source_sha256": "b7b22cbb66cb749a5cb365ae448b1ec381ebc1b79d5f3d133e2cf49898a1eaf8",
+        "note": "Acapulco 2025: walkover in R16 contro Pacheco Mendez dopo la vittoria in R32. Causa letta nella sezione Retirements/W.O. del PDF ufficiale, controllo visivo."
+      }
+    }
+  },
+  "2025-6242": {
+    "confirmed_byes": {
+      "GJ37": {
+        "seed": 2,
+        "source": "https://www.protennislive.com/posting/2025/6242/mds.pdf",
+        "source_sha256": "4c24439592b712bd61c2e6cb5a11c8f16efeb5d54a6db439a2e5d82fce2ea868",
+        "note": "Winston-Salem 17-23 agosto 2025, tabellone a 48: Griekspoor WC e TdS 2 in posizione 64, bye in posizione 63. La fonte TML non riporta testa di serie ne' wild card."
+      }
+    }
+  },
   "2026-375": {
     "confirmed_byes": {
       "C0E9": {

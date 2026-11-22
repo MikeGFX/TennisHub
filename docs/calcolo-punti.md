@@ -1,4 +1,4 @@
-# Calcolo dei punti ottenuti — motore 2026.6
+# Calcolo dei punti ottenuti — motore 2026.7
 
 Il calcolo e' ora nel modulo `tennishub/points.py`, condiviso dalle query
 dell'app e dallo script di ricerca. Funziona per un identificativo ATP qualsiasi.
@@ -120,12 +120,13 @@ Ogni risultato 2025 cita quella fonte, senza assumere che le regole di un altro
 anno siano applicabili. L'edizione deve appartenere all'anno richiesto.
 
 Per i primi 50 selezionati dalla classifica del 16 novembre 2026, l'archivio 2025
-contiene 1.227 partecipazioni: 983 calcolabili e 244 da verificare. I livelli delle
-edizioni Challenger 2025, United Cup e altri casi speciali non sono ancora tutti
-validati. Non si riutilizza il registro delle edizioni Challenger 2026.
+contiene 1.227 partecipazioni: 1.016 calcolabili e 211 da verificare (motore 2026.7;
+erano 983 e 244). I livelli delle edizioni Challenger 2025, United Cup e altri casi
+speciali non sono ancora tutti validati. Non si riutilizza il registro delle
+edizioni Challenger 2026.
 
-Zverev 2025 ha 27 partecipazioni e un subtotale di 4.895 punti, con 2 eventi da
-verificare. Questo subtotale non viene presentato come totale completo.
+Zverev 2025 ha 27 partecipazioni e un subtotale di 5.225 punti, con 1 evento da
+verificare (United Cup). Questo subtotale non viene presentato come totale completo.
 
 Gli anni diversi dal 2025 e 2026 restano da validare.
 
@@ -145,3 +146,36 @@ Il formato qualificazioni a 16 giocatori e' supportato solo per edizioni con
 formato verificato. Fery Cap Cana: 3 punti; Van Assche: 13 + 6 = 19. I valori
 per gli altri 48 giocatori sono invariati rispetto alla fotografia precedente.
 Copertura attuale: 1.188/1.188 partecipazioni registrate, inventario non certificato.
+
+## Casi prioritari 2025, motore 2026.7
+
+Risolte 33 delle 34 partecipazioni 2025 del circuito principale ancora aperte.
+Regole lette sui PDF ufficiali ATP 2025, privi di testo e quindi controllati
+visivamente; gli script ricevono 403 e i file sono stati salvati dal browser:
+
+- [Capitolo 9](https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf),
+  9.03 G 2: bye seguito da sconfitta = punti del primo turno. 9.03 G 3-4: i
+  perdenti dell'ultimo turno di qualificazione ricevono quei punti in aggiunta
+  a quelli del tabellone; il bonus del qualificato spetta solo a chi si qualifica.
+- [Capitolo 10, Exhibit K](https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-10_exhibits_23dec.pdf),
+  p. 338: il walkover nasce da malattia/infortunio o da sanzione del Codice; chi
+  lo vince riceve i punti come se l'incontro fosse stato giocato.
+
+| Gruppo | Casi | Risolti | Criterio |
+|---|---:|---:|---|
+| Walkover vinti | 13 | 13 | Exhibit K 2025 |
+| Walkover persi | 8 | 7 | causa medica nel PDF ufficiale o notizia ATP, e almeno un incontro giocato |
+| Bye | 6 | 6 | posizione e testa di serie nel tabellone ufficiale |
+| Lucky loser | 7 | 7 | etichetta LL nella fonte o tabellone ufficiale per i 3 casi senza etichetta |
+
+Esempi: Zverev Vienna 330 (finale, walkover vinto nei quarti); Griekspoor Vienna
+100 (walkover per "Back injury" nei quarti); van de Zandschulp Indian Wells
+10 + 50 = 60; Halys Basilea 13 + 0 = 13; Shelton, F. Cerundolo e Tabilo ad
+Auckland 0 punti dopo bye.
+
+Resta da verificare Van Assche a Marsiglia: il PDF elenca il walkover senza causa,
+quindi non si distingue un ritiro medico da una sanzione. Nessun valore gia'
+calcolato e' cambiato; incontri, vittorie e sconfitte sono invariati. Il 2026 resta
+identico (Zverev 9.760). Dettaglio caso per caso nel
+[rapporto](../research/main-tour-review-2025.json) e prove in `edition-evidence.json`.
+Il completamento del sottoinsieme prioritario non certifica la stagione 2025.

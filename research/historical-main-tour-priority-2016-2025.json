@@ -1,5 +1,5 @@
 {
-  "checked_on": "2026-11-22",
+  "checked_on": "2026-11-23",
   "scope": {
     "through_season": 2025,
     "categories": [
@@ -25,8 +25,8 @@
       "as_of": "2026-11-18",
       "ranking_date": "2026-11-16",
       "recorded_participations": 1227,
-      "calculated": 983,
-      "needs_review": 244,
+      "calculated": 1016,
+      "needs_review": 211,
       "priority": {
         "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
         "categories": [
@@ -38,15 +38,12 @@
         ],
         "include_qualifying": true,
         "participations": 959,
-        "calculated": 925,
-        "needs_review": 34,
+        "calculated": 958,
+        "needs_review": 1,
         "recorded_points_resolved": false,
         "certifies_complete_season": false,
         "reasons": {
-          "Lucky loser: verificare il trattamento dei punti delle qualificazioni.": 4,
-          "Possibile bye o turno mancante: verificare il tabellone.": 6,
-          "Qualificazioni perse con ingresso nel main draw: verificare lucky loser.": 3,
-          "Walkover perso, risultato speciale o non concluso: verifica necessaria.": 21
+          "Walkover perso, risultato speciale o non concluso: verifica necessaria.": 1
         }
       },
       "complete": false
@@ -318,276 +315,17 @@
   ],
   "next_2025_review_cases": [
     {
-      "player_id": "Z355",
-      "player_name": "Alexander Zverev",
-      "event_id": "2025-337",
-      "event_name": "Vienna",
-      "category": "500",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "S0S1",
-      "player_name": "Ben Shelton",
-      "event_id": "2025-301",
-      "event_name": "Auckland",
-      "category": "250",
-      "reason": "Possibile bye o turno mancante: verificare il tabellone."
-    },
-    {
-      "player_id": "S0S1",
-      "player_name": "Ben Shelton",
-      "event_id": "2025-520",
-      "event_name": "Roland Garros",
-      "category": "G",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "MM58",
-      "player_name": "Daniil Medvedev",
-      "event_id": "2025-1536",
-      "event_name": "Madrid Masters",
-      "category": "M",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "MM58",
-      "player_name": "Daniil Medvedev",
-      "event_id": "2025-352",
-      "event_name": "Paris Masters",
-      "category": "M",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "F0F1",
-      "player_name": "Arthur Fils",
-      "event_id": "2025-520",
-      "event_name": "Roland Garros",
-      "category": "G",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "DH58",
-      "player_name": "Alex de Minaur",
-      "event_id": "2025-421",
-      "event_name": "Canada Masters",
-      "category": "M",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "PL56",
-      "player_name": "Tommy Paul",
-      "event_id": "2025-807",
-      "event_name": "Acapulco",
-      "category": "500",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "M0NI",
-      "player_name": "Jakub Mensik",
-      "event_id": "2025-403",
-      "event_name": "Miami Masters",
-      "category": "M",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "M0NI",
-      "player_name": "Jakub Mensik",
-      "event_id": "2025-328",
-      "event_name": "Basel",
-      "category": "500",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "AG37",
-      "player_name": "Felix Auger-Aliassime",
-      "event_id": "2025-451",
-      "event_name": "Doha",
-      "category": "500",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "RH16",
-      "player_name": "Casper Ruud",
-      "event_id": "2025-807",
-      "event_name": "Acapulco",
-      "category": "500",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "N0AE",
-      "player_name": "Brandon Nakashima",
-      "event_id": "2025-416",
-      "event_name": "Rome Masters",
-      "category": "M",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "C0AU",
-      "player_name": "Francisco Cerundolo",
-      "event_id": "2025-301",
-      "event_name": "Auckland",
-      "category": "250",
-      "reason": "Possibile bye o turno mancante: verificare il tabellone."
-    },
-    {
-      "player_id": "RE44",
-      "player_name": "Andrey Rublev",
-      "event_id": "2025-336",
-      "event_name": "Hong Kong",
-      "category": "250",
-      "reason": "Possibile bye o turno mancante: verificare il tabellone."
-    },
-    {
-      "player_id": "RE44",
-      "player_name": "Andrey Rublev",
-      "event_id": "2025-1536",
-      "event_name": "Madrid Masters",
-      "category": "M",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "RE44",
-      "player_name": "Andrey Rublev",
-      "event_id": "2025-520",
-      "event_name": "Roland Garros",
-      "category": "G",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "KE29",
-      "player_name": "Karen Khachanov",
-      "event_id": "2025-336",
-      "event_name": "Hong Kong",
-      "category": "250",
-      "reason": "Possibile bye o turno mancante: verificare il tabellone."
-    },
-    {
-      "player_id": "M0EJ",
-      "player_name": "Lorenzo Musetti",
-      "event_id": "2025-506",
-      "event_name": "Buenos Aires",
-      "category": "250",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "HB71",
-      "player_name": "Hubert Hurkacz",
-      "event_id": "2025-440",
-      "event_name": "'s-Hertogenbosch",
-      "category": "250",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "TE30",
-      "player_name": "Alejandro Tabilo",
-      "event_id": "2025-301",
-      "event_name": "Auckland",
-      "category": "250",
-      "reason": "Possibile bye o turno mancante: verificare il tabellone."
-    },
-    {
       "player_id": "V0DZ",
       "player_name": "Luca Van Assche",
       "event_id": "2025-496",
       "event_name": "Marseille",
       "category": "250",
       "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "V812",
-      "player_name": "Botic van de Zandschulp",
-      "event_id": "2025-404",
-      "event_name": "Indian Wells Masters",
-      "category": "M",
-      "reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
-    },
-    {
-      "player_id": "V812",
-      "player_name": "Botic van de Zandschulp",
-      "event_id": "2025-308",
-      "event_name": "Munich",
-      "category": "500",
-      "reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
-    },
-    {
-      "player_id": "V812",
-      "player_name": "Botic van de Zandschulp",
-      "event_id": "2025-1536",
-      "event_name": "Madrid Masters",
-      "category": "M",
-      "reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
-    },
-    {
-      "player_id": "V812",
-      "player_name": "Botic van de Zandschulp",
-      "event_id": "2025-328",
-      "event_name": "Basel",
-      "category": "500",
-      "reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
-    },
-    {
-      "player_id": "BT72",
-      "player_name": "Nuno Borges",
-      "event_id": "2025-440",
-      "event_name": "'s-Hertogenbosch",
-      "category": "250",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "BU13",
-      "player_name": "Zizou Bergs",
-      "event_id": "2025-560",
-      "event_name": "US Open",
-      "category": "G",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "HB64",
-      "player_name": "Quentin Halys",
-      "event_id": "2025-328",
-      "event_name": "Basel",
-      "category": "500",
-      "reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
-    },
-    {
-      "player_id": "F0FV",
-      "player_name": "Joao Fonseca",
-      "event_id": "2025-328",
-      "event_name": "Basel",
-      "category": "500",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
-    },
-    {
-      "player_id": "T0A1",
-      "player_name": "Thiago Agustin Tirante",
-      "event_id": "2025-520",
-      "event_name": "Roland Garros",
-      "category": "G",
-      "reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
-    },
-    {
-      "player_id": "N0BS",
-      "player_name": "Mariano Navone",
-      "event_id": "2025-422",
-      "event_name": "Cincinnati Masters",
-      "category": "M",
-      "reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
-    },
-    {
-      "player_id": "GJ37",
-      "player_name": "Tallon Griekspoor",
-      "event_id": "2025-6242",
-      "event_name": "Winston-Salem",
-      "category": "250",
-      "reason": "Possibile bye o turno mancante: verificare il tabellone."
-    },
-    {
-      "player_id": "GJ37",
-      "player_name": "Tallon Griekspoor",
-      "event_id": "2025-337",
-      "event_name": "Vienna",
-      "category": "500",
-      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
     }
-  ]
+  ],
+  "resolved_2025_review_cases": {
+    "count": 33,
+    "evidence": "research/main-tour-review-2025.json",
+    "points_engine_version": "2026.7"
+  }
 }

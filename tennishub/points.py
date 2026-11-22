@@ -14,9 +14,10 @@ from pathlib import Path
 RULES_URL = "https://www.itftennis.com/media/15608/atp-2026-points-table.pdf"
 UNITED_URL = "https://www.atptour.com/-/media/0030c0c028734686b55efd45fe463926.pdf"
 FINALS_URL = "https://www.nittoatpfinals.com/en/event/points-and-prize-money"
-ENGINE_VERSION = "2026.6"
+ENGINE_VERSION = "2026.7"
 RULES_2025_URL = "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf"
 WALKOVER_URL = "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-10_exhibits_27apr26.pdf"
+WALKOVER_2025_URL = "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-10_exhibits_23dec.pdf"
 ROUND_ORDER = {r: i for i, r in enumerate(("Q1", "Q2", "Q3", "RR", "R128", "R64", "R32", "R16", "QF", "SF", "F"))}
 LABELS = {"W": "Vincitore", "F": "Finalista", "SF": "Semifinale", "QF": "Quarti",
           "R16": "Ottavi", "R32": "R32", "R64": "R64", "R128": "R128"}
@@ -119,7 +120,7 @@ def _rule(sample, edition_metadata, qualifying_only=False):
     return None
 
 
-def _qualifying_bonus(rows, main, rule, player_id, allow_lucky_loser=False):
+def _qualifying_bonus(rows, main, rule, player_id, allow_lucky_loser=False, require_ll_label=False):
     """Restituisce (valore, spiegazione); il valore manca se la prova e' incompleta."""
     entries = {_entry(row, player_id) for row in main} - {""}
     if "LL" in entries and not allow_lucky_loser:
@@ -135,7 +136,7 @@ def _qualifying_bonus(rows, main, rule, player_id, allow_lucky_loser=False):
     won_qualifying = any(row["round"] == last_round and _winner(row, player_id) for row in rows)
     if main:
         if losses or "LL" in entries:
-            if not allow_lucky_loser:
+            if not allow_lucky_loser or require_ll_label and "LL" not in entries:
                 return None, "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
             if "Q" in entries or won_qualifying or not losses:
                 return None, "Lucky loser: percorso qualificazioni mancante o incoerente."
@@ -179,9 +180,9 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
     rules_url = RULES_2025_URL if season == 2025 else RULES_URL
     if category == "D" or edition_id == f"{season}-9210":
         return PointsResult(0, "Competizione a squadre senza punti ATP individuali.", 0, 0, [rules_url])
-    # Il vincitore di un walkover nel main draw avanza per i punti come da Exhibit K.
-    # Ritiri prima del proprio match e risultati amministrativi restano da verificare.
-    safe_walkovers = [row for row in main if "W/O" in row["score"].upper() and _winner(row, player_id)] if season == 2026 else []
+    # Il vincitore di un walkover nel main draw avanza per i punti come da Exhibit K
+    # (2025: p. 338; 2026). Ritiri prima del proprio match e risultati amministrativi restano da verificare.
+    safe_walkovers = [row for row in main if "W/O" in row["score"].upper() and _winner(row, player_id)]
     edition_evidence = evidence_file("edition-evidence.json").get(edition_id, {})
     sanction = edition_evidence.get("disciplinary_defaults", {}).get(player_id)
     if sanction and sanction.get("forfeit_event_points") is True:
@@ -214,10 +215,15 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
     if qualifying and metadata and metadata.get("qualifying_source"):
         sources.append(metadata["qualifying_source"])
     if safe_walkovers or default_wins:
-        sources.append(WALKOVER_URL)
+        sources.append(WALKOVER_2025_URL if season == 2025 else WALKOVER_URL)
     if medical_walkovers:
         sources.append(withdrawal["source"])
-    bonus, bonus_reason = _qualifying_bonus(qualifying, main, rule, player_id, allow_lucky_loser=season == 2026)
+    # 2025: regola 9.03 G 3-4; senza etichetta LL nella fonte serve una prova dell'edizione.
+    documented_ll = edition_evidence.get("lucky_losers", {}).get(player_id)
+    bonus, bonus_reason = _qualifying_bonus(qualifying, main, rule, player_id, allow_lucky_loser=True,
+                                            require_ll_label=season == 2025 and not documented_ll)
+    if documented_ll and bonus is not None and bonus_reason.startswith("Lucky loser"):
+        sources += [documented_ll["source"], documented_ll["qualifying_source"]]
     if bonus is None:
         return PointsResult(reason=bonus_reason, sources=sources)
     if not main:

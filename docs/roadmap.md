@@ -82,7 +82,7 @@ fra stagioni; importazione 2025 e validazione delle tabelle Tour principali;
 17 casi 2026 risolti per walkover vinti, con 34 partecipazioni ancora da verificare.
 
 La consultazione attuale copre il 2025 e il 2026. Restano prioritari i dati
-storici aggiuntivi per H2H pi? completi e le verifiche delle edizioni Challenger
+storici aggiuntivi per H2H più completi e le verifiche delle edizioni Challenger
 2025 e dei casi speciali. Il grafico riguarda i punti ottenuti nei tornei;
 uno storico settimanale dei punti del ranking ATP richiede una serie diversa.
 La prima prova Android resta un passo successivo.
@@ -110,3 +110,9 @@ le 244 incognite complessive rimangono visibili. Nessuna stagione viene certific
 completa soltanto per il completamento del sottoinsieme prioritario.
 
 Dettagli e conteggi: [completezza e priorita](completezza-stagioni.md).
+
+## Aggiornamento del 23 novembre 2026
+
+Risolti 33 dei 34 casi prioritari 2025 con il capitolo 9 e l'Exhibit K del
+Rulebook 2025 e i tabelloni ufficiali: priorita circuito principale 958/959.
+Resta Van Assche a Marsiglia. La stagione 2025 non e' certificata completa.

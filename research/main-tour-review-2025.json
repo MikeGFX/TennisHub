@@ -1,0 +1,732 @@
+{
+  "checked_on": "2026-11-23",
+  "points_engine_version": "2026.7",
+  "scope": "34 partecipazioni prioritarie 2025 (Slam, Masters 1000, ATP 500/250, Finals) aperte nel motore 2026.6; 50 giocatori della classifica del 16 novembre 2026.",
+  "rule_documents": [
+    {
+      "url": "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf",
+      "sha256": "c8796f5f1b6ccc28a3cc980d0a27e979d056a1145f553cd0f56cb9f17f228dad",
+      "pages": 10,
+      "sections": [
+        "9.03 G 2",
+        "9.03 G 3-4",
+        "9.03 G 5"
+      ],
+      "note": "PDF senza livello di testo, letto visivamente. Scaricato dall'utente tramite browser: gli script ricevono HTTP 403. Non redistribuito."
+    },
+    {
+      "url": "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-10_exhibits_23dec.pdf",
+      "sha256": "01a6d3445b9111ea9ea5dda2d590334125dceb09ba0ad018ba8f8b06c21332bc",
+      "pages": 126,
+      "sections": [
+        "Exhibit K - Glossary, Draw Results, p. 338"
+      ],
+      "note": "PDF senza livello di testo, letto visivamente. Scaricato dall'utente tramite browser. Non redistribuito."
+    }
+  ],
+  "rules_by_group": {
+    "won_walkover": {
+      "rule": "Exhibit K 2025, p. 338: i vincitori di walkover ricevono punti come se l'incontro fosse stato giocato.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-10_exhibits_23dec.pdf"
+      ]
+    },
+    "lost_walkover_medical": {
+      "rule": "Exhibit K 2025, p. 338: walkover per malattia/infortunio o per sanzione del Codice. Punti del turno raggiunto (9.03 G 2) solo con causa medica documentata e almeno un incontro giocato; una sanzione disciplinare puo' revocare i punti.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-10_exhibits_23dec.pdf",
+        "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf"
+      ]
+    },
+    "bye": {
+      "rule": "9.03 G 2 (2025): chi raggiunge il secondo turno con un bye e perde riceve i punti del primo turno. Bye verificato sul tabellone ufficiale.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf"
+      ]
+    },
+    "lucky_loser": {
+      "rule": "9.03 G 3-4 (2025): punti della sconfitta nell'ultimo turno di qualificazione in aggiunta ai punti del tabellone; il bonus del qualificato spetta solo a chi si qualifica. Senza etichetta LL nella fonte serve il tabellone ufficiale.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-9_pif-atp-rankings_10feb.pdf"
+      ]
+    }
+  },
+  "summary": {
+    "won_walkover": {
+      "cases": 13,
+      "resolved": 13
+    },
+    "lost_walkover_medical": {
+      "cases": 8,
+      "resolved": 7
+    },
+    "bye": {
+      "cases": 6,
+      "resolved": 6
+    },
+    "lucky_loser": {
+      "cases": 7,
+      "resolved": 7
+    }
+  },
+  "resolved": 33,
+  "open": 1,
+  "previously_calculated_values_changed": 0,
+  "matches_or_records_changed": 0,
+  "notes": [
+    "Le prove sono specifiche per edizione e giocatore in tennishub/rules/edition-evidence.json; non si applicano ad altri anni.",
+    "Van Assche, Marsiglia 2025: il PDF ufficiale elenca 'L. Van Assche ()' senza causa del walkover, quindi non si distingue un ritiro medico da una sanzione. Punti lasciati sconosciuti.",
+    "Le pagine ufficiali degli Slam su ProTennisLive non contengono il tabellone ('Tournament Information Not Yet Available'); per Fils al Roland Garros e' usata la notizia ufficiale ATP del ritiro per infortunio.",
+    "Winston-Salem 2025: la fonte TML non riporta wild card e testa di serie di Griekspoor (WC e TdS 2 nel PDF). Ininfluente sui punti di un ATP 250.",
+    "Risolvere il sottoinsieme prioritario non certifica la stagione 2025: restano incognite Challenger, United Cup e altri eventi."
+  ],
+  "cases": [
+    {
+      "player_id": "Z355",
+      "player_name": "Alexander Zverev",
+      "event_id": "2025-337",
+      "event_name": "Vienna",
+      "category": "500",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 330,
+      "breakdown": {
+        "main_draw": 330,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "S0S1",
+      "player_name": "Ben Shelton",
+      "event_id": "2025-301",
+      "event_name": "Auckland",
+      "category": "250",
+      "group": "bye",
+      "previous_reason": "Possibile bye o turno mancante: verificare il tabellone.",
+      "before": null,
+      "after": 0,
+      "breakdown": {
+        "main_draw": 0,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/301/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "S0S1",
+      "player_name": "Ben Shelton",
+      "event_id": "2025-520",
+      "event_name": "Roland Garros",
+      "category": "G",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 200,
+      "breakdown": {
+        "main_draw": 200,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "MM58",
+      "player_name": "Daniil Medvedev",
+      "event_id": "2025-1536",
+      "event_name": "Madrid Masters",
+      "category": "M",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 200,
+      "breakdown": {
+        "main_draw": 200,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "MM58",
+      "player_name": "Daniil Medvedev",
+      "event_id": "2025-352",
+      "event_name": "Paris Masters",
+      "category": "M",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 200,
+      "breakdown": {
+        "main_draw": 200,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "F0F1",
+      "player_name": "Arthur Fils",
+      "event_id": "2025-520",
+      "event_name": "Roland Garros",
+      "category": "G",
+      "group": "lost_walkover_medical",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 100,
+      "breakdown": {
+        "main_draw": 100,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.atptour.com/en/news/fils-roland-garros-2025-withdrawal"
+      ]
+    },
+    {
+      "player_id": "DH58",
+      "player_name": "Alex de Minaur",
+      "event_id": "2025-421",
+      "event_name": "Canada Masters",
+      "category": "M",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 200,
+      "breakdown": {
+        "main_draw": 200,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "PL56",
+      "player_name": "Tommy Paul",
+      "event_id": "2025-807",
+      "event_name": "Acapulco",
+      "category": "500",
+      "group": "lost_walkover_medical",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 50,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/807/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "M0NI",
+      "player_name": "Jakub Mensik",
+      "event_id": "2025-403",
+      "event_name": "Miami Masters",
+      "category": "M",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 1000,
+      "breakdown": {
+        "main_draw": 1000,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del titolo. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "M0NI",
+      "player_name": "Jakub Mensik",
+      "event_id": "2025-328",
+      "event_name": "Basel",
+      "category": "500",
+      "group": "lost_walkover_medical",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 50,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/328/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "AG37",
+      "player_name": "Felix Auger-Aliassime",
+      "event_id": "2025-451",
+      "event_name": "Doha",
+      "category": "500",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 200,
+      "breakdown": {
+        "main_draw": 200,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "RH16",
+      "player_name": "Casper Ruud",
+      "event_id": "2025-807",
+      "event_name": "Acapulco",
+      "category": "500",
+      "group": "lost_walkover_medical",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 50,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/807/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "N0AE",
+      "player_name": "Brandon Nakashima",
+      "event_id": "2025-416",
+      "event_name": "Rome Masters",
+      "category": "M",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 50,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "C0AU",
+      "player_name": "Francisco Cerundolo",
+      "event_id": "2025-301",
+      "event_name": "Auckland",
+      "category": "250",
+      "group": "bye",
+      "previous_reason": "Possibile bye o turno mancante: verificare il tabellone.",
+      "before": null,
+      "after": 0,
+      "breakdown": {
+        "main_draw": 0,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/301/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "RE44",
+      "player_name": "Andrey Rublev",
+      "event_id": "2025-336",
+      "event_name": "Hong Kong",
+      "category": "250",
+      "group": "bye",
+      "previous_reason": "Possibile bye o turno mancante: verificare il tabellone.",
+      "before": null,
+      "after": 0,
+      "breakdown": {
+        "main_draw": 0,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/336/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "RE44",
+      "player_name": "Andrey Rublev",
+      "event_id": "2025-1536",
+      "event_name": "Madrid Masters",
+      "category": "M",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 50,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "RE44",
+      "player_name": "Andrey Rublev",
+      "event_id": "2025-520",
+      "event_name": "Roland Garros",
+      "category": "G",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 200,
+      "breakdown": {
+        "main_draw": 200,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "KE29",
+      "player_name": "Karen Khachanov",
+      "event_id": "2025-336",
+      "event_name": "Hong Kong",
+      "category": "250",
+      "group": "bye",
+      "previous_reason": "Possibile bye o turno mancante: verificare il tabellone.",
+      "before": null,
+      "after": 0,
+      "breakdown": {
+        "main_draw": 0,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/336/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "M0EJ",
+      "player_name": "Lorenzo Musetti",
+      "event_id": "2025-506",
+      "event_name": "Buenos Aires",
+      "category": "250",
+      "group": "lost_walkover_medical",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 50,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/506/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "HB71",
+      "player_name": "Hubert Hurkacz",
+      "event_id": "2025-440",
+      "event_name": "'s-Hertogenbosch",
+      "category": "250",
+      "group": "lost_walkover_medical",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 25,
+      "breakdown": {
+        "main_draw": 25,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/440/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "TE30",
+      "player_name": "Alejandro Tabilo",
+      "event_id": "2025-301",
+      "event_name": "Auckland",
+      "category": "250",
+      "group": "bye",
+      "previous_reason": "Possibile bye o turno mancante: verificare il tabellone.",
+      "before": null,
+      "after": 0,
+      "breakdown": {
+        "main_draw": 0,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/301/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "V0DZ",
+      "player_name": "Luca Van Assche",
+      "event_id": "2025-496",
+      "event_name": "Marseille",
+      "category": "250",
+      "group": "lost_walkover_medical",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": null,
+      "breakdown": {
+        "main_draw": null,
+        "qualifying": null
+      },
+      "status": "needs_review",
+      "reason_now": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "evidence": []
+    },
+    {
+      "player_id": "V812",
+      "player_name": "Botic van de Zandschulp",
+      "event_id": "2025-404",
+      "event_name": "Indian Wells Masters",
+      "category": "M",
+      "group": "lucky_loser",
+      "previous_reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni.",
+      "before": null,
+      "after": 60,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 10
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
+      "evidence": []
+    },
+    {
+      "player_id": "V812",
+      "player_name": "Botic van de Zandschulp",
+      "event_id": "2025-308",
+      "event_name": "Munich",
+      "category": "500",
+      "group": "lucky_loser",
+      "previous_reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni.",
+      "before": null,
+      "after": 63,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 13
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
+      "evidence": []
+    },
+    {
+      "player_id": "V812",
+      "player_name": "Botic van de Zandschulp",
+      "event_id": "2025-1536",
+      "event_name": "Madrid Masters",
+      "category": "M",
+      "group": "lucky_loser",
+      "previous_reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni.",
+      "before": null,
+      "after": 20,
+      "breakdown": {
+        "main_draw": 10,
+        "qualifying": 10
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
+      "evidence": []
+    },
+    {
+      "player_id": "V812",
+      "player_name": "Botic van de Zandschulp",
+      "event_id": "2025-328",
+      "event_name": "Basel",
+      "category": "500",
+      "group": "lucky_loser",
+      "previous_reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser.",
+      "before": null,
+      "after": 63,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 13
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/328/mds.pdf",
+        "https://www.protennislive.com/posting/2025/328/qs.pdf"
+      ]
+    },
+    {
+      "player_id": "BT72",
+      "player_name": "Nuno Borges",
+      "event_id": "2025-440",
+      "event_name": "'s-Hertogenbosch",
+      "category": "250",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 50,
+      "breakdown": {
+        "main_draw": 50,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "BU13",
+      "player_name": "Zizou Bergs",
+      "event_id": "2025-560",
+      "event_name": "US Open",
+      "category": "G",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 100,
+      "breakdown": {
+        "main_draw": 100,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "HB64",
+      "player_name": "Quentin Halys",
+      "event_id": "2025-328",
+      "event_name": "Basel",
+      "category": "500",
+      "group": "lucky_loser",
+      "previous_reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser.",
+      "before": null,
+      "after": 13,
+      "breakdown": {
+        "main_draw": 0,
+        "qualifying": 13
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/328/mds.pdf",
+        "https://www.protennislive.com/posting/2025/328/qs.pdf"
+      ]
+    },
+    {
+      "player_id": "F0FV",
+      "player_name": "Joao Fonseca",
+      "event_id": "2025-328",
+      "event_name": "Basel",
+      "category": "500",
+      "group": "won_walkover",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 500,
+      "breakdown": {
+        "main_draw": 500,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del titolo. Avanzamento per walkover vinto incluso secondo Exhibit K. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": []
+    },
+    {
+      "player_id": "T0A1",
+      "player_name": "Thiago Agustin Tirante",
+      "event_id": "2025-520",
+      "event_name": "Roland Garros",
+      "category": "G",
+      "group": "lucky_loser",
+      "previous_reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni.",
+      "before": null,
+      "after": 26,
+      "breakdown": {
+        "main_draw": 10,
+        "qualifying": 16
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
+      "evidence": []
+    },
+    {
+      "player_id": "N0BS",
+      "player_name": "Mariano Navone",
+      "event_id": "2025-422",
+      "event_name": "Cincinnati Masters",
+      "category": "M",
+      "group": "lucky_loser",
+      "previous_reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser.",
+      "before": null,
+      "after": 20,
+      "breakdown": {
+        "main_draw": 10,
+        "qualifying": 10
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Lucky loser: punti del turno perso in qualificazione, senza bonus qualificato. Sconfitta nell'ultimo turno di qualificazione.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/422/mds.pdf",
+        "https://www.protennislive.com/posting/2025/422/qs.pdf"
+      ]
+    },
+    {
+      "player_id": "GJ37",
+      "player_name": "Tallon Griekspoor",
+      "event_id": "2025-6242",
+      "event_name": "Winston-Salem",
+      "category": "250",
+      "group": "bye",
+      "previous_reason": "Possibile bye o turno mancante: verificare il tabellone.",
+      "before": null,
+      "after": 0,
+      "breakdown": {
+        "main_draw": 0,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Sconfitta al debutto dopo bye: punti del primo turno. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/6242/mds.pdf"
+      ]
+    },
+    {
+      "player_id": "GJ37",
+      "player_name": "Tallon Griekspoor",
+      "event_id": "2025-337",
+      "event_name": "Vienna",
+      "category": "500",
+      "group": "lost_walkover_medical",
+      "previous_reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria.",
+      "before": null,
+      "after": 100,
+      "breakdown": {
+        "main_draw": 100,
+        "qualifying": 0
+      },
+      "status": "calculated",
+      "reason_now": "Punti del turno di eliminazione. Ritiro medico documentato dopo incontri giocati. Nessun ingresso da qualificazioni rilevato.",
+      "evidence": [
+        "https://www.protennislive.com/posting/2025/337/mds.pdf"
+      ]
+    }
+  ]
+}

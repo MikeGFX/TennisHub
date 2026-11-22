@@ -179,10 +179,28 @@ class PointsTests(unittest.TestCase):
         rows = [match(round=r, won=True, stage="qualifying") for r in ("Q1","Q2")]
         self.assertIsNone(self.points(rows+[match(loser_entry="LL")]).value)
 
-    def test_lucky_loser_2025_remains_pending_annual_validation(self):
+    def test_labelled_lucky_loser_2025_follows_rule_9_03_g(self):
+        from tennishub.points import RULES_2025_URL
         rows = [match(round=r, won=r=="Q1", stage="qualifying", tourney_id="2025-test") for r in ("Q1","Q2")]
         rows += [match(tourney_id="2025-test",loser_entry="LL")]
+        result = self.points(rows,season=2025)
+        self.assertEqual((result.value,result.qualifying,result.main_draw), (7,7,0))
+        self.assertIn(RULES_2025_URL, result.sources)
+        slam = [match(round=r, won=r!="Q3", stage="qualifying", level="G", draw="128", tourney_id="2025-test") for r in ("Q1","Q2","Q3")]
+        slam += [match(round="R128", level="G", draw="128", loser_entry="LL", tourney_id="2025-test")]
+        self.assertEqual(self.points(slam,season=2025).value, 26)
+
+    def test_unlabelled_2025_lucky_loser_needs_edition_evidence(self):
+        rows = [match(round=r, won=r=="Q1", stage="qualifying", level="500", draw="32", tourney_id="2025-test") for r in ("Q1","Q2")]
+        rows += [match(level="500", draw="32", tourney_id="2025-test")]
         self.assertIsNone(self.points(rows,season=2025).value)
+        documented = [match(round=r, won=r=="Q1", stage="qualifying", level="500", draw="32", tourney_id="2025-328",
+                            winner_id="HB64" if r=="Q1" else "OTHER", loser_id="OTHER" if r=="Q1" else "HB64") for r in ("Q1","Q2")]
+        documented += [match(level="500", draw="32", tourney_id="2025-328", loser_id="HB64")]
+        result = evaluate_points(documented, "HB64", season=2025)
+        self.assertEqual((result.value,result.qualifying,result.main_draw), (13,13,0))
+        self.assertIn("https://www.protennislive.com/posting/2025/328/qs.pdf", result.sources)
+        self.assertIsNone(evaluate_points(documented, "OTHER", season=2025).value)
 
     def test_documented_lucky_loser_bye_does_not_invent_a_seed(self):
         rows = [match(round=r, won=r=="Q1", stage="qualifying", level="M", draw="56", winner_id="T0A1" if r=="Q1" else "OTHER", loser_id="OTHER" if r=="Q1" else "T0A1", tourney_id="2026-352") for r in ("Q1","Q2")]
@@ -202,6 +220,54 @@ class PointsTests(unittest.TestCase):
         self.assertIsNone(self.points([match(round="SF",score="7-5 5-3 DEF")]).value)
         documented = [match(round="SF",score="7-5 5-3 DEF",winner_id="D643",loser_id="MM58",level="500",draw="32",tourney_id="2026-747")]
         self.assertEqual(evaluate_points(documented,"MM58").value,0)
+
+    def test_2025_won_walkover_uses_2025_exhibit_k(self):
+        from tennishub.points import WALKOVER_2025_URL, WALKOVER_URL
+        rows = [match(round="R32", won=True, level="500", draw="32", tourney_id="2025-test"),
+                match(round="R16", won=True, score="W/O", level="500", draw="32", tourney_id="2025-test"),
+                match(round="QF", level="500", draw="32", tourney_id="2025-test")]
+        result = self.points(rows, season=2025)
+        self.assertEqual(result.value, 100)
+        self.assertIn(WALKOVER_2025_URL, result.sources)
+        self.assertNotIn(WALKOVER_URL, result.sources)
+
+    def test_2025_seed_with_bye_and_walkover_is_not_a_bye_loss(self):
+        rows = [match(round="R64", won=True, score="W/O", level="M", draw="96", tourney_id="2025-test", winner_seed="28"),
+                match(round="R32", level="M", draw="96", tourney_id="2025-test", loser_seed="28")]
+        self.assertEqual(self.points(rows, season=2025).value, 50)
+
+    def test_2025_lost_walkover_needs_documented_medical_reason(self):
+        rows = [match(round="R32", won=True, level="500", draw="32", tourney_id="2025-test"),
+                match(round="R16", score="W/O", level="500", draw="32", tourney_id="2025-test")]
+        self.assertIsNone(self.points(rows, season=2025).value)
+        documented = [match(round=r, won=True, level="500", draw="32", tourney_id="2025-337", winner_id="GJ37", loser_id="OTHER") for r in ("R32", "R16")]
+        documented += [match(round="QF", score="W/O", level="500", draw="32", tourney_id="2025-337", winner_id="Z355", loser_id="GJ37")]
+        result = evaluate_points(documented, "GJ37", season=2025)
+        self.assertEqual((result.value, result.main_draw), (100, 100))
+        self.assertIn("https://www.protennislive.com/posting/2025/337/mds.pdf", result.sources)
+        self.assertIsNone(evaluate_points(documented[2:], "GJ37", season=2025).value)
+
+    def test_2025_lost_walkover_without_listed_reason_stays_unknown(self):
+        rows = [match(round=r, won=r=="Q1", stage="qualifying", tourney_id="2025-496", winner_id="V0DZ" if r=="Q1" else "OTHER", loser_id="OTHER" if r=="Q1" else "V0DZ") for r in ("Q1","Q2")]
+        rows += [match(round="R32", won=True, tourney_id="2025-496", winner_id="V0DZ", loser_id="OTHER", winner_entry="LL"),
+                 match(round="R16", score="W/O", tourney_id="2025-496", winner_id="OTHER", loser_id="V0DZ", loser_entry="LL")]
+        self.assertIsNone(evaluate_points(rows, "V0DZ", season=2025).value)
+
+    def test_documented_2025_byes_resolve_only_listed_players(self):
+        for edition, player, round, draw in (("2025-301", "S0S1", "R16", "28"), ("2025-336", "RE44", "R16", "28"),
+                                             ("2025-6242", "GJ37", "R32", "48")):
+            with self.subTest(edition=edition):
+                row = match(round=round, draw=draw, loser_id=player, tourney_id=edition)
+                result = evaluate_points([row], player, season=2025)
+                self.assertEqual((result.value, result.main_draw, result.qualifying), (0, 0, 0))
+                self.assertIn(f"https://www.protennislive.com/posting/2025/{edition[5:]}/mds.pdf", result.sources)
+                self.assertIn("bye", result.reason)
+                other = match(round=round, draw=draw, loser_id="P001", tourney_id=edition)
+                self.assertIsNone(self.points([other], season=2025).value)
+
+    def test_2025_bye_evidence_does_not_apply_to_another_year(self):
+        row = match(round="R16", loser_id="S0S1", tourney_id="2026-301")
+        self.assertIsNone(evaluate_points([row], "S0S1").value)
 
     def test_unverified_year_and_empty_input_remain_unknown(self):
         self.assertIsNone(self.points([match()], season=2024).value)

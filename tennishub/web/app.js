@@ -205,7 +205,14 @@ function renderEvent(event) {
   const placement = event.placement.replace("In corso: RR", "Gironi · in corso").replace("Singolare a squadre:", "Singolare:");
   const pointDisplay = event.earned_points === null ? '<span class="review-tag">Da verificare</span>' : `${formatNumber(event.earned_points)}${event.provisional ? '<span class="point-note provisional-label">Provvisori</span>' : '<span class="point-note">punti</span>'}`;
   const sources = [...new Set(event.points_sources || [])].map(safeLink).filter(Boolean);
-  const links = sources.map((url, index) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${url.includes("/qs.pdf") ? "Tabellone qualificazioni" : index ? "Livello dell’edizione" : "Regole dei punti"} ↗</a>`).join("");
+  const sourceLabel = (url, index) => {
+    if (url.includes("/qs.pdf")) return "Tabellone qualificazioni";
+    if (url.includes("/mds.pdf")) return "Tabellone ufficiale";
+    if (url.includes("chapter-10_exhibits")) return "Regola walkover (Exhibit K)";
+    if (!index) return "Regole dei punti";
+    return event.category === "C" && index === 1 ? "Livello dell’edizione" : "Prova dell’edizione";
+  };
+  const links = sources.map((url, index) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${sourceLabel(url, index)} ↗</a>`).join("");
   const breakdown = event.points_breakdown;
   const breakdownText = breakdown && breakdown.qualifying > 0 && breakdown.main_draw !== null ? `Tabellone principale: ${formatNumber(breakdown.main_draw)} · Qualificazioni: ${formatNumber(breakdown.qualifying)}.` : "";
   return `<details class="event" id="tournament-${escapeHtml(event.id)}"><summary class="event-summary" aria-label="${escapeHtml(event.name)}, ${escapeHtml(placement)}, ${event.earned_points === null ? "punti da verificare" : `${event.earned_points} punti`}. Apri gli incontri">

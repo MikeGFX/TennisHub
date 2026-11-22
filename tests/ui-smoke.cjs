@@ -166,6 +166,10 @@ async function main() {
   assert.match(vanAsscheCapCana.querySelector(".event-points").textContent, /^19/);
   assert.ok(vanAsscheCapCana.textContent.includes("Qualificazioni: 6"));
   assert.ok(vanAsscheCapCana.querySelector('a[href="https://www.protennislive.com/posting/2026/2975/qs.pdf"]'));
+  const capCanaLinks = [...vanAsscheCapCana.querySelectorAll(".event-detail a, a")].filter((node) => vanAsscheCapCana.contains(node));
+  assert.ok(capCanaLinks.some((node) => node.textContent.includes("Livello dell’edizione")));
+  for (const link of all('a[href*="chapter-10_exhibits"]')) assert.ok(link.textContent.includes("Exhibit K"));
+  for (const link of all('a[href$="/mds.pdf"]')) assert.ok(link.textContent.includes("Tabellone ufficiale"));
 
   let fail = true;
   const retryWindow = await page((url, options, realFetch) => {
