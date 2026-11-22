@@ -127,15 +127,16 @@ def status(connection, year=None):
             "issue_examples": [dict(row) for row in connection.execute("SELECT source_name, source_line, code, message FROM issues WHERE import_id=? LIMIT 20", (snapshot["id"],))]}
 
 
-def coverage(connection, year):
+def coverage(connection, year, categories=None):
     roster = players(connection, season=year)
     unresolved, reasons = [], defaultdict(int)
     total = provisional = 0
     for player in roster["players"]:
         report = season(connection, player["id"], year)
-        total += len(report["events"])
-        provisional += sum(event["provisional"] for event in report["events"])
-        for event in report["events"]:
+        events = [event for event in report["events"] if categories is None or event["category"] in categories]
+        total += len(events)
+        provisional += sum(event["provisional"] for event in events)
+        for event in events:
             if event["earned_points"] is None:
                 reasons[event["points_reason"]] += 1
                 unresolved.append({"player_id": player["id"], "player_name": player["name"],

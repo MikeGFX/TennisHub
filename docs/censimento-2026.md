@@ -77,7 +77,9 @@ con soli percorsi curati.
 - Recuperare il vero tabellone Challenger di Santa Cruz 2 di ottobre.
 - Riconciliare l'inventario dei tornei con una fonte indipendente: la scansione
   parte dalle 238 edizioni gia' presenti e non scopre automaticamente tornei assenti.
-- Completare la copertura ITF/Futures: la copia disponibile arriva a giugno.
+- Riconciliare la copertura ITF/Futures: il nuovo feed secondario arriva al
+  18 novembre nel limite dell'app, ma non certifica tutti i tornei.
+  Vedi [verifica ITF](itf-2026.md).
 - Verificare quattro main draw Challenger conclusi con 30 incontri su 32 giocatori:
   Brisbane QTC #3 (3037, R32), Lima (6579, SF), Guangzhou (6965, R16), Lisbona
   (7742, R16). Nessun giocatore osservato in questi quattro tornei e' nel campione;
@@ -135,5 +137,5 @@ Il comando legge solo le sezioni delle qualificazioni e ignora main draw,
 classifiche laterali e script. Controlla anno, date e sei qualificati; si interrompe
 se il contenuto manca o non concorda. Richiede la cache raccolta per l'esecuzione offline.
 I conteggi ufficiali rimangono 237 PDF validati e uno pendente. Per proseguire sul
-2026 resta prioritaria una fonte ITF/Futures dell'intera stagione, oltre al
+2026 resta prioritaria la riconciliazione ITF/Futures con un inventario indipendente, oltre al
 recupero del vero tabellone ufficiale di Santa Cruz.

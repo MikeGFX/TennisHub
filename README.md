@@ -44,6 +44,9 @@ i tornei, inclusi ITF/Futures, resta da completare.
 Le tabelle principali 2025 sono validate; diverse edizioni Challenger e casi
 speciali restano da verificare. Gli anni diversi dal 2025/2026 non hanno ancora
 regole validate.
+Dal 2025 in giu la priorita di verifica riguarda Slam, Masters 1000, ATP 500/250
+e Finals, incluse le qualificazioni disponibili. I risultati degli altri livelli
+restano consultabili e nei totali generali.
 La beta non include risultati in diretta.
 
 Per controllare separatamente punti e completezza delle stagioni:
@@ -58,7 +61,8 @@ python3 -m tennishub completeness --from-season 2016 --to-season 2026
 - [Importazione, fonti, cache e storico](docs/importazione-locale.md)
 - [Calcolo dei punti e limiti di copertura](docs/calcolo-punti.md)
 - [Avanzamento delle stagioni 2016-2026](docs/completezza-stagioni.md)
-- [Primo censimento 2026: lacune confermate](docs/censimento-2026.md)
+- [Censimento 2026 e limiti residui](docs/censimento-2026.md)
+- [Verifica ITF 2026 e nuova fonte secondaria](docs/itf-2026.md)
 - [Verifica iniziale di Zverev 2026](docs/verifica-dati-zverev-2026.md)
 - [Prossime funzionalità e percorso Android](docs/roadmap.md)
 
@@ -68,7 +72,7 @@ python3 -m tennishub completeness --from-season 2016 --to-season 2026
 python3 -m unittest discover -s tests -v
 ```
 
-141 test coprono importazione, calcolo dei punti e API locali.
+150 test coprono importazione, calcolo dei punti e API locali.
 Il controllo DOM facoltativo delle interazioni è descritto nella guida
 all'interfaccia; Node è necessario solo per quel controllo.
 

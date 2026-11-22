@@ -1,0 +1,72 @@
+{
+  "source_url": "https://www.valuebetennis.com/datasets/valuebetennis-matchs-2026.csv",
+  "source_sha256": "9de1c34e834c94907524e1695562cbe1d8fd1664518526ba40baeb579ef0b9cd",
+  "import_id": "248fbde78eb06d4de870486423d05985e486cabf6743bba2fd06515927d9abee",
+  "method": "Aliases checked against local known matches using outcome, opponent, exact score and date within the event window. Diagnostic mapping only; does not modify player identities.",
+  "players": {
+    "FB98": {
+      "alias": "Taylor Harry Fritz",
+      "source_player_id": "9023",
+      "matching_known_matches": 57,
+      "matching_editions": 19,
+      "examples": [
+        {
+          "source_match_id": "900773",
+          "local_match_key": "1e68647c4dbec69bb53f3aef146b54ca98760ea4934a957a5061197fb904c232",
+          "edition_id": "2026-9900",
+          "opponent": "Sebastian Baez",
+          "score_winner_first": "4-6 7-5 6-4",
+          "source_date": "2026-01-03"
+        },
+        {
+          "source_match_id": "901761",
+          "local_match_key": "eac986757600f9694600dfdb4a64cc9aecc54a9b2f6ac3012c7e091e1af95846",
+          "edition_id": "2026-9900",
+          "opponent": "Stefanos Tsitsipas",
+          "score_winner_first": "6-4 7-5",
+          "source_date": "2026-01-07"
+        },
+        {
+          "source_match_id": "902464",
+          "local_match_key": "e702e4963f79ef9389ca44179a95f4c99fca9f59f812bd17edeeb46727002299",
+          "edition_id": "2026-9900",
+          "opponent": "Hubert Hurkacz",
+          "score_winner_first": "7-6(1) 7-6(2)",
+          "source_date": "2026-01-10"
+        }
+      ]
+    },
+    "M0N7": {
+      "alias": "Daniel Merida Aguilar",
+      "source_player_id": "31551",
+      "matching_known_matches": 44,
+      "matching_editions": 21,
+      "examples": [
+        {
+          "source_match_id": "905316",
+          "local_match_key": "3e1b1ab27127d3638fa97e8ffa9d6bc1437fdfc3494c65c1b68cc8f30fbeeccb",
+          "edition_id": "2026-2831",
+          "opponent": "Mark Lajal",
+          "score_winner_first": "6-2 6-2",
+          "source_date": "2026-01-20"
+        },
+        {
+          "source_match_id": "908148",
+          "local_match_key": "ac9f49f82fad9e5362494fe4d81956ee2cb752bf10a02ae54c630475357db00c",
+          "edition_id": "2026-9623",
+          "opponent": "Toby Samuel",
+          "score_winner_first": "6-2 6-4",
+          "source_date": "2026-02-03"
+        },
+        {
+          "source_match_id": "909226",
+          "local_match_key": "ed062ff078be21b56fc1e4eb4d0fdf512b221a585ef0169764c610c1cccec75b",
+          "edition_id": "2026-9623",
+          "opponent": "Alejo Sanchez Quilez",
+          "score_winner_first": "7-5 6-3",
+          "source_date": "2026-02-05"
+        }
+      ]
+    }
+  }
+}

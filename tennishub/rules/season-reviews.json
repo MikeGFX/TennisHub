@@ -1,19 +1,26 @@
 {
-  "scope": "singolare dei 50 giocatori selezionati, tutti i tornei con punti ATP inclusi ITF/Futures",
+  "scope": "50 giocatori selezionati: censimento di tutti i tornei con punti ATP per il 2026; dal 2025 priorita al circuito principale, mantenendo i dati degli altri livelli.",
   "seasons": {
     "2026": {
       "inventory_verified": false,
-      "itf_status": "partial_external_snapshot_not_integrated",
+      "itf_status": "secondary_to_cutoff_screened_not_reconciled",
       "itf_source": {
-        "url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/8ac86f7c62889b5d5c4cfec4c6403edcb8c5d993/atp/atp_matches_futures_2026.csv",
-        "snapshot": "8ac86f7c62889b5d5c4cfec4c6403edcb8c5d993",
-        "sha256": "f571907c3e884bc2046261e911ddf35ed1e803d5ea8bff164391a59829b9d107",
-        "records": 6894,
-        "latest_observed_tournament_date": "2026-06-01",
-        "cohort_exact_name_matches": 0,
-        "status": "Esaminata una copia parziale. Zero corrispondenze esatte dei 50 non prova assenza di altri tornei ITF nella stagione."
+        "url": "https://www.valuebetennis.com/datasets/valuebetennis-matchs-2026.csv",
+        "sha256": "9de1c34e834c94907524e1695562cbe1d8fd1664518526ba40baeb579ef0b9cd",
+        "license": "CC BY 4.0",
+        "license_source": "https://www.valuebetennis.com/donnees.htm",
+        "source_type": "secondary_observed_results",
+        "records_observed_through_cutoff": 32997,
+        "event_ids_observed": 557,
+        "first_timestamp": "2026-01-01 12:05:00",
+        "last_timestamp": "2026-11-18 23:40:00",
+        "as_of": "2026-11-18",
+        "mapped_cohort_players": 50,
+        "cohort_itf_candidates": 0,
+        "evidence": "research/itf-secondary-census-2026.json",
+        "limitations": "Only live-observed settled matches published by the provider. No independent calendar reconciliation or certified absence of participation."
       },
-      "notes": "Qualificazioni dei 238 Challenger noti: 237 PDF validati. Santa Cruz 2: 16 risultati alternativi, 22 partecipanti osservati, nessun candidato del campione; sei qualificati incrociati con Wikipedia. PDF ufficiale e completezza del suo tabellone restano aperti. Percorsi selezionati a Canberra e Cap Cana integrati (7 incontri), non tabelloni completi. ITF/Futures e inventario di tutti i tornei da verificare; Finals provvisorie al 18 novembre.",
+      "notes": "Qualificazioni Challenger: 237 PDF validati, Santa Cruz con riscontri alternativi ma PDF ufficiale pendente. ITF 2026: nuova fonte secondaria, 32.997 incontri maschili fino al 18 novembre, tutti i 50 giocatori abbinati e nessun incontro osservato del campione. Inventario indipendente dei tornei e completezza ITF non certificati. Finals provvisorie nella fotografia del 18 novembre.",
       "qualifying_status": "challenger_qualifying_partially_imported",
       "census_import_id": "e1e0d3d2be24788e94b3999dd575a02eb3fea20fd4e2f6e5293c3d791e0c3846",
       "confirmed_missing_participations": [],
@@ -101,7 +108,33 @@
         "official_document_verified": false,
         "complete_draw_verified": false,
         "cohort_candidates_in_observed_results": 0
+      },
+      "itf_legacy_source": {
+        "url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/8ac86f7c62889b5d5c4cfec4c6403edcb8c5d993/atp/atp_matches_futures_2026.csv",
+        "snapshot": "8ac86f7c62889b5d5c4cfec4c6403edcb8c5d993",
+        "sha256": "f571907c3e884bc2046261e911ddf35ed1e803d5ea8bff164391a59829b9d107",
+        "records": 6894,
+        "latest_observed_tournament_date": "2026-06-01",
+        "cohort_exact_name_matches": 0,
+        "status": "Esaminata una copia parziale. Zero corrispondenze esatte dei 50 non prova assenza di altri tornei ITF nella stagione."
       }
     }
+  },
+  "historical_priority": {
+    "through_season": 2025,
+    "categories": [
+      "G",
+      "M",
+      "500",
+      "250",
+      "F"
+    ],
+    "include_qualifying": true,
+    "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+    "deferred_categories": [
+      "C",
+      "ITF/Futures"
+    ],
+    "note": "Priorita di lavoro e verifica, non rimozione dei risultati minori o certificazione dell intera stagione."
   }
 }

@@ -1,0 +1,593 @@
+{
+  "checked_on": "2026-11-22",
+  "scope": {
+    "through_season": 2025,
+    "categories": [
+      "G",
+      "M",
+      "500",
+      "250",
+      "F"
+    ],
+    "include_qualifying": true,
+    "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+    "deferred_categories": [
+      "C",
+      "ITF/Futures"
+    ],
+    "note": "Priorita di lavoro e verifica, non rimozione dei risultati minori o certificazione dell intera stagione."
+  },
+  "note": "Work priority only; all existing results and full-season unknowns are retained. Not an annual top-50 selection.",
+  "seasons": [
+    {
+      "season": 2025,
+      "import_id": "353ae8c5d6b8e901c641cdf9b62049c47cbaa76e37bef7b9c294c2dd087ec422",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 1227,
+      "calculated": 983,
+      "needs_review": 244,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 959,
+        "calculated": 925,
+        "needs_review": 34,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Lucky loser: verificare il trattamento dei punti delle qualificazioni.": 4,
+          "Possibile bye o turno mancante: verificare il tabellone.": 6,
+          "Qualificazioni perse con ingresso nel main draw: verificare lucky loser.": 3,
+          "Walkover perso, risultato speciale o non concluso: verifica necessaria.": 21
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2024,
+      "import_id": "e1bbfa359c52d59ba03fcd27bd2407814cbfb95f6719e652f4db292b1b50add0",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 1243,
+      "calculated": 0,
+      "needs_review": 1243,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 923,
+        "calculated": 0,
+        "needs_review": 923,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Formato del tabellone discordante nella fonte: punti da verificare.": 13,
+          "Regole punti di questa stagione ancora da validare.": 910
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2023,
+      "import_id": "15c9b24ce87cb90e6e06a2a7ce8765268c099ccd312f0f2b15cae578f8749b5d",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 1124,
+      "calculated": 0,
+      "needs_review": 1124,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 797,
+        "calculated": 0,
+        "needs_review": 797,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Regole punti di questa stagione ancora da validare.": 797
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2022,
+      "import_id": "06e96c80dcd41c96833e8f7e660116b2b78c953e3342e72b043b80388d055714",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 1012,
+      "calculated": 0,
+      "needs_review": 1012,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 659,
+        "calculated": 0,
+        "needs_review": 659,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Regole punti di questa stagione ancora da validare.": 659
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2021,
+      "import_id": "0768a728b2b65420da4ca2bdeba7cae5df760f31cf1d7ae5ab3e6beac9c53aaf",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 823,
+      "calculated": 0,
+      "needs_review": 823,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 540,
+        "calculated": 0,
+        "needs_review": 540,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Formato del tabellone discordante nella fonte: punti da verificare.": 4,
+          "Regole punti di questa stagione ancora da validare.": 536
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2020,
+      "import_id": "11caefa260d2a24fbde4f09f9f8c913d126413ced870d43eb9a2a09a3e6e4716",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 385,
+      "calculated": 0,
+      "needs_review": 385,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 258,
+        "calculated": 0,
+        "needs_review": 258,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Regole punti di questa stagione ancora da validare.": 258
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2019,
+      "import_id": "6ebbc10a0f5a4bf860cf99db12f70528c323da636b88b8538c75303b3e7d274b",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 564,
+      "calculated": 0,
+      "needs_review": 564,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 436,
+        "calculated": 0,
+        "needs_review": 436,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Formato del tabellone discordante nella fonte: punti da verificare.": 19,
+          "Regole punti di questa stagione ancora da validare.": 417
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2018,
+      "import_id": "8db383d1289bccf45b44c9515dc29c2f31d0ebbd1ba379c18014b27dc1f2003c",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 523,
+      "calculated": 0,
+      "needs_review": 523,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 331,
+        "calculated": 0,
+        "needs_review": 331,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Regole punti di questa stagione ancora da validare.": 331
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2017,
+      "import_id": "aa8fd62c31da68f8cebc8a5b7163b81036945e4f13b3e44d2d648255ca234577",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 422,
+      "calculated": 0,
+      "needs_review": 422,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 255,
+        "calculated": 0,
+        "needs_review": 255,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Regole punti di questa stagione ancora da validare.": 255
+        }
+      },
+      "complete": false
+    },
+    {
+      "season": 2016,
+      "import_id": "47855aab8d19e5a27480947a7df9a5406641a598ee4a7be2c98de17d70acb7ec",
+      "as_of": "2026-11-18",
+      "ranking_date": "2026-11-16",
+      "recorded_participations": 335,
+      "calculated": 0,
+      "needs_review": 335,
+      "priority": {
+        "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
+        "categories": [
+          "G",
+          "M",
+          "500",
+          "250",
+          "F"
+        ],
+        "include_qualifying": true,
+        "participations": 161,
+        "calculated": 0,
+        "needs_review": 161,
+        "recorded_points_resolved": false,
+        "certifies_complete_season": false,
+        "reasons": {
+          "Regole punti di questa stagione ancora da validare.": 161
+        }
+      },
+      "complete": false
+    }
+  ],
+  "next_2025_review_cases": [
+    {
+      "player_id": "Z355",
+      "player_name": "Alexander Zverev",
+      "event_id": "2025-337",
+      "event_name": "Vienna",
+      "category": "500",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "S0S1",
+      "player_name": "Ben Shelton",
+      "event_id": "2025-301",
+      "event_name": "Auckland",
+      "category": "250",
+      "reason": "Possibile bye o turno mancante: verificare il tabellone."
+    },
+    {
+      "player_id": "S0S1",
+      "player_name": "Ben Shelton",
+      "event_id": "2025-520",
+      "event_name": "Roland Garros",
+      "category": "G",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "MM58",
+      "player_name": "Daniil Medvedev",
+      "event_id": "2025-1536",
+      "event_name": "Madrid Masters",
+      "category": "M",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "MM58",
+      "player_name": "Daniil Medvedev",
+      "event_id": "2025-352",
+      "event_name": "Paris Masters",
+      "category": "M",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "F0F1",
+      "player_name": "Arthur Fils",
+      "event_id": "2025-520",
+      "event_name": "Roland Garros",
+      "category": "G",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "DH58",
+      "player_name": "Alex de Minaur",
+      "event_id": "2025-421",
+      "event_name": "Canada Masters",
+      "category": "M",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "PL56",
+      "player_name": "Tommy Paul",
+      "event_id": "2025-807",
+      "event_name": "Acapulco",
+      "category": "500",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "M0NI",
+      "player_name": "Jakub Mensik",
+      "event_id": "2025-403",
+      "event_name": "Miami Masters",
+      "category": "M",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "M0NI",
+      "player_name": "Jakub Mensik",
+      "event_id": "2025-328",
+      "event_name": "Basel",
+      "category": "500",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "AG37",
+      "player_name": "Felix Auger-Aliassime",
+      "event_id": "2025-451",
+      "event_name": "Doha",
+      "category": "500",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "RH16",
+      "player_name": "Casper Ruud",
+      "event_id": "2025-807",
+      "event_name": "Acapulco",
+      "category": "500",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "N0AE",
+      "player_name": "Brandon Nakashima",
+      "event_id": "2025-416",
+      "event_name": "Rome Masters",
+      "category": "M",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "C0AU",
+      "player_name": "Francisco Cerundolo",
+      "event_id": "2025-301",
+      "event_name": "Auckland",
+      "category": "250",
+      "reason": "Possibile bye o turno mancante: verificare il tabellone."
+    },
+    {
+      "player_id": "RE44",
+      "player_name": "Andrey Rublev",
+      "event_id": "2025-336",
+      "event_name": "Hong Kong",
+      "category": "250",
+      "reason": "Possibile bye o turno mancante: verificare il tabellone."
+    },
+    {
+      "player_id": "RE44",
+      "player_name": "Andrey Rublev",
+      "event_id": "2025-1536",
+      "event_name": "Madrid Masters",
+      "category": "M",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "RE44",
+      "player_name": "Andrey Rublev",
+      "event_id": "2025-520",
+      "event_name": "Roland Garros",
+      "category": "G",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "KE29",
+      "player_name": "Karen Khachanov",
+      "event_id": "2025-336",
+      "event_name": "Hong Kong",
+      "category": "250",
+      "reason": "Possibile bye o turno mancante: verificare il tabellone."
+    },
+    {
+      "player_id": "M0EJ",
+      "player_name": "Lorenzo Musetti",
+      "event_id": "2025-506",
+      "event_name": "Buenos Aires",
+      "category": "250",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "HB71",
+      "player_name": "Hubert Hurkacz",
+      "event_id": "2025-440",
+      "event_name": "'s-Hertogenbosch",
+      "category": "250",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "TE30",
+      "player_name": "Alejandro Tabilo",
+      "event_id": "2025-301",
+      "event_name": "Auckland",
+      "category": "250",
+      "reason": "Possibile bye o turno mancante: verificare il tabellone."
+    },
+    {
+      "player_id": "V0DZ",
+      "player_name": "Luca Van Assche",
+      "event_id": "2025-496",
+      "event_name": "Marseille",
+      "category": "250",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "V812",
+      "player_name": "Botic van de Zandschulp",
+      "event_id": "2025-404",
+      "event_name": "Indian Wells Masters",
+      "category": "M",
+      "reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
+    },
+    {
+      "player_id": "V812",
+      "player_name": "Botic van de Zandschulp",
+      "event_id": "2025-308",
+      "event_name": "Munich",
+      "category": "500",
+      "reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
+    },
+    {
+      "player_id": "V812",
+      "player_name": "Botic van de Zandschulp",
+      "event_id": "2025-1536",
+      "event_name": "Madrid Masters",
+      "category": "M",
+      "reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
+    },
+    {
+      "player_id": "V812",
+      "player_name": "Botic van de Zandschulp",
+      "event_id": "2025-328",
+      "event_name": "Basel",
+      "category": "500",
+      "reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
+    },
+    {
+      "player_id": "BT72",
+      "player_name": "Nuno Borges",
+      "event_id": "2025-440",
+      "event_name": "'s-Hertogenbosch",
+      "category": "250",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "BU13",
+      "player_name": "Zizou Bergs",
+      "event_id": "2025-560",
+      "event_name": "US Open",
+      "category": "G",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "HB64",
+      "player_name": "Quentin Halys",
+      "event_id": "2025-328",
+      "event_name": "Basel",
+      "category": "500",
+      "reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
+    },
+    {
+      "player_id": "F0FV",
+      "player_name": "Joao Fonseca",
+      "event_id": "2025-328",
+      "event_name": "Basel",
+      "category": "500",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    },
+    {
+      "player_id": "T0A1",
+      "player_name": "Thiago Agustin Tirante",
+      "event_id": "2025-520",
+      "event_name": "Roland Garros",
+      "category": "G",
+      "reason": "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
+    },
+    {
+      "player_id": "N0BS",
+      "player_name": "Mariano Navone",
+      "event_id": "2025-422",
+      "event_name": "Cincinnati Masters",
+      "category": "M",
+      "reason": "Qualificazioni perse con ingresso nel main draw: verificare lucky loser."
+    },
+    {
+      "player_id": "GJ37",
+      "player_name": "Tallon Griekspoor",
+      "event_id": "2025-6242",
+      "event_name": "Winston-Salem",
+      "category": "250",
+      "reason": "Possibile bye o turno mancante: verificare il tabellone."
+    },
+    {
+      "player_id": "GJ37",
+      "player_name": "Tallon Griekspoor",
+      "event_id": "2025-337",
+      "event_name": "Vienna",
+      "category": "500",
+      "reason": "Walkover perso, risultato speciale o non concluso: verifica necessaria."
+    }
+  ]
+}

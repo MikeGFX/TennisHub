@@ -60,6 +60,29 @@ class QualityTests(unittest.TestCase):
         self.assertEqual(report["seasons"][0]["blockers"],["not_imported"])
         self.assertFalse(report["all_complete"])
 
+    def test_historical_priority_does_not_delete_or_certify_deferred_events(self):
+        datasets=[resource("2025.csv",[row(tourney_id="2025-1",tourney_date="20250201",round="F")]),
+                  resource("2025_challenger.csv",[row(tourney_id="2025-777",tourney_date="20250301",tourney_level="C",round="F")]),
+                  resource("atp_quali/2025_atp_quali.csv",[])]
+        import_bundle(self.connection,2025,AS_OF,RANKING_DATE,RANKINGS,datasets,datasets)
+        report=assess_season(self.connection,2025,reviews={})
+        self.assertEqual((report["recorded_participations"],report["needs_review"]),(4,2))
+        self.assertEqual((report["priority"]["participations"],report["priority"]["needs_review"]),(2,0))
+        self.assertTrue(report["priority"]["recorded_points_resolved"])
+        self.assertFalse(report["priority"]["certifies_complete_season"])
+        self.assertFalse(report["complete"])
+
+    def test_2026_retains_full_scope_without_historical_priority(self):
+        self.load(2026)
+        self.assertIsNone(assess_season(self.connection,2026)["priority"])
+
+    def test_empty_primary_scope_is_not_counted_as_resolved(self):
+        datasets=[resource("2025.csv",[]),resource("2025_challenger.csv",[row(tourney_id="2025-777",tourney_date="20250301",tourney_level="C",round="F")]),resource("atp_quali/2025_atp_quali.csv",[])]
+        import_bundle(self.connection,2025,AS_OF,RANKING_DATE,RANKINGS,datasets,datasets)
+        priority=assess_season(self.connection,2025)["priority"]
+        self.assertEqual(priority["participations"],0)
+        self.assertFalse(priority["recorded_points_resolved"])
+
 
 if __name__ == "__main__":
     unittest.main()

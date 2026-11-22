@@ -124,6 +124,9 @@ def main(argv=None):
                         if "recorded_participations" in item:
                             print(f"{item['season']}: {item['calculated']}/{item['recorded_participations']} punti calcolabili; "
                                   f"{item['needs_review']} da verificare; stagione completa: {'si' if item['complete'] else 'no'}")
+                            if item.get("priority"):
+                                priority = item["priority"]
+                                print(f"  Priorita circuito principale: {priority['calculated']}/{priority['participations']} punti calcolabili; {priority['needs_review']} da verificare.")
                         else:
                             print(f"{item['season']}: non importata")
             elif args.command == "coverage":

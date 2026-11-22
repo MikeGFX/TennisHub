@@ -1,0 +1,570 @@
+{
+  "source_rows": 81349,
+  "male_rows_through_cutoff": 47811,
+  "excluded_male_rows_by_date": 346,
+  "invalid_male_rows": [],
+  "itf_matches_observed": 32997,
+  "itf_event_ids_observed": 557,
+  "first_itf_timestamp": "2026-01-01 12:05:00",
+  "last_itf_timestamp": "2026-11-18 23:40:00",
+  "itf_month_counts": {
+    "2026-01": 1657,
+    "2026-02": 1845,
+    "2026-03": 2776,
+    "2026-04": 2313,
+    "2026-05": 1044,
+    "2026-06": 4383,
+    "2026-07": 4340,
+    "2026-08": 4366,
+    "2026-09": 3708,
+    "2026-10": 3722,
+    "2026-11": 2843
+  },
+  "source_round_counts": {
+    "1": 8907,
+    "10": 1053,
+    "12": 523,
+    "2": 3328,
+    "3": 4178,
+    "4": 8681,
+    "5": 4225,
+    "9": 2102
+  },
+  "cohort_size": 50,
+  "mapped_cohort_players": 50,
+  "player_mappings": [
+    {
+      "id": "Z355",
+      "name": "Alexander Zverev",
+      "source_player_ids": [
+        "1756"
+      ]
+    },
+    {
+      "id": "S0AG",
+      "name": "Jannik Sinner",
+      "source_player_ids": [
+        "22691"
+      ]
+    },
+    {
+      "id": "A0E2",
+      "name": "Carlos Alcaraz",
+      "source_player_ids": [
+        "22877"
+      ]
+    },
+    {
+      "id": "S0S1",
+      "name": "Ben Shelton",
+      "source_player_ids": [
+        "41506"
+      ]
+    },
+    {
+      "id": "MM58",
+      "name": "Daniil Medvedev",
+      "source_player_ids": [
+        "6538"
+      ]
+    },
+    {
+      "id": "C0E9",
+      "name": "Flavio Cobolli",
+      "source_player_ids": [
+        "27735"
+      ]
+    },
+    {
+      "id": "F0F1",
+      "name": "Arthur Fils",
+      "source_player_ids": [
+        "30812"
+      ]
+    },
+    {
+      "id": "TD51",
+      "name": "Frances Tiafoe",
+      "source_player_ids": [
+        "8748"
+      ]
+    },
+    {
+      "id": "FB98",
+      "name": "Taylor Fritz",
+      "source_player_ids": [
+        "9023"
+      ]
+    },
+    {
+      "id": "J0DZ",
+      "name": "Rafael Jodar",
+      "source_player_ids": [
+        "63664"
+      ]
+    },
+    {
+      "id": "DH58",
+      "name": "Alex de Minaur",
+      "source_player_ids": [
+        "12964"
+      ]
+    },
+    {
+      "id": "D643",
+      "name": "Novak Djokovic",
+      "source_player_ids": [
+        "625"
+      ]
+    },
+    {
+      "id": "PL56",
+      "name": "Tommy Paul",
+      "source_player_ids": [
+        "9422"
+      ]
+    },
+    {
+      "id": "L0BV",
+      "name": "Jiri Lehecka",
+      "source_player_ids": [
+        "19988"
+      ]
+    },
+    {
+      "id": "M0NI",
+      "name": "Jakub Mensik",
+      "source_player_ids": [
+        "39806"
+      ]
+    },
+    {
+      "id": "DH50",
+      "name": "Alejandro Davidovich Fokina",
+      "source_player_ids": [
+        "13818"
+      ]
+    },
+    {
+      "id": "AG37",
+      "name": "Felix Auger-Aliassime",
+      "source_player_ids": [
+        "10505"
+      ]
+    },
+    {
+      "id": "RH16",
+      "name": "Casper Ruud",
+      "source_player_ids": [
+        "13350"
+      ]
+    },
+    {
+      "id": "N0AE",
+      "name": "Brandon Nakashima",
+      "source_player_ids": [
+        "17836"
+      ]
+    },
+    {
+      "id": "C0AU",
+      "name": "Francisco Cerundolo",
+      "source_player_ids": [
+        "15308"
+      ]
+    },
+    {
+      "id": "D0FJ",
+      "name": "Luciano Darderi",
+      "source_player_ids": [
+        "29875"
+      ]
+    },
+    {
+      "id": "T0HA",
+      "name": "Learner Tien",
+      "source_player_ids": [
+        "52218"
+      ]
+    },
+    {
+      "id": "RE44",
+      "name": "Andrey Rublev",
+      "source_player_ids": [
+        "6528"
+      ]
+    },
+    {
+      "id": "KE29",
+      "name": "Karen Khachanov",
+      "source_player_ids": [
+        "6160"
+      ]
+    },
+    {
+      "id": "BK92",
+      "name": "Alexander Bublik",
+      "source_player_ids": [
+        "9592"
+      ]
+    },
+    {
+      "id": "VA25",
+      "name": "Valentin Vacherot",
+      "source_player_ids": [
+        "11896"
+      ]
+    },
+    {
+      "id": "M0EJ",
+      "name": "Lorenzo Musetti",
+      "source_player_ids": [
+        "20727"
+      ]
+    },
+    {
+      "id": "B0PG",
+      "name": "Alexander Blockx",
+      "source_player_ids": [
+        "43728"
+      ]
+    },
+    {
+      "id": "EA24",
+      "name": "Tomas Martin Etcheverry",
+      "source_player_ids": [
+        "18158"
+      ]
+    },
+    {
+      "id": "HB71",
+      "name": "Hubert Hurkacz",
+      "source_player_ids": [
+        "10325"
+      ]
+    },
+    {
+      "id": "TE30",
+      "name": "Alejandro Tabilo",
+      "source_player_ids": [
+        "13095"
+      ]
+    },
+    {
+      "id": "F0DM",
+      "name": "Arthur Fery",
+      "source_player_ids": [
+        "30027"
+      ]
+    },
+    {
+      "id": "B0ID",
+      "name": "Ignacio Buse",
+      "source_player_ids": [
+        "32045"
+      ]
+    },
+    {
+      "id": "V0DZ",
+      "name": "Luca Van Assche",
+      "source_player_ids": [
+        "30539"
+      ]
+    },
+    {
+      "id": "M0QI",
+      "name": "Alex Michelsen",
+      "source_player_ids": [
+        "51394"
+      ]
+    },
+    {
+      "id": "TE51",
+      "name": "Stefanos Tsitsipas",
+      "source_player_ids": [
+        "10144"
+      ]
+    },
+    {
+      "id": "A0FC",
+      "name": "Matteo Arnaldi",
+      "source_player_ids": [
+        "26227"
+      ]
+    },
+    {
+      "id": "HH26",
+      "name": "Ugo Humbert",
+      "source_player_ids": [
+        "12940"
+      ]
+    },
+    {
+      "id": "SL28",
+      "name": "Jan-Lennard Struff",
+      "source_player_ids": [
+        "99"
+      ]
+    },
+    {
+      "id": "V812",
+      "name": "Botic van de Zandschulp",
+      "source_player_ids": [
+        "11421"
+      ]
+    },
+    {
+      "id": "BT72",
+      "name": "Nuno Borges",
+      "source_player_ids": [
+        "16343"
+      ]
+    },
+    {
+      "id": "M0N7",
+      "name": "Daniel Merida",
+      "source_player_ids": [
+        "31551"
+      ]
+    },
+    {
+      "id": "BK40",
+      "name": "Matteo Berrettini",
+      "source_player_ids": [
+        "9837"
+      ]
+    },
+    {
+      "id": "BU13",
+      "name": "Zizou Bergs",
+      "source_player_ids": [
+        "12281"
+      ]
+    },
+    {
+      "id": "HB64",
+      "name": "Quentin Halys",
+      "source_player_ids": [
+        "3402"
+      ]
+    },
+    {
+      "id": "F0FV",
+      "name": "Joao Fonseca",
+      "source_player_ids": [
+        "48755"
+      ]
+    },
+    {
+      "id": "T0A1",
+      "name": "Thiago Agustin Tirante",
+      "source_player_ids": [
+        "15027"
+      ]
+    },
+    {
+      "id": "G0IX",
+      "name": "Arthur Gea",
+      "source_player_ids": [
+        "40833"
+      ]
+    },
+    {
+      "id": "N0BS",
+      "name": "Mariano Navone",
+      "source_player_ids": [
+        "26884"
+      ]
+    },
+    {
+      "id": "GJ37",
+      "name": "Tallon Griekspoor",
+      "source_player_ids": [
+        "10157"
+      ]
+    }
+  ],
+  "unmapped_players": [],
+  "ambiguous_player_mappings": [],
+  "cohort_itf_candidates": [],
+  "similar_name_candidates": [
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "102393",
+      "source_name": "Paul Schmid",
+      "appearances": 5
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "106365",
+      "source_name": "John Paul Baroni Schtz Tankersley",
+      "appearances": 1
+    },
+    {
+      "cohort_player_id": "D643",
+      "cohort_name": "Novak Djokovic",
+      "source_player_id": "109228",
+      "source_name": "Stefan Djokovic",
+      "appearances": 3
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "113307",
+      "source_name": "Paul Popoaca",
+      "appearances": 14
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "118662",
+      "source_name": "Paul Croisy",
+      "appearances": 2
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "118975",
+      "source_name": "Paul Colin",
+      "appearances": 12
+    },
+    {
+      "cohort_player_id": "TE51",
+      "cohort_name": "Stefanos Tsitsipas",
+      "source_player_id": "15061",
+      "source_name": "Petros Tsitsipas",
+      "appearances": 31
+    },
+    {
+      "cohort_player_id": "BK40",
+      "cohort_name": "Matteo Berrettini",
+      "source_player_id": "16845",
+      "source_name": "Jacopo Berrettini",
+      "appearances": 4
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "20319",
+      "source_name": "Paul Valsecchi",
+      "appearances": 4
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "20782",
+      "source_name": "Paul Jubb",
+      "appearances": 46
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "23564",
+      "source_name": "Paul Theate",
+      "appearances": 20
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "33253",
+      "source_name": "Paul Howe",
+      "appearances": 7
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "45361",
+      "source_name": "Paul Barbier Gazeu",
+      "appearances": 18
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "46958",
+      "source_name": "Aron Paul Samson",
+      "appearances": 24
+    },
+    {
+      "cohort_player_id": "TE51",
+      "cohort_name": "Stefanos Tsitsipas",
+      "source_player_id": "47613",
+      "source_name": "Pavlos Tsitsipas",
+      "appearances": 43
+    },
+    {
+      "cohort_player_id": "N0AE",
+      "cohort_name": "Brandon Nakashima",
+      "source_player_id": "48669",
+      "source_name": "Bryce Nakashima",
+      "appearances": 27
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "51581",
+      "source_name": "Paul Inchauspe",
+      "appearances": 11
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "56268",
+      "source_name": "Paul Roeder",
+      "appearances": 12
+    },
+    {
+      "cohort_player_id": "PL56",
+      "cohort_name": "Tommy Paul",
+      "source_player_id": "67645",
+      "source_name": "Robert Paul Betuker",
+      "appearances": 1
+    },
+    {
+      "cohort_player_id": "D0FJ",
+      "cohort_name": "Luciano Darderi",
+      "source_player_id": "73154",
+      "source_name": "Vito Antonio Darderi",
+      "appearances": 20
+    },
+    {
+      "cohort_player_id": "D643",
+      "cohort_name": "Novak Djokovic",
+      "source_player_id": "83944",
+      "source_name": "Balsa Djokovic",
+      "appearances": 2
+    },
+    {
+      "cohort_player_id": "A0E2",
+      "cohort_name": "Carlos Alcaraz",
+      "source_player_id": "95205",
+      "source_name": "Vicente Alcaraz Galbis",
+      "appearances": 14
+    }
+  ],
+  "inventory_verified": false,
+  "absence_of_itf_participation_certified": false,
+  "limitations": [
+    "Publisher includes only live-observed settled matches, not a certified tournament census.",
+    "Zero hits in this snapshot does not prove absence from all ITF events.",
+    "Player mappings and raw round codes are diagnostic only; no records or points are imported."
+  ],
+  "source": {
+    "name": "valuebetennis-matchs-2026.csv",
+    "url": "https://www.valuebetennis.com/datasets/valuebetennis-matchs-2026.csv",
+    "sha256": "9de1c34e834c94907524e1695562cbe1d8fd1664518526ba40baeb579ef0b9cd",
+    "retrieved_at": "2026-11-22T22:45:19.508692+00:00",
+    "modified_at": "Sun, 22 Nov 2026 05:45:04 GMT"
+  },
+  "import_id": "248fbde78eb06d4de870486423d05985e486cabf6743bba2fd06515927d9abee",
+  "ranking_date": "2026-11-16",
+  "as_of": "2026-11-18",
+  "attribution": "Valuebetennis, Resultats et cotes de tennis depuis 2021, https://www.valuebetennis.com/donnees.htm",
+  "license": "CC BY 4.0",
+  "license_source": "https://www.valuebetennis.com/donnees.htm",
+  "checked_on": "2026-11-22",
+  "source_page": "https://www.valuebetennis.com/donnees.htm",
+  "alias_evidence": "research/valuebetennis-player-aliases-2026.json",
+  "upstream_independence_verified": false
+}

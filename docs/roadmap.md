@@ -99,3 +99,14 @@ esplicita anche nelle schede delle stagioni passate.
 Il salvataggio GitHub della beta approvata e il commit `54cc8e6`.
 Il prossimo passo proposto resta la prova Android offline su una stagione,
 mentre le regole punti anteriori al 2025 richiedono una validazione dedicata.
+
+## Priorita concordata il 22 novembre 2026
+
+Proseguire il censimento esteso 2026, con tutte le categorie che assegnano punti ATP.
+Dal 2025 al 2016 dare priorita a Slam, Masters 1000, ATP 500/250 e Finals, incluse
+le qualificazioni disponibili. Challenger e ITF restano nei dati ma in secondo piano.
+Il 2025 ha 34 casi prioritari aperti su 959 partecipazioni del circuito principale;
+le 244 incognite complessive rimangono visibili. Nessuna stagione viene certificata
+completa soltanto per il completamento del sottoinsieme prioritario.
+
+Dettagli e conteggi: [completezza e priorita](completezza-stagioni.md).
