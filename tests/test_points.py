@@ -154,6 +154,27 @@ class PointsTests(unittest.TestCase):
     def test_united_cup_2025_is_not_assigned_2026_rankings(self):
         self.assertIsNone(self.points([match(round="RR", won=True, level="A", tourney_id="2025-9900", loser_id="Z355")], season=2025).value)
 
+    def test_united_cup_2025_official_rounds_and_frozen_ranking(self):
+        def tie(round, loser, score="6-4 6-4"):
+            return {"stage": "main", "raw": {"tourney_id": "2025-9900", "tourney_level": "A", "draw_size": "18", "round": round,
+                    "winner_id": "FB98", "loser_id": loser, "winner_entry": "", "loser_entry": "", "score": score}}
+        rows = [tie("RR", "CG80"), tie("RR", "Z371"), tie("RR", "M0FH", "6-7(4) 6-5 RET"), tie("F", "HB71")]
+        result = evaluate_points(rows, "FB98", season=2025)
+        self.assertEqual(result.value, 25 + 40 + 90 + 140)
+        self.assertIn("23 dicembre 2024", result.reason)
+        self.assertIn("https://www.atptour.com/en/players/x/fb98/player-activity?matchType=Singles&year=2025&tournament=all", result.sources)
+
+    def test_united_cup_2025_protected_ranking_counts(self):
+        row = {"stage": "main", "raw": {"tourney_id": "2025-9900", "tourney_level": "A", "draw_size": "18", "round": "RR",
+               "winner_id": "TE51", "loser_id": "CD85", "winner_entry": "", "loser_entry": "", "score": "6-4 4-6 6-3"}}
+        result = evaluate_points([row], "TE51", season=2025)
+        self.assertEqual(result.value, 45)
+        self.assertIn("https://www.unitedcup.com/en/media/news/united-cup-2025-initial-player-field-announced", result.sources)
+
+    def test_united_cup_2026_reason_unchanged(self):
+        result = self.points([match(round="RR", won=True, level="A", tourney_id="2026-9900", loser_id="Z355")])
+        self.assertEqual(result.reason, "United Cup: tabella 4.03 K e ranking congelato al 29 dicembre 2025.")
+
     def test_united_cup_walkover_needs_evidence_that_the_tie_was_played(self):
         self.assertIsNone(self.points([match(round="RR", won=True, level="A", score="W/O", tourney_id="2026-9900", loser_id="Z355")]).value)
 

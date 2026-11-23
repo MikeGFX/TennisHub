@@ -121,3 +121,7 @@ certificata completa (Challenger, United Cup, inventario dei tornei).
 Challenger 2025: livelli di 110 edizioni verificati (108 sul tabellone ufficiale),
 196/197 partecipazioni calcolate e uguali ai registri ATP. Restano United Cup 2025,
 Oeiras 1 e 32 settimane ATP senza evento registrato (ITF, qualificazioni Challenger).
+
+United Cup 2025 risolta con il capitolo 4 del Rulebook 2025 (ranking del 23 dicembre
+2024 e ranking protetti): 10/10 uguali ai registri ATP. Il 2025 ha 1.226/1.227
+partecipazioni registrate calcolate; inventario 2025 ancora incompleto.

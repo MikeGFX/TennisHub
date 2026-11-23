@@ -1,0 +1,61 @@
+{
+  "ranking_date": "2024-12-23",
+  "ranking_source": "https://stats.tennismylife.org/api/ranking?date=2024-12-23",
+  "ranking_sha256": "7f8b267bebc94563e0fbba22a82092cc32c88addbfa393dd7bf67956afa4a6c2",
+  "rule_source": "https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-4_world-championships_23dec.pdf",
+  "rule_sha256": "3d3b6536955971f3792cb3ed75a334ccc64603a0794e2f68631db0a0f02450ec",
+  "rule_section": "4.03 E 4, K, L (pp. 82, 88-89)",
+  "rule_note": "Tabella 4.03 K identica a quella 2026; fasce in base al ranking dell'avversario di lunedi 23 dicembre 2024; il ranking protetto usato alla United Cup conta per i punti (4.03 E 4). PDF senza testo, letto visivamente; scaricato dall'utente tramite browser.",
+  "rankings": {
+    "CD85": 18,
+    "CG80": 90,
+    "EA24": 39,
+    "FB98": 4,
+    "HB71": 16,
+    "HD68": 125,
+    "HH26": 14,
+    "M0FH": 25,
+    "MJ08": 109,
+    "S0H2": 78,
+    "S0LA": 94,
+    "Z371": 45
+  },
+  "protected_rankings": {
+    "CD85": {
+      "name": "Pablo Carreno Busta",
+      "protected": 18,
+      "ranking_2024_12_23": 196
+    },
+    "S0LA": {
+      "name": "Dominic Stricker",
+      "protected": 94,
+      "ranking_2024_12_23": 300
+    },
+    "source": "https://www.unitedcup.com/en/media/news/united-cup-2025-initial-player-field-announced",
+    "note": "Tabella ufficiale delle squadre: 'P18' Carreno Busta (controllo visivo), 'P94' Stricker; 'P = Protected ranking'. Coerente con i punti ATP di Tsitsipas (45), Humbert (25) e Cobolli (70)."
+  },
+  "official_rounds": {
+    "FB98|Z371": "QF",
+    "FB98|M0FH": "SF",
+    "HB71|HD68": "QF",
+    "HB71|S0H2": "SF",
+    "source": "https://www.atptour.com/en/players/x/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
+    "note": "La fonte TML etichetta RR questi incontri della fase finale; turni presi dai registri ATP Player Activity di Fritz e Hurkacz."
+  },
+  "official_points_records": {
+    "source": "https://www.atptour.com/en/players/x/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
+    "checked_on": "2026-11-23",
+    "points": {
+      "Z355": 55,
+      "FB98": 295,
+      "DH58": 55,
+      "AG37": 55,
+      "RH16": 85,
+      "EA24": 20,
+      "HB71": 65,
+      "TE51": 45,
+      "HH26": 25,
+      "C0E9": 70
+    }
+  }
+}

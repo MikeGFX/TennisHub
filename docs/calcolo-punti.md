@@ -121,12 +121,12 @@ Ogni risultato 2025 cita quella fonte, senza assumere che le regole di un altro
 anno siano applicabili. L'edizione deve appartenere all'anno richiesto.
 
 Per i primi 50 selezionati dalla classifica del 16 novembre 2026, l'archivio 2025
-contiene 1.227 partecipazioni: 1.216 calcolabili e 11 da verificare (motore 2026.7;
-erano 983 e 244): United Cup 2025 (10) e Oeiras 1 (livello contraddittorio).
+contiene 1.227 partecipazioni: 1.226 calcolabili e 1 da verificare (motore 2026.7;
+erano 983 e 244): Oeiras 1, livello contraddittorio nel tabellone ufficiale.
 Il registro Challenger 2025 e' separato da quello 2026.
 
-Zverev 2025 ha 27 partecipazioni e un subtotale di 5.225 punti, con 1 evento da
-verificare (United Cup). Questo subtotale non viene presentato come totale completo.
+Zverev 2025 ha 27 partecipazioni registrate e 5.280 punti calcolati, senza eventi
+registrati da verificare. Non e' un totale certificato: l'inventario 2025 non e' completo.
 
 Gli anni diversi dal 2025 e 2026 restano da validare.
 
@@ -206,3 +206,17 @@ delle pagine ATP Player Activity. Le stesse pagine mostrano 32 settimane senza a
 evento nel database (ITF e qualificazioni Challenger perse, 298 punti in tutto per
 27 giocatori controllati): indizi d'inventario non importati. Dettagli nel
 [rapporto Challenger 2025](../research/challenger-review-2025.json).
+
+## United Cup 2025, motore 2026.7
+
+Regola del [capitolo 4 del Rulebook 2025](https://www.atptour.com/-/media/files/rulebook/2025/2025-rulebook-chapter-4_world-championships_23dec.pdf),
+sezione 4.03 K: stessa tabella del 2026, fasce dell'avversario secondo il ranking di
+lunedi 23 dicembre 2024. Per la 4.03 E 4 il ranking protetto usato alla United Cup
+conta per i punti: Carreno Busta P18 e Stricker P94, dalla
+[tabella ufficiale delle squadre](https://www.unitedcup.com/en/media/news/united-cup-2025-initial-player-field-announced).
+La fonte TML etichetta RR quattro incontri della fase finale (Fritz-Zhang QF,
+Fritz-Machac SF, Hurkacz-Harris QF, Hurkacz-Shevchenko SF); i turni sono presi dai
+registri ATP. Prove in `tennishub/rules/united-cup-2025.json`.
+
+Le 10 partecipazioni coincidono con i registri ATP Player Activity: per esempio Fritz
+25 + 40 + 90 + 140 = 295, Tsitsipas 45 (vittoria su Carreno Busta, P18), Zverev 55.

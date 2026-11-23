@@ -77,23 +77,37 @@ def _seed_number(value):
         return None
 
 
-def _united_cup_2026(rows, player_id):
-    evidence = evidence_file("united-cup-2026.json")
+MONTHS_IT = ("gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
+             "agosto", "settembre", "ottobre", "novembre", "dicembre")
+
+
+def _united_cup(rows, player_id, season):
+    """United Cup: tabella 4.03 K con ranking congelato dell'edizione; prove annuali separate."""
+    evidence = evidence_file(f"united-cup-{season}.json")
     table = {"RR": (55,45,40,35,25,20,15), "QF": (80,65,55,40,35,25,20),
              "SF": (130,105,90,60,40,35,25), "F": (180,140,120,90,60,40,35)}
     sources = [evidence["rule_source"], evidence["ranking_source"]]
+    rounds = evidence.get("official_rounds", {})
+    protected = evidence.get("protected_rankings", {})
     total = 0
     for row in rows:
         if not _winner(row, player_id):
             continue
         rank = evidence["rankings"].get(row["loser_id"])
-        if row["round"] not in table or rank is None:
+        played_round = rounds.get(f"{row['winner_id']}|{row['loser_id']}", row["round"])
+        if played_round != row["round"] and rounds["source"].format(player_id=player_id.lower()) not in sources:
+            sources.append(rounds["source"].format(player_id=player_id.lower()))
+        if row["loser_id"] in protected and protected["source"] not in sources:
+            sources.append(protected["source"])
+        if played_round not in table or rank is None:
             return PointsResult(reason="United Cup: ranking congelato o turno non verificato.", sources=sources)
         index = next(i for i, upper in enumerate((10,20,30,50,100,250,float("inf"))) if rank <= upper)
         if "W/O" in row["score"].upper():
             return PointsResult(reason="United Cup: verificare che altri incontri della sfida siano stati giocati prima di assegnare punti al walkover.", sources=sources)
-        total += table[row["round"]][index]
-    return PointsResult(total, "United Cup: tabella 4.03 K e ranking congelato al 29 dicembre 2025.", total, 0, sources)
+        total += table[played_round][index]
+    year, month, day = (int(part) for part in evidence["ranking_date"].split("-"))
+    frozen = f"{day} {MONTHS_IT[month - 1]} {year}"
+    return PointsResult(total, f"United Cup: tabella 4.03 K e ranking congelato al {frozen}.", total, 0, sources)
 
 
 def _entry(row, player_id):
@@ -209,9 +223,7 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
            for row in rows if not any(row is safe for safe in allowed_special)):
         return PointsResult(reason="Walkover perso, risultato speciale o non concluso: verifica necessaria.", sources=[rules_url])
     if edition_id == f"{season}-9900":
-        if season != 2026:
-            return PointsResult(reason="United Cup: ranking congelato e regole dell'edizione da verificare.", sources=[rules_url])
-        return _united_cup_2026(main, player_id)
+        return _united_cup(main, player_id, season)
     if category == "F":
         if any(row["round"] not in {"RR", "SF", "F"} for row in main):
             return PointsResult(reason="Turno Finals sconosciuto.", sources=[rules_url])
