@@ -73,6 +73,15 @@
       }
     }
   },
+  "2025-398": {
+    "qualifier_entries": {
+      "F0DM": {
+        "source": "https://www.protennislive.com/posting/2025/398/mds.pdf",
+        "source_sha256": "11298708cf708b56df42693fa12289d41efbdb9ca39b31459571f364d40c653b",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      }
+    }
+  },
   "2025-422": {
     "lucky_losers": {
       "N0BS": {
@@ -143,6 +152,73 @@
       }
     }
   },
+  "2025-2789": {
+    "qualifier_entries": {
+      "J0DZ": {
+        "source": "https://www.protennislive.com/posting/2025/2789/mds.pdf",
+        "source_sha256": "3705020714b5c57acac633eddc844844c0306b604eb03418e0a8fff785fb6d20",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      }
+    }
+  },
+  "2025-2863": {
+    "confirmed_byes": {
+      "D0FJ": {
+        "seed": 2,
+        "confirmed": true,
+        "source": "https://www.protennislive.com/posting/2025/2863/mds.pdf",
+        "source_sha256": "389394d6aa3908b55032ebf98f8d2c760d0367937aaf4fe8bae36bd58bd092af",
+        "note": "Torino: Darderi TdS 2 in posizione 32, bye in posizione 31. Tabellone Challenger con 32 posizioni e bye: la fonte TML indica 32 senza teste di serie. Controllo visivo; registro ATP Player Activity: 0 punti."
+      }
+    }
+  },
+  "2025-2871": {
+    "qualifier_entries": {
+      "M0N7": {
+        "source": "https://www.atptour.com/en/players/x/m0n7/player-activity?matchType=Singles&year=2025&tournament=all",
+        "note": "PDF ufficiale non disponibile (404). Il registro ATP Player Activity elenca Q1 e Q2 vinti contro Nassauer e Sanchez Quilez, poi R32 vinto e R16 perso: 11 punti."
+      }
+    }
+  },
+  "2025-2883": {
+    "qualifier_entries": {
+      "F0DM": {
+        "source": "https://www.protennislive.com/posting/2025/2883/mds.pdf",
+        "source_sha256": "268470ad569f43db299db4fdb54a3d615486ad858b860c04578f58f027f66bee",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      }
+    }
+  },
+  "2025-2973": {
+    "medical_withdrawals": {
+      "V0DZ": {
+        "reason": "Abdominals",
+        "source": "https://www.protennislive.com/posting/2025/2973/mds.pdf",
+        "source_sha256": "0eb058a5c2727911a5a1516374b0b5f84745bc5d0185dc19415972cd2a0334ff",
+        "note": "Thionville 2025: walkover nei quarti contro Bouquier dopo due vittorie. Registro ATP Player Activity: 12 punti. Causa letta nella sezione Retirements/W.O. del PDF ufficiale."
+      }
+    }
+  },
+  "2025-2979": {
+    "qualifier_entries": {
+      "B0ID": {
+        "source": "https://www.protennislive.com/posting/2025/2979/mds.pdf",
+        "source_sha256": "7ecfc875e3ce8ffd877afebdc47e4d03abb368b375dabcb08733d2f0a3646471",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      }
+    }
+  },
+  "2025-3015": {
+    "confirmed_byes": {
+      "BU13": {
+        "seed": 1,
+        "confirmed": true,
+        "source": "https://www.protennislive.com/posting/2025/3015/mds.pdf",
+        "source_sha256": "a4cefd741582c6c9f5276255bd5f14dfc561ab6a0bf2b661fd1c5067a0d2ad43",
+        "note": "Sumter: Bergs TdS 1 in posizione 1, bye in posizione 2. Tabellone Challenger con 32 posizioni e bye: la fonte TML indica 32 senza teste di serie. Controllo visivo; registro ATP Player Activity: 0 punti."
+      }
+    }
+  },
   "2025-6242": {
     "confirmed_byes": {
       "GJ37": {
@@ -150,6 +226,123 @@
         "source": "https://www.protennislive.com/posting/2025/6242/mds.pdf",
         "source_sha256": "4c24439592b712bd61c2e6cb5a11c8f16efeb5d54a6db439a2e5d82fce2ea868",
         "note": "Winston-Salem 17-23 agosto 2025, tabellone a 48: Griekspoor WC e TdS 2 in posizione 64, bye in posizione 63. La fonte TML non riporta testa di serie ne' wild card."
+      }
+    }
+  },
+  "2025-7009": {
+    "confirmed_byes": {
+      "D0FJ": {
+        "seed": 2,
+        "confirmed": true,
+        "source": "https://www.protennislive.com/posting/2025/7009/mds.pdf",
+        "source_sha256": "edead9755c7395f2c5c611119cee048be89e2ce87c16e8bd1484bc5d90412c9a",
+        "note": "Aix-en-Provence: Darderi TdS 2 in posizione 32, bye in posizione 31. Tabellone Challenger con 32 posizioni e bye: la fonte TML indica 32 senza teste di serie. Controllo visivo; registro ATP Player Activity: 0 punti."
+      },
+      "HB64": {
+        "seed": 3,
+        "confirmed": true,
+        "source": "https://www.protennislive.com/posting/2025/7009/mds.pdf",
+        "source_sha256": "edead9755c7395f2c5c611119cee048be89e2ce87c16e8bd1484bc5d90412c9a",
+        "note": "Aix-en-Provence: Halys TdS 3 in posizione 24, bye in posizione 23. Tabellone Challenger con 32 posizioni e bye: la fonte TML indica 32 senza teste di serie. Controllo visivo; registro ATP Player Activity: 0 punti."
+      }
+    },
+    "qualifier_entries": {
+      "VA25": {
+        "source": "https://www.protennislive.com/posting/2025/7009/mds.pdf",
+        "source_sha256": "edead9755c7395f2c5c611119cee048be89e2ce87c16e8bd1484bc5d90412c9a",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      },
+      "B0ID": {
+        "source": "https://www.protennislive.com/posting/2025/7009/mds.pdf",
+        "source_sha256": "edead9755c7395f2c5c611119cee048be89e2ce87c16e8bd1484bc5d90412c9a",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      }
+    }
+  },
+  "2025-7290": {
+    "confirmed_byes": {
+      "AG37": {
+        "seed": 1,
+        "confirmed": true,
+        "source": "https://www.protennislive.com/posting/2025/7290/mds.pdf",
+        "source_sha256": "98df340edc5430777699382d971e73da189962e202b248133488916fddd76d87",
+        "note": "Estoril: Auger-Aliassime WC e TdS 1 in posizione 1, bye in posizione 2. Tabellone Challenger con 32 posizioni e bye: la fonte TML indica 32 senza teste di serie. Controllo visivo; registro ATP Player Activity: 0 punti."
+      }
+    }
+  },
+  "2025-7341": {
+    "qualifier_entries": {
+      "F0DM": {
+        "source": "https://www.protennislive.com/posting/2025/7341/mds.pdf",
+        "source_sha256": "3b1d8c80d25642e41bd3c182cf2cadc52fec08e539c5754d934355b9eb799080",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      }
+    }
+  },
+  "2025-7696": {
+    "no_ranking_points": {
+      "event": "Next Gen ATP Finals 2025, Jeddah",
+      "source": "https://www.tennis365.com/tennis-features/2025-next-gen-atp-finals-draw-prize-money-dates-learner-tien",
+      "official_record_source": "https://www.atptour.com/en/players/x/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
+      "official_records": {
+        "B0PG": 0,
+        "T0HA": 0,
+        "J0DZ": 0
+      },
+      "checked_on": "2026-11-23",
+      "note": "Tennis365 (15 dicembre 2025): nessun punto ranking alla Next Gen ATP Finals. Le pagine ATP Player Activity di Blockx, Tien e Jodar riportano 'Points: 0'. Valido solo per i giocatori con registro ATP controllato; i risultati restano nel bilancio vittorie/sconfitte."
+    }
+  },
+  "2025-7740": {
+    "qualifier_entries": {
+      "F0DM": {
+        "source": "https://www.protennislive.com/posting/2025/7740/mds.pdf",
+        "source_sha256": "23c9563655ac98bedae03ca7fd022f74fcb41d40c1e385b81c2bdd8f6bdbdf0f",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      }
+    }
+  },
+  "2025-9167": {
+    "confirmed_byes": {
+      "SL28": {
+        "seed": 4,
+        "confirmed": true,
+        "source": "https://www.protennislive.com/posting/2025/9167/mds.pdf",
+        "source_sha256": "da91939b407917195afc9278af88633dbd6b6759699bff196baf8b82f87a1945",
+        "note": "Phoenix: Struff TdS 4 in posizione 24, bye in posizione 23. Tabellone Challenger con 32 posizioni e bye: la fonte TML indica 32 senza teste di serie. Controllo visivo; registro ATP Player Activity: 0 punti."
+      }
+    }
+  },
+  "2025-9171": {
+    "qualifier_entries": {
+      "VA25": {
+        "source": "https://www.protennislive.com/posting/2025/9171/mds.pdf",
+        "source_sha256": "63f19c82d16bf51f04e46195deb61c66e70e826b72ba49ebe2d2c727869dffdd",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      },
+      "M0N7": {
+        "source": "https://www.protennislive.com/posting/2025/9171/mds.pdf",
+        "source_sha256": "63f19c82d16bf51f04e46195deb61c66e70e826b72ba49ebe2d2c727869dffdd",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
+      }
+    }
+  },
+  "2025-9697": {
+    "medical_withdrawals": {
+      "B0PG": {
+        "reason": "Abdominal strain",
+        "source": "https://www.protennislive.com/posting/2025/9697/mds.pdf",
+        "source_sha256": "7dd0c524104ce123856e519aa155284dbc8d4468e5c51ca238e146d66469dcdb",
+        "note": "Mauthausen 2025: walkover nei quarti contro Kym dopo due vittorie. Registro ATP Player Activity: 14 punti. Causa letta nella sezione Retirements/W.O. del PDF ufficiale."
+      }
+    }
+  },
+  "2025-9814": {
+    "qualifier_entries": {
+      "T0A1": {
+        "source": "https://www.protennislive.com/posting/2025/9814/mds.pdf",
+        "source_sha256": "2f3ec75f6a0cd4c16753345a713168f0efbd6fcb09dce9682e0fa764967b5a2d",
+        "note": "Etichetta Q accanto al giocatore nel tabellone ufficiale (controllo visivo); assente nella fonte TML, che non contiene le qualificazioni Challenger. Il registro ATP Player Activity include il bonus del qualificato."
       }
     }
   },

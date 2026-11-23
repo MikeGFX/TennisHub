@@ -1,0 +1,773 @@
+{
+  "2025-398": {
+    "name": "Cherbourg",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/398/mds.pdf",
+    "source_sha256": "11298708cf708b56df42693fa12289d41efbdb9ca39b31459571f364d40c653b",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-03-10."
+  },
+  "2025-444": {
+    "name": "Bratislava 2",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/444/mds.pdf",
+    "source_sha256": "cea4df7f717cf403a143bfddf436e85249b114a7b0ded1b352395842e0259471",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-10-27."
+  },
+  "2025-448": {
+    "name": "Szczecin",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/448/mds.pdf",
+    "source_sha256": "1e17bc616061a4f8d662bffe25de8fb897d144444a916aa38a3e818f4bc05f72",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-09-08."
+  },
+  "2025-460": {
+    "name": "Heilbronn - Bad Rappenau",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/460/mds.pdf",
+    "source_sha256": "970270edd8cc63c9d076d1b83b30122e9f6556d74392ef66e55ded79b7cf66a5",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-06-02."
+  },
+  "2025-472": {
+    "name": "Pozoblanco",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/472/mds.pdf",
+    "source_sha256": "5aaa203dc0ceb458dcdc5d4f7e1bba0beefd0ee48b8b5dd24b8bd1646ff596ab",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-07-14."
+  },
+  "2025-526": {
+    "name": "Braunschweig",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/526/mds.pdf",
+    "source_sha256": "f7b38bfe917e12f96760a8c23418b46cfaca04f16f7c271dca46aaff1909762e",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-07-07."
+  },
+  "2025-544": {
+    "name": "Montevideo",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/544/mds.pdf",
+    "source_sha256": "127441dfa87a0de3c2cc94480037a0d38bc9a6fb534dcd5ea0f1610b2a879f41",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-11-10."
+  },
+  "2025-558": {
+    "name": "Prostejov",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/558/mds.pdf",
+    "source_sha256": "35dc1a8dc727cd03831203bf6c1f8ba495102879e68233d1fded7227f924ede6",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-06-02."
+  },
+  "2025-600": {
+    "name": "Prague",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/600/mds.pdf",
+    "source_sha256": "2f5d99d7e4d0370b33ffb68e011578c63e1c2541ee1ab119502de928b9207abc",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-05-05."
+  },
+  "2025-783": {
+    "name": "Segovia",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/783/mds.pdf",
+    "source_sha256": "df53dd2dcdeda565f11ac3ae831938e58d83a477c1c1f8c20a83a34b0c0e29e8",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-07-21."
+  },
+  "2025-784": {
+    "name": "Seville",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/784/mds.pdf",
+    "source_sha256": "bc98f16032d4e330287d4b0936b4c6425a9460fd8177eccc3b32bb2e73b067c0",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-09-01."
+  },
+  "2025-786": {
+    "name": "Poznan",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/786/mds.pdf",
+    "source_sha256": "d9167ef571f910bbce3553e2041d1754dae6e47eb8c874fd1c00fbbb0d2ffdd9",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-06-16."
+  },
+  "2025-877": {
+    "name": "Granby",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/877/mds.pdf",
+    "source_sha256": "cf1963eac86ef8a9db24b2ac707b407aa4926969a27913054a05067f2d4a56f8",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-07-14."
+  },
+  "2025-1214": {
+    "name": "Troyes",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/1214/mds.pdf",
+    "source_sha256": "57a3b1a078e73ee160c485a8a2814229a1182b2eacf758b95cbb5b265e324f59",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-06-30."
+  },
+  "2025-1763": {
+    "name": "Genoa",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/1763/mds.pdf",
+    "source_sha256": "42ba7958790689f220a22cd9b076340b099caf4e357c5a3296fafb60007b3487",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-09-01."
+  },
+  "2025-1768": {
+    "name": "Tiburon",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/1768/mds.pdf",
+    "source_sha256": "95689c0f32f6552ef013ca6b6545821f5029a8016d95a1ab5f7c1fc71f0d1199",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-09-29."
+  },
+  "2025-1797": {
+    "name": "Ostrava",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/1797/mds.pdf",
+    "source_sha256": "089032217d87920416b12057b03f137a8b40e457b65a7bedd8a01804182f6158",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-04-28."
+  },
+  "2025-2120": {
+    "name": "Cordenons",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2120/mds.pdf",
+    "source_sha256": "f34ebf7360735dd2c9925d79fc820c8c47bfff0e59636dd5debae2a84be9122e",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-08-04."
+  },
+  "2025-2205": {
+    "name": "Noumea",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/2205/mds.pdf",
+    "source_sha256": "b1cce850c8a9814c3ce48ee1da9bc5b4bc63744d5c7aeb9f0dbed859656a7d7a",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2024-12-30."
+  },
+  "2025-2273": {
+    "name": "Orleans",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/2273/mds.pdf",
+    "source_sha256": "c615b6a11273e809d8394c547d95cee48968ab19acd6c07d5da41434927a29c8",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-09-22."
+  },
+  "2025-2785": {
+    "name": "Zug",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/2785/mds.pdf",
+    "source_sha256": "6c582412d2a4676f2e6abbd9aed8eb8c286a1a50777d9de6b22354cddb02efee",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-07-21."
+  },
+  "2025-2789": {
+    "name": "Grodzisk Mazowiecki",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2789/mds.pdf",
+    "source_sha256": "3705020714b5c57acac633eddc844844c0306b604eb03418e0a8fff785fb6d20",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-08-04."
+  },
+  "2025-2801": {
+    "name": "Nonthaburi 3",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2801/mds.pdf",
+    "source_sha256": "d69a85e47e136a0488e5045eba5f867853715c30b35867e60bd0cad2967906fc",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-01-13."
+  },
+  "2025-2823": {
+    "name": "Valencia",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/2823/mds.pdf",
+    "source_sha256": "5e2ceda8b0fb47e8ae34f53a9f59b462b27e1c0ad93bc250603353017705aa25",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-10-06."
+  },
+  "2025-2833": {
+    "name": "Oeiras 2",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/2833/mds.pdf",
+    "source_sha256": "a2d59621d2a9b03a3f09225456b30fb5cd8ab9b1e1589ab6e956d50682805ee5",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-01-13."
+  },
+  "2025-2839": {
+    "name": "Tenerife 2",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2839/mds.pdf",
+    "source_sha256": "048e07902251f4dcf54094908332eaf9a2ecc2c2f2519b53af2f204a485d263b",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-02-10."
+  },
+  "2025-2863": {
+    "name": "Turin",
+    "level": 175,
+    "source": "https://www.protennislive.com/posting/2025/2863/mds.pdf",
+    "source_sha256": "389394d6aa3908b55032ebf98f8d2c760d0367937aaf4fe8bae36bd58bd092af",
+    "verification": "PDF ufficiale: etichetta 'Challenger 175', punti stampati [0, 13, 25, 50, 90, 175], settimana dal 2025-05-13."
+  },
+  "2025-2871": {
+    "name": "Oeiras 5",
+    "level": 100,
+    "source": "https://www.atptour.com/en/players/x/t0a1/player-activity?matchType=Singles&year=2025&tournament=all",
+    "official_points_records": "https://www.atptour.com/en/players/x/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
+    "verification": "PDF ufficiale non disponibile (HTTP 404). Livello dedotto dai registri ATP: Tirante 14 punti per i quarti, valore presente solo nel Challenger 100; Merida 11 = 7 (R16) + 4 bonus qualificato del Challenger 100."
+  },
+  "2025-2873": {
+    "name": "Tyler",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2873/mds.pdf",
+    "source_sha256": "5402706875bffecc2e3fbd8db5ecf49f9b57df4b3b1f3872541834951010f418",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-06-02."
+  },
+  "2025-2877": {
+    "name": "Modena",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2877/mds.pdf",
+    "source_sha256": "59ef4c48c1565162f9c673102884bc774444805a3e839032374009f656ec1d96",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-06-30."
+  },
+  "2025-2883": {
+    "name": "Bloomfield Hills",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/2883/mds.pdf",
+    "source_sha256": "268470ad569f43db299db4fdb54a3d615486ad858b860c04578f58f027f66bee",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-07-21."
+  },
+  "2025-2891": {
+    "name": "Bad Waltersdorf",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/2891/mds.pdf",
+    "source_sha256": "4a8efdc5938527463d8c6cf15c252e1d30b05494f1bbdba9575ec9998496028c",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-09-15."
+  },
+  "2025-2893": {
+    "name": "Olbia",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/2893/mds.pdf",
+    "source_sha256": "5bb6081840e60f873c859fc0996238ba925433e51c6381c7da1db4e08f03d515",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-10-13."
+  },
+  "2025-2895": {
+    "name": "Curitiba",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2895/mds.pdf",
+    "source_sha256": "ae24e4c526e20dd4bb5ecb010b6d0c38d0361c528a4a3a2884fa2777e132b2fd",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-10-13."
+  },
+  "2025-2911": {
+    "name": "Naples",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/2911/mds.pdf",
+    "source_sha256": "df1cf04ae77023b5a90768b93a77eab10c7ccfcfd12dafcfcbe195929c1b33a6",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-03-24."
+  },
+  "2025-2937": {
+    "name": "Guangzhou (Huangpu)",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/2937/mds.pdf",
+    "source_sha256": "9e4217e3fe6f9e5204026851ec8f5d9ff5d7175e398bd35ebc9e97a5eb423242",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-09-08."
+  },
+  "2025-2941": {
+    "name": "Lincoln",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2941/mds.pdf",
+    "source_sha256": "468d76ccb51dc5d32933f17c42626ea66f291524bf49373a393b528240dc313b",
+    "verification": "PDF ufficiale: etichetta 'Challenger\n75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-10-13."
+  },
+  "2025-2951": {
+    "name": "Sioux Falls",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/2951/mds.pdf",
+    "source_sha256": "f477787ec63610c3efbd616924f9bac15678959bd7e7064ed4cc74ae85cb5d6c",
+    "verification": "PDF ufficiale: etichetta 'Challenger\n100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-10-20."
+  },
+  "2025-2955": {
+    "name": "Montemar",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2955/mds.pdf",
+    "source_sha256": "92a254015e40487d20017e20434fcb8e1fd873de46332eea25dfaf940a2cb31c",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-11-17."
+  },
+  "2025-2963": {
+    "name": "Lyon 2",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2963/mds.pdf",
+    "source_sha256": "edae4a6b0e13f1c8589ffc2aef4a92ffb5a81cd1acde5094833f06f0e464137a",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-11-10."
+  },
+  "2025-2965": {
+    "name": "Rosario",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/2965/mds.pdf",
+    "source_sha256": "3ea7cf35d223c035a2a9b4f20e8ddc5aca6fce94acecac6df741d5a5cb91f66f",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-02-03."
+  },
+  "2025-2973": {
+    "name": "Thionville",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2973/mds.pdf",
+    "source_sha256": "0eb058a5c2727911a5a1516374b0b5f84745bc5d0185dc19415972cd2a0334ff",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-03-03."
+  },
+  "2025-2975": {
+    "name": "Cap Cana",
+    "level": 175,
+    "source": "https://www.protennislive.com/posting/2025/2975/mds.pdf",
+    "source_sha256": "26b4949fd79f9c8d2113b01767901ecf32b1daddf40df84c5031dc3e11e253ee",
+    "verification": "PDF ufficiale: etichetta 'Challenger 175', punti stampati [0, 13, 25, 50, 90, 175], settimana dal 2025-03-11."
+  },
+  "2025-2979": {
+    "name": "Oeiras 3",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/2979/mds.pdf",
+    "source_sha256": "7ecfc875e3ce8ffd877afebdc47e4d03abb368b375dabcb08733d2f0a3646471",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-01-21."
+  },
+  "2025-2981": {
+    "name": "Cordoba",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2981/mds.pdf",
+    "source_sha256": "64137b7149fa1a1567c4723c7d85fceb867da786bb650dc1b4d112a4c7ffcd5d",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-03-03."
+  },
+  "2025-2983": {
+    "name": "Hersonissos 1",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/2983/mds.pdf",
+    "source_sha256": "75153bd9c82f90c2a26cf9eddbe01c1109aba3d6070a82a65126f7c5aef58e9b",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-03-03."
+  },
+  "2025-2985": {
+    "name": "Hersonissos 2",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/2985/mds.pdf",
+    "source_sha256": "deb2b3c128927f6cd57df305a13dbaa27ae3a9c2fa1d6a77a67e27442516fef5",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-03-10."
+  },
+  "2025-2989": {
+    "name": "Monza",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/2989/mds.pdf",
+    "source_sha256": "91dfd52b98f190db7b875f515a67ad91d84ecc2f79ec29999c729850eb1c2f5d",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-04-07."
+  },
+  "2025-2991": {
+    "name": "Morelia",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/2991/mds.pdf",
+    "source_sha256": "fac3819714f924d858250acbe7f80addd94b5acbe7dc03a569fb5de939df7440",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-03-24."
+  },
+  "2025-3009": {
+    "name": "Cancun",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/3009/mds.pdf",
+    "source_sha256": "32428ad7855c83e3da7e9d59f8646f7f8698ed5f1c25ad45402badb3459cf6c1",
+    "official_points_records": "https://www.atptour.com/en/players/x/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
+    "verification": "PDF ufficiale con etichetta 'Challenger 125' ma senza scala punti stampata e con bye nel tabellone. Registri ATP coerenti con il 125: Tabilo R16 8, Buse SF 35, Struff R32 0, Tirante F 64."
+  },
+  "2025-3011": {
+    "name": "Winston Salem",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/3011/mds.pdf",
+    "source_sha256": "c215b88d20f4e57bbbd794519ca70517eef9e2b5806921cbfdec52c210bcc850",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-09-08."
+  },
+  "2025-3015": {
+    "name": "Sumter",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/3015/mds.pdf",
+    "source_sha256": "a4cefd741582c6c9f5276255bd5f14dfc561ab6a0bf2b661fd1c5067a0d2ad43",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-08-12."
+  },
+  "2025-3017": {
+    "name": "Hersonissos 3",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/3017/mds.pdf",
+    "source_sha256": "bf3e56ebc50e2df5cfd204e3232f4e4beb21220991497f536fb5499ee151dd06",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-08-11."
+  },
+  "2025-3019": {
+    "name": "Hersonissos 4",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/3019/mds.pdf",
+    "source_sha256": "12e7057f26583c74d19ed2dc469874f362438db1eef29c8b5c155a5edbca6625",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-08-18."
+  },
+  "2025-3031": {
+    "name": "Costa do Sauipe",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/3031/mds.pdf",
+    "source_sha256": "b0d9ca40453811b55aab72cdeb9b2524e383870bba1d677688427de40d496848",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-10-20."
+  },
+  "2025-3035": {
+    "name": "Monastir",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/3035/mds.pdf",
+    "source_sha256": "c7c3ca9f20110c267fbd8f0e74a4e70ad0b5483a2ba9eb5e856f982694b50a25",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-10-27."
+  },
+  "2025-3043": {
+    "name": "Athens",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/3043/mds.pdf",
+    "source_sha256": "a9b64245198ad4f96fdec91e0ea82762cc056f73baf7c4221fe6c281042adf56",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-11-24."
+  },
+  "2025-3049": {
+    "name": "Lima - Los Inkas",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/3049/mds.pdf",
+    "source_sha256": "23c43bc1a928e55664dc576e09b096e6c41272f1a317fd133d946c85ce723003",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-10-27."
+  },
+  "2025-3406": {
+    "name": "Santiago",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/3406/mds.pdf",
+    "source_sha256": "fc8f9ef06fb0be746c28b439692ff4ef6f5b6ecde17c7fb610535b3cde4cfe03",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-03-10."
+  },
+  "2025-3463": {
+    "name": "Milan",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/3463/mds.pdf",
+    "source_sha256": "4abdc027e59221a8a060ec36161a0fa0cf51e22d0f91250419ffc99c054d6aa5",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-06-23."
+  },
+  "2025-3824": {
+    "name": "Bordeaux",
+    "level": 175,
+    "source": "https://www.protennislive.com/posting/2025/3824/mds.pdf",
+    "source_sha256": "85bc8e9833eea552499932642eaeb4c61ea133e4d38d2e288a243f656f2442e5",
+    "verification": "PDF ufficiale: etichetta 'Challenger 175', punti stampati [0, 13, 25, 50, 90, 175], settimana dal 2025-05-13."
+  },
+  "2025-4940": {
+    "name": "Birmingham",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/4940/mds.pdf",
+    "source_sha256": "d86812723e9202fb49b13571fa97fdbdd9d152a07542956e0d4937c7c8c5b22b",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-06-02."
+  },
+  "2025-4942": {
+    "name": "Royan",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/4942/mds.pdf",
+    "source_sha256": "efa88711814a0c7cdcb930345fad427fde7e8ed5c93cd80acaf48eded60c40ce",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-06-16."
+  },
+  "2025-6055": {
+    "name": "Charlottesville",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/6055/mds.pdf",
+    "source_sha256": "3db0b6667dd7e126e173f63260f7b4b343d23cd8fa8196bf0799b65af5392b07",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-10-27."
+  },
+  "2025-6239": {
+    "name": "Quimper",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/6239/mds.pdf",
+    "source_sha256": "f12c66b70fb1f910c853a0725dfe7b3d6f2e049484703318820408ad4c9fb2f6",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-01-21."
+  },
+  "2025-6250": {
+    "name": "Barranquilla",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/6250/mds.pdf",
+    "source_sha256": "726ef57602c819204529a69fb528b8afa1329cff44dd9f8393daacef1c92aa52",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-08-11."
+  },
+  "2025-6579": {
+    "name": "Lima 2",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/6579/mds.pdf",
+    "source_sha256": "a37813ac73c76d10832516156b90da02ce3dfd0015d7d3dc8485b64cba0f6a13",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-11-03."
+  },
+  "2025-6795": {
+    "name": "Liberec",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/6795/mds.pdf",
+    "source_sha256": "bee98781d6a0f349b793ca178ac7d53929f3a05327fb02d2e39f6f5883925a6e",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-07-28."
+  },
+  "2025-6857": {
+    "name": "Mouilleron le Captif",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/6857/mds.pdf",
+    "source_sha256": "31903da88493aeed5026988e8a4c01704e8783c03237ef195240b9b826d13068",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-09-29."
+  },
+  "2025-6961": {
+    "name": "New Delhi",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/6961/mds.pdf",
+    "source_sha256": "766594da035a140ad32925701571641d44ec696a364a290e912ef53add027250",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-02-10."
+  },
+  "2025-7009": {
+    "name": "Aix-en-Provence",
+    "level": 175,
+    "source": "https://www.protennislive.com/posting/2025/7009/mds.pdf",
+    "source_sha256": "edead9755c7395f2c5c611119cee048be89e2ce87c16e8bd1484bc5d90412c9a",
+    "verification": "PDF ufficiale: etichetta 'Challenger 175', punti stampati [0, 13, 25, 50, 90, 175], settimana dal 2025-04-29."
+  },
+  "2025-7015": {
+    "name": "Vicenza",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/7015/mds.pdf",
+    "source_sha256": "6d512b028cf84c966fc42e9bb626e741758bcb93356b9c66d09a56ba7aabe0a6",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-05-26."
+  },
+  "2025-7290": {
+    "name": "Estoril",
+    "level": 175,
+    "source": "https://www.protennislive.com/posting/2025/7290/mds.pdf",
+    "source_sha256": "98df340edc5430777699382d971e73da189962e202b248133488916fddd76d87",
+    "verification": "PDF ufficiale: etichetta 'Challenger 175', punti stampati [0, 13, 25, 50, 90, 175], settimana dal 2025-04-27."
+  },
+  "2025-7341": {
+    "name": "Brest",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/7341/mds.pdf",
+    "source_sha256": "3b1d8c80d25642e41bd3c182cf2cadc52fec08e539c5754d934355b9eb799080",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-10-20."
+  },
+  "2025-7393": {
+    "name": "Canberra",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/7393/mds.pdf",
+    "source_sha256": "7034b10b93802d570703f21a10b68ed137d5aeb3b64add464dac6143a3a136ee",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2024-12-30."
+  },
+  "2025-7395": {
+    "name": "Buenos Aires",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/7395/mds.pdf",
+    "source_sha256": "8624e3360955b11b3f8592348d8eff8a0654021fab23454fd61daf2a72579a0a",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-09-22."
+  },
+  "2025-7536": {
+    "name": "Lyon",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/7536/mds.pdf",
+    "source_sha256": "96806ab7828c3adedd1e47584e39f3070c79b42a354261a28fdbda782e6d7f2e",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-06-09."
+  },
+  "2025-7542": {
+    "name": "Winnipeg",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/7542/mds.pdf",
+    "source_sha256": "930f99adc02ccb3aff5891093ff660ed264ff258f629cac04b8e1bcae1c83a85",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-07-07."
+  },
+  "2025-7707": {
+    "name": "Francavilla al Mare",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/7707/mds.pdf",
+    "source_sha256": "cecf1fd5736181a8d738758b917a3dcabec87ce6cc981d53ec730340aca9ad20",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-05-05."
+  },
+  "2025-7740": {
+    "name": "Nottingham 2",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/7740/mds.pdf",
+    "source_sha256": "23c9563655ac98bedae03ca7fd022f74fcb41d40c1e385b81c2bdd8f6bdbdf0f",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-06-16."
+  },
+  "2025-7742": {
+    "name": "Lisbon",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/7742/mds.pdf",
+    "source_sha256": "898c54d82370d5d8d20caf857b567b0b648b18899e07c2e1903bbeb11972576f",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-09-22."
+  },
+  "2025-7783": {
+    "name": "Zhangjiagang",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/7783/mds.pdf",
+    "source_sha256": "c372a96e5e5740c113ea1cb3285f216900757ca5880921b6337dcf4ecb46c1ba",
+    "verification": "PDF ufficiale: etichetta 'Challenger\n75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-08-25."
+  },
+  "2025-7808": {
+    "name": "Bengaluru",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/7808/mds.pdf",
+    "source_sha256": "af7faf13cd698386a948c8d305bed284e6e5877be3cec2531ec48fb2be7101ed",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-02-24."
+  },
+  "2025-7874": {
+    "name": "Lille",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/7874/mds.pdf",
+    "source_sha256": "653d373d8e7b2e897e988109d0ed7b4fbc55af9483bef3b6d29e24a1dac291d7",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-02-03."
+  },
+  "2025-7909": {
+    "name": "Villena",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/7909/mds.pdf",
+    "source_sha256": "d2a0f2990f77b841689ac01187219aefe29bd29d91521270cec05ed09f8e7649",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-09-29."
+  },
+  "2025-7973": {
+    "name": "Manacor",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/7973/mds.pdf",
+    "source_sha256": "eea02ab2d5f627ac54b53b81294da03fb6287efbc4d377426ed60a85a0c5449e",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-08-26."
+  },
+  "2025-8281": {
+    "name": "Columbus",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/8281/mds.pdf",
+    "source_sha256": "874607c0268fd6fa09a3e29bb6b8e835e0092274e172e6aed99ef0aba65305b5",
+    "verification": "PDF ufficiale: etichetta '\nChallenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-09-15."
+  },
+  "2025-8297": {
+    "name": "Hamburg",
+    "level": 50,
+    "source": "https://www.protennislive.com/posting/2025/8297/mds.pdf",
+    "source_sha256": "2927d6b598a281269e69cc1d9082fd6ee43dd452659375d4c65f044f5ab9911d",
+    "verification": "PDF ufficiale: etichetta 'Challenger 50', punti stampati [0, 4, 8, 14, 25, 50], settimana dal 2025-10-20."
+  },
+  "2025-8312": {
+    "name": "Maia",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/8312/mds.pdf",
+    "source_sha256": "799e0bbe55f3e7ac4647def8b164101c950224a4556423cb75912ceeac0b6350",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-11-24."
+  },
+  "2025-8375": {
+    "name": "Mexico City",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/8375/mds.pdf",
+    "source_sha256": "50ec745212f3fa4ff3fa43c16e0c18d3cebb5eef6eb503159e4ad1d49c8074aa",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-04-07."
+  },
+  "2025-8392": {
+    "name": "Todi",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/8392/mds.pdf",
+    "source_sha256": "c7bfedfb824e488c343a794edd7643f861f4122e60bf5d015928385559782200",
+    "verification": "PDF ufficiale: etichetta 'Challenger\n75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-08-11."
+  },
+  "2025-9003": {
+    "name": "Bratislava",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/9003/mds.pdf",
+    "source_sha256": "1efc44a197d8437e2ce07271e9a05d0773275b3c860c0431388150f94b6de9e7",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-06-09."
+  },
+  "2025-9120": {
+    "name": "Cassis",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/9120/mds.pdf",
+    "source_sha256": "4e2d015323dc5e1de939c032d6c4b76032d723741cdb1689cc6571fc10cdaa57",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-09-01."
+  },
+  "2025-9162": {
+    "name": "Pau",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/9162/mds.pdf",
+    "source_sha256": "81853ac82f861c9b00a3e3bee255a1cde0e14230c11fcf7a5a829179301a6122",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-02-17."
+  },
+  "2025-9167": {
+    "name": "Phoenix",
+    "level": 175,
+    "source": "https://www.protennislive.com/posting/2025/9167/mds.pdf",
+    "source_sha256": "da91939b407917195afc9278af88633dbd6b6759699bff196baf8b82f87a1945",
+    "verification": "PDF ufficiale: etichetta 'Challenger 175', punti stampati [0, 13, 25, 50, 90, 175], settimana dal 2025-03-11."
+  },
+  "2025-9171": {
+    "name": "Murcia",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/9171/mds.pdf",
+    "source_sha256": "63f19c82d16bf51f04e46195deb61c66e70e826b72ba49ebe2d2c727869dffdd",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-03-17."
+  },
+  "2025-9188": {
+    "name": "Little Rock",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/9188/mds.pdf",
+    "source_sha256": "787364ecf7a839555d36ce958e41d4fdbe56ce02c4e88d3e7750dca4ecdc1c57",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-05-26."
+  },
+  "2025-9351": {
+    "name": "Trieste",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/9351/mds.pdf",
+    "source_sha256": "c6ea529b7c3ca9658d630a924e877f58f56844b0c1402d71bb65cc1ef1dc3961",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-07-07."
+  },
+  "2025-9500": {
+    "name": "Zagreb",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/9500/mds.pdf",
+    "source_sha256": "fdd7aa88e99a7a945715d69633072becd06e326e7800cde0e378851dd9bd3b44",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-05-12."
+  },
+  "2025-9514": {
+    "name": "Oeiras 4",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/9514/mds.pdf",
+    "source_sha256": "525ad919f562278da7e546769405e3b2e4fef36352522641f16a4c70b623500a",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-04-14."
+  },
+  "2025-9516": {
+    "name": "Lugano",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/9516/mds.pdf",
+    "source_sha256": "b53bb7965db51f85dad0843eb4e816f2dc60d2008fb84929354ba30a7ff5e852",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-02-24."
+  },
+  "2025-9540": {
+    "name": "San Marino",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/9540/mds.pdf",
+    "source_sha256": "d2130095e154f4270fb3000ad7dcd07955e8175eb81a697b4dce51d7cdb7e471",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-07-14."
+  },
+  "2025-9542": {
+    "name": "Hagen",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/9542/mds.pdf",
+    "source_sha256": "6c090bdab870a3ba782a55ba6427a80fa6ee092e03ac4da249e4965ba35831c6",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-07-28."
+  },
+  "2025-9552": {
+    "name": "Saint-Tropez",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/9552/mds.pdf",
+    "source_sha256": "f9d7780ebdad1a396622777e5c3da8cc764abfa542858681e71240b04ed5a247",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-09-15."
+  },
+  "2025-9623": {
+    "name": "Tenerife 1",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/9623/mds.pdf",
+    "source_sha256": "205db529b5c8a9a0700d2a78751fd96d61a2c0eafd4fbc9fd5c1fb851c89b673",
+    "verification": "PDF ufficiale: etichetta 'Challenger\n75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-02-03."
+  },
+  "2025-9625": {
+    "name": "Roanne",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/9625/mds.pdf",
+    "source_sha256": "49ce707f55eaee127d5ca24471ed210fd722712aa81304066d43616f8937e713",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-10-06."
+  },
+  "2025-9687": {
+    "name": "Madrid",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/9687/mds.pdf",
+    "source_sha256": "cc5e4cd1fbb59d86b4c39cf70e187b0bc7172dcfe7e91d2c650219273ae46067",
+    "verification": "PDF ufficiale: etichetta 'Challenger\n100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-04-07."
+  },
+  "2025-9697": {
+    "name": "Mauthausen",
+    "level": 100,
+    "source": "https://www.protennislive.com/posting/2025/9697/mds.pdf",
+    "source_sha256": "7dd0c524104ce123856e519aa155284dbc8d4468e5c51ca238e146d66469dcdb",
+    "verification": "PDF ufficiale: etichetta 'Challenger 100', punti stampati [0, 7, 14, 25, 50, 100], settimana dal 2025-04-28."
+  },
+  "2025-9814": {
+    "name": "Cali",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/9814/mds.pdf",
+    "source_sha256": "2f3ec75f6a0cd4c16753345a713168f0efbd6fcb09dce9682e0fa764967b5a2d",
+    "verification": "PDF ufficiale: etichetta 'Challenger 75', punti stampati [0, 6, 12, 22, 44, 75], settimana dal 2025-10-06."
+  },
+  "2025-9835": {
+    "name": "Sassuolo",
+    "level": 125,
+    "source": "https://www.protennislive.com/posting/2025/9835/mds.pdf",
+    "source_sha256": "fd9b2cc2752fe2bbb13c5baf8b7bdf0b8c5e90f2acdf7bdbcd32498ec02f876c",
+    "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-06-16."
+  }
+}

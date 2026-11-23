@@ -25,8 +25,8 @@
       "as_of": "2026-11-18",
       "ranking_date": "2026-11-16",
       "recorded_participations": 1227,
-      "calculated": 1017,
-      "needs_review": 210,
+      "calculated": 1216,
+      "needs_review": 11,
       "priority": {
         "label": "Slam, Masters 1000, ATP 500/250 e Finals, incluse qualificazioni disponibili",
         "categories": [
@@ -317,5 +317,15 @@
     "evidence": "research/main-tour-review-2025.json",
     "points_engine_version": "2026.7",
     "atp_player_activity_matches": 34
+  },
+  "secondary_levels_2025": {
+    "evidence": "research/challenger-review-2025.json",
+    "challenger_participations": 197,
+    "calculated": 196,
+    "atp_player_activity_matches": 196,
+    "open": [
+      "Oeiras 1 (livello contraddittorio)",
+      "United Cup 2025 (10)"
+    ]
   }
 }

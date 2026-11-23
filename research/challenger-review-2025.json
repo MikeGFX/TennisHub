@@ -1,0 +1,1835 @@
+{
+  "checked_on": "2026-11-23",
+  "season": 2025,
+  "points_engine_version": "2026.7",
+  "import_id": "353ae8c5d6b8e901c641cdf9b62049c47cbaa76e37bef7b9c294c2dd087ec422",
+  "scope": "Partecipazioni Challenger 2025 registrate per i 50 giocatori della classifica del 16 novembre 2026. Livello secondario rispetto alla priorita sui tornei principali.",
+  "level_verification": {
+    "method": "Official main-draw PDF: circuit label, week, city and printed points ladder must all agree.",
+    "registry": "tennishub/rules/challengers-2025.json",
+    "script": "python -B -m scripts.verify_challenger_levels --season 2025",
+    "editions": 111,
+    "verified_from_official_pdf": 108,
+    "levels": {
+      "100": 21,
+      "125": 27,
+      "75": 45,
+      "50": 9,
+      "175": 6
+    },
+    "manual": [
+      {
+        "edition_id": "2025-3009",
+        "event": "Cancun",
+        "level": 125,
+        "basis": "Etichetta 'Challenger 125' nel PDF (senza scala punti stampata) e 4 registri ATP coerenti."
+      },
+      {
+        "edition_id": "2025-2871",
+        "event": "Oeiras 5",
+        "level": 100,
+        "basis": "PDF 404; registri ATP di Tirante (QF 14) e Merida (Q + R16 = 11) possibili solo nel Challenger 100."
+      },
+      {
+        "edition_id": "2025-2831",
+        "event": "Oeiras 1",
+        "level": null,
+        "basis": "PDF contraddittorio: etichetta 'Challenger 100', scala punti del Challenger 75 (0/6/12/22/44/75). Lasciato da verificare anche se Merida, sconfitto in R32, ha 0 punti in entrambi i casi."
+      }
+    ]
+  },
+  "draw_corrections_from_official_pdfs": {
+    "byes_in_32_position_draws": 6,
+    "qualifier_entries_missing_in_source": 12,
+    "note": "Bye ed etichette Q verificate visivamente sui tabelloni ufficiali; la fonte TML non contiene le qualificazioni Challenger e riporta 32 senza bye."
+  },
+  "special_results": [
+    {
+      "player_id": "B0PG",
+      "edition_id": "2025-9697",
+      "event": "Mauthausen",
+      "basis": "Walkover per 'Abdominal strain' nel PDF ufficiale; 14 punti."
+    },
+    {
+      "player_id": "V0DZ",
+      "edition_id": "2025-2973",
+      "event": "Thionville",
+      "basis": "Walkover per 'Abdominals' nel PDF ufficiale; 12 punti."
+    },
+    {
+      "event": "Next Gen ATP Finals 2025",
+      "edition_id": "2025-7696",
+      "basis": "Nessun punto ranking (Tennis365) e 0 punti nei registri ATP di Blockx, Tien e Jodar."
+    }
+  ],
+  "atp_cross_check": {
+    "source": "https://www.atptour.com/en/players/{slug}/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
+    "method": "Pagine lette nel browser integrato; voce ATP abbinata per settimana (+/- 6 giorni) e, se ambigua, per nome del torneo.",
+    "participations": 197,
+    "matching": 196,
+    "unknown": [
+      {
+        "player": "M0N7",
+        "event": "2025-2831",
+        "name": "Oeiras 1",
+        "engine": null,
+        "atp": 0,
+        "status": "unknown"
+      }
+    ],
+    "mismatches": [],
+    "note": "Riscontro dei punti del torneo, non del ranking. Il valore ATP verifica il calcolo e non lo sostituisce."
+  },
+  "inventory_leads": {
+    "description": "Settimane in cui il registro ATP 2025 elenca un torneo che non ha alcun evento registrato nel database per quel giocatore (probabili ITF o qualificazioni Challenger perse). Non importate: mancano gli incontri e i dettagli dell'edizione.",
+    "count": 32,
+    "with_points": 22,
+    "atp_points_total": 298,
+    "players_checked": 27,
+    "items": [
+      {
+        "player": "J0DZ",
+        "week": "2025-03-31",
+        "atp_points": 22
+      },
+      {
+        "player": "VA25",
+        "week": "2025-03-24",
+        "atp_points": 0
+      },
+      {
+        "player": "VA25",
+        "week": "2025-02-17",
+        "atp_points": 14
+      },
+      {
+        "player": "B0PG",
+        "week": "2024-12-30",
+        "atp_points": 0
+      },
+      {
+        "player": "F0DM",
+        "week": "2025-05-19",
+        "atp_points": 1
+      },
+      {
+        "player": "F0DM",
+        "week": "2025-04-14",
+        "atp_points": 3
+      },
+      {
+        "player": "F0DM",
+        "week": "2025-02-10",
+        "atp_points": 25
+      },
+      {
+        "player": "B0ID",
+        "week": "2025-03-31",
+        "atp_points": 25
+      },
+      {
+        "player": "B0ID",
+        "week": "2025-03-24",
+        "atp_points": 2
+      },
+      {
+        "player": "V0DZ",
+        "week": "2025-09-01",
+        "atp_points": 0
+      },
+      {
+        "player": "V0DZ",
+        "week": "2025-07-28",
+        "atp_points": 7
+      },
+      {
+        "player": "M0N7",
+        "week": "2025-07-28",
+        "atp_points": 0
+      },
+      {
+        "player": "M0N7",
+        "week": "2025-06-02",
+        "atp_points": 1
+      },
+      {
+        "player": "M0N7",
+        "week": "2025-05-26",
+        "atp_points": 4
+      },
+      {
+        "player": "M0N7",
+        "week": "2025-04-28",
+        "atp_points": 25
+      },
+      {
+        "player": "M0N7",
+        "week": "2025-03-31",
+        "atp_points": 11
+      },
+      {
+        "player": "M0N7",
+        "week": "2025-02-03",
+        "atp_points": 0
+      },
+      {
+        "player": "M0N7",
+        "week": "2025-01-20",
+        "atp_points": 25
+      },
+      {
+        "player": "M0N7",
+        "week": "2025-01-13",
+        "atp_points": 0
+      },
+      {
+        "player": "T0A1",
+        "week": "2025-03-31",
+        "atp_points": 0
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-10-06",
+        "atp_points": 25
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-09-01",
+        "atp_points": 0
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-08-11",
+        "atp_points": 25
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-08-04",
+        "atp_points": 25
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-06-02",
+        "atp_points": 1
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-05-12",
+        "atp_points": 0
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-04-21",
+        "atp_points": 3
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-04-14",
+        "atp_points": 16
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-03-31",
+        "atp_points": 7
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-03-24",
+        "atp_points": 0
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-01-13",
+        "atp_points": 15
+      },
+      {
+        "player": "G0IX",
+        "week": "2025-01-06",
+        "atp_points": 16
+      }
+    ]
+  },
+  "rows": [
+    {
+      "player": "C0E9",
+      "event": "2025-9167",
+      "name": "Phoenix",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "C0E9",
+      "event": "2025-2863",
+      "name": "Turin",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-9188",
+      "name": "Little Rock",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-2873",
+      "name": "Tyler",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-3463",
+      "name": "Milan",
+      "engine": 22,
+      "atp": 22,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-472",
+      "name": "Pozoblanco",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-783",
+      "name": "Segovia",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-2789",
+      "name": "Grodzisk Mazowiecki",
+      "engine": 4,
+      "atp": 4,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-3017",
+      "name": "Hersonissos 3",
+      "engine": 50,
+      "atp": 50,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-3019",
+      "name": "Hersonissos 4",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-3011",
+      "name": "Winston Salem",
+      "engine": 22,
+      "atp": 22,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-8281",
+      "name": "Columbus",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-1768",
+      "name": "Tiburon",
+      "engine": 22,
+      "atp": 22,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-2941",
+      "name": "Lincoln",
+      "engine": 75,
+      "atp": 75,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-2951",
+      "name": "Sioux Falls",
+      "engine": 7,
+      "atp": 7,
+      "status": "match"
+    },
+    {
+      "player": "J0DZ",
+      "event": "2025-6055",
+      "name": "Charlottesville",
+      "engine": 75,
+      "atp": 75,
+      "status": "match"
+    },
+    {
+      "player": "M0NI",
+      "event": "2025-2975",
+      "name": "Cap Cana",
+      "engine": 50,
+      "atp": 50,
+      "status": "match"
+    },
+    {
+      "player": "M0NI",
+      "event": "2025-558",
+      "name": "Prostejov",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "AG37",
+      "event": "2025-7290",
+      "name": "Estoril",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "N0AE",
+      "event": "2025-3824",
+      "name": "Bordeaux",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "D0FJ",
+      "event": "2025-2911",
+      "name": "Naples",
+      "engine": 64,
+      "atp": 64,
+      "status": "match"
+    },
+    {
+      "player": "D0FJ",
+      "event": "2025-7009",
+      "name": "Aix-en-Provence",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "D0FJ",
+      "event": "2025-2863",
+      "name": "Turin",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "D0FJ",
+      "event": "2025-1763",
+      "name": "Genoa",
+      "engine": 125,
+      "atp": 125,
+      "status": "match"
+    },
+    {
+      "player": "T0HA",
+      "event": "2025-7290",
+      "name": "Estoril",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "BK92",
+      "event": "2025-9167",
+      "name": "Phoenix",
+      "engine": 90,
+      "atp": 90,
+      "status": "match"
+    },
+    {
+      "player": "BK92",
+      "event": "2025-2863",
+      "name": "Turin",
+      "engine": 175,
+      "atp": 175,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-2205",
+      "name": "Noumea",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-2801",
+      "name": "Nonthaburi 3",
+      "engine": 0,
+      "atp": 0,
+      "status": "match",
+      "note": "Settimana con due voci ATP; abbinata per nome del torneo (Nonthaburi 3)."
+    },
+    {
+      "player": "VA25",
+      "event": "2025-6961",
+      "name": "New Delhi",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-7808",
+      "name": "Bengaluru",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-9171",
+      "name": "Murcia",
+      "engine": 10,
+      "atp": 10,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-7009",
+      "name": "Aix-en-Provence",
+      "engine": 31,
+      "atp": 31,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-7707",
+      "name": "Francavilla al Mare",
+      "engine": 44,
+      "atp": 44,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-9003",
+      "name": "Bratislava",
+      "engine": 7,
+      "atp": 7,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-786",
+      "name": "Poznan",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-6795",
+      "name": "Liberec",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-2120",
+      "name": "Cordenons",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-8392",
+      "name": "Todi",
+      "engine": 22,
+      "atp": 22,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-7973",
+      "name": "Manacor",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-9120",
+      "name": "Cassis",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "VA25",
+      "event": "2025-9552",
+      "name": "Saint-Tropez",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-2979",
+      "name": "Oeiras 3",
+      "engine": 100,
+      "atp": 100,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-7874",
+      "name": "Lille",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-9162",
+      "name": "Pau",
+      "engine": 8,
+      "atp": 8,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-9516",
+      "name": "Lugano",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-2973",
+      "name": "Thionville",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-9687",
+      "name": "Madrid",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-9514",
+      "name": "Oeiras 4",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-9697",
+      "name": "Mauthausen",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-600",
+      "name": "Prague",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-4940",
+      "name": "Birmingham",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-7740",
+      "name": "Nottingham 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-7542",
+      "name": "Winnipeg",
+      "engine": 44,
+      "atp": 44,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-877",
+      "name": "Granby",
+      "engine": 22,
+      "atp": 22,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-2883",
+      "name": "Bloomfield Hills",
+      "engine": 7,
+      "atp": 7,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-2273",
+      "name": "Orleans",
+      "engine": 8,
+      "atp": 8,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-6857",
+      "name": "Mouilleron le Captif",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-9625",
+      "name": "Roanne",
+      "engine": 7,
+      "atp": 7,
+      "status": "match"
+    },
+    {
+      "player": "B0PG",
+      "event": "2025-444",
+      "name": "Bratislava 2",
+      "engine": 125,
+      "atp": 125,
+      "status": "match"
+    },
+    {
+      "player": "EA24",
+      "event": "2025-2975",
+      "name": "Cap Cana",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "EA24",
+      "event": "2025-2863",
+      "name": "Turin",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "EA24",
+      "event": "2025-526",
+      "name": "Braunschweig",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "TE30",
+      "event": "2025-558",
+      "name": "Prostejov",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "TE30",
+      "event": "2025-3009",
+      "name": "Cancun",
+      "engine": 8,
+      "atp": 8,
+      "status": "match"
+    },
+    {
+      "player": "TE30",
+      "event": "2025-2937",
+      "name": "Guangzhou (Huangpu)",
+      "engine": 50,
+      "atp": 50,
+      "status": "match"
+    },
+    {
+      "player": "TE30",
+      "event": "2025-2893",
+      "name": "Olbia",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "TE30",
+      "event": "2025-444",
+      "name": "Bratislava 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-9162",
+      "name": "Pau",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-398",
+      "name": "Cherbourg",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-7740",
+      "name": "Nottingham 2",
+      "engine": 13,
+      "atp": 13,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-2883",
+      "name": "Bloomfield Hills",
+      "engine": 18,
+      "atp": 18,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-6250",
+      "name": "Barranquilla",
+      "engine": 75,
+      "atp": 75,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-9120",
+      "name": "Cassis",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-6857",
+      "name": "Mouilleron le Captif",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-7341",
+      "name": "Brest",
+      "engine": 18,
+      "atp": 18,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-2963",
+      "name": "Lyon 2",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "F0DM",
+      "event": "2025-3043",
+      "name": "Athens",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-2833",
+      "name": "Oeiras 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match",
+      "note": "Settimana con due voci ATP; abbinata per nome del torneo (Oeiras 2)."
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-2979",
+      "name": "Oeiras 3",
+      "engine": 4,
+      "atp": 4,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-9623",
+      "name": "Tenerife 1",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-2839",
+      "name": "Tenerife 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-2981",
+      "name": "Cordoba",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-3406",
+      "name": "Santiago",
+      "engine": 22,
+      "atp": 22,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-9687",
+      "name": "Madrid",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-7009",
+      "name": "Aix-en-Provence",
+      "engine": 56,
+      "atp": 56,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-7707",
+      "name": "Francavilla al Mare",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-7015",
+      "name": "Vicenza",
+      "engine": 12,
+      "atp": 12,
+      "status": "match",
+      "note": "Settimana con due voci ATP; abbinata per nome del torneo (Vicenza)."
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-460",
+      "name": "Heilbronn - Bad Rappenau",
+      "engine": 100,
+      "atp": 100,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-2877",
+      "name": "Modena",
+      "engine": 0,
+      "atp": 0,
+      "status": "match",
+      "note": "Settimana con due voci ATP; abbinata per nome del torneo (Modena)."
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-526",
+      "name": "Braunschweig",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-3009",
+      "name": "Cancun",
+      "engine": 35,
+      "atp": 35,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-784",
+      "name": "Seville",
+      "engine": 125,
+      "atp": 125,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-7742",
+      "name": "Lisbon",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-2823",
+      "name": "Valencia",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-3049",
+      "name": "Lima - Los Inkas",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-6579",
+      "name": "Lima 2",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "B0ID",
+      "event": "2025-544",
+      "name": "Montevideo",
+      "engine": 50,
+      "atp": 50,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-7393",
+      "name": "Canberra",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-7874",
+      "name": "Lille",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-9162",
+      "name": "Pau",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-9516",
+      "name": "Lugano",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-2973",
+      "name": "Thionville",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-2989",
+      "name": "Monza",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-9514",
+      "name": "Oeiras 4",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-1797",
+      "name": "Ostrava",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-9500",
+      "name": "Zagreb",
+      "engine": 44,
+      "atp": 44,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-558",
+      "name": "Prostejov",
+      "engine": 7,
+      "atp": 7,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-7536",
+      "name": "Lyon",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-9835",
+      "name": "Sassuolo",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-526",
+      "name": "Braunschweig",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-9625",
+      "name": "Roanne",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-2893",
+      "name": "Olbia",
+      "engine": 125,
+      "atp": 125,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-7341",
+      "name": "Brest",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "V0DZ",
+      "event": "2025-2963",
+      "name": "Lyon 2",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "M0QI",
+      "event": "2025-7290",
+      "name": "Estoril",
+      "engine": 175,
+      "atp": 175,
+      "status": "match"
+    },
+    {
+      "player": "SL28",
+      "event": "2025-9167",
+      "name": "Phoenix",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "SL28",
+      "event": "2025-7290",
+      "name": "Estoril",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "SL28",
+      "event": "2025-3009",
+      "name": "Cancun",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "SL28",
+      "event": "2025-7909",
+      "name": "Villena",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "SL28",
+      "event": "2025-9625",
+      "name": "Roanne",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "SL28",
+      "event": "2025-444",
+      "name": "Bratislava 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "SL28",
+      "event": "2025-2963",
+      "name": "Lyon 2",
+      "engine": 75,
+      "atp": 75,
+      "status": "match"
+    },
+    {
+      "player": "V812",
+      "event": "2025-526",
+      "name": "Braunschweig",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "V812",
+      "event": "2025-9542",
+      "name": "Hagen",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "BT72",
+      "event": "2025-9167",
+      "name": "Phoenix",
+      "engine": 50,
+      "atp": 50,
+      "status": "match"
+    },
+    {
+      "player": "BT72",
+      "event": "2025-7290",
+      "name": "Estoril",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-2831",
+      "name": "Oeiras 1",
+      "engine": null,
+      "atp": 0,
+      "status": "unknown"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-9171",
+      "name": "Murcia",
+      "engine": 10,
+      "atp": 10,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-9687",
+      "name": "Madrid",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-2871",
+      "name": "Oeiras 5",
+      "engine": 11,
+      "atp": 11,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-7536",
+      "name": "Lyon",
+      "engine": 50,
+      "atp": 50,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-4942",
+      "name": "Royan",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-2877",
+      "name": "Modena",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-472",
+      "name": "Pozoblanco",
+      "engine": 75,
+      "atp": 75,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-2785",
+      "name": "Zug",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-784",
+      "name": "Seville",
+      "engine": 35,
+      "atp": 35,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-2891",
+      "name": "Bad Waltersdorf",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-7742",
+      "name": "Lisbon",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-7909",
+      "name": "Villena",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-2823",
+      "name": "Valencia",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-8297",
+      "name": "Hamburg",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-2955",
+      "name": "Montemar",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "M0N7",
+      "event": "2025-8312",
+      "name": "Maia",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "BU13",
+      "event": "2025-3015",
+      "name": "Sumter",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "HB64",
+      "event": "2025-7009",
+      "name": "Aix-en-Provence",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "HB64",
+      "event": "2025-3824",
+      "name": "Bordeaux",
+      "engine": 13,
+      "atp": 13,
+      "status": "match"
+    },
+    {
+      "player": "HB64",
+      "event": "2025-9120",
+      "name": "Cassis",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "F0FV",
+      "event": "2025-7393",
+      "name": "Canberra",
+      "engine": 125,
+      "atp": 125,
+      "status": "match"
+    },
+    {
+      "player": "F0FV",
+      "event": "2025-9167",
+      "name": "Phoenix",
+      "engine": 175,
+      "atp": 175,
+      "status": "match"
+    },
+    {
+      "player": "F0FV",
+      "event": "2025-7290",
+      "name": "Estoril",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-2965",
+      "name": "Rosario",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-2981",
+      "name": "Cordoba",
+      "engine": 75,
+      "atp": 75,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-2991",
+      "name": "Morelia",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-8375",
+      "name": "Mexico City",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-9697",
+      "name": "Mauthausen",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-2871",
+      "name": "Oeiras 5",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-786",
+      "name": "Poznan",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-2877",
+      "name": "Modena",
+      "engine": 6,
+      "atp": 6,
+      "status": "match",
+      "note": "Settimana con due voci ATP; abbinata per nome del torneo (Modena)."
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-9351",
+      "name": "Trieste",
+      "engine": 50,
+      "atp": 50,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-9540",
+      "name": "San Marino",
+      "engine": 35,
+      "atp": 35,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-3009",
+      "name": "Cancun",
+      "engine": 64,
+      "atp": 64,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-1763",
+      "name": "Genoa",
+      "engine": 8,
+      "atp": 8,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-448",
+      "name": "Szczecin",
+      "engine": 125,
+      "atp": 125,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-2891",
+      "name": "Bad Waltersdorf",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-7395",
+      "name": "Buenos Aires",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-9814",
+      "name": "Cali",
+      "engine": 4,
+      "atp": 4,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-2895",
+      "name": "Curitiba",
+      "engine": 6,
+      "atp": 6,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-3031",
+      "name": "Costa do Sauipe",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-444",
+      "name": "Bratislava 2",
+      "engine": 8,
+      "atp": 8,
+      "status": "match"
+    },
+    {
+      "player": "T0A1",
+      "event": "2025-2963",
+      "name": "Lyon 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-6239",
+      "name": "Quimper",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-7874",
+      "name": "Lille",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-2983",
+      "name": "Hersonissos 1",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-2985",
+      "name": "Hersonissos 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-2989",
+      "name": "Monza",
+      "engine": 7,
+      "atp": 7,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-7009",
+      "name": "Aix-en-Provence",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-7536",
+      "name": "Lyon",
+      "engine": 7,
+      "atp": 7,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-4942",
+      "name": "Royan",
+      "engine": 4,
+      "atp": 4,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-3463",
+      "name": "Milan",
+      "engine": 12,
+      "atp": 12,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-1214",
+      "name": "Troyes",
+      "engine": 4,
+      "atp": 4,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-9351",
+      "name": "Trieste",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-9540",
+      "name": "San Marino",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-7783",
+      "name": "Zhangjiagang",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-2937",
+      "name": "Guangzhou (Huangpu)",
+      "engine": 7,
+      "atp": 7,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-7909",
+      "name": "Villena",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-2893",
+      "name": "Olbia",
+      "engine": 8,
+      "atp": 8,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-3035",
+      "name": "Monastir",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "G0IX",
+      "event": "2025-2963",
+      "name": "Lyon 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "N0BS",
+      "event": "2025-7009",
+      "name": "Aix-en-Provence",
+      "engine": 25,
+      "atp": 25,
+      "status": "match"
+    },
+    {
+      "player": "N0BS",
+      "event": "2025-2863",
+      "name": "Turin",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "N0BS",
+      "event": "2025-526",
+      "name": "Braunschweig",
+      "engine": 125,
+      "atp": 125,
+      "status": "match"
+    },
+    {
+      "player": "N0BS",
+      "event": "2025-3031",
+      "name": "Costa do Sauipe",
+      "engine": 16,
+      "atp": 16,
+      "status": "match"
+    },
+    {
+      "player": "N0BS",
+      "event": "2025-3049",
+      "name": "Lima - Los Inkas",
+      "engine": 75,
+      "atp": 75,
+      "status": "match"
+    },
+    {
+      "player": "N0BS",
+      "event": "2025-6579",
+      "name": "Lima 2",
+      "engine": 0,
+      "atp": 0,
+      "status": "match"
+    },
+    {
+      "player": "N0BS",
+      "event": "2025-544",
+      "name": "Montevideo",
+      "engine": 14,
+      "atp": 14,
+      "status": "match"
+    },
+    {
+      "player": "GJ37",
+      "event": "2025-3824",
+      "name": "Bordeaux",
+      "engine": 50,
+      "atp": 50,
+      "status": "match"
+    }
+  ]
+}

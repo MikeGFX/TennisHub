@@ -19,7 +19,7 @@ Non e' la top 50 di ciascun anno.
 | Anno | Tutti: calcolabili / registrate | Priorita circuito principale: calcolabili / registrate | Casi prioritari aperti |
 |---|---:|---:|---:|
 | 2026 | 1188 / 1188 | Tutti i livelli da verificare | - |
-| 2025 | 1017 / 1227 | 959 / 959 | 0 |
+| 2025 | 1216 / 1227 | 959 / 959 | 0 |
 | 2024 | 0 / 1243 | 0 / 923 | 923 |
 | 2023 | 0 / 1124 | 0 / 797 | 797 |
 | 2022 | 0 / 1012 | 0 / 659 | 659 |
@@ -41,9 +41,11 @@ con i punti delle pagine ATP Player Activity. Dettagli nel
 [rapporto dei casi](../research/main-tour-review-2025.json) e nel
 [registro delle priorita](../research/historical-main-tour-priority-2016-2025.json).
 Questo riguarda solo le partecipazioni registrate dei tornei principali: non
-certifica che l'elenco dei tornei sia completo. Le 210 partecipazioni complessive
-da verificare non sono state cancellate o trasformate in zeri: riguardano
-soprattutto Challenger e United Cup. Il prossimo anno da affrontare e' il 2024, le cui
+certifica che l'elenco dei tornei sia completo. Challenger 2025: 196 delle 197 partecipazioni registrate sono calcolate e coincidono
+con i registri ATP ([rapporto](../research/challenger-review-2025.json)). Restano
+11 incognite: United Cup 2025 (10) e Oeiras 1 (1). Il confronto con l'ATP mostra
+inoltre 32 settimane senza evento nel database (ITF e qualificazioni Challenger):
+l'inventario 2025 non e' completo. Il prossimo anno da affrontare e' il 2024, le cui
 regole punti vanno validate prima di calcolare qualsiasi valore.
 
 ## Censimento 2026

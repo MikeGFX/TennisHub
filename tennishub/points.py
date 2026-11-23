@@ -54,8 +54,14 @@ class PointsResult:
 
 @lru_cache(maxsize=1)
 def challenger_editions():
-    path = Path(__file__).with_name("rules") / "challengers-2026.json"
-    return json.loads(path.read_text(encoding="utf-8"))
+    """Registri annuali delle edizioni Challenger verificate; le chiavi includono l'anno."""
+    editions = {}
+    for path in sorted(Path(__file__).with_name("rules").glob("challengers-20??.json")):
+        for edition_id, metadata in json.loads(path.read_text(encoding="utf-8")).items():
+            if not edition_id.startswith(path.stem[-4:] + "-") or edition_id in editions:
+                raise ValueError(f"Edizione Challenger fuori registro annuale o duplicata: {edition_id}")
+            editions[edition_id] = metadata
+    return editions
 
 
 @lru_cache(maxsize=None)
@@ -120,9 +126,9 @@ def _rule(sample, edition_metadata, qualifying_only=False):
     return None
 
 
-def _qualifying_bonus(rows, main, rule, player_id, allow_lucky_loser=False, require_ll_label=False):
+def _qualifying_bonus(rows, main, rule, player_id, allow_lucky_loser=False, require_ll_label=False, documented_qualifier=False):
     """Restituisce (valore, spiegazione); il valore manca se la prova e' incompleta."""
-    entries = {_entry(row, player_id) for row in main} - {""}
+    entries = ({_entry(row, player_id) for row in main} | ({"Q"} if documented_qualifier else set())) - {""}
     if "LL" in entries and not allow_lucky_loser:
         return None, "Lucky loser: verificare il trattamento dei punti delle qualificazioni."
     if any(row["round"] not in {"Q1", "Q2", "Q3"} for row in rows):
@@ -180,6 +186,10 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
     rules_url = RULES_2025_URL if season == 2025 else RULES_URL
     if category == "D" or edition_id == f"{season}-9210":
         return PointsResult(0, "Competizione a squadre senza punti ATP individuali.", 0, 0, [rules_url])
+    no_points = evidence_file("edition-evidence.json").get(edition_id, {}).get("no_ranking_points")
+    if no_points and no_points.get("official_records", {}).get(player_id) == 0:
+        return PointsResult(0, "Evento senza punti per il ranking ATP: " + no_points["event"] + ".", 0, 0,
+                            [no_points["source"], no_points["official_record_source"].format(player_id=player_id.lower())])
     # Il vincitore di un walkover nel main draw avanza per i punti come da Exhibit K
     # (2025: p. 338; 2026). Ritiri prima del proprio match e risultati amministrativi restano da verificare.
     safe_walkovers = [row for row in main if "W/O" in row["score"].upper() and _winner(row, player_id)]
@@ -216,12 +226,17 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
         sources.append(metadata["qualifying_source"])
     if safe_walkovers or default_wins:
         sources.append(WALKOVER_2025_URL if season == 2025 else WALKOVER_URL)
-    if medical_walkovers:
+    if medical_walkovers and withdrawal["source"] not in sources:
         sources.append(withdrawal["source"])
     # 2025: regola 9.03 G 3-4; senza etichetta LL nella fonte serve una prova dell'edizione.
     documented_ll = edition_evidence.get("lucky_losers", {}).get(player_id)
+    # Ingresso da qualificato documentato dal tabellone ufficiale quando la fonte non riporta "Q".
+    documented_q = edition_evidence.get("qualifier_entries", {}).get(player_id)
     bonus, bonus_reason = _qualifying_bonus(qualifying, main, rule, player_id, allow_lucky_loser=True,
-                                            require_ll_label=season == 2025 and not documented_ll)
+                                            require_ll_label=season == 2025 and not documented_ll,
+                                            documented_qualifier=bool(documented_q))
+    if documented_q and bonus and documented_q["source"] not in sources:
+        sources.append(documented_q["source"])
     if documented_ll and bonus is not None and bonus_reason.startswith("Lucky loser"):
         sources += [documented_ll["source"], documented_ll["qualifying_source"]]
     if bonus is None:
@@ -246,7 +261,8 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
             bracket = 1 << (draw - 1).bit_length()
             first_round = "R" + str(bracket)
             second_round = "R" + str(bracket // 2)
-            if points_round == second_round and bracket > draw:
+            documented_bye = player_id in edition_evidence.get("confirmed_byes", {})
+            if points_round == second_round and (bracket > draw or documented_bye):
                 seed = _seed_number(last.get("loser_seed", ""))
                 bye_confirmed = seed is not None and 1 <= seed <= bracket - draw
                 if not bye_confirmed:
@@ -254,7 +270,8 @@ def evaluate_points(matches, player_id, season=2026, editions=None):
                     if verified:
                         seed = verified.get("seed")
                         bye_confirmed = verified.get("confirmed") is True or seed is not None and 1 <= seed <= bracket - draw
-                        sources.append(verified["source"])
+                        if verified["source"] not in sources:
+                            sources.append(verified["source"])
                 if not bye_confirmed:
                     return PointsResult(reason="Possibile bye o turno mancante: verificare il tabellone.", qualifying=bonus, sources=sources)
                 points_round, reason = first_round, "Sconfitta al debutto dopo bye: punti del primo turno."

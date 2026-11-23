@@ -117,3 +117,7 @@ Risolti tutti i 34 casi prioritari 2025 con il capitolo 9 e l'Exhibit K del
 Rulebook 2025 e i tabelloni ufficiali: priorita circuito principale 959/959, con
 riscontro dei 34 valori sulle pagine ATP Player Activity. La stagione 2025 non e'
 certificata completa (Challenger, United Cup, inventario dei tornei).
+
+Challenger 2025: livelli di 110 edizioni verificati (108 sul tabellone ufficiale),
+196/197 partecipazioni calcolate e uguali ai registri ATP. Restano United Cup 2025,
+Oeiras 1 e 32 settimane ATP senza evento registrato (ITF, qualificazioni Challenger).

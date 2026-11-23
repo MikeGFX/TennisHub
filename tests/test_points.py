@@ -273,6 +273,38 @@ class PointsTests(unittest.TestCase):
         row = match(round="R16", loser_id="S0S1", tourney_id="2026-301")
         self.assertIsNone(evaluate_points([row], "S0S1").value)
 
+    def test_2025_challenger_level_comes_from_yearly_registry(self):
+        result = evaluate_points([match(round="F", won=True, level="C", draw="32", tourney_id="2025-1214")], "P001", season=2025)
+        self.assertEqual(result.value, 50)
+        self.assertIn("https://www.protennislive.com/posting/2025/1214/mds.pdf", result.sources)
+        self.assertIsNone(evaluate_points([match(round="F", won=True, level="C", draw="32", tourney_id="2025-2831")], "P001", season=2025).value)
+
+    def test_documented_bye_in_32_position_challenger_draw(self):
+        row = match(round="R16", level="C", draw="32", tourney_id="2025-9167", loser_id="SL28")
+        self.assertEqual(evaluate_points([row], "SL28", season=2025).value, 0)
+        self.assertEqual(evaluate_points([match(round="R16", level="C", draw="32", tourney_id="2025-9167")], "P001", season=2025).value, 13)
+
+    def test_documented_qualifier_entry_adds_challenger_bonus(self):
+        rows = [match(round="R32", won=True, level="C", draw="32", tourney_id="2025-398", winner_id="F0DM", loser_id="OTHER"),
+                match(round="R16", won=True, level="C", draw="32", tourney_id="2025-398", winner_id="F0DM", loser_id="OTHER"),
+                match(round="QF", level="C", draw="32", tourney_id="2025-398", winner_id="OTHER", loser_id="F0DM")]
+        result = evaluate_points(rows, "F0DM", season=2025)
+        self.assertEqual((result.value, result.main_draw, result.qualifying), (16, 12, 4))
+        self.assertIn("https://www.protennislive.com/posting/2025/398/mds.pdf", result.sources)
+
+    def test_next_gen_finals_2025_zero_only_with_official_record(self):
+        rows = [match(round="RR", won=True, level="A", draw="8", tourney_id="2025-7696", winner_id="T0HA", loser_id="OTHER")]
+        result = evaluate_points(rows, "T0HA", season=2025)
+        self.assertEqual((result.value, result.main_draw, result.qualifying), (0, 0, 0))
+        self.assertIn("https://www.atptour.com/en/players/x/t0ha/player-activity?matchType=Singles&year=2025&tournament=all", result.sources)
+        self.assertIsNone(evaluate_points(rows, "OTHER", season=2025).value)
+
+    def test_challenger_registries_are_yearly_and_keyed_by_year(self):
+        from tennishub.points import challenger_editions
+        editions = challenger_editions()
+        self.assertTrue(any(key.startswith("2026-") for key in editions))
+        self.assertTrue(all(key[:4] in ("2025", "2026") for key in editions))
+
     def test_unverified_year_and_empty_input_remain_unknown(self):
         self.assertIsNone(self.points([match()], season=2024).value)
         self.assertIsNone(self.points([]).value)
