@@ -7,6 +7,7 @@ from .database import latest_import
 from .results import match_was_played
 from .importer import search_key
 from .queries import resolve_player, season
+from .points import official_round
 
 SURFACES = ("Hard", "Clay", "Grass", "Carpet", "Unknown")
 
@@ -52,7 +53,7 @@ def head_to_head(connection, first, second, year=None, surface="all", stage="all
             matches.append({"key": row["match_key"], "year": value, "date": row["match_date"],
                             "tournament": row["name"], "category": row["category"],
                             "surface": row["surface"] if row["surface"] in SURFACES else "Unknown",
-                            "stage": row["stage"], "round": row["round"],
+                            "stage": row["stage"], "round": official_round(row["edition_id"], row["winner_id"], row["loser_id"], row["round"]),
                             "winner_id": row["winner_id"], "winner_name": raw["winner_name"],
                             "loser_id": row["loser_id"], "score_winner_first": row["score"], "counted": counted})
     by_surface = []

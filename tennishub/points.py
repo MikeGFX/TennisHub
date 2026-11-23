@@ -81,6 +81,17 @@ MONTHS_IT = ("gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "lugl
              "agosto", "settembre", "ottobre", "novembre", "dicembre")
 
 
+def official_round(edition_id, winner_id, loser_id, source_round):
+    """Turno ufficiale documentato per la United Cup quando la fonte usa un'etichetta diversa."""
+    if not edition_id.endswith("-9900"):
+        return source_round
+    try:
+        rounds = evidence_file(f"united-cup-{edition_id[:4]}.json").get("official_rounds", {})
+    except FileNotFoundError:
+        return source_round
+    return rounds.get(f"{winner_id}|{loser_id}", source_round)
+
+
 def _united_cup(rows, player_id, season):
     """United Cup: tabella 4.03 K con ranking congelato dell'edizione; prove annuali separate."""
     evidence = evidence_file(f"united-cup-{season}.json")
@@ -94,7 +105,7 @@ def _united_cup(rows, player_id, season):
         if not _winner(row, player_id):
             continue
         rank = evidence["rankings"].get(row["loser_id"])
-        played_round = rounds.get(f"{row['winner_id']}|{row['loser_id']}", row["round"])
+        played_round = official_round(row["tourney_id"], row["winner_id"], row["loser_id"], row["round"])
         if played_round != row["round"] and rounds["source"].format(player_id=player_id.lower()) not in sources:
             sources.append(rounds["source"].format(player_id=player_id.lower()))
         if row["loser_id"] in protected and protected["source"] not in sources:

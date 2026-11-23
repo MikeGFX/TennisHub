@@ -171,6 +171,13 @@ class PointsTests(unittest.TestCase):
         self.assertEqual(result.value, 45)
         self.assertIn("https://www.unitedcup.com/en/media/news/united-cup-2025-initial-player-field-announced", result.sources)
 
+    def test_official_round_only_changes_documented_united_cup_matches(self):
+        from tennishub.points import official_round
+        self.assertEqual(official_round("2025-9900", "FB98", "Z371", "RR"), "QF")
+        self.assertEqual(official_round("2025-9900", "FB98", "CG80", "RR"), "RR")
+        self.assertEqual(official_round("2025-337", "FB98", "Z371", "RR"), "RR")
+        self.assertEqual(official_round("2024-9900", "FB98", "Z371", "RR"), "RR")
+
     def test_united_cup_2026_reason_unchanged(self):
         result = self.points([match(round="RR", won=True, level="A", tourney_id="2026-9900", loser_id="Z355")])
         self.assertEqual(result.reason, "United Cup: tabella 4.03 K e ranking congelato al 29 dicembre 2025.")

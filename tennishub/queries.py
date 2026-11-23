@@ -3,7 +3,7 @@
 import json
 from collections import defaultdict
 
-from .points import ENGINE_VERSION, LABELS, ROUND_ORDER, PointsResult, evaluate_points
+from .points import ENGINE_VERSION, LABELS, ROUND_ORDER, PointsResult, evaluate_points, official_round
 
 from .database import latest_import
 from .results import match_was_played
@@ -58,8 +58,11 @@ def season(connection, player, year):
     for record in records:
         groups[record["edition_id"]].append(record)
     events = []
+    def shown_round(row):
+        return official_round(row["edition_id"], row["winner_id"], row["loser_id"], row["round"])
+
     for edition_id, rows in groups.items():
-        rows.sort(key=lambda row: (row["stage"] == "main", ROUND_ORDER.get(row["round"], -1), row["match_date"], row["match_key"]))
+        rows.sort(key=lambda row: (row["stage"] == "main", ROUND_ORDER.get(shown_round(row), -1), row["match_date"], row["match_key"]))
         main = [row for row in rows if row["stage"] == "main"]
         primary = main or rows
         last = max(primary, key=lambda row: (ROUND_ORDER.get(row["round"], {"Q1": -3, "Q2": -2, "Q3": -1}.get(row["round"], -99)), row["match_date"]))
@@ -103,7 +106,8 @@ def season(connection, player, year):
             "points_reason": reason, "wins": wins, "losses": losses,
             "points_breakdown": {"main_draw": result.main_draw, "qualifying": result.qualifying},
             "points_sources": result.sources,
-            "matches": [{"date": row["match_date"], "stage": row["stage"], "round": row["round"],
+            "matches": [{"date": row["match_date"], "stage": row["stage"], "round": shown_round(row),
+                         **({"source_round": row["round"]} if shown_round(row) != row["round"] else {}),
                          "winner_id": row["winner_id"], "loser_id": row["loser_id"],
                          "score_winner_first": row["score"], "played": match_was_played(row["score"]), "raw": json.loads(row["raw_json"]),
                          "sources": provenances[row["match_key"]]} for row in rows],
