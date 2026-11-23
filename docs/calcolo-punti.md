@@ -33,7 +33,7 @@ Su Windows usare `py -3` al posto di `python3`.
 - ATP 500 e 250: tabelloni a 28/32 e 48 giocatori.
 - Challenger 50, 75, 100, 125 e 175, quando il livello dell'edizione e' verificato.
   I registri annuali `tennishub/rules/challengers-2026.json` (36 edizioni) e
-  `challengers-2025.json` (110 edizioni) contengono le edizioni verificate,
+  `challengers-2025.json` (111 edizioni) contengono le edizioni verificate,
   rilevanti per il campione, con l'URL della fonte per ogni voce.
 - Bonus qualificato aggiunto una sola volta ai punti del tabellone principale.
 - Sconfitte Q1/Q2/Q3, quando percorso e formato sono riconoscibili.
@@ -121,8 +121,9 @@ Ogni risultato 2025 cita quella fonte, senza assumere che le regole di un altro
 anno siano applicabili. L'edizione deve appartenere all'anno richiesto.
 
 Per i primi 50 selezionati dalla classifica del 16 novembre 2026, l'archivio 2025
-contiene 1.227 partecipazioni: 1.226 calcolabili e 1 da verificare (motore 2026.7;
-erano 983 e 244): Oeiras 1, livello contraddittorio nel tabellone ufficiale.
+contiene 1.227 partecipazioni, tutte con punti calcolabili (motore 2026.7; erano
+983 su 1.227). Questo non certifica la stagione: l'inventario dei tornei 2025 non
+e' verificato.
 Il registro Challenger 2025 e' separato da quello 2026.
 
 Zverev 2025 ha 27 partecipazioni registrate e 5.280 punti calcolati, senza eventi
@@ -192,8 +193,9 @@ Livello di 108 edizioni verificato sul tabellone ufficiale ProTennisLive: etiche
 "Challenger NN", settimana, citta' e scala punti stampata devono concordare con la
 tabella 2025 (`python -B -m scripts.verify_challenger_levels --season 2025`).
 Casi manuali: Cancun 125 (etichetta e registri ATP, scala non stampata), Oeiras 5
-100 (PDF 404, livello univocamente compatibile con i registri ATP). Oeiras 1 resta
-da verificare: il PDF stampa "Challenger 100" con la scala del Challenger 75.
+100 (PDF 404, livello univocamente compatibile con i registri ATP). Oeiras 1: il PDF
+stampa "Challenger 100" con la scala del Challenger 75; i registri ATP di finalisti
+e perdenti nei quarti (75, 44, 12, 12) confermano il Challenger 75.
 
 Dai tabelloni ufficiali sono emersi dati assenti nella fonte TML: 6 bye in tabelloni
 da 32 posizioni (es. Struff a Phoenix: 0 punti, non 13) e 12 ingressi da qualificato
@@ -201,7 +203,7 @@ senza etichetta Q (es. Fery a Cherbourg: 12 + 4 = 16). Walkover di Blockx a Maut
 e Van Assche a Thionville: cause mediche nel PDF. Next Gen ATP Finals 2025: 0 punti,
 come nei registri ATP di Blockx, Tien e Jodar.
 
-Riscontro: 196 partecipazioni Challenger calcolate, tutte uguali al valore "Points"
+Riscontro: 197 partecipazioni Challenger calcolate, tutte uguali al valore "Points"
 delle pagine ATP Player Activity. Le stesse pagine mostrano 32 settimane senza alcun
 evento nel database (ITF e qualificazioni Challenger perse, 298 punti in tutto per
 27 giocatori controllati): indizi d'inventario non importati. Dettagli nel

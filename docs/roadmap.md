@@ -125,3 +125,7 @@ Oeiras 1 e 32 settimane ATP senza evento registrato (ITF, qualificazioni Challen
 United Cup 2025 risolta con il capitolo 4 del Rulebook 2025 (ranking del 23 dicembre
 2024 e ranking protetti): 10/10 uguali ai registri ATP. Il 2025 ha 1.226/1.227
 partecipazioni registrate calcolate; inventario 2025 ancora incompleto.
+
+Oeiras 1 risolto come Challenger 75 (registri ATP di finalisti e quartifinalisti).
+Il 2025 ha 1.227/1.227 partecipazioni registrate calcolate; resta da completare
+l'inventario dei tornei (ITF e qualificazioni Challenger mancanti).

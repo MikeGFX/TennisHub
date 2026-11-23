@@ -33,8 +33,8 @@
       {
         "edition_id": "2025-2831",
         "event": "Oeiras 1",
-        "level": null,
-        "basis": "PDF contraddittorio: etichetta 'Challenger 100', scala punti del Challenger 75 (0/6/12/22/44/75). Lasciato da verificare anche se Merida, sconfitto in R32, ha 0 punti in entrambi i casi."
+        "level": 75,
+        "basis": "PDF contraddittorio (etichetta 'Challenger 100', scala del Challenger 75). Registri ATP tutti del 75: Medjedovic campione 75, Draxl finalista 44, Piros e Cornut-Chauvinc quarti 12."
       }
     ]
   },
@@ -66,17 +66,8 @@
     "source": "https://www.atptour.com/en/players/{slug}/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
     "method": "Pagine lette nel browser integrato; voce ATP abbinata per settimana (+/- 6 giorni) e, se ambigua, per nome del torneo.",
     "participations": 197,
-    "matching": 196,
-    "unknown": [
-      {
-        "player": "M0N7",
-        "event": "2025-2831",
-        "name": "Oeiras 1",
-        "engine": null,
-        "atp": 0,
-        "status": "unknown"
-      }
-    ],
+    "matching": 197,
+    "unknown": [],
     "mismatches": [],
     "note": "Riscontro dei punti del torneo, non del ranking. Il valore ATP verifica il calcolo e non lo sostituisce."
   },
@@ -1274,9 +1265,9 @@
       "player": "M0N7",
       "event": "2025-2831",
       "name": "Oeiras 1",
-      "engine": null,
+      "engine": 0,
       "atp": 0,
-      "status": "unknown"
+      "status": "match"
     },
     {
       "player": "M0N7",

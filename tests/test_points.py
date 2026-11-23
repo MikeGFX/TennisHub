@@ -305,7 +305,9 @@ class PointsTests(unittest.TestCase):
         result = evaluate_points([match(round="F", won=True, level="C", draw="32", tourney_id="2025-1214")], "P001", season=2025)
         self.assertEqual(result.value, 50)
         self.assertIn("https://www.protennislive.com/posting/2025/1214/mds.pdf", result.sources)
-        self.assertIsNone(evaluate_points([match(round="F", won=True, level="C", draw="32", tourney_id="2025-2831")], "P001", season=2025).value)
+        self.assertIsNone(evaluate_points([match(round="F", won=True, level="C", draw="32", tourney_id="2025-9999")], "P001", season=2025).value)
+        oeiras = evaluate_points([match(round="F", won=True, level="C", draw="32", tourney_id="2025-2831")], "P001", season=2025)
+        self.assertEqual(oeiras.value, 75)
 
     def test_documented_bye_in_32_position_challenger_draw(self):
         row = match(round="R16", level="C", draw="32", tourney_id="2025-9167", loser_id="SL28")

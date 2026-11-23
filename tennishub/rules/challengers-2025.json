@@ -167,6 +167,25 @@
     "source_sha256": "5e2ceda8b0fb47e8ae34f53a9f59b462b27e1c0ad93bc250603353017705aa25",
     "verification": "PDF ufficiale: etichetta 'Challenger 125', punti stampati [0, 8, 16, 35, 64, 125], settimana dal 2025-10-06."
   },
+  "2025-2831": {
+    "name": "Oeiras 1",
+    "level": 75,
+    "source": "https://www.protennislive.com/posting/2025/2831/mds.pdf",
+    "source_sha256": "5491d9aac64cff0a43ea325cb09fa7b5f98d62201b4a56e52762dc3ea29d9a87",
+    "official_points_records": "https://www.atptour.com/en/players/x/{player_id}/player-activity?matchType=Singles&year=2025&tournament=all",
+    "level_conflict": {
+      "printed_label": "Challenger 100",
+      "printed_points": [
+        0,
+        6,
+        12,
+        22,
+        44,
+        75
+      ]
+    },
+    "verification": "PDF ufficiale contraddittorio: intestazione 'Challenger 100' ma scala punti del Challenger 75. Registri ATP Player Activity tutti del Challenger 75: Medjedovic campione 75, Draxl finalista 44, Piros e Cornut-Chauvinc quarti 12. Livello 75 adottato; l'etichetta resta documentata come conflitto."
+  },
   "2025-2833": {
     "name": "Oeiras 2",
     "level": 100,
